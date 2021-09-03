@@ -1,0 +1,21 @@
+.tc_WelcomePaper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tc_WelcomePaper_title {
+  color: #110091;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+  line-height: normal;
+}
+
+.tc_WelcomePaper_content {
+  color: #3d3d3d;
+  font-size: 24px;
+  letter-spacing: 1px;
+}

@@ -12,9 +12,12 @@ module.exports = {
   resolve: {
     alias: {
       components: paths.src + '/components',
-      style: paths.res + '/css/components',
+      styles: paths.res + '/css/components',
+      images: paths.res + '/images',
     }
   },
+
+  watch: true,
 
   // Where webpack looks to start building the bundle
   entry: [paths.src + '/index.js'],
@@ -53,7 +56,7 @@ module.exports = {
     // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
     new HtmlWebpackPlugin({
       title: 'Project Title',
-      favicon: paths.res + '/icons/favicon.png',
+      favicon: paths.res + '/images/icons/favicon.ico',
       template: paths.public + '/index.html', // template file
       filename: 'index.html', // output file
     }),
@@ -69,7 +72,7 @@ module.exports = {
       {
         test: /\.(css|scss|sass)$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
           {

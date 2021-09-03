@@ -1,0 +1,27 @@
+.tc_TopBar {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tc_TopBar-Left {
+  display: flex;
+  align-items: center;
+}
+
+.tc_TopBar-Left_name {
+  font-weight: bolder;
+  font-size: 1.5em;
+  margin-left: 30px;
+}
+
+.tc_TopBar-Right {
+  display: flex;
+  align-items: center;
+}
+
+.tc_TopBar-Right button {
+  font-size: 15px;
+  color: #110091;
+  margin-left: 50px;
+}
