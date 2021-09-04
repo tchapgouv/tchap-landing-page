@@ -1,0 +1,21 @@
+.tc_BottomBar {
+  display: flex;
+}
+
+.tc_BottomBar_container {
+  border-top: 3px solid #110091;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.tc_BottomBar_text {
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+.tc_BottomBar-Menu_container {
+  border-top: 1px solid #3d3d3d;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding-top: 20px;
+}

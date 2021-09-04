@@ -10,8 +10,8 @@
 }
 
 .tc_TopBar-Left_name {
-  font-weight: bolder;
-  font-size: 1.5em;
+  font-weight: bold;
+  font-size: 1.8em;
   margin-left: 30px;
 }
 
@@ -20,8 +20,16 @@
   align-items: center;
 }
 
-.tc_TopBar-Right button {
-  font-size: 15px;
+.tc_TopBar-Right a,
+.tc_TopBar-Right a:link,
+.tc_TopBar-Right a:visited {
+  font-size: 17px;
   color: #110091;
   margin-left: 50px;
+  text-decoration: none;
+}
+
+.tc_TopBar-Right a:hover,
+.tc_TopBar-Right a:active {
+  text-decoration: underline;
 }

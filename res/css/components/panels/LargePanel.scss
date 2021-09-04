@@ -1,0 +1,44 @@
+.tc_LargePanel {
+  margin-top: 30px !important;
+  margin-bottom: 100px !important;
+}
+
+.tc_LargePanel_title {
+  color: #110091;
+  font-size: 46px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: normal;
+  text-align: center;
+  margin: 50px auto 50px auto;
+}
+
+.tc_LargePanel_content {
+  color: #3d3d3d;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  line-height: 36px;
+  text-align: left;
+}
+
+.tc_LargePanel_btn_container {
+  margin-top: 70px !important;
+  display: flex;
+  justify-content: center;
+}
+
+.tc_LargePanel_btn {
+  background-color: #110091 !important;
+  color: lightgray !important;
+  font-weight: bold !important;
+  padding: 15px 30px 15px 30px;
+}
+
+.tc_LargePanel_content a,
+.tc_LargePanel_content a:link,
+.tc_LargePanel_content a:visited,
+.tc_LargePanel_content a:hover,
+.tc_LargePanel_content a:active {
+  text-decoration: underline;
+  color: #3d3d3d;
+}

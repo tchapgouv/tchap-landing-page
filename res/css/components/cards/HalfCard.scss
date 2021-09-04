@@ -1,0 +1,41 @@
+.tc_HalfCard {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 70px 50px 70px;
+}
+
+.tc_HalfCard_light {
+  background-color: #f8f8f8;
+}
+
+.tc_HalfCard_dark {
+  background-color: #efefef;
+}
+
+.tc_HalfCard_title {
+  color: #110091;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: normal;
+  text-align: center;
+  margin: 50px auto 20px auto;
+}
+
+.tc_HalfCard_content {
+  color: #3d3d3d;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.8px;
+  text-align: justify;
+}
+
+.tc_HalfCard_image_top {
+  flex-direction: column;
+}
+
+.tc_HalfCard_image_bottom {
+  flex-direction: column-reverse;
+}

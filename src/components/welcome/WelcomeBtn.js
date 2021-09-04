@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import AndroidIcon from '@material-ui/icons/Android';
 import AppleIcon from '@material-ui/icons/Apple';
 
-import "styles/WelcomeBtn.scss";
+import "styles/welcome/WelcomeBtn.scss";
 
 class WelcomeBtn extends Component {
 	render() {

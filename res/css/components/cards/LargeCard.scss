@@ -1,0 +1,62 @@
+.tc_LargeCard {
+  min-height: 400px;
+  display: flex;
+  padding-top: 30px;
+}
+
+.tc_LargeCard_main {
+  text-align: center;
+}
+
+.tc_LargeCard_light {
+  background-color: #f8f8f8;
+}
+
+.tc_LargeCard_dark {
+  background-color: #efefef;
+}
+
+.tc_LargeCard_image {
+  padding: 0 !important;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.tc_LargeCard_image_container_left {
+  flex-direction: row;
+}
+
+.tc_LargeCard_image_container_right {
+  flex-direction: row-reverse;
+}
+
+.tc_LargeCard_text_left {
+  padding-left: 80px !important;
+  padding-right: 55px !important;
+  padding-bottom: 60px !important;
+}
+
+.tc_LargeCard_text_right {
+  padding-left: 55px !important;
+  padding-right: 80px !important;
+  padding-bottom: 60px !important;
+}
+
+.tc_LargeCard_title {
+  color: #110091;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: normal;
+  margin: 50px auto 20px auto;
+}
+
+.tc_LargeCard_content {
+  color: #3d3d3d;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.8px;
+  text-align: justify;
+}
+

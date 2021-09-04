@@ -1,7 +1,9 @@
 import { Component } from "react";
-import TopBar from "./TopBar";
-import MainPane from "./MainPane";
-import LargePane from "./LargePane";
+import TopBar from "./bars/TopBar";
+import MainPanel from "./panels/MainPanel";
+import IntroPanel from "./panels/IntroPanel";
+import LargePanel from "./panels/LargePanel";
+import BottomBar from "./bars/BottomBar";
 
 import "styles/App.scss";
 
@@ -10,8 +12,10 @@ class App extends Component {
     return (
       <div className="tc_App">
         <TopBar />
-        <LargePane />
-        <MainPane />
+        <IntroPanel />
+        <MainPanel />
+        <LargePanel />
+        <BottomBar />
       </div>
     );
   }

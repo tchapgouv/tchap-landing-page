@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Link from '@material-ui/core/Link';
 import Container from "@material-ui/core/Container";
-import TchapLogo from "images/icons/tchap-logo.svg";
 
-import "styles/TopBar.scss";
+import TchapLogo from "images/icons/tchap-logo.svg";
+import "styles/bars/TopBar.scss";
 
 class TopBar extends Component {
 	render() {
@@ -12,19 +11,28 @@ class TopBar extends Component {
 				<Container maxWidth="lg">
 					<div className="tc_TopBar">
 						<div className="tc_TopBar-Left">
-							<TchapLogo width="50px" />
+							<TchapLogo width="70px" />
 							<span className="tc_TopBar-Left_name">Tchap</span>
 						</div>
 						<div className="tc_TopBar-Right">
-							<Link href="#" component="button">
+							<a href="https://www.tchap.gouv.fr/tchap-prise-en-main.pdf"
+								target="_blank"
+								rel="noreferrer noopener nofollow"
+							>
 								Prise en main
-							</Link>
-							<Link href="#" component="button">
+							</a>
+							<a href="https://www.tchap.gouv.fr/faq/"
+								target="_blank"
+								rel="noreferrer noopener nofollow"
+							>
 								FAQ
-							</Link>
-							<Link href="#" component="button">
+							</a>
+							<a href="#"
+								target="_blank"
+								rel="noreferrer noopener nofollow"
+							>
 								Contact
-							</Link>
+							</a>
 						</div>
 					</div>
 				</Container>

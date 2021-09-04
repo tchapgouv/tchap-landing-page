@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-
-import "styles/WelcomePaper.scss";
 import WelcomeBtn from "./WelcomeBtn";
+
+import "styles/welcome/WelcomePaper.scss";
 
 class WelcomePaper extends Component {
 	render() {

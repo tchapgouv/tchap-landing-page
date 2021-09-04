@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import "styles/WelcomeImage.scss";
+import "styles/welcome/WelcomeImage.scss";
 
 class WelcomeImage extends Component {
 	render() {
