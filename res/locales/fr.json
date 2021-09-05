@@ -1,0 +1,38 @@
+{
+  "fr": {
+    "welcome": {
+      "title": "Tchap, la messagerie instantanée de confiance de l'État français",
+      "text": "Conçue pour les agents publics, pour communiques facilement avec leur collaborateurs et partenaires en toute sécurité."
+    },
+    "cards": {
+      "government" : {
+        "title": "Solution souveraine",
+        "text": "Conçue et entièrement maîtrisée par l'État français, hébergée sur ses serveurs en France, Tchap vous apporte les garanties nécessaires en termes de confidentialité et de protection des données."
+      },
+      "security" : {
+        "title": "Sécurité des échanges",
+        "text": "Tous vos échanges privés sont chiffrés de bout en bout. Cela veut dire que même interceptés, ils seraient illisibles. Les fichiers partagés sont analysés avant leur remise au(x) destinataire(s) pour vérifier l'absence de virus."
+      },
+      "directory" : {
+        "title": "Annuaire intégré des utilisateurs",
+        "text": "L'annuaire intégré de Tchap vous permet d'entrer en contact direct avec l'ensemble des utilisateurs de l'application, toutes administrations confondues. Vous pouvez également inviter des correspondants extérieurs à rejoindre vos échanges."
+      },
+      "forums" : {
+        "title": "Forums sur vos centres d'intérêt",
+        "text": "Les forums (non chiffrés) couvrent vos centres d'intérêt professionnels (mais pas que), avec des thématiques transverses communes à tous les ministères comme l'innovation publique, la cybersécurité, l'emploi public... mais aussi des salons dédiés à des communautés (BlueHats, beta.gouv.fr, DesignGouv...). Un répertoire des forums vous permet de trouver ceux qui vous intéressent."
+      },
+      "devices" : {
+        "title": "Multi-dispositif",
+        "text": "Vous pouvez utiliser Tchap de façon simultanée sur plusieurs appareils. L'application est disponible sur smartphones et tablettes Android et Apple, ainsi que sur ordinateur vis simple navigateur."
+      },
+      "osources" : {
+        "title": "Open-Source",
+        "text": "Tchap s'appuie sur une suite logicielle open source (Element, Matrix) et son code est librement accèssible."
+      }
+    },
+    "join": {
+      "title": "Comment rejoindre Tchap ?",
+      "text": "Tout agent de l'État peut créer librement son compte Tchap à partir de son adresse email professionnelle, depuis l'application mobile ou la version web. Au besoin, il est possible d'inviter par email un correspodant extérieur à l'État à un salon spécifique. <br /> <br /> Les parlementaires et agents des parlements ont également accès à la messagerie depuis mai 2020. <a href=\"#\">Consulter le guide utilisateur dédié - pdf,366ko</a> (disponible également en <a href=\"#\">version accessible - docx,21ko</a>). <br /> <br /> Tchap est ouvert en expérimentation des plusieurs collectivités territoriales depuis février 2020. Vous souhaitez rejoindre l'expérimentation et proposer Tchap aux agents de votre collectivité ? Contactez <a href=\"mailto:tchap.dinum@modernisation.gouv.fr\">tchap.dinum@modernisation.gouv.fr</a> pour plus d'information. <br /> Une convention devra être établie et signé par la direction générale des services, téléchargez pour cela le modèle de convention en format <a href=\"#\">Word (37ko)</a> ou <a href=\"#\">OpenOffice/odt (22ko)</a>."
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 
 import "styles/cards/HalfCard.scss";
+import {t} from "react-i18nify";
 
 class HalfCard extends Component {
 
@@ -30,9 +31,7 @@ class HalfCard extends Component {
 					<div className="tc_HalfCard_title">
 						{this.props.title}
 					</div>
-					<div className="tc_HalfCard_content">
-						{this.props.children}
-					</div>
+					<div className="tc_HalfCard_content" dangerouslySetInnerHTML={{ __html: this.props.children }} />
 				</div>
 			</div>
 		);

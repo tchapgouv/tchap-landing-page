@@ -14,6 +14,7 @@ module.exports = {
       components: paths.src + '/components',
       styles: paths.res + '/css/components',
       images: paths.res + '/images',
+      locales: paths.res + '/locales',
     }
   },
 
@@ -55,7 +56,7 @@ module.exports = {
     // Generates an HTML file from a template
     // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
     new HtmlWebpackPlugin({
-      title: 'Project Title',
+      title: 'Tchap landing page',
       favicon: paths.res + '/images/icons/favicon.ico',
       template: paths.public + '/index.html', // template file
       filename: 'index.html', // output file
@@ -93,10 +94,17 @@ module.exports = {
       },
 
       // Images: Copy image files to build folder
-      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
+      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: 'asset/resource',
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '/assets/images/[hash].[ext]',
+          }
+        }]
+      },
 
-      // Fonts and SVGs: Inline files
-      { test: /\.(woff(2)?|eot|ttf|otf|)$/, type: 'asset/inline' },
+      { test: /\.(woff|woff2|eot|ttf|otf)$/i, type: 'asset/resource' },
     ],
   },
 }
