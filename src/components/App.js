@@ -6,6 +6,7 @@ import LargePanel from "./panels/LargePanel";
 import BottomBar from "./bars/BottomBar";
 import { setLocale, setTranslations } from "react-i18nify";
 
+import "@fontsource/roboto";
 import "styles/App.scss";
 
 class App extends Component {

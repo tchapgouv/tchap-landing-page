@@ -17,9 +17,9 @@ class MainPanel extends Component {
 							<HalfCard
 								title={ t('cards.government.title') }
 								backgroundColor="light"
-								imageName="etat.jpg"
+								imageName="etat.png"
 								imageWidth={270}
-								imageHeight={80}
+								imageHeight={90}
 								imagePosition="top"
 							>
 								{ t('cards.government.text') }
@@ -31,7 +31,7 @@ class MainPanel extends Component {
 								backgroundColor="dark"
 								imageName="secu.png"
 								imageWidth={80}
-								imageHeight={100}
+								imageHeight={103}
 								imagePosition="top"
 							>
 								{ t('cards.security.text') }
@@ -46,7 +46,7 @@ class MainPanel extends Component {
 								backgroundColor="light"
 								imageName="annuaire.png"
 								imageWidth={380}
-								imageHeight={400}
+								imageHeight={365}
 								imagePosition="left"
 							>
 								{ t('cards.directory.text') }
@@ -60,8 +60,8 @@ class MainPanel extends Component {
 								title={ t('cards.forums.title') }
 								backgroundColor="dark"
 								imageName="forums.png"
-								imageWidth={380}
-								imageHeight={400}
+								imageWidth={385}
+								imageHeight={365}
 								imagePosition="right"
 							>
 								{ t('cards.forums.text') }
@@ -74,9 +74,9 @@ class MainPanel extends Component {
 							<HalfCard
 								title={ t('cards.devices.title') }
 								backgroundColor="dark"
-								imageName="multi.png"
-								imageWidth={180}
-								imageHeight={80}
+								imageName="devices.png"
+								imageWidth={168}
+								imageHeight={77}
 								imagePosition="top"
 							>
 								{ t('cards.devices.text') }
@@ -87,8 +87,8 @@ class MainPanel extends Component {
 								title={ t('cards.osources.title') }
 								backgroundColor="light"
 								imageName="matrix.png"
-								imageWidth={135}
-								imageHeight={60}
+								imageWidth={133}
+								imageHeight={57}
 								imagePosition="top"
 							>
 								{ t('cards.osources.text') }

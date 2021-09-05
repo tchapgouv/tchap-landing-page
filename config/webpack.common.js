@@ -47,7 +47,7 @@ module.exports = {
           from: paths.res,
           to: 'assets',
           globOptions: {
-            ignore: ['*.DS_Store', paths.res + '/css/**/*'],
+            ignore: ['*.DS_Store', paths.res + '/css/**/*', paths.res + '/images/*'],
           },
         },
       ],
@@ -93,18 +93,19 @@ module.exports = {
         use: ['@svgr/webpack'],
       },
 
-      // Images: Copy image files to build folder
       { test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-        type: 'asset/resource',
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '/assets/images/[hash].[ext]',
-          }
-        }]
+	    type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[hash][ext]'
+        }
       },
 
-      { test: /\.(woff|woff2|eot|ttf|otf)$/i, type: 'asset/resource' },
+      { test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[hash][ext]'
+        }
+      },
     ],
   },
 }
