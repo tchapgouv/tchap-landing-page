@@ -1,11 +1,11 @@
 .tc_LargeCard {
-  min-height: 400px;
   display: flex;
   padding-top: 30px;
 }
 
 .tc_LargeCard_main {
   text-align: center;
+  min-height: 400px;
 }
 
 .tc_LargeCard_light {
@@ -32,21 +32,21 @@
 }
 
 .tc_LargeCard_text_left {
-  padding-left: 80px !important;
-  padding-right: 55px !important;
+  padding-left: 60px !important;
+  padding-right: 40px !important;
   padding-bottom: 60px !important;
 }
 
 .tc_LargeCard_text_right {
-  padding-left: 55px !important;
-  padding-right: 80px !important;
+  padding-left: 40px !important;
+  padding-right: 60px !important;
   padding-bottom: 60px !important;
 }
 
 .tc_LargeCard_title {
   color: #110091;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 1px;
   line-height: normal;
   margin: 50px auto 20px auto;

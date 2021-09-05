@@ -27,7 +27,7 @@ class LargeCard extends Component {
 
 		return (
 			<Container maxWidth="lg" className={classes}>
-				<Grid container spacing={3} className={imgContainerClasses}>
+				<Grid container className={imgContainerClasses}>
 					<Grid item xs={6} className="tc_LargeCard_image">
 						<img src={require(`images/${this.props.imageName}`)}
 							alt={this.props.imageName}

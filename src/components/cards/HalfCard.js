@@ -23,11 +23,13 @@ class HalfCard extends Component {
 		const classes = `tc_HalfCard tc_HalfCard_${this.props.backgroundColor} tc_HalfCard_image_${this.props.imagePosition}`;
 		return (
 			<div className={classes}>
-				<img src={require(`images/${this.props.imageName}`)}
-					alt={this.props.imageName}
-					width={this.props.imageWidth}
-					height={this.props.imageHeight}/>
-				<div>
+				<div className="tc_HalfCard_image_container">
+					<img src={require(`images/${this.props.imageName}`)}
+						alt={this.props.imageName}
+						width={this.props.imageWidth}
+						height={this.props.imageHeight}/>
+				</div>
+				<div className="tc_HalfCard_text_container">
 					<div className="tc_HalfCard_title">
 						{this.props.title}
 					</div>

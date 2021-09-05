@@ -17,10 +17,9 @@
 .tc_HalfCard_title {
   color: #110091;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 1px;
   line-height: normal;
-  text-align: center;
   margin: 50px auto 20px auto;
 }
 
@@ -30,6 +29,19 @@
   line-height: 30px;
   letter-spacing: 0.8px;
   text-align: justify;
+}
+
+.tc_HalfCard_text_container {
+  display: flex;
+  flex-direction: inherit;
+  justify-content: flex-end;
+}
+
+
+.tc_HalfCard_image_container {
+  height: 150px;
+  align-items: center;
+  display: flex;
 }
 
 .tc_HalfCard_image_top {
