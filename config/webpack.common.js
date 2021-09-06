@@ -18,8 +18,6 @@ module.exports = {
     }
   },
 
-  watch: true,
-
   // Where webpack looks to start building the bundle
   entry: [paths.src + '/index.js'],
 
