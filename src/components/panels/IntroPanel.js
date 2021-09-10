@@ -14,10 +14,10 @@ class IntroPanel extends Component {
 					<div className="tc_IntroPanel">
 						<Container maxWidth="lg">
 							<Grid container spacing={3}>
-								<Grid item xs={6}>
+								<Grid item md={6} xs={12}>
 									<WelcomePaper />
 								</Grid>
-								<Grid item xs={6}>
+								<Grid item md={6} xs={12}>
 									<WelcomeImage />
 								</Grid>
 							</Grid>

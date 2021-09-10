@@ -28,13 +28,13 @@ class LargeCard extends Component {
 		return (
 			<Container maxWidth="lg" className={classes}>
 				<Grid container className={imgContainerClasses}>
-					<Grid item xs={6} className="tc_LargeCard_image">
+					<Grid item md={6} xs={12} className="tc_LargeCard_image">
 						<img src={require(`images/${this.props.imageName}`)}
 							alt={this.props.imageName}
 							width={this.props.imageWidth}
 							height={this.props.imageHeight}/>
 					</Grid>
-					<Grid item xs={6} className={textClasses}>
+					<Grid item md={6} xs={12} className={textClasses}>
 						<div className="tc_LargeCard_title">{this.props.title}</div>
 						<div className="tc_LargeCard_content">{this.props.children}</div>
 					</Grid>

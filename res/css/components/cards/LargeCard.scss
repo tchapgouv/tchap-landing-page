@@ -60,3 +60,11 @@
   text-align: justify;
 }
 
+@media (max-width: 960px) {
+  .tc_LargeCard_image_container_left {
+    flex-direction: column-reverse;
+  }
+  .tc_LargeCard_image_container_right {
+    flex-direction: column-reverse;
+  }
+}

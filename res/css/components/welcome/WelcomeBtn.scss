@@ -1,6 +1,4 @@
 .tc_WelcomeBtn {
-  display: flex;
-  justify-content: space-between;
   margin-top: 70px;
 }
 
@@ -8,11 +6,17 @@
   background-color: #110091 !important;
   color: lightgray !important;
   font-weight: 600 !important;
-  width: 200px;
+  width: 100% !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
 .tc_WelcomeBtn_outlined {
   border-color: #110091 !important;
   color: #110091 !important;
   font-weight: 600 !important;
+  width: 100% !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  text-align: center;
 }

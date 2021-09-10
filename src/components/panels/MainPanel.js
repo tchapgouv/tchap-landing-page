@@ -13,7 +13,7 @@ class MainPanel extends Component {
 			<React.Fragment>
 				<Container maxWidth="lg" className="tc_MainPanel">
 					<Grid container spacing={3} className="tc_MainPanel_grid">
-						<Grid item xs={6}>
+						<Grid item md={6} xs={12}>
 							<HalfCard
 								title={ t('cards.government.title') }
 								backgroundColor="light"
@@ -25,7 +25,7 @@ class MainPanel extends Component {
 								{ t('cards.government.text') }
 							</HalfCard>
 						</Grid>
-						<Grid item xs={6}>
+						<Grid item md={6} xs={12}>
 							<HalfCard
 								title={ t('cards.security.title') }
 								backgroundColor="dark"
@@ -70,7 +70,7 @@ class MainPanel extends Component {
 					</Grid>
 
 					<Grid container spacing={3} className="tc_MainPanel_grid">
-						<Grid item xs={6}>
+						<Grid item md={6} xs={12}>
 							<HalfCard
 								title={ t('cards.devices.title') }
 								backgroundColor="dark"
@@ -82,7 +82,7 @@ class MainPanel extends Component {
 								{ t('cards.devices.text') }
 							</HalfCard>
 						</Grid>
-						<Grid item xs={6}>
+						<Grid item md={6} xs={12}>
 							<HalfCard
 								title={ t('cards.osources.title') }
 								backgroundColor="light"
