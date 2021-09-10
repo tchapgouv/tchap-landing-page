@@ -2,7 +2,7 @@
   "fr": {
     "welcome": {
       "title": "Tchap, la messagerie instantanée de confiance de l'État français",
-      "text": "Conçue pour les agents publics, pour communiques facilement avec leur collaborateurs et partenaires en toute sécurité."
+      "text": "Conçue pour les agents publics, pour communiquer facilement avec leur collaborateurs et partenaires en toute sécurité."
     },
     "cards": {
       "government" : {
@@ -23,16 +23,16 @@
       },
       "devices" : {
         "title": "Multi-dispositif",
-        "text": "Vous pouvez utiliser Tchap de façon simultanée sur plusieurs appareils. L'application est disponible sur smartphones et tablettes Android et Apple, ainsi que sur ordinateur vis simple navigateur."
+        "text": "Vous pouvez utiliser Tchap de façon simultanée sur plusieurs appareils. L'application est disponible sur smartphones et tablettes Android et Apple, ainsi que sur ordinateur via simple navigateur."
       },
       "osources" : {
         "title": "Open-Source",
-        "text": "Tchap s'appuie sur une suite logicielle open source (Element, Matrix) et son code est librement accèssible."
+        "text": "Tchap s'appuie sur une suite logicielle open source (Element, Matrix) et son code est librement accessible."
       }
     },
     "join": {
       "title": "Comment rejoindre Tchap ?",
-      "text": "Tout agent de l'État peut créer librement son compte Tchap à partir de son adresse email professionnelle, depuis l'application mobile ou la version web. Au besoin, il est possible d'inviter par email un correspodant extérieur à l'État à un salon spécifique. <br /> <br /> Les parlementaires et agents des parlements ont également accès à la messagerie depuis mai 2020. <a href=\"#\">Consulter le guide utilisateur dédié - pdf,366ko</a> (disponible également en <a href=\"#\">version accessible - docx,21ko</a>). <br /> <br /> Tchap est ouvert en expérimentation des plusieurs collectivités territoriales depuis février 2020. Vous souhaitez rejoindre l'expérimentation et proposer Tchap aux agents de votre collectivité ? Contactez <a href=\"mailto:tchap.dinum@modernisation.gouv.fr\">tchap.dinum@modernisation.gouv.fr</a> pour plus d'information. <br /> Une convention devra être établie et signé par la direction générale des services, téléchargez pour cela le modèle de convention en format <a href=\"#\">Word (37ko)</a> ou <a href=\"#\">OpenOffice/odt (22ko)</a>."
+      "text": "Tout agent de l'État peut créer librement son compte Tchap à partir de son adresse email professionnelle, depuis l'application mobile ou la version web. Au besoin, il est possible d'inviter par email un correspondant extérieur à l'État à un salon spécifique. <br /> <br /> Les parlementaires et agents des parlements ont également accès à la messagerie depuis mai 2020. <a href='#'>Consulter le guide utilisateur dédié - pdf,366ko</a> (disponible également en <a href='#'>version accessible - docx,21ko</a>). <br /> <br /> Tchap est ouvert en expérimentation des plusieurs collectivités territoriales depuis février 2020. Vous souhaitez rejoindre l'expérimentation et proposer Tchap aux agents de votre collectivité ? Contactez <a href='mailto:tchap.dinum@modernisation.gouv.fr'>tchap.dinum@modernisation.gouv.fr</a> pour plus d'information. <br /> Une convention devra être établie et signé par la direction générale des services, téléchargez pour cela le modèle de convention en format <a href='#'>Word (37ko)</a> ou <a href='#'>OpenOffice/odt (22ko)</a>."
     }
   }
 }
