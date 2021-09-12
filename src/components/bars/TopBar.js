@@ -27,7 +27,7 @@ class TopBar extends Component {
 							>
 								FAQ
 							</a>
-							<a href="#"
+							<a href="mailto:tchap.dinum@modernisation.gouv.fr"
 								target="_blank"
 								rel="noreferrer noopener nofollow"
 							>

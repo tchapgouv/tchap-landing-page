@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
+import TchapUtils from "../../utils/TchapUtils";
 
 import "styles/cards/HalfCard.scss";
-import {t} from "react-i18nify";
 
 class HalfCard extends Component {
 
 	static propTypes = {
 		title: PropTypes.string.isRequired,
-		imageName: PropTypes.string.isRequired,
+		imageLocalUri: PropTypes.string.isRequired,
 		imagePosition: PropTypes.oneOf(['top', 'bottom']).isRequired,
 		backgroundColor: PropTypes.oneOf(['light', 'dark']).isRequired,
 		imageWidth: PropTypes.number.isRequired,
@@ -24,8 +24,8 @@ class HalfCard extends Component {
 		return (
 			<div className={classes}>
 				<div className="tc_HalfCard_image_container">
-					<img src={require(`images/${this.props.imageName}`)}
-						alt={this.props.imageName}
+					<img src={require(`images/${this.props.imageLocalUri}`)}
+						alt={this.props.imageLocalUri}
 						width={this.props.imageWidth}
 						height={this.props.imageHeight}/>
 				</div>
@@ -33,7 +33,7 @@ class HalfCard extends Component {
 					<div className="tc_HalfCard_title">
 						{this.props.title}
 					</div>
-					<div className="tc_HalfCard_content" dangerouslySetInnerHTML={{ __html: this.props.children }} />
+					<div className="tc_HalfCard_content" dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(this.props.children) }} />
 				</div>
 			</div>
 		);

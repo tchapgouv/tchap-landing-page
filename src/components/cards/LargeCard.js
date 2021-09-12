@@ -9,7 +9,7 @@ class LargeCard extends Component {
 
 	static propTypes = {
 		title: PropTypes.string.isRequired,
-		imageName: PropTypes.string.isRequired,
+		imageLocalUri: PropTypes.string.isRequired,
 		imagePosition: PropTypes.oneOf(['left', 'right']).isRequired,
 		backgroundColor: PropTypes.oneOf(['light', 'dark']).isRequired,
 		imageWidth: PropTypes.number.isRequired,
@@ -29,8 +29,8 @@ class LargeCard extends Component {
 			<Container maxWidth="lg" className={classes}>
 				<Grid container className={imgContainerClasses}>
 					<Grid item md={6} xs={12} className="tc_LargeCard_image">
-						<img src={require(`images/${this.props.imageName}`)}
-							alt={this.props.imageName}
+						<img src={require(`images/${this.props.imageLocalUri}`)}
+							alt={this.props.imageLocalUri}
 							width={this.props.imageWidth}
 							height={this.props.imageHeight}/>
 					</Grid>

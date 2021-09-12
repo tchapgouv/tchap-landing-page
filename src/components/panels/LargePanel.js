@@ -3,6 +3,7 @@ import Container from "@material-ui/core/Container";
 import Grid from '@material-ui/core/Grid';
 import Button from "@material-ui/core/Button";
 import { t } from "react-i18nify";
+import TchapUtils from "../../utils/TchapUtils";
 
 import "styles/panels/LargePanel.scss";
 
@@ -15,8 +16,8 @@ class LargePanel extends Component {
 						<Grid container>
 							<Grid item xs={2}>&nbsp;</Grid>
 							<Grid item xs={8}>
-								<div className="tc_LargePanel_title" dangerouslySetInnerHTML={{ __html: t('join.title') }} />
-								<div className="tc_LargePanel_content" dangerouslySetInnerHTML={{ __html: t('join.text') }} />
+								<div className="tc_LargePanel_title" dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(t('join.title')) }} />
+								<div className="tc_LargePanel_content" dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(t('join.text')) }} />
 							</Grid>
 							<Grid item xs={2}>&nbsp;</Grid>
 							<Grid item xs={12} className="tc_LargePanel_btn_container">
