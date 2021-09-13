@@ -5,7 +5,7 @@
   "main": "index.js",
   "description": "Tchap landing page",
   "scripts": {
-    "start": "NODE_ENV=development webpack serve --config config/webpack.dev.js",
+    "start": "NODE_ENV=development webpack serve --config config/webpack.dev.js --progress",
     "build": "NODE_ENV=production webpack --config config/webpack.prod.js"
   },
   "dependencies": {
