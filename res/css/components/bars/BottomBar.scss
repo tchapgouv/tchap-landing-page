@@ -13,9 +13,25 @@
   letter-spacing: 1px;
 }
 
-.tc_BottomBar-Menu_container {
-  border-top: 1px solid #3d3d3d;
+.tc_BottomBar_Menu_container {
+  border-top: 1px solid #e6e6e6;
   margin-top: 20px;
   margin-bottom: 50px;
   padding-top: 20px;
+}
+
+.tc_BottomBar_Menu_item {
+  color: #3d3d3d !important;
+  text-decoration: none !important;
+  margin-left: 20px !important;
+  padding-right: 20px !important;
+  border-right: 2px solid #e6e6e6;
+  font-size: 0.8em;
+}
+
+.tc_BottomBar_Menu_btn {
+  position: relative;
+  top: 2px;
+  font-size: 14px !important;
+  margin-right: 5px;
 }
