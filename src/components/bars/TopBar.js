@@ -38,7 +38,7 @@ class TopBar extends Component {
 							<span className="tc_TopBar_Left_name">Tchap</span>
 						</div>
 						<div className="tc_TopBar_Right_menu">
-							<Button size="large" aria-controls="simple-menu" aria-haspopup="true" onClick={this.handleClick} startIcon={<MenuIcon />} />
+							<Button size="large" aria-controls="simple-menu" aria-haspopup="true" onClick={this.handleClick} startIcon={<MenuIcon />} title="Top menu" />
 							<Menu
 								anchorEl={this.state.anchorEl}
 								keepMounted
