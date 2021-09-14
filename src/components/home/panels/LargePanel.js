@@ -3,9 +3,9 @@ import Container from "@material-ui/core/Container";
 import Grid from '@material-ui/core/Grid';
 import Button from "@material-ui/core/Button";
 import { t } from "react-i18nify";
-import TchapUtils from "../../utils/TchapUtils";
+import TchapUtils from "../../../utils/TchapUtils";
 
-import "styles/panels/LargePanel.scss";
+import "styles/home/panels/LargePanel.scss";
 
 class LargePanel extends Component {
 	render() {

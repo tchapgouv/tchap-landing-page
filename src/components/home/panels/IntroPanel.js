@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import WelcomePaper from "../welcome/WelcomePaper";
 import WelcomeImage from "../welcome/WelcomeImage";
 
-import "styles/panels/IntroPanel.scss";
+import "styles/home/panels/IntroPanel.scss";
 
 class IntroPanel extends Component {
 	render() {

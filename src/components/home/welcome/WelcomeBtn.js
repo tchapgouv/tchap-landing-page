@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import AndroidIcon from '@material-ui/icons/Android';
 import AppleIcon from '@material-ui/icons/Apple';
-
-import "styles/welcome/WelcomeBtn.scss";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
+
+import "styles/home/welcome/WelcomeBtn.scss";
 
 class WelcomeBtn extends Component {
 	render() {

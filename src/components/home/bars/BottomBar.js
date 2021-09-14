@@ -5,7 +5,7 @@ import Link from "@material-ui/core/Link";
 import GitHub from '@material-ui/icons/GitHub';
 import RepLogo from "images/icons/rep-logo.svg";
 import TchapLogoMono from "images/icons/tchap-logo-mono.svg";
-import "styles/bars/BottomBar.scss";
+import "styles/home/bars/BottomBar.scss";
 
 class BottomBar extends Component {
 	render() {

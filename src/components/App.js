@@ -1,10 +1,12 @@
 import {Component} from "react";
-import TopBar from "./bars/TopBar";
-import MainPanel from "./panels/MainPanel";
-import IntroPanel from "./panels/IntroPanel";
-import LargePanel from "./panels/LargePanel";
-import BottomBar from "./bars/BottomBar";
+import Home from "components/home/Home";
+import Convention from "components/convention/Convention";
 import { setLocale, setTranslations } from "react-i18nify";
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route
+} from "react-router-dom";
 
 import "@fontsource/roboto";
 import "styles/App.scss";
@@ -19,13 +21,18 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="tc_App">
-				<TopBar/>
-				<IntroPanel/>
-				<MainPanel/>
-				<LargePanel/>
-				<BottomBar/>
-			</div>
+			<Router>
+				<div>
+					<Switch>
+						<Route path="/convention">
+							<Convention />
+						</Route>
+						<Route path="/">
+							<Home />
+						</Route>
+					</Switch>
+				</div>
+			</Router>
 		);
 	}
 }

@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import HalfCard from "../cards/HalfCard";
 import LargeCard from "../cards/LargeCard";
 
-import "styles/panels/MainPanel.scss";
+import "styles/home/panels/MainPanel.scss";
 import {t} from "react-i18nify";
 
 class MainPanel extends Component {

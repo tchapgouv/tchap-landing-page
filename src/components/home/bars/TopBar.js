@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Container from "@material-ui/core/Container";
+import { Link } from "react-router-dom";
+
 import MenuIcon from '@material-ui/icons/Menu';
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import TchapLogo from "images/icons/tchap-logo.svg";
-
 import "styles/bars/TopBar.scss";
 
 class TopBar extends Component {
@@ -32,11 +33,11 @@ class TopBar extends Component {
 		return (
 			<React.Fragment>
 				<Container maxWidth="lg">
-					<div className="tc_TopBar">
-						<div className="tc_TopBar_Left">
+					<Link className="tc_TopBar">
+						<Link to="/" className="tc_TopBar_Left">
 							<TchapLogo width="70px" />
 							<span className="tc_TopBar_Left_name">Tchap</span>
-						</div>
+						</Link>
 						<div className="tc_TopBar_Right_menu">
 							<Button size="large" aria-controls="simple-menu" aria-haspopup="true" onClick={this.handleClick} startIcon={<MenuIcon />} title="Top menu" />
 							<Menu
