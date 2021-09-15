@@ -3,7 +3,7 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import PropTypes from "prop-types";
 
-import "styles/cards/LargeCard.scss";
+import "styles/home/cards/LargeCard.scss";
 
 class LargeCard extends Component {
 

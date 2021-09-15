@@ -1,4 +1,5 @@
 const paths = require('./paths');
+
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -11,8 +12,11 @@ module.exports = {
   resolve: {
     alias: {
       components: paths.src + '/components',
+      generic: paths.src + '/components/generic',
+      utils: paths.src + '/utils',
       styles: paths.res + '/css/components',
       images: paths.res + '/images',
+      icons: paths.res + '/images/icons',
       locales: paths.res + '/locales',
     }
   },
@@ -83,6 +87,12 @@ module.exports = {
           process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: paths.res + '/css/themes/style.scss',
+            },
+          },
           {
             loader: 'postcss-loader',
             options: {

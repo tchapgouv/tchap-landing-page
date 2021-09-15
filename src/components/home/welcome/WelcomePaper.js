@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import WelcomeBtn from "./WelcomeBtn";
 import { t } from 'react-i18nify';
-import TchapUtils from "../../utils/TchapUtils";
+import TchapUtils from "utils/TchapUtils";
 
-import "styles/welcome/WelcomePaper.scss";
+import "styles/home/welcome/WelcomePaper.scss";
 
 class WelcomePaper extends Component {
 	render() {
