@@ -1,12 +1,7 @@
 import {Component} from "react";
 import Home from "components/home/Home";
-import Convention from "components/convention/Convention";
 import { setLocale, setTranslations } from "react-i18nify";
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route
-} from "react-router-dom";
+import { Switch, Route, HashRouter } from "react-router-dom";
 
 import "@fontsource/roboto";
 import "styles/App.scss";
@@ -21,18 +16,15 @@ class App extends Component {
 
 	render() {
 		return (
-			<Router>
+			<HashRouter basename="/">
 				<div>
 					<Switch>
-						<Route path="/convention">
-							<Convention />
-						</Route>
 						<Route path="/">
 							<Home />
 						</Route>
 					</Switch>
 				</div>
-			</Router>
+			</HashRouter>
 		);
 	}
 }

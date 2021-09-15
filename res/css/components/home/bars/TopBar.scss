@@ -29,12 +29,13 @@
   align-items: center;
 }
 
-.tc_TopBar-Right a {
+.tc_TopBar_Right_text a {
+  font-size: 17px;
+  color: $color-blue;
+  margin-left: 50px;
+
   &:link,
   &:visited {
-    font-size: 17px;
-    color: $color-blue;
-    margin-left: 50px;
     text-decoration: none;
   }
   &:hover,

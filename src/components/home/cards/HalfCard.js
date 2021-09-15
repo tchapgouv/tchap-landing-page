@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
-import TchapUtils from "../../../utils/TchapUtils";
+import TchapUtils from "utils/TchapUtils";
 
 import "styles/home/cards/HalfCard.scss";
 

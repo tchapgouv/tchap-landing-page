@@ -1,9 +1,9 @@
 import {Component} from "react";
 import TopBar from "./bars/TopBar";
-import MainPanel from "./panels/MainPanel";
-import IntroPanel from "./panels/IntroPanel";
-import LargePanel from "./panels/LargePanel";
-import BottomBar from "./bars/BottomBar";
+import MainPanel from "components/home/panels/MainPanel";
+import IntroPanel from "components/home/panels/IntroPanel";
+import LargePanel from "components/home/panels/LargePanel";
+import BottomBar from "components/home/bars/BottomBar";
 import "styles/home/Home.scss";
 
 class Home extends Component {
