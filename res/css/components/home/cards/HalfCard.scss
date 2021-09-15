@@ -7,27 +7,27 @@
 }
 
 .tc_HalfCard_light {
-  background-color: #f8f8f8;
+  background-color: $color-bg-lightgrey;
 }
 
 .tc_HalfCard_dark {
-  background-color: #efefef;
+  background-color: $color-bg-darkgrey;
 }
 
 .tc_HalfCard_title {
-  color: #110091;
-  font-size: 30px;
+  color: $color-theme-blue;
+  font-size: $font-size-19;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: $font-letter-spacing;
   line-height: normal;
   margin: 50px auto 20px auto;
 }
 
 .tc_HalfCard_content {
-  color: #3d3d3d;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: 0.8px;
+  color: $color-text-darkgrey;
+  font-size: $font-size-12;
+  line-height: $font-line-height;
+  letter-spacing: $font-letter-spacing-08;
   text-align: left;
 }
 
