@@ -3,8 +3,8 @@
 }
 
 .tc_WelcomeBtn_default {
-  background-color: #110091 !important;
-  color: lightgray !important;
+  background-color: $color-theme-blue !important;
+  color: $color-text-lightgrey !important;
   font-weight: 600 !important;
   width: 100% !important;
   padding-right: 0 !important;
@@ -12,8 +12,8 @@
 }
 
 .tc_WelcomeBtn_outlined {
-  border-color: #110091 !important;
-  color: #110091 !important;
+  border-color: $color-theme-blue !important;
+  color: $color-theme-blue !important;
   font-weight: 600 !important;
   width: 100% !important;
   padding-right: 0 !important;
