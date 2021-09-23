@@ -23,7 +23,7 @@ class BottomBar extends Component {
 					</Grid>
 					<Grid container className="tc_BottomBar_Menu_container">
 						<Grid item xs={12}>
-							<GenericLink to="https://github.com/tchapgouv/" className="tc_BottomBar_Menu_item">
+							<GenericLink to="https://github.com/tchapgouv/tchap-landing-page" className="tc_BottomBar_Menu_item">
 								<GitHub className="tc_BottomBar_Menu_logo" /> GitHub
 							</GenericLink>
 							<GenericLink to="https://www.tchap.gouv.fr/" className="tc_BottomBar_Menu_item">

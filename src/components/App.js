@@ -1,5 +1,6 @@
 import {Component} from "react";
 import Home from "components/home/Home";
+import Convention from "components/convention/Convention";
 import { setLocale, setTranslations } from "react-i18nify";
 import { Switch, Route, HashRouter } from "react-router-dom";
 
@@ -19,6 +20,9 @@ class App extends Component {
 			<HashRouter basename="/">
 				<div>
 					<Switch>
+						<Route path="/convention">
+							<Convention />
+						</Route>
 						<Route path="/">
 							<Home />
 						</Route>
