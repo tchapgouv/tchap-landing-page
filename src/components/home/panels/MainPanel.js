@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
 import {t} from "react-i18nify";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 import HalfCard from "components/home/cards/HalfCard";
 import LargeCard from "components/home/cards/LargeCard";
 

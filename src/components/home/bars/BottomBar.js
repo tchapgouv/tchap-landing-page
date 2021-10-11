@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import GitHub from '@mui/icons-material/GitHub';
 import GenericLink from "generic/GenericLink";
-import GitHub from '@material-ui/icons/GitHub';
 import RepLogo from "icons/rep-logo.svg";
 import TchapLogoMono from "icons/tchap-logo-mono.svg";
 
