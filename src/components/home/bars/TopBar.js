@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Container from "@material-ui/core/Container";
-import MenuIcon from '@material-ui/icons/Menu';
-import Button from "@material-ui/core/Button";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+import Container from "@mui/material/Container";
+import MenuIcon from '@mui/icons-material/Menu';
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 import GenericLink from "generic/GenericLink";
 import TchapLogo from "icons/tchap-logo.svg";
 

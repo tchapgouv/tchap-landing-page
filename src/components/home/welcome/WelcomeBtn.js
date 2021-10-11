@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import AndroidIcon from '@material-ui/icons/Android';
-import AppleIcon from '@material-ui/icons/Apple';
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
+import Button from '@mui/material/Button';
+import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import AndroidIcon from '@mui/icons-material/Android';
+import AppleIcon from '@mui/icons-material/Apple';
 
 import "styles/home/welcome/WelcomeBtn.scss";
 
