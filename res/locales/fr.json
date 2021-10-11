@@ -1,33 +1,33 @@
 {
   "fr": {
     "welcome": {
-      "title": "Tchap, la messagerie instantanée de confiance de l'Administration",
-      "text": "Conçue pour les agents des trois fonctions publiques, pour communiquer facilement en toute sécurité."
+      "title": "Tchap, la messagerie instantanée de confiance de l'État français",
+      "text": "Conçue pour les agents publics, pour communiquer facilement avec leurs collaborateurs et partenaires en toute sécurité."
     },
     "cards": {
       "government" : {
-        "title": "Bénéficiez d'une application souveraine",
-        "text": "Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics."
+        "title": "Solution souveraine",
+        "text": "Conçue et entièrement maîtrisée par l'État français, hébergée sur ses serveurs en France, Tchap vous apporte les garanties nécessaires en termes de confidentialité et de protection des données."
       },
       "security" : {
-        "title": "Echangez en toute sécurité",
-        "text": "Tous les messages privés échangés sur Tchap sont chiffrés de bout en bout. Concrètement, cela signifie que jamais personne d'autre que vous ne pourra avoir accès à ces échanges. Ni même nous."
+        "title": "Sécurité des échanges",
+        "text": "Tous vos échanges privés sont chiffrés de bout en bout. Cela veut dire que même interceptés, ils seraient illisibles. Les fichiers partagés sont analysés avant leur remise au(x) destinataire(s) pour vérifier l'absence de virus."
       },
       "directory" : {
-        "title": "Retrouvez facilement vos collaborateurs",
-        "text": "L'annuaire intégré de Tchap vous permet d'entrer en contact avec l'ensemble de ses utilisateurs. Pas besoin de connaître les coordonnées de vos interlocuteurs : retrouvez-les simplement en recherchant leur nom."
+        "title": "Annuaire intégré des utilisateurs",
+        "text": "L'annuaire intégré de Tchap vous permet d'entrer en contact direct avec l'ensemble des utilisateurs de l'application, toutes administrations confondues. Vous pouvez également inviter des correspondants extérieurs à rejoindre vos échanges."
       },
       "forums" : {
-        "title": "Partagez vos centres d'intérêt",
-        "text": "Les forums couvrent vos centres d'intérêt professionnels (mais pas que !), avec des thématiques communes à toutes les administrations : innovation publique, formations en ligne, partage de bons plans... Et si vous ne trouvez pas votre bonheur, créez un nouveau forum !"
+        "title": "Forums sur vos centres d'intérêt",
+        "text": "Les forums (non chiffrés) couvrent vos centres d'intérêt professionnels (mais pas que), avec des thématiques transverses communes à tous les ministères comme l'innovation publique, la cybersécurité, l'emploi public... mais aussi des salons dédiés à des communautés (BlueHats, beta.gouv.fr, DesignGouv...). Un répertoire des forums vous permet de trouver ceux qui vous intéressent."
       },
       "devices" : {
-        "title": "Utilisez Tchap sur tous vos appareils",
-        "text": "En plus d'être compatible avec vos appareils sécurisés, Tchap est disponible sur mobile, tablette et web. Vous pouvez donc l'utiliser simultanément sur l'ensemble de vos appareils, que vous soyez au bureau ou en mobilité."
+        "title": "Multi-dispositif",
+        "text": "Vous pouvez utiliser Tchap de façon simultanée sur plusieurs appareils. L'application est disponible sur smartphones et tablettes Android et Apple, ainsi que sur ordinateur via simple navigateur."
       },
       "osources" : {
-        "title": "Centralisez vos échanges",
-        "text": "Un seul canal d'échange pour toute l'Administration : tous les agents publics peuvent s'inscrire sur Tchap et y échanger. Vous pouvez également inviter vos partenaires externes à se joindre à certains de vos échanges."
+        "title": "Open-Source",
+        "text": "Tchap s'appuie sur une suite logicielle open source (Element, Matrix) et son code est librement accessible."
       }
     },
     "join": {
