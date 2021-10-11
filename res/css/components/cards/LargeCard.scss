@@ -24,11 +24,11 @@
 }
 
 .tc_LargeCard_image_container_left {
-  flex-direction: row;
+  flex-direction: row !important;
 }
 
 .tc_LargeCard_image_container_right {
-  flex-direction: row-reverse;
+  flex-direction: row-reverse !important;
 }
 
 .tc_LargeCard_text_left {

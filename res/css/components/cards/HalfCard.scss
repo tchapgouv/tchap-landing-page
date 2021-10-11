@@ -1,5 +1,5 @@
 .tc_HalfCard {
-  min-height: 400px;
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +21,7 @@
   letter-spacing: $font-letter-spacing;
   line-height: normal;
   margin: 50px auto 20px auto;
+  text-align: center;
 }
 
 .tc_HalfCard_content {
@@ -36,7 +37,6 @@
   flex-direction: inherit;
   justify-content: flex-end;
 }
-
 
 .tc_HalfCard_image_container {
   height: 150px;
