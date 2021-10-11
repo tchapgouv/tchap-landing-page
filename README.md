@@ -5,7 +5,7 @@ Tchap landing page
 ## Installation
 
 ```bash
-$ yarn install
+$ yarn
 ```
 
 ## Development
