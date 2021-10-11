@@ -57,6 +57,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: paths.public + '/index.html',
       filename: 'index.html',
+      title: "Tchap"
     }),
 
     new FaviconsWebpackPlugin({

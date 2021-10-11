@@ -6,6 +6,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import GenericLink from "components/GenericLink";
 import TchapLogo from "icons/tchap-logo.svg";
+import RepLogo from "icons/rep-logo.svg";
 
 import "styles/components/bars/TopBar.scss";
 
@@ -32,8 +33,9 @@ class TopBar extends Component {
 		return (
 			<Container maxWidth="lg">
 				<div className="tc_TopBar">
+					<RepLogo width="120"/>
 					<GenericLink to="/" className="tc_TopBar_Left">
-						<TchapLogo width="70px" />
+						<TchapLogo width="60px" />
 						<span className="tc_TopBar_Left_name">Tchap</span>
 					</GenericLink>
 					<div className="tc_TopBar_Right_menu">
