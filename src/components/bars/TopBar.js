@@ -55,7 +55,7 @@ class TopBar extends Component {
 							<GenericLink className="tc_TopBar_Right_menu_item" to="https://www.tchap.gouv.fr/faq/">
 								<MenuItem onClick={this.handleClose}>FAQ</MenuItem>
 							</GenericLink>
-							<GenericLink className="tc_TopBar_Right_menu_item" to="mailto:tchap.dinum@modernisation.gouv.fr">
+							<GenericLink className="tc_TopBar_Right_menu_item" to="mailto:tchap@beta.gouv.fr">
 								<MenuItem onClick={this.handleClose}>Contact</MenuItem>
 							</GenericLink>
 						</Menu>
