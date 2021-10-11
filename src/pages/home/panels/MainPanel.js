@@ -83,7 +83,7 @@ class MainPanel extends Component {
 					</Grid>
 					<Grid item md={6} xs={12}>
 						<HalfCard
-							title={ t('cards.card-4-1.title') }
+							title={ t('cards.card-4-2.title') }
 							backgroundColor="light"
 							imageLocalUri="matrix.png"
 							imageWidth={133}
