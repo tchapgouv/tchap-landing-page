@@ -1,0 +1,7 @@
+server {
+    server_name _;
+    listen <%= ENV['PORT'] %>;
+
+    index index.html;
+    root /app/dist;
+}
