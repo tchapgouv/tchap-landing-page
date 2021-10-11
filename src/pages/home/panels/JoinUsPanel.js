@@ -5,25 +5,25 @@ import Grid from '@mui/material/Grid';
 import Button from "@mui/material/Button";
 import TchapUtils from "utils/TchapUtils";
 
-import "styles/home/panels/LargePanel.scss";
+import "styles/pages/home/panels/JoinUsPanel.scss";
 
-class LargePanel extends Component {
+class JoinUsPanel extends Component {
 	render() {
 		return (
-			<div className="tc_LargePanel">
+			<div className="tc_JoinUsPanel">
 				<Container maxWidth="lg">
 					<Grid container>
 						<Grid item xs={2}>&nbsp;</Grid>
 						<Grid item xs={8}>
-							<div className="tc_LargePanel_title" dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(t('join.title')) }} />
-							<div className="tc_LargePanel_content" dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(t('join.text')) }} />
+							<div className="tc_JoinUsPanel_title" dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(t('join.title')) }} />
+							<div className="tc_JoinUsPanel_content" dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(t('join.text')) }} />
 						</Grid>
 						<Grid item xs={2}>&nbsp;</Grid>
-						<Grid item xs={12} className="tc_LargePanel_btn_container">
+						<Grid item xs={12} className="tc_JoinUsPanel_btn_container">
 							<Button
 								variant="contained"
 								size="large"
-								className="tc_LargePanel_btn"
+								className="tc_JoinUsPanel_btn"
 								href="https://www.tchap.gouv.fr/#/register"
 								target="_blank"
 								rel="noreferrer noopener nofollow"
@@ -38,4 +38,4 @@ class LargePanel extends Component {
 	}
 }
 
-export default LargePanel;
+export default JoinUsPanel;

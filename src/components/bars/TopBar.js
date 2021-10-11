@@ -4,10 +4,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import GenericLink from "generic/GenericLink";
+import GenericLink from "components/GenericLink";
 import TchapLogo from "icons/tchap-logo.svg";
 
-import "styles/home/bars/TopBar.scss";
+import "styles/components/bars/TopBar.scss";
 
 class TopBar extends Component {
 

@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import PropTypes from "prop-types";
 
-import "styles/home/cards/LargeCard.scss";
+import "styles/components/cards/LargeCard.scss";
 
 class LargeCard extends Component {
 

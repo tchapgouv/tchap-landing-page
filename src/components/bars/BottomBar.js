@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import GitHub from '@mui/icons-material/GitHub';
-import GenericLink from "generic/GenericLink";
+import GenericLink from "components/GenericLink";
 import RepLogo from "icons/rep-logo.svg";
 import TchapLogoMono from "icons/tchap-logo-mono.svg";
 
-import "styles/home/bars/BottomBar.scss";
+import "styles/components/bars/BottomBar.scss";
 
 class BottomBar extends Component {
 	render() {

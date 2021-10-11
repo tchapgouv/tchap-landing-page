@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {t} from "react-i18nify";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import HalfCard from "components/home/cards/HalfCard";
-import LargeCard from "components/home/cards/LargeCard";
+import HalfCard from "components/cards/HalfCard";
+import LargeCard from "components/cards/LargeCard";
 
-import "styles/home/panels/MainPanel.scss";
+import "styles/pages/home/panels/MainPanel.scss";
 
 class MainPanel extends Component {
 	render() {

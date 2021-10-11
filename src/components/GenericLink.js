@@ -14,7 +14,6 @@ class GenericLink extends Component {
 
 	generateLink() {
 		const url = this.props.to;
-		console.error(this.props)
 		if (url.startsWith("/")) {
 			return <Link to={url} {...this.props}>{this.props.children}</Link>
 		} else {

@@ -1,9 +1,9 @@
-.tc_LargePanel {
+.tc_JoinUsPanel {
   margin-top: 30px !important;
   margin-bottom: 100px !important;
 }
 
-.tc_LargePanel_title {
+.tc_JoinUsPanel_title {
   color: $color-theme-blue;
   font-size: $font-size-29;
   font-weight: 600;
@@ -13,7 +13,7 @@
   margin: 50px auto 50px auto;
 }
 
-.tc_LargePanel_content {
+.tc_JoinUsPanel_content {
   color: #3d3d3d;
   font-size: $font-size-12;
   letter-spacing: $font-letter-spacing-08;
@@ -21,24 +21,24 @@
   text-align: left;
 }
 
-.tc_LargePanel_btn_container {
+.tc_JoinUsPanel_btn_container {
   margin-top: 70px !important;
   display: flex;
   justify-content: center;
 }
 
-.tc_LargePanel_btn {
+.tc_JoinUsPanel_btn {
   background-color: $color-theme-blue !important;
   color: $color-text-lightgrey !important;
   font-weight: 600 !important;
   padding: 15px 30px 15px 30px;
 }
 
-.tc_LargePanel_content a,
-.tc_LargePanel_content a:link,
-.tc_LargePanel_content a:visited,
-.tc_LargePanel_content a:hover,
-.tc_LargePanel_content a:active {
+.tc_JoinUsPanel_content a,
+.tc_JoinUsPanel_content a:link,
+.tc_JoinUsPanel_content a:visited,
+.tc_JoinUsPanel_content a:hover,
+.tc_JoinUsPanel_content a:active {
   text-decoration: underline;
   color: #3d3d3d;
 }

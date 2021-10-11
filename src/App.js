@@ -1,11 +1,10 @@
 import {Component} from "react";
-import Home from "components/home/Home";
-import Convention from "components/convention/Convention";
+import Home from "pages/home/Home";
+import Convention from "pages/convention/Convention";
 import { setLocale, setTranslations } from "react-i18nify";
 import { Switch, Route, HashRouter } from "react-router-dom";
 
 import "@fontsource/roboto";
-import "styles/App.scss";
 
 class App extends Component {
 

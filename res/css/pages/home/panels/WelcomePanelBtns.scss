@@ -1,8 +1,8 @@
-.tc_WelcomeBtn {
+.tc_WelcomePanelBtn {
   margin-top: 70px;
 }
 
-.tc_WelcomeBtn_default {
+.tc_WelcomePanelBtn_default {
   background-color: $color-theme-blue !important;
   color: $color-text-lightgrey !important;
   font-weight: 600 !important;
@@ -11,7 +11,7 @@
   padding-left: 0 !important;
 }
 
-.tc_WelcomeBtn_outlined {
+.tc_WelcomePanelBtn_outlined {
   border-color: $color-theme-blue !important;
   color: $color-theme-blue !important;
   font-weight: 600 !important;

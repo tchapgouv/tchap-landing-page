@@ -5,40 +5,40 @@ import Container from "@mui/material/Container";
 import AndroidIcon from '@mui/icons-material/Android';
 import AppleIcon from '@mui/icons-material/Apple';
 
-import "styles/home/welcome/WelcomeBtn.scss";
+import "styles/pages/home/panels/WelcomePanelBtns.scss";
 
-class WelcomeBtn extends Component {
+class WelcomePanelBtns extends Component {
 	render() {
 		return (
-			<Container maxWidth="lg" className="tc_WelcomeBtn">
+			<Container maxWidth="lg" className="tc_WelcomePanelBtn">
 				<Grid container spacing={3}>
 					<Grid item md={4} xs={12}>
 						<Button
 							variant="contained"
 							size="large"
-							className="tc_WelcomeBtn_default"
+							className="tc_WelcomePanelBtn_default"
 							startIcon={<AppleIcon />}
 							href="https://apps.apple.com/fr/app/tchap/id1446253779"
 							target="_blank"
 							rel="noreferrer noopener nofollow"
 						>iOS</Button>
 					</Grid>
-					<Grid item md={4} xs={12} className="tc_WelcomeBtn">
+					<Grid item md={4} xs={12} className="tc_WelcomePanelBtn">
 						<Button
 							variant="contained"
 							size="large"
-							className="tc_WelcomeBtn_default"
+							className="tc_WelcomePanelBtn_default"
 							startIcon={<AndroidIcon />}
 							href="https://play.google.com/store/apps/details?id=fr.gouv.tchap.a"
 							target="_blank"
 							rel="noreferrer noopener nofollow"
 						>Android</Button>
 					</Grid>
-					<Grid item md={4} xs={12} className="tc_WelcomeBtn">
+					<Grid item md={4} xs={12} className="tc_WelcomePanelBtn">
 						<Button
 							variant="outlined"
 							size="large"
-							className="tc_WelcomeBtn_outlined"
+							className="tc_WelcomePanelBtn_outlined"
 							href="https://www.tchap.gouv.fr/"
 							target="_blank"
 							rel="noreferrer noopener nofollow"
@@ -50,4 +50,4 @@ class WelcomeBtn extends Component {
 	}
 }
 
-export default WelcomeBtn;
+export default WelcomePanelBtns;

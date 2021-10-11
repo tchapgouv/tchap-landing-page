@@ -1,7 +1,7 @@
 import {Component} from "react";
-import TopBar from "components/home/bars/TopBar";
-import BottomBar from "components/home/bars/BottomBar";
-import Form from "components/convention/Form";
+import TopBar from "components/bars/TopBar";
+import BottomBar from "components/bars/BottomBar";
+import Form from "pages/convention/Form";
 
 class Convention extends Component {
 

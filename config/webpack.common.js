@@ -12,9 +12,9 @@ module.exports = {
   resolve: {
     alias: {
       components: paths.src + '/components',
-      generic: paths.src + '/components/generic',
+      pages: paths.src + '/pages',
       utils: paths.src + '/utils',
-      styles: paths.res + '/css/components',
+      styles: paths.res + '/css',
       images: paths.res + '/images',
       icons: paths.res + '/images/icons',
       locales: paths.res + '/locales',

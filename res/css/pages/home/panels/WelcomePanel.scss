@@ -1,0 +1,40 @@
+.tc_WelcomePanel {
+  background-color: $color-bg-mediumgrey;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.tc_WelcomePanel_block {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+}
+
+.tc_WelcomePanel_title {
+  color: $color-theme-blue;
+  font-size: $font-size-29;
+  font-weight: 600;
+  letter-spacing: $font-letter-spacing;
+  margin-bottom: 22px;
+  line-height: normal;
+}
+
+.tc_WelcomePanel_content {
+  color: $color-text-darkgrey;
+  font-size: $font-size-15;
+  letter-spacing: $font-letter-spacing-16;
+  line-height: $font-line-height-36;
+}
+
+
+.tc_WelcomePanel_image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 960px) {
+  .tc_WelcomePanel_image {
+    display: flex;
+    justify-content: center;
+  }
+}

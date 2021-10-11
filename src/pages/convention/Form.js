@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import TextField from '@mui/material/TextField';
 
-import "styles/convention/Form.scss";
+import "styles/pages/convention/Form.scss";
 
 class Form extends Component {
 	render() {
