@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import AndroidIcon from '@mui/icons-material/Android';
 import AppleIcon from '@mui/icons-material/Apple';
+import ComputerIcon from '@mui/icons-material/Computer';
 
 import "styles/pages/home/panels/WelcomePanelBtns.scss";
 
@@ -36,13 +37,14 @@ class WelcomePanelBtns extends Component {
 					</Grid>
 					<Grid item md={4} xs={12} className="tc_WelcomePanelBtn">
 						<Button
-							variant="outlined"
+							variant="contained"
 							size="large"
-							className="tc_WelcomePanelBtn_outlined"
+							className="tc_WelcomePanelBtn_default"
+							startIcon={<ComputerIcon />}
 							href="https://www.tchap.gouv.fr/"
 							target="_blank"
 							rel="noreferrer noopener nofollow"
-						>Application Web</Button>
+						>Web</Button>
 					</Grid>
 				</Grid>
 			</Container>
