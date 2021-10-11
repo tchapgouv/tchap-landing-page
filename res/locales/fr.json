@@ -5,27 +5,27 @@
       "text": "Conçue pour les agents des trois fonctions publiques, pour communiquer facilement en toute sécurité."
     },
     "cards": {
-      "government" : {
+      "card-1-1" : {
         "title": "Bénéficiez d'une application souveraine",
         "text": "Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics."
       },
-      "security" : {
+      "card-1-2" : {
         "title": "Echangez en toute sécurité",
         "text": "Tous les messages privés échangés sur Tchap sont chiffrés de bout en bout. Concrètement, cela signifie que jamais personne d'autre que vous ne pourra avoir accès à ces échanges. Ni même nous."
       },
-      "directory" : {
+      "card-2-1" : {
         "title": "Retrouvez facilement vos collaborateurs",
         "text": "L'annuaire intégré de Tchap vous permet d'entrer en contact avec l'ensemble de ses utilisateurs. Pas besoin de connaître les coordonnées de vos interlocuteurs : retrouvez-les simplement en recherchant leur nom."
       },
-      "forums" : {
+      "card-3-1" : {
         "title": "Partagez vos centres d'intérêt",
         "text": "Les forums couvrent vos centres d'intérêt professionnels (mais pas que !), avec des thématiques communes à toutes les administrations : innovation publique, formations en ligne, partage de bons plans... Et si vous ne trouvez pas votre bonheur, créez un nouveau forum !"
       },
-      "devices" : {
+      "card-4-1" : {
         "title": "Utilisez Tchap sur tous vos appareils",
         "text": "En plus d'être compatible avec vos appareils sécurisés, Tchap est disponible sur mobile, tablette et web. Vous pouvez donc l'utiliser simultanément sur l'ensemble de vos appareils, que vous soyez au bureau ou en mobilité."
       },
-      "osources" : {
+      "card-4-2" : {
         "title": "Centralisez vos échanges",
         "text": "Un seul canal d'échange pour toute l'Administration : tous les agents publics peuvent s'inscrire sur Tchap et y échanger. Vous pouvez également inviter vos partenaires externes à se joindre à certains de vos échanges."
       }
