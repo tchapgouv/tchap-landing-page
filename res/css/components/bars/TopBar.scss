@@ -23,6 +23,24 @@
   color: $color-theme-blue;
 }
 
+.tc_TopBar_Right_menu_btn {
+  color: $color-theme-blue !important;
+}
+
+.tc_TopBar_Right_menu_item,
+.tc_TopBar_Right_menu_item li {
+  color: $color-theme-blue;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
 .tc_TopBar_Right_text,
 .tc_TopBar_Right_menu {
   display: flex;

@@ -37,20 +37,25 @@ class TopBar extends Component {
 						<span className="tc_TopBar_Left_name">Tchap</span>
 					</GenericLink>
 					<div className="tc_TopBar_Right_menu">
-						<Button size="large" aria-controls="simple-menu" aria-haspopup="true" onClick={this.handleClick} startIcon={<MenuIcon />} title="Top menu" />
+						<Button
+							className="tc_TopBar_Right_menu_btn"
+							size="large" aria-controls="simple-menu"
+							aria-haspopup="true"
+							onClick={this.handleClick}
+							startIcon={<MenuIcon />}
+							title="Top menu" />
 						<Menu
 							anchorEl={this.state.anchorEl}
 							keepMounted
 							open={Boolean(this.state.anchorEl)}
-							onClose={this.handleClose}
-						>
-							<GenericLink to="https://www.tchap.gouv.fr/tchap-prise-en-main.pdf">
+							onClose={this.handleClose} >
+							<GenericLink className="tc_TopBar_Right_menu_item" to="https://www.tchap.gouv.fr/tchap-prise-en-main.pdf">
 								<MenuItem onClick={this.handleClose}>Prise en main</MenuItem>
 							</GenericLink>
-							<GenericLink to="https://www.tchap.gouv.fr/faq/">
+							<GenericLink className="tc_TopBar_Right_menu_item" to="https://www.tchap.gouv.fr/faq/">
 								<MenuItem onClick={this.handleClose}>FAQ</MenuItem>
 							</GenericLink>
-							<GenericLink to="mailto:tchap.dinum@modernisation.gouv.fr">
+							<GenericLink className="tc_TopBar_Right_menu_item" to="mailto:tchap.dinum@modernisation.gouv.fr">
 								<MenuItem onClick={this.handleClose}>Contact</MenuItem>
 							</GenericLink>
 						</Menu>
