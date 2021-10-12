@@ -8,6 +8,9 @@ import FormControl from "@mui/material/FormControl";
 import InputAdornment from "@mui/material/InputAdornment";
 import InputLabel from "@mui/material/InputLabel";
 import OutlinedInput from "@mui/material/OutlinedInput";
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 import "styles/pages/home/TestYourEmail.scss";
 
@@ -17,6 +20,8 @@ class TestYourEmail extends Component {
 		super(props);
 		this.state = {
 			textFieldValue: '',
+			textError: '',
+			isTested: false,
 			isWled: false,
 			disabled: true,
 		}
@@ -27,15 +32,11 @@ class TestYourEmail extends Component {
 
 	_handleTextFieldChange(e) {
 		const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		let disabled = this.state.disabled
-		if (re.test(String(e.target.value).toLowerCase())) {
-			disabled = false;
-		} else {
-			disabled = true;
-		}
+		const disabled = !re.test(String(e.target.value).toLowerCase());
 		this.setState({
 			disabled,
-			textFieldValue: e.target.value
+			textFieldValue: e.target.value,
+			isTested: false,
 		});
 	}
 
@@ -43,29 +44,65 @@ class TestYourEmail extends Component {
 		this.setState({
 			textFieldValue: '',
 			disabled: true,
+			isTested: false,
 		})
 	}
 
 	analyzeEmail() {
 		const email = this.state.textFieldValue;
-		fetch("https://matrix.agent.tchap.gouv.fr/_matrix/identity/api/v1/info?medium=email&address=" + email)
+		fetch("https://matrix.agent.tchap.gouv.fr/_matrix/identity/api/v1/info?medium=email&address=" + String(email).toLowerCase())
 			.then(res => res.json())
 			.then(data => {
-				console.log(data)
+				let isWled = false;
+				if (data.hs !== "agent.externe.tchap.gouv.fr") isWled = true;
+				this.setState({
+					isWled,
+					isTested: true
+				});
 			}).catch(err => {
-				console.error("ERROR !")
+			this.setState({
+				testError: "Erreur : Impossible de joindre le serveur",
+				isWled: false,
+				isTested: true
+			});
 		})
 	}
 
 	render() {
+		let validateIcon = <HelpOutlineIcon />;
+		let colorClass = "";
+		let renderBlock = "";
+		if (this.state.isTested && this.state.isWled) {
+			validateIcon = <TaskAltIcon />;
+			colorClass = "tc_TestYourEmail_email_valid";
+			renderBlock = (
+				<div className="tc_TestYourEmail_email_text">
+					<div>Votre administration est présente sur Tchap !</div>
+					<Button variant="text" size="large" href="https://www.tchap.gouv.fr/#/register">
+						Inscrivez-vous
+					</Button>
+				</div>
+			);
+		} else if (this.state.isTested && !this.state.isWled) {
+			validateIcon = <HighlightOffIcon />;
+			colorClass = "tc_TestYourEmail_email_invalid";
+			renderBlock = (
+				<div className="tc_TestYourEmail_email_text">
+					<div>Votre administration n'est pas encore présente sur Tchap !</div>
+					<div>Téléchargez la convention <a href="https://osmose.numerique.gouv.fr/front/publicDownload.jsp?docId=108585184_DBFileDocument&authKey=Y18yMDQwMzQyOjE2MzY0ODA2MTEwMTQ6JDJhJDA0JGY0UHVLbEU4VEtRL2NxZHZUaXRxc3VTaUJ0UXZWTzgzdmxLS0I1ME1ZYm90cm1HVmcxcDlx" target="_blank">ici</a>.</div>
+				</div>
+			);
+		}
+
 		return (
 			<Container maxWidth="lg">
 				<Grid item xs={12}>
 					<FormControl variant="outlined" size="small">
-						<InputLabel htmlFor="test-your-email">Testez votre adresse email</InputLabel>
+						<InputLabel htmlFor="test-your-email" className="tc_TestYourEmail_input_label">Testez votre adresse email professionnelle</InputLabel>
 						<OutlinedInput
 							id="test-your-email"
-							type={'text'}
+							className="tc_TestYourEmail_input"
+							type="text"
 							value={this.state.textFieldValue}
 							onChange={this._handleTextFieldChange}
 							endAdornment={
@@ -79,12 +116,13 @@ class TestYourEmail extends Component {
 									</IconButton>
 								</InputAdornment>
 							}
-							label="Testez votre adresse email"
+							label="Testez votre adresse email professionnelle"
 						/>
 					</FormControl>
-					<Button variant="contained" size="large" disabled={this.state.disabled} onClick={this.analyzeEmail}>
-						Test
+					<Button variant="text" size="large" disabled={this.state.disabled} onClick={this.analyzeEmail} className={colorClass}>
+						{ validateIcon }
 					</Button>
+					{ renderBlock }
 				</Grid>
 			</Container>
 		);
