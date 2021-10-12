@@ -78,7 +78,7 @@ class TestYourEmail extends Component {
 			renderBlock = (
 				<div className="tc_TestYourEmail_email_text">
 					<div>Votre administration est présente sur Tchap !</div>
-					<Button variant="text" size="large" href="https://www.tchap.gouv.fr/#/register">
+					<Button variant="text" size="large" href="https://www.tchap.gouv.fr/#/register" target="_blank" rel="noreferrer noopener nofollow">
 						Inscrivez-vous
 					</Button>
 				</div>
@@ -89,7 +89,7 @@ class TestYourEmail extends Component {
 			renderBlock = (
 				<div className="tc_TestYourEmail_email_text">
 					<div>Votre administration n'est pas encore présente sur Tchap !</div>
-					<div>Téléchargez la convention <a href="https://osmose.numerique.gouv.fr/front/publicDownload.jsp?docId=108585184_DBFileDocument&authKey=Y18yMDQwMzQyOjE2MzY0ODA2MTEwMTQ6JDJhJDA0JGY0UHVLbEU4VEtRL2NxZHZUaXRxc3VTaUJ0UXZWTzgzdmxLS0I1ME1ZYm90cm1HVmcxcDlx" target="_blank">ici</a>.</div>
+					<div>Téléchargez la convention <a href="https://osmose.numerique.gouv.fr/front/publicDownload.jsp?docId=108585184_DBFileDocument&authKey=Y18yMDQwMzQyOjE2MzY0ODA2MTEwMTQ6JDJhJDA0JGY0UHVLbEU4VEtRL2NxZHZUaXRxc3VTaUJ0UXZWTzgzdmxLS0I1ME1ZYm90cm1HVmcxcDlx" target="_blank" rel="noreferrer noopener nofollow">ici</a>.</div>
 				</div>
 			);
 		}

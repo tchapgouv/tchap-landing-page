@@ -4,6 +4,7 @@ const authorizedUrl = [
 	"https://www.tchap.gouv.fr/",
 	"https://tchap.beta.gouv.fr/",
 	"https://matrix.org/",
+	"https://osmose.numerique.gouv.fr/",
 	"mailto:"
 ];
 
