@@ -1,21 +1,32 @@
 import sanitizeHtml from 'sanitize-html';
 
+const authorizedUrl = [
+	"https://www.tchap.gouv.fr/",
+	"https://tchap.beta.gouv.fr/",
+	"https://matrix.org/",
+	"mailto:"
+];
+
 class TchapUtils {
+	static startsWithArray(str) {
+		return authorizedUrl.some(val => str.toLowerCase().startsWith(val.toLowerCase()));
+	}
+
 	static sanitize(str) {
 		return sanitizeHtml(str, {
 			allowedTags: [
 				"a", "br"
 			],
 			allowedAttributes: {
-				a: [ 'href' ],
+				a: [ 'href', 'target', 'rel' ]
 			},
 			selfClosing: [ 'br' ],
 			allowedSchemes: [ 'https', 'mailto' ],
 			allowedSchemesAppliedToAttributes: [ 'href' ],
-			exclusiveFilter: function(str) {
+			exclusiveFilter: (str) => {
 				if (str.tag === 'a') {
 					if (str.attribs.href &&
-						!(str.attribs.href.startsWith("https://www.tchap.gouv.fr/") || str.attribs.href.startsWith("mailto:"))) {
+						!(TchapUtils.startsWithArray(str.attribs.href))) {
 						return true;
 					}
 				}

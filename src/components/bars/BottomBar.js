@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import GitHub from '@mui/icons-material/GitHub';
 import GenericLink from "components/GenericLink";
 import RepLogo from "icons/rep-logo.svg";
 import TchapLogoMono from "icons/tchap-logo-mono.svg";
+import MatrixLogo from "icons/matrix-logo.svg";
+import TchapUtils from "utils/TchapUtils";
 
 import "styles/components/bars/BottomBar.scss";
 
@@ -18,7 +21,7 @@ class BottomBar extends Component {
 							<RepLogo width="150"/>
 						</Grid>
 						<Grid item xs={6} className="tc_BottomBar_text">
-							&nbsp;
+							<div dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(t('footer.text')) }} />
 						</Grid>
 					</Grid>
 					<Grid container className="tc_BottomBar_Menu_container">
@@ -28,6 +31,9 @@ class BottomBar extends Component {
 							</GenericLink>
 							<GenericLink to="https://www.tchap.gouv.fr/" className="tc_BottomBar_Menu_item">
 								<TchapLogoMono className="tc_BottomBar_Menu_logo" /> Tchap
+							</GenericLink>
+							<GenericLink to="https://matrix.org/" className="tc_BottomBar_Menu_item">
+								<MatrixLogo className="tc_BottomBar_Menu_logo" /> matrix.org
 							</GenericLink>
 						</Grid>
 					</Grid>
