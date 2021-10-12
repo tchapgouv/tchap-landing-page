@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import Grid from '@mui/material/Grid';
 import Button from "@mui/material/Button";
 import TchapUtils from "utils/TchapUtils";
+import TestYourEmail from "./TestYourEmail";
 
 import "styles/pages/home/panels/JoinUsPanel.scss";
 
@@ -30,6 +31,9 @@ class JoinUsPanel extends Component {
 							>
 								Créer un compte Tchap
 							</Button>
+						</Grid>
+						<Grid item xs={12}>
+							<TestYourEmail />
 						</Grid>
 					</Grid>
 				</Container>
