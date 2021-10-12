@@ -34,6 +34,18 @@
   padding: 15px 30px 15px 30px;
 }
 
+.tc_JoinUsPanel_joinus {
+  color: #3d3d3d;
+  font-size: $font-size-12;
+  letter-spacing: $font-letter-spacing-08;
+  line-height: $font-line-height-36;
+  text-align: center;
+  margin: 50px auto 50px auto !important;
+}
+.tc_JoinUsPanel_joinus_content {
+  margin-bottom: 20px;
+}
+
 .tc_JoinUsPanel_content a,
 .tc_JoinUsPanel_content a:link,
 .tc_JoinUsPanel_content a:visited,
