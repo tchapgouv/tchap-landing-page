@@ -32,7 +32,10 @@
     },
     "join": {
       "title": "Comment rejoindre Tchap ?",
-      "text": "Tout agent de l'État peut créer librement son compte Tchap à partir de son adresse email professionnelle, depuis l'application mobile ou la version web. Au besoin, il est possible d'inviter par email un correspondant extérieur à l'État à un salon spécifique. <br /> <br /> Les parlementaires et agents des parlements ont également accès à la messagerie depuis mai 2020. <a href='https://www.tchap.gouv.fr/'>Consulter le guide utilisateur dédié - pdf,366ko</a> (disponible également en <a href='https://www.tchap.gouv.fr/'>version accessible - docx,21ko</a>). <br /> <br /> Tchap est ouvert en expérimentation dans plusieurs collectivités territoriales depuis février 2020. Vous souhaitez rejoindre l'expérimentation et proposer Tchap aux agents de votre collectivité ? Contactez <a href='mailto:tchap.dinum@modernisation.gouv.fr'>tchap.dinum@modernisation.gouv.fr</a> pour plus d'information. <br /> Une convention devra être établie et signée par la direction générale des services. Téléchargez pour cela le modèle de convention en format <a href='https://www.tchap.gouv.fr/'>Word (37ko)</a> ou <a href='https://www.tchap.gouv.fr/'>OpenOffice/odt (22ko)</a>."
+      "text": "Tchap est ouvert aux agents des trois fonctions publiques, quel que soit leur statut, à condition que leur administration y soit déjà inscrite."
+    },
+    "footer": {
+      "text": "Le code de Tchap est consultable publiquement et se base sur le protocole <a href='https://matrix.org/docs/guides/end-to-end-encryption-implementation-guide' target='_blank' rel='noreferrer noopener nofollow'>Matrix</a>. Le développement de l'application bénéficie ainsi des avancées de la communauté Matrix, en terme d'amélioration fonctionnelle et de sécurité."
     }
   }
 }
