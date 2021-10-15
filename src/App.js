@@ -3,8 +3,6 @@ import Home from "pages/home/Home";
 import Convention from "pages/convention/Convention";
 import { setLocale, setTranslations } from "react-i18nify";
 import { Switch, Route, HashRouter } from "react-router-dom";
-import { createTheme } from '@mui/material/styles';
-import { ThemeProvider } from "@emotion/react";
 
 import "@fontsource/roboto";
 
@@ -17,15 +15,7 @@ class App extends Component {
 	}
 
 	render() {
-		const theme = createTheme({
-			palette: {
-				primary: {
-					main: "#110091",
-				},
-			},
-		});
 		return (
-			<ThemeProvider theme={theme}>
 			<HashRouter basename="/">
 				<div>
 					<Switch>
@@ -38,7 +28,6 @@ class App extends Component {
 					</Switch>
 				</div>
 			</HashRouter>
-			</ThemeProvider>
 		);
 	}
 }
