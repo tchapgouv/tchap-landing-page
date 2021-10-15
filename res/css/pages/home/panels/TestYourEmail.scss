@@ -1,0 +1,35 @@
+.tc_TestYourEmail_label {
+  color: #3d3d3d;
+  font-size: $font-size-10;
+  letter-spacing: $font-letter-spacing-08;
+  line-height: $font-line-height-36;
+  margin-bottom: 20px;
+}
+
+.tc_TestYourEmail_input {
+  width: 450px;
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.tc_TestYourEmail_btn {
+  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  line-height: 1.6 !important;
+}
+
+.tc_TestYourEmail_invalid_list {
+  list-style: decimal inside;
+}
+
+.tc_TestYourEmail_email_text {
+  margin-top: 20px;
+}
+
+.tc_TestYourEmail_icon_valid {
+  color: green;
+}
+
+.tc_TestYourEmail_icon_invalid {
+  color: red;
+}

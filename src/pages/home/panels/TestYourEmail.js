@@ -2,17 +2,15 @@ import React, { Component } from 'react';
 import Container from "@mui/material/Container";
 import Grid from '@mui/material/Grid';
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import CancelIcon from '@mui/icons-material/Cancel';
 import FormControl from "@mui/material/FormControl";
 import InputAdornment from "@mui/material/InputAdornment";
 import InputLabel from "@mui/material/InputLabel";
 import OutlinedInput from "@mui/material/OutlinedInput";
+import CheckIcon from '@mui/icons-material/Check';
+import ClearIcon from '@mui/icons-material/Clear';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import TaskAltIcon from '@mui/icons-material/TaskAlt';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
-import "styles/pages/home/TestYourEmail.scss";
+import "styles/pages/home/panels/TestYourEmail.scss";
 
 class TestYourEmail extends Component {
 
@@ -20,7 +18,7 @@ class TestYourEmail extends Component {
 		super(props);
 		this.state = {
 			textFieldValue: '',
-			textError: '',
+			errorText: '',
 			isTested: false,
 			isWled: false,
 			disabled: true,
@@ -28,6 +26,7 @@ class TestYourEmail extends Component {
 		this.analyzeEmail = this.analyzeEmail.bind(this);
 		this.clearField = this.clearField.bind(this);
 		this._handleTextFieldChange = this._handleTextFieldChange.bind(this);
+		this._handleKeyDown = this._handleKeyDown.bind(this);
 	}
 
 	_handleTextFieldChange(e) {
@@ -37,7 +36,17 @@ class TestYourEmail extends Component {
 			disabled,
 			textFieldValue: e.target.value,
 			isTested: false,
+			errorText: '',
 		});
+	}
+
+	_handleKeyDown(e) {
+		if (e.key === 'Enter') {
+			e.preventDefault();
+			e.stopPropagation();
+			this.setState({errorText: ''})
+			this.analyzeEmail();
+		}
 	}
 
 	clearField() {
@@ -61,7 +70,7 @@ class TestYourEmail extends Component {
 				});
 			}).catch(err => {
 			this.setState({
-				testError: "Erreur : Impossible de joindre le serveur",
+				errorText: "Erreur : Impossible de joindre le serveur",
 				isWled: false,
 				isTested: true
 			});
@@ -69,12 +78,21 @@ class TestYourEmail extends Component {
 	}
 
 	render() {
-		let validateIcon = <HelpOutlineIcon />;
-		let colorClass = "";
-		let renderBlock = "";
-		if (this.state.isTested && this.state.isWled) {
-			validateIcon = <TaskAltIcon />;
-			colorClass = "tc_TestYourEmail_email_valid";
+		let validateIcon = null;
+		let colorClass = "tc_TestYourEmail_btn";
+		let renderBlock = null;
+		if (this.state.errorText) {
+			validateIcon = <HelpOutlineIcon />;
+			colorClass += " tc_TestYourEmail_btn_invalid";
+			renderBlock = (
+				<div className="tc_TestYourEmail_email_text">
+					<div>{this.state.errorText}</div>
+				</div>
+			);
+		}
+		else if (this.state.isTested && this.state.isWled) {
+			validateIcon = <CheckIcon className="tc_TestYourEmail_icon_valid" />;
+			colorClass += " tc_TestYourEmail_btn_valid";
 			renderBlock = (
 				<div className="tc_TestYourEmail_email_text">
 					<div>Votre administration est présente sur Tchap !</div>
@@ -84,18 +102,23 @@ class TestYourEmail extends Component {
 				</div>
 			);
 		} else if (this.state.isTested && !this.state.isWled) {
-			validateIcon = <HighlightOffIcon />;
-			colorClass = "tc_TestYourEmail_email_invalid";
+			validateIcon = <ClearIcon className="tc_TestYourEmail_icon_invalid" />;
+			colorClass += " tc_TestYourEmail_btn_invalid";
 			renderBlock = (
 				<div className="tc_TestYourEmail_email_text">
 					<div>Votre administration n'est pas encore présente sur Tchap !</div>
-					<div>Téléchargez la convention <a href="https://osmose.numerique.gouv.fr/front/publicDownload.jsp?docId=108585184_DBFileDocument&authKey=Y18yMDQwMzQyOjE2MzY0ODA2MTEwMTQ6JDJhJDA0JGY0UHVLbEU4VEtRL2NxZHZUaXRxc3VTaUJ0UXZWTzgzdmxLS0I1ME1ZYm90cm1HVmcxcDlx" target="_blank" rel="noreferrer noopener nofollow">ici</a>.</div>
+					<ul className="tc_TestYourEmail_invalid_list">
+						<li>Téléchargez la convention Tchap <a href="https://osmose.numerique.gouv.fr/front/publicDownload.jsp?docId=108585184_DBFileDocument&authKey=Y18yMDQwMzQyOjE2MzY0ODA2MTEwMTQ6JDJhJDA0JGY0UHVLbEU4VEtRL2NxZHZUaXRxc3VTaUJ0UXZWTzgzdmxLS0I1ME1ZYm90cm1HVmcxcDlx" target="_blank" rel="noreferrer noopener nofollow">ici</a></li>
+						<li>Envoyez la signée par votre direction à <a href="mailto:tchap@beta.gouv.fr">tchap@beta.gouv.fr</a></li>
+						<li>L'équipe Tchap se charge de l'ouverture du service à votre administration</li>
+					</ul>
 				</div>
 			);
 		}
 
 		return (
 			<Container maxWidth="lg">
+				<div className="tc_TestYourEmail_label">Votre administration est-elle déjà présente sur Tchap ?</div>
 				<Grid item xs={12}>
 					<FormControl variant="outlined" size="small">
 						<InputLabel htmlFor="test-your-email" className="tc_TestYourEmail_input_label">Testez votre adresse email professionnelle</InputLabel>
@@ -104,23 +127,18 @@ class TestYourEmail extends Component {
 							className="tc_TestYourEmail_input"
 							type="text"
 							value={this.state.textFieldValue}
+							onKeyDown={this._handleKeyDown}
 							onChange={this._handleTextFieldChange}
 							endAdornment={
-								<InputAdornment position="end">
-									<IconButton
-										aria-label="clear input field"
-										onClick={this.clearField}
-										edge="end"
-									>
-										<CancelIcon />
-									</IconButton>
+								<InputAdornment position="end" className="tc_TestYourEmail_icon">
+									{ validateIcon }
 								</InputAdornment>
 							}
 							label="Testez votre adresse email professionnelle"
 						/>
 					</FormControl>
-					<Button variant="text" size="large" disabled={this.state.disabled} onClick={this.analyzeEmail} className={colorClass}>
-						{ validateIcon }
+					<Button variant="outlined" size="large" disabled={this.state.disabled} onClick={this.analyzeEmail} className={colorClass}>
+						Vérifier
 					</Button>
 					{ renderBlock }
 				</Grid>

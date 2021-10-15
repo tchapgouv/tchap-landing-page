@@ -13,14 +13,6 @@
   margin: 50px auto 50px auto;
 }
 
-.tc_JoinUsPanel_content {
-  color: #3d3d3d;
-  font-size: $font-size-12;
-  letter-spacing: $font-letter-spacing-08;
-  line-height: $font-line-height-36;
-  text-align: left;
-}
-
 .tc_JoinUsPanel_btn_container {
   margin-top: 70px !important;
   display: flex;
@@ -42,8 +34,16 @@
   text-align: center;
   margin: 50px auto 50px auto !important;
 }
+
 .tc_JoinUsPanel_joinus_content {
   margin-bottom: 20px;
+}
+
+.tc_JoinUsPanel_content {
+  font-size: $font-size-12;
+  letter-spacing: $font-letter-spacing-08;
+  line-height: $font-line-height;
+  text-align: center;
 }
 
 .tc_JoinUsPanel_content a,

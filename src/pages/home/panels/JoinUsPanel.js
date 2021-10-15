@@ -2,26 +2,10 @@ import React, { Component } from 'react';
 import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
 import Grid from '@mui/material/Grid';
-import Button from "@mui/material/Button";
 import TchapUtils from "utils/TchapUtils";
 import TestYourEmail from "./TestYourEmail";
 
 import "styles/pages/home/panels/JoinUsPanel.scss";
-
-/*
-<Grid item xs={12} className="tc_JoinUsPanel_btn_container">
-							<Button
-								variant="contained"
-								size="large"
-								className="tc_JoinUsPanel_btn"
-								href="https://www.tchap.gouv.fr/#/register"
-								target="_blank"
-								rel="noreferrer noopener nofollow"
-							>
-								Créer un compte Tchap
-							</Button>
-						</Grid>
- */
 
 class JoinUsPanel extends Component {
 	render() {
@@ -36,7 +20,6 @@ class JoinUsPanel extends Component {
 						</Grid>
 						<Grid item xs={2}>&nbsp;</Grid>
 						<Grid item xs={12} className="tc_JoinUsPanel_joinus">
-							<div className="tc_JoinUsPanel_joinus_content">Votre administration est-elle déjà présente sur Tchap ?</div>
 							<TestYourEmail />
 						</Grid>
 					</Grid>

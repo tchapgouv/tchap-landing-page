@@ -69,7 +69,7 @@ class TopBar extends Component {
 						<GenericLink to="https://www.tchap.gouv.fr/faq/">
 							FAQ
 						</GenericLink>
-						<GenericLink to="mailto:tchap.dinum@modernisation.gouv.fr">
+						<GenericLink to="mailto:tchap@beta.gouv.fr">
 							Contact
 						</GenericLink>
 					</div>
