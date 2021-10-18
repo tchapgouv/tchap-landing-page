@@ -19,10 +19,10 @@ const instance = createInstance({
 	siteId: 203,
 	trackerUrl: 'https://stats.data.gouv.fr/piwik.php',
 	srcUrl: 'https://stats.data.gouv.fr/piwik.js',
-	disabled: false,
+	disabled: process.env.NODE_ENV === "development",
 	heartBeat: {
 		active: false,
 	},
-})
+});
 
 ReactDOM.render(<MatomoProvider value={instance}><ThemeProvider theme={theme}><App /></ThemeProvider></MatomoProvider>, document.getElementById('root'));

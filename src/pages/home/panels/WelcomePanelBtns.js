@@ -5,10 +5,23 @@ import Container from "@mui/material/Container";
 import AndroidIcon from '@mui/icons-material/Android';
 import AppleIcon from '@mui/icons-material/Apple';
 import ComputerIcon from '@mui/icons-material/Computer';
+import { matomoHOC } from 'utils/HOC';
 
 import "styles/pages/home/panels/WelcomePanelBtns.scss";
 
 class WelcomePanelBtns extends Component {
+	constructor(props) {
+		super(props);
+		this._handleClick = this._handleClick.bind(this);
+	}
+
+	_handleClick(e) {
+		e.preventDefault();
+		const hooks = this.props.hooks;
+		hooks.trackEvent({ category: 'platform', action: e.target.dataset.platform });
+		window.open(e.target.href, "_blank", "noreferrer");
+	}
+
 	render() {
 		return (
 			<Container maxWidth="lg" className="tc_WelcomePanelBtn">
@@ -18,10 +31,10 @@ class WelcomePanelBtns extends Component {
 							variant="contained"
 							size="large"
 							className="tc_WelcomePanelBtn_default"
+							onClick={this._handleClick}
 							startIcon={<AppleIcon />}
 							href="https://apps.apple.com/fr/app/tchap/id1446253779"
-							target="_blank"
-							rel="noreferrer noopener nofollow"
+							data-platform="ios"
 						>iOS</Button>
 					</Grid>
 					<Grid item md={4} xs={12} className="tc_WelcomePanelBtn">
@@ -29,10 +42,10 @@ class WelcomePanelBtns extends Component {
 							variant="contained"
 							size="large"
 							className="tc_WelcomePanelBtn_default"
+							onClick={this._handleClick}
 							startIcon={<AndroidIcon />}
 							href="https://play.google.com/store/apps/details?id=fr.gouv.tchap.a"
-							target="_blank"
-							rel="noreferrer noopener nofollow"
+							data-platform="android"
 						>Android</Button>
 					</Grid>
 					<Grid item md={4} xs={12} className="tc_WelcomePanelBtn">
@@ -40,10 +53,10 @@ class WelcomePanelBtns extends Component {
 							variant="contained"
 							size="large"
 							className="tc_WelcomePanelBtn_default"
+							onClick={this._handleClick}
 							startIcon={<ComputerIcon />}
 							href="https://www.tchap.gouv.fr/"
-							target="_blank"
-							rel="noreferrer noopener nofollow"
+							data-platform="web"
 						>Web</Button>
 					</Grid>
 				</Grid>
@@ -52,4 +65,4 @@ class WelcomePanelBtns extends Component {
 	}
 }
 
-export default WelcomePanelBtns;
+export default matomoHOC(WelcomePanelBtns);

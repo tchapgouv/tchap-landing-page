@@ -55,7 +55,7 @@ class TestYourEmail extends Component {
 		const hooks = this.props.hooks;
 		const conventionUrl = "https://osmose.numerique.gouv.fr/front/publicDownload.jsp?docId=108585184_DBFileDocument&authKey=Y18yMDQwMzQyOjE2MzY0ODA2MTEwMTQ6JDJhJDA0JGY0UHVLbEU4VEtRL2NxZHZUaXRxc3VTaUJ0UXZWTzgzdmxLS0I1ME1ZYm90cm1HVmcxcDlx";
 		hooks.trackEvent({ category: 'convention', action: 'download' });
-		window.open(conventionUrl, "_blank", "noopener");
+		window.open(conventionUrl, "_blank", "noreferrer");
 	}
 
 	clearField() {
