@@ -17,8 +17,8 @@ const theme = createTheme({
 const instance = createInstance({
 	urlBase: 'https://stats.data.gouv.fr/',
 	siteId: 203,
-	trackerUrl: 'https://stats.data.gouv.fr/matomo.php',
-	srcUrl: 'https://stats.data.gouv.fr/matomo.js',
+	trackerUrl: 'https://stats.data.gouv.fr/piwik.php',
+	srcUrl: 'https://stats.data.gouv.fr/piwik.js',
 	disabled: false,
 	heartBeat: {
 		active: false,
