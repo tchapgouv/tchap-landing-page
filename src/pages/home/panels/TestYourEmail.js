@@ -9,6 +9,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import { matomoHOC } from 'utils/HOC';
 
 import "styles/pages/home/panels/TestYourEmail.scss";
 
@@ -27,6 +28,7 @@ class TestYourEmail extends Component {
 		this.clearField = this.clearField.bind(this);
 		this._handleTextFieldChange = this._handleTextFieldChange.bind(this);
 		this._handleKeyDown = this._handleKeyDown.bind(this);
+		this._handleClick = this._handleClick.bind(this);
 	}
 
 	_handleTextFieldChange(e) {
@@ -49,6 +51,13 @@ class TestYourEmail extends Component {
 		}
 	}
 
+	_handleClick() {
+		const hooks = this.props.hooks;
+		const conventionUrl = "https://osmose.numerique.gouv.fr/front/publicDownload.jsp?docId=108585184_DBFileDocument&authKey=Y18yMDQwMzQyOjE2MzY0ODA2MTEwMTQ6JDJhJDA0JGY0UHVLbEU4VEtRL2NxZHZUaXRxc3VTaUJ0UXZWTzgzdmxLS0I1ME1ZYm90cm1HVmcxcDlx";
+		hooks.trackEvent({ category: 'convention', action: 'download' });
+		window.open(conventionUrl, "_blank", "noopener");
+	}
+
 	clearField() {
 		this.setState({
 			textFieldValue: '',
@@ -58,6 +67,8 @@ class TestYourEmail extends Component {
 	}
 
 	analyzeEmail() {
+		const hooks = this.props.hooks;
+		hooks.trackEvent({ category: 'email', action: 'verification' });
 		const email = this.state.textFieldValue;
 		fetch("https://matrix.agent.tchap.gouv.fr/_matrix/identity/api/v1/info?medium=email&address=" + String(email).toLowerCase())
 			.then(res => res.json())
@@ -108,8 +119,8 @@ class TestYourEmail extends Component {
 				<div className="tc_TestYourEmail_email_text">
 					<div>Votre administration n'est pas encore présente sur Tchap !</div>
 					<ul className="tc_TestYourEmail_invalid_list">
-						<li>Téléchargez la convention Tchap <a href="https://osmose.numerique.gouv.fr/front/publicDownload.jsp?docId=108585184_DBFileDocument&authKey=Y18yMDQwMzQyOjE2MzY0ODA2MTEwMTQ6JDJhJDA0JGY0UHVLbEU4VEtRL2NxZHZUaXRxc3VTaUJ0UXZWTzgzdmxLS0I1ME1ZYm90cm1HVmcxcDlx" target="_blank" rel="noreferrer noopener nofollow">ici</a></li>
-						<li>Envoyez la signée par votre direction à <a href="mailto:tchap@beta.gouv.fr">tchap@beta.gouv.fr</a></li>
+						<li>Téléchargez la convention Tchap <a className="tc_TestYourEmail_link" onClick={this._handleClick}>ici</a></li>
+						<li>Envoyez la signée par votre direction à <a className="tc_TestYourEmail_link" href="mailto:tchap@beta.gouv.fr">tchap@beta.gouv.fr</a></li>
 						<li>L'équipe Tchap se charge de l'ouverture du service à votre administration</li>
 					</ul>
 				</div>
@@ -147,4 +158,4 @@ class TestYourEmail extends Component {
 	}
 }
 
-export default TestYourEmail;
+export default matomoHOC(TestYourEmail);

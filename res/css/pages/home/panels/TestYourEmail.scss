@@ -18,6 +18,12 @@
   line-height: 1.6 !important;
 }
 
+.tc_TestYourEmail_link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: $color-text-darkgrey;
+}
+
 .tc_TestYourEmail_invalid_list {
   list-style: decimal inside;
 }

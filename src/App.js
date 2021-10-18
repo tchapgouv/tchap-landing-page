@@ -3,6 +3,7 @@ import Home from "pages/home/Home";
 import Convention from "pages/convention/Convention";
 import { setLocale, setTranslations } from "react-i18nify";
 import { Switch, Route, HashRouter } from "react-router-dom";
+import { matomoHOC } from './utils/HOC';
 
 import "@fontsource/roboto";
 
@@ -10,8 +11,10 @@ class App extends Component {
 
 	constructor(props) {
 		super(props);
+		const hooks = this.props.hooks;
 		setTranslations(require("locales/fr.json"));
 		setLocale('fr');
+		hooks.trackPageView();
 	}
 
 	render() {
@@ -32,4 +35,4 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default matomoHOC(App);
