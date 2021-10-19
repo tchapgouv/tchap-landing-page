@@ -14,12 +14,21 @@ const theme = createTheme({
 	},
 });
 
+const isTrackingEnabled = () => {
+	const tracking = localStorage.getItem('tracking') || "enabled";
+	if (process.env.NODE_ENV !== "production") {
+		return true;
+	} else {
+		return tracking === "disabled";
+	}
+};
+
 const instance = createInstance({
 	urlBase: 'https://stats.data.gouv.fr/',
 	siteId: 203,
 	trackerUrl: 'https://stats.data.gouv.fr/piwik.php',
 	srcUrl: 'https://stats.data.gouv.fr/piwik.js',
-	disabled: process.env.NODE_ENV === "development",
+	disabled: isTrackingEnabled(),
 	heartBeat: {
 		active: false,
 	},
