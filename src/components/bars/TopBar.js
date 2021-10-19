@@ -4,6 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import {t} from "react-i18nify";
 import GenericLink from "components/GenericLink";
 import TchapLogo from "icons/tchap-logo.svg";
 import RepLogo from "icons/rep-logo.svg";
@@ -51,25 +52,25 @@ class TopBar extends Component {
 							keepMounted
 							open={Boolean(this.state.anchorEl)}
 							onClose={this.handleClose} >
-							<GenericLink className="tc_TopBar_Right_menu_item" to="https://www.tchap.gouv.fr/tchap-prise-en-main.pdf">
+							<GenericLink className="tc_TopBar_Right_menu_item" to={t('links.prise-en-main')}>
 								<MenuItem onClick={this.handleClose}>Prise en main</MenuItem>
 							</GenericLink>
-							<GenericLink className="tc_TopBar_Right_menu_item" to="https://www.tchap.gouv.fr/faq/">
+							<GenericLink className="tc_TopBar_Right_menu_item" to={t('links.faq')}>
 								<MenuItem onClick={this.handleClose}>FAQ</MenuItem>
 							</GenericLink>
-							<GenericLink className="tc_TopBar_Right_menu_item" to="mailto:tchap@beta.gouv.fr">
+							<GenericLink className="tc_TopBar_Right_menu_item" to={"mailto:" + t('links.contact')}>
 								<MenuItem onClick={this.handleClose}>Contact</MenuItem>
 							</GenericLink>
 						</Menu>
 					</div>
 					<div className="tc_TopBar_Right_text">
-						<GenericLink to="https://www.tchap.gouv.fr/tchap-prise-en-main.pdf">
+						<GenericLink to={t('links.prise-en-main')}>
 							Prise en main
 						</GenericLink>
-						<GenericLink to="https://www.tchap.gouv.fr/faq/">
+						<GenericLink to={t('links.faq')}>
 							FAQ
 						</GenericLink>
-						<GenericLink to="mailto:tchap@beta.gouv.fr">
+						<GenericLink to={"mailto:" + t('links.contact')}>
 							Contact
 						</GenericLink>
 					</div>

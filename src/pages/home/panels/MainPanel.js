@@ -16,9 +16,7 @@ class MainPanel extends Component {
 						<HalfCard
 							title={ t('cards.card-1-1.title') }
 							backgroundColor="light"
-							imageLocalUri="etat.png"
-							imageWidth={270}
-							imageHeight={90}
+							imageLocalUri="devices.png"
 							imagePosition="top"
 						>
 							{ t('cards.card-1-1.text') }
@@ -29,8 +27,8 @@ class MainPanel extends Component {
 							title={ t('cards.card-1-2.title') }
 							backgroundColor="dark"
 							imageLocalUri="secu.png"
-							imageWidth={80}
-							imageHeight={103}
+							imageWidth={0}
+							imageHeight={0}
 							imagePosition="top"
 						>
 							{ t('cards.card-1-2.text') }
@@ -44,8 +42,6 @@ class MainPanel extends Component {
 							title={ t('cards.card-2-1.title') }
 							backgroundColor="light"
 							imageLocalUri="annuaire.png"
-							imageWidth={380}
-							imageHeight={365}
 							imagePosition="left"
 						>
 							{ t('cards.card-2-1.text') }
@@ -59,8 +55,6 @@ class MainPanel extends Component {
 							title={ t('cards.card-3-1.title') }
 							backgroundColor="dark"
 							imageLocalUri="forums.png"
-							imageWidth={385}
-							imageHeight={365}
 							imagePosition="right"
 						>
 							{ t('cards.card-3-1.text') }
@@ -73,9 +67,7 @@ class MainPanel extends Component {
 						<HalfCard
 							title={ t('cards.card-4-1.title') }
 							backgroundColor="dark"
-							imageLocalUri="devices.png"
-							imageWidth={168}
-							imageHeight={77}
+							imageLocalUri="etat.png"
 							imagePosition="top"
 						>
 							{ t('cards.card-4-1.text') }
@@ -85,9 +77,7 @@ class MainPanel extends Component {
 						<HalfCard
 							title={ t('cards.card-4-2.title') }
 							backgroundColor="light"
-							imageLocalUri="matrix.png"
-							imageWidth={133}
-							imageHeight={57}
+							imageLocalUri="secu.png"
 							imagePosition="top"
 						>
 							{ t('cards.card-4-2.text') }

@@ -14,16 +14,17 @@ class WelcomePanel extends Component {
 				<div className="tc_WelcomePanel">
 					<Container maxWidth="lg">
 						<Grid container spacing={3}>
-							<Grid item md={6} xs={12} className="tc_WelcomePanel_block">
+							<Grid item md={7} xs={12} className="tc_WelcomePanel_block">
 								<div className="tc_WelcomePanel_title" dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(t('welcome.title')) }} />
 								<div className="tc_WelcomePanel_content" dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(t('welcome.text')) }} />
+								<div className="tc_WelcomePanel_subcontent">{t("welcome.subtext")}</div>
 								<div className="tc_WelcomePanel_content">
 									<WelcomePanelBtns />
 								</div>
 							</Grid>
-							<Grid item md={6} xs={12}>
+							<Grid item md={5} xs={12}>
 								<div className="tc_WelcomePanel_image">
-									<img src={require('images/phone.png')} alt="Phone"/>
+									<img src={require('images/intro.png')} alt="Phone"/>
 								</div>
 							</Grid>
 						</Grid>
