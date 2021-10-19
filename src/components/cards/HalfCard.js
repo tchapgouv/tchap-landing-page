@@ -11,8 +11,8 @@ class HalfCard extends Component {
 		imageLocalUri: PropTypes.string.isRequired,
 		imagePosition: PropTypes.oneOf(['top', 'bottom']).isRequired,
 		backgroundColor: PropTypes.oneOf(['light', 'dark']).isRequired,
-		imageWidth: PropTypes.number.isRequired,
-		imageHeight: PropTypes.number.isRequired,
+		imageWidth: PropTypes.number,
+		imageHeight: PropTypes.number,
 	};
 
 	constructor(props) {

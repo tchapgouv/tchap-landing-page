@@ -7,9 +7,15 @@
 }
 
 .tc_TestYourEmail_input {
-  width: 450px;
+  min-width: 450px;
   border-bottom-right-radius: 0 !important;
   border-top-right-radius: 0 !important;
+}
+
+@media (max-width: 960px) {
+  .tc_TestYourEmail_input {
+    min-width: inherit;
+  }
 }
 
 .tc_TestYourEmail_btn {

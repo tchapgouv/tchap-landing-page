@@ -2,32 +2,33 @@
   "fr": {
     "welcome": {
       "title": "Tchap, la messagerie instantanée de confiance de l'Administration",
-      "text": "Conçue pour les agents des trois fonctions publiques, pour communiquer facilement en toute sécurité."
+      "text": "Conçue pour les agents des trois fonctions publiques, pour communiquer facilement en toute sécurité.",
+      "subtext": "Rejoignez les + 260.000 agents qui l'utilisent déjà !"
     },
     "cards": {
       "card-1-1" : {
-        "title": "Bénéficiez d'une application souveraine",
-        "text": "Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics."
+        "title": "Utilisez Tchap sur tous vos appareils",
+        "text": "En plus d'être compatible avec vos appareils sécurisés, Tchap est disponible sur mobile, tablette et web. Vous pouvez donc l'utiliser simultanément sur l'ensemble de vos appareils, que vous soyez au bureau ou en mobilité."
       },
       "card-1-2" : {
-        "title": "Echangez en toute sécurité",
-        "text": "Tous les messages privés échangés sur Tchap sont chiffrés de bout en bout. Concrètement, cela signifie que jamais personne d'autre que vous ne pourra avoir accès à ces échanges. Ni même nous."
-      },
-      "card-2-1" : {
         "title": "Retrouvez facilement vos collaborateurs",
         "text": "L'annuaire intégré de Tchap vous permet d'entrer en contact avec l'ensemble de ses utilisateurs. Pas besoin de connaître les coordonnées de vos interlocuteurs : retrouvez-les simplement en recherchant leur nom."
+      },
+      "card-2-1" : {
+        "title": "Centralisez vos échanges",
+        "text": "Un seul canal d'échange pour toute l'Administration : tous les agents publics peuvent s'inscrire sur Tchap et y échanger. Vous pouvez également inviter vos partenaires externes à se joindre à certains de vos échanges. "
       },
       "card-3-1" : {
         "title": "Partagez vos centres d'intérêt",
         "text": "Les forums couvrent vos centres d'intérêt professionnels (mais pas que !), avec des thématiques communes à toutes les administrations : innovation publique, formations en ligne, partage de bons plans... Et si vous ne trouvez pas votre bonheur, créez un nouveau forum !"
       },
       "card-4-1" : {
-        "title": "Utilisez Tchap sur tous vos appareils",
-        "text": "En plus d'être compatible avec vos appareils sécurisés, Tchap est disponible sur mobile, tablette et web. Vous pouvez donc l'utiliser simultanément sur l'ensemble de vos appareils, que vous soyez au bureau ou en mobilité."
+        "title": "Bénéficiez d'une application souveraine",
+        "text": "Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics. "
       },
       "card-4-2" : {
-        "title": "Centralisez vos échanges",
-        "text": "Un seul canal d'échange pour toute l'Administration : tous les agents publics peuvent s'inscrire sur Tchap et y échanger. Vous pouvez également inviter vos partenaires externes à se joindre à certains de vos échanges."
+        "title": "Echangez en toute sécurité",
+        "text": "Tous les messages privés échangés sur Tchap sont chiffrés de bout en bout. Concrètement, cela signifie que jamais personne d'autre que vous ne pourra avoir accès à ces échanges. Ni même nous."
       }
     },
     "join": {
@@ -36,6 +37,12 @@
     },
     "footer": {
       "text": "Le code de Tchap est consultable publiquement et se base sur le protocole <a href='https://matrix.org/docs/guides/end-to-end-encryption-implementation-guide' target='_blank' rel='noreferrer noopener nofollow'>Matrix</a>. Le développement de l'application bénéficie ainsi des avancées de la communauté Matrix, en terme d'amélioration fonctionnelle et de sécurité."
+    },
+    "links": {
+      "contact": "tchap@beta.gouv.fr",
+      "prise-en-main": "https://www.tchap.gouv.fr/tchap-prise-en-main.pdf",
+      "faq": "https://www.tchap.gouv.fr/faq/",
+      "convention": "https://osmose.numerique.gouv.fr/front/publicDownload.jsp?docId=108585184_DBFileDocument&authKey=Y18yMDQwMzQyOjE2MzY0ODA2MTEwMTQ6JDJhJDA0JGY0UHVLbEU4VEtRL2NxZHZUaXRxc3VTaUJ0UXZWTzgzdmxLS0I1ME1ZYm90cm1HVmcxcDlx"
     }
   }
 }
