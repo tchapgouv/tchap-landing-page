@@ -1,0 +1,90 @@
+.tc_Pem_topbar {
+  border-top: 3px solid $color-theme-blue;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: $color-text-darkgrey;
+}
+
+.tc_Pem_Menu {
+  list-style-type: circle;
+  margin-bottom: 50px;
+}
+
+.tc_Pem_Menu_item {
+  font-size: $font-size-10;
+  letter-spacing: $font-letter-spacing-08;
+  line-height: $font-line-height;
+  font-weight: bold;
+  text-decoration: none;
+  color: $color-text-darkgrey;
+}
+
+.tc_Pem_Menu_item:hover {
+  text-decoration: underline;
+  color: $color-text-black;
+}
+
+.tc_Pem_Intro_title {
+  font-size: $font-size-25;
+  letter-spacing: $font-letter-spacing-08;
+  line-height: $font-line-height;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.tc_Pem_Intro_subtitle {
+  font-size: $font-size-10;
+  letter-spacing: $font-letter-spacing-08;
+  line-height: $font-line-height;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tc_Pem_Content_title {
+  font-size: $font-size-15;
+  letter-spacing: $font-letter-spacing-08;
+  line-height: $font-line-height;
+  font-weight: bold;
+  margin-bottom: 16px;
+  margin-top: 45px;
+}
+
+.tc_Pem_Content_subtitle {
+  font-size: $font-size-12;
+  letter-spacing: $font-letter-spacing-08;
+  line-height: $font-line-height;
+  font-weight: bold;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+.tc_Pem_Content_subsubtitle {
+  letter-spacing: $font-letter-spacing-08;
+  font-weight: bold;
+}
+
+.tc_Pem_Content_text {
+  letter-spacing: $font-letter-spacing-08;
+  line-height: $font-line-height;
+}
+
+.tc_Pem_Content_withAvatar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  img {
+    width: 70px;
+    margin-right: 50px;
+  }
+}
+
+.tc_Pem_Content_withImage_double {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.tc_Pem_Content_withImage {
+  display: flex;
+  flex-flow: wrap-reverse;
+}

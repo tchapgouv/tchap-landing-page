@@ -41,7 +41,7 @@ class Suivi extends Component {
 			<div>
 				<TopBar/>
 				<Container maxWidth="lg">
-					<Grid container className="tc_Suivi_bar">
+					<Grid container className="tc_Suivi_topbar">
 						<Grid item xs={12}>
 							<div className="tc_Suivi_title">Suivi d'audience et vie privée</div>
 							<div className="tc_Suivi_subtitle">Stockage local</div>

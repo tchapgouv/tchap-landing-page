@@ -12,8 +12,8 @@ class LargeCard extends Component {
 		imageLocalUri: PropTypes.string.isRequired,
 		imagePosition: PropTypes.oneOf(['left', 'right']).isRequired,
 		backgroundColor: PropTypes.oneOf(['light', 'dark']).isRequired,
-		imageWidth: PropTypes.number.isRequired,
-		imageHeight: PropTypes.number.isRequired,
+		imageWidth: PropTypes.number,
+		imageHeight: PropTypes.number,
 	};
 
 	constructor(props) {
