@@ -1,6 +1,7 @@
 import {Component} from "react";
 import Home from "pages/home/Home";
 import Convention from "pages/convention/Convention";
+import Suivi from "pages/suivi/Suivi";
 import { setLocale, setTranslations } from "react-i18nify";
 import { Switch, Route, HashRouter } from "react-router-dom";
 import { matomoHOC } from './utils/HOC';
@@ -24,6 +25,9 @@ class App extends Component {
 					<Switch>
 						<Route path="/convention">
 							<Convention />
+						</Route>
+						<Route path="/suivi">
+							<Suivi />
 						</Route>
 						<Route path="/">
 							<Home />

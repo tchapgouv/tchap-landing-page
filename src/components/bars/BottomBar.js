@@ -35,6 +35,9 @@ class BottomBar extends Component {
 							<GenericLink to="https://matrix.org/" className="tc_BottomBar_Menu_item">
 								<MatrixLogo className="tc_BottomBar_Menu_logo" /> matrix.org
 							</GenericLink>
+							<GenericLink to="/suivi" className="tc_BottomBar_Menu_item">
+								Données personnelles
+							</GenericLink>
 						</Grid>
 					</Grid>
 				</Container>
