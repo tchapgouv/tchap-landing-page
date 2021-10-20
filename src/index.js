@@ -15,7 +15,12 @@ const theme = createTheme({
 });
 
 const isTrackingEnabled = () => {
-	const tracking = localStorage ? localStorage.getItem('tracking') : "enabled";
+	let tracking = "enabled";
+	if (localStorage && !localStorage.getItem('tracking')) {
+		localStorage.setItem('tracking', tracking)
+	} else if (localStorage && localStorage.getItem('tracking')) {
+		tracking = localStorage.getItem('tracking');
+	}
 	if (process.env.NODE_ENV !== "production") {
 		return true;
 	} else {
