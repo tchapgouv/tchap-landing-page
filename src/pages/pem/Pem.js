@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {t} from "react-i18nify";
 import { HashLink } from 'react-router-hash-link';
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -30,15 +31,13 @@ class Pem extends Component {
 				<TopBar/>
 				<Container maxWidth="lg">
 					<Grid container className="tc_Pem_topbar">
-						<Grid item xs={12}>
-
-
+						<Grid item xs={12} className="tc_Pem_Container">
 
 							<div className="tc_Pem_Intro_title">Prise en main de Tchap</div>
-							<div className="tc_Pem_Intro_subtitle">Bienvenue sur Tchap !</div>
+							<div className="tc_Pem_Intro_subtitle tc_text_b">Bienvenue sur Tchap !</div>
 							<div className="tc_Pem_Intro_subtitle">L'équipe est ravie de vous compter parmi nos nouveaux utilisateurs.</div>
 							<div className="tc_Pem_Intro_subtitle">
-								Si ce n’est pas encore fait, n’hésitez pas à télécharger l’application Android ou IOS depuis votre mobile, ou bien à ouvrir Tchap sur le navigateur de votre ordinateur.
+								Si ce n’est pas encore fait, n’hésitez pas à télécharger l’application <GenericLink to={"https://play.google.com/store/apps/details?id=fr.gouv.tchap.a"} className="tc_link">Android</GenericLink> ou <GenericLink to={"https://apps.apple.com/fr/app/tchap/id1446253779"} className="tc_link">iOS</GenericLink> depuis votre mobile, ou bien à ouvrir <GenericLink to={"https://www.tchap.gouv.fr/"} className="tc_link">Tchap sur le navigateur</GenericLink> de votre ordinateur.
 							</div>
 							<div className="tc_Pem_Intro_subtitle">Nous avons conçu ce guide pour vous accompagner dans la prise en main de votre compte.</div>
 							<div className="tc_Pem_Intro_subtitle">C'est parti !</div>
@@ -51,7 +50,6 @@ class Pem extends Component {
 								<li><HashLink className="tc_Pem_Menu_item" to="#admin" smooth>Créer et administrer un salon</HashLink></li>
 								<li><HashLink className="tc_Pem_Menu_item" to="#question" smooth>Des questions ?</HashLink></li>
 							</ul>
-
 
 							<div className="tc_Pem_Content_title" id="start">Quelques conseils pour bien démarrer...</div>
 							<div className="tc_Pem_Content_subtitle">Choisir une photo de profil</div>
@@ -137,14 +135,14 @@ class Pem extends Component {
 
 							<div className="tc_Pem_Content_title" id="admin">Créer et administrer un salon</div>
 							<div className="tc_Pem_Content_withAvatar">
-								<img src={require("images/pem/avatar_create_forum.jpeg")}  alt="Création d'un salon privé"/>
+								<img src={require("images/pem/avatar_create_private.jpeg")}  alt="Création d'un salon privé"/>
 								<div>
 									<div className="tc_Pem_Content_subsubtitle">Créer un Salon Privé</div>
 									<div className="tc_Pem_Content_text">Pour que le salon ne soit trouvable et accessible que sur invitation de votre part, choisissez “Salon Privé” ou bien “Salon privé ouvert aux externes” si vous souhaitez pouvoir y inviter des partenaires externes à l'administration.</div>
 								</div>
 							</div>
 							<div className="tc_Pem_Content_withAvatar">
-								<img src={require("images/pem/avatar_create_private.jpeg")}  alt="Création d'un salon forum"/>
+								<img src={require("images/pem/avatar_create_forum.jpeg")}  alt="Création d'un salon forum"/>
 								<div>
 									<div className="tc_Pem_Content_subsubtitle">Créer un Salon Forum</div>
 									<div className="tc_Pem_Content_text">Pour que le salon soit visible et ouvert à tous les utilisateurs de Tchap (sauf invités externes), choisissez “Salon Forum”.</div>
@@ -158,12 +156,12 @@ class Pem extends Component {
 							<div className="tc_Pem_Content_text"><span className="tc_text_b">Exclure ou bannir des participants si nécessaire : </span>attention, le bannissement d'un membre est irréversible.</div>
 
 							<div className="tc_Pem_Content_title" id="question">Des questions ?</div>
-							<div className="tc_Pem_Content_text">La FAQ de Tchap est disponible <GenericLink className="tc_Pem_Menu_item" to={"https://www.tchap.gouv.fr/faq/"}>ici</GenericLink> pour toute précision supplémentaire.</div>
+							<div className="tc_Pem_Content_text">La FAQ de Tchap est disponible <GenericLink className="tc_Pem_Menu_item" to={t("links.faq")}>ici</GenericLink> pour toute précision supplémentaire.</div>
 							<div className="tc_Pem_Content_text">Et si vous rencontrez des difficultés dans l'utilisation de votre messagerie, n'hésitez pas à contacter le support !</div>
-							<GenericLink className="tc_Pem_Menu_item" to={"mailto:tchap@beta.gouv.fr"}>tchap@beta.gouv.fr</GenericLink>
+							<GenericLink className="tc_Pem_Menu_item" to={"mailto:" + t("links.contact")}>{t("links.contact")}</GenericLink>
 							<div className="tc_Pem_Content_subtitle">A très vite sur Tchap !</div>
 							<div className="tc_Pem_Content_subtitle">L'équipe Tchap</div>
-							<div className="tc_Pem_Content_text tc_text_b">NB : Donnez-nous votre avis sur ce guide <GenericLink className="tc_Pem_Menu_item" to={"https://www.tchap.gouv.fr/faq/"}>ici</GenericLink> et aidez-nous à l'améliorer !</div>
+							<div className="tc_Pem_Content_text tc_text_b">NB : Donnez-nous votre avis sur ce guide <GenericLink className="tc_Pem_Menu_item" to={"https://xwfozb619ea.typeform.com/to/Uso2I4Ze"}>ici</GenericLink> et aidez-nous à l'améliorer !</div>
 							<div className="tc_Pem_Content_text tc_text_i">(Cela ne vous prendra pas plus de 5 minutes, promis)</div>
 						</Grid>
 					</Grid>

@@ -29,13 +29,23 @@ $font-size-08: 0.8em;
 
 /* Generic classes */
 .tc_text_b {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 .tc_text_i {
-  font-style: italic;
+  font-style: italic !important;
 }
 
 .tc_text_u {
-  text-decoration: underline;
+  text-decoration: underline !important;
+}
+
+.tc_link {
+  text-decoration: none !important;
+  font-weight: bold !important;
+  color: #3d3d3d !important;
+  &:hover {
+    text-decoration: underline !important;
+    color: #000000 !important;
+  }
 }
