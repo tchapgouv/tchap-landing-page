@@ -5,9 +5,18 @@
   color: $color-text-darkgrey;
 }
 
+.tc_Pem_Container {
+  padding-bottom: 50px;
+}
+
 .tc_Pem_Menu {
   list-style-type: circle;
   margin-bottom: 50px;
+  li {
+    &:hover {
+      list-style-type: disc;
+    }
+  }
 }
 
 .tc_Pem_Menu_item {
@@ -17,11 +26,10 @@
   font-weight: bold;
   text-decoration: none;
   color: $color-text-darkgrey;
-}
-
-.tc_Pem_Menu_item:hover {
-  text-decoration: underline;
-  color: $color-text-black;
+  &:hover {
+    text-decoration: underline;
+    color: $color-text-black;
+  }
 }
 
 .tc_Pem_Intro_title {
@@ -36,7 +44,6 @@
   font-size: $font-size-10;
   letter-spacing: $font-letter-spacing-08;
   line-height: $font-line-height;
-  font-weight: bold;
   margin-bottom: 10px;
 }
 
@@ -76,12 +83,19 @@
     width: 70px;
     margin-right: 50px;
   }
+
 }
 
 .tc_Pem_Content_withImage_double {
   display: flex;
   margin-top: 30px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 960px) {
+  .tc_Pem_Content_withImage_double {
+    flex-direction: column;
+  }
 }
 
 .tc_Pem_Content_withImage {

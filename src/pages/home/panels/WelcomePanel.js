@@ -22,10 +22,8 @@ class WelcomePanel extends Component {
 									<WelcomePanelBtns />
 								</div>
 							</Grid>
-							<Grid item md={5} xs={12}>
-								<div className="tc_WelcomePanel_image">
-									<img src={require('images/intro.png')} alt="Phone"/>
-								</div>
+							<Grid item md={5} xs={12} className="tc_WelcomePanel_image">
+								<img src={require('images/intro.png')} alt="Phone"/>
 							</Grid>
 						</Grid>
 					</Container>

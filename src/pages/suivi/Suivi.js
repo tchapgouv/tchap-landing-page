@@ -13,7 +13,7 @@ class Suivi extends Component {
 
 	constructor(props) {
 		super(props);
-		const tracking = localStorage.getItem('tracking') || "enabled";
+		const tracking = localStorage ? localStorage.getItem('tracking') : "enabled";
 		this.state = {
 			tracking,
 		};
@@ -22,14 +22,13 @@ class Suivi extends Component {
 	}
 
 	_handleCheckboxChange(e) {
-		console.error(e.target.checked);
 		let tracking = "enabled";
 		if (e.target.checked === false) {
 			tracking = "disabled";
 		}
 
 		this.setState({tracking});
-		localStorage.setItem('tracking', tracking);
+		localStorage ? localStorage.setItem('tracking', tracking) : null;
 	}
 
 	isTrackingEnabled(t) {

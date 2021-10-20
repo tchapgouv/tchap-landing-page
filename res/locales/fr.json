@@ -3,7 +3,7 @@
     "welcome": {
       "title": "Tchap, la messagerie instantanée de confiance de l'Administration",
       "text": "Conçue pour les agents des trois fonctions publiques, pour communiquer facilement en toute sécurité.",
-      "subtext": "Rejoignez les + 260.000 agents qui l'utilisent déjà !"
+      "subtext": "Actuellement utilisée par plus de 260 000 agents publics"
     },
     "cards": {
       "card-1-1" : {
@@ -12,7 +12,7 @@
       },
       "card-1-2" : {
         "title": "Retrouvez facilement vos collaborateurs",
-        "text": "L'annuaire intégré de Tchap vous permet d'entrer en contact avec l'ensemble de ses utilisateurs. Pas besoin de connaître les coordonnées de vos interlocuteurs : retrouvez-les simplement en recherchant leur nom."
+        "text": "L'annuaire intégré de Tchap vous permet d'entrer en contact avec l'ensemble de ses utilisateurs. Pas besoin de connaître le numéro de téléphone de vos interlocuteurs : retrouvez-les simplement en recherchant leur nom ou leur adresse email professionnelle."
       },
       "card-2-1" : {
         "title": "Centralisez vos échanges",
@@ -42,7 +42,7 @@
       "contact": "tchap@beta.gouv.fr",
       "prise-en-main": "/prise-en-main",
       "faq": "https://www.tchap.gouv.fr/faq/",
-      "convention": "https://osmose.numerique.gouv.fr/front/publicDownload.jsp?docId=108585184_DBFileDocument&authKey=Y18yMDQwMzQyOjE2MzY0ODA2MTEwMTQ6JDJhJDA0JGY0UHVLbEU4VEtRL2NxZHZUaXRxc3VTaUJ0UXZWTzgzdmxLS0I1ME1ZYm90cm1HVmcxcDlx"
+      "convention": "https://osmose.numerique.gouv.fr/front/publicDownload.jsp?docId=109625574_DBFileDocument&authKey=Y18yMDQwMzQyOjE2MzcxMjg3NjQ5ODg6JDJhJDA0JDNHUktOcDB6YzlnQkRZRURZV3lUZmVYclFCaVN4Zzltd3pWZ3lib3dJOGRhU3oxT3ZrYThp"
     }
   }
 }
