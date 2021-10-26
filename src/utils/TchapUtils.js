@@ -13,12 +13,6 @@ class TchapUtils {
 		return authorizedUrl.some(val => str.toLowerCase().startsWith(val.toLowerCase()));
 	}
 
-	static clipboardAnchorUrl(event) {
-		const linkId = event.target.parentNode.id;
-		const anchorUrl = `${window.location.href}#${linkId}`
-		return navigator.clipboard.writeText(anchorUrl);
-	}
-
 	static sanitize(str) {
 		return sanitizeHtml(str, {
 			allowedTags: [
