@@ -24,14 +24,12 @@ class MainPanel extends Component {
 					</Grid>
 					<Grid item md={6} xs={12}>
 						<HalfCard
-							title={ t('cards.card-1-2.title') }
+							title={ t('cards.card-2-1.title') }
 							backgroundColor="dark"
-							imageLocalUri="secu.png"
-							imageWidth={0}
-							imageHeight={0}
+							imageLocalUri="centralized.png"
 							imagePosition="top"
 						>
-							{ t('cards.card-1-2.text') }
+							{ t('cards.card-2-1.text') }
 						</HalfCard>
 					</Grid>
 				</Grid>
@@ -39,12 +37,12 @@ class MainPanel extends Component {
 				<Grid container spacing={3} className="tc_MainPanel_grid">
 					<Grid item xs={12}>
 						<LargeCard
-							title={ t('cards.card-2-1.title') }
+							title={ t('cards.card-1-2.title') }
 							backgroundColor="light"
-							imageLocalUri="annuaire.png"
+							imageLocalUri="collaborate.png"
 							imagePosition="left"
 						>
-							{ t('cards.card-2-1.text') }
+							{ t('cards.card-1-2.text') }
 						</LargeCard>
 					</Grid>
 				</Grid>
@@ -54,7 +52,7 @@ class MainPanel extends Component {
 						<LargeCard
 							title={ t('cards.card-3-1.title') }
 							backgroundColor="dark"
-							imageLocalUri="forums.png"
+							imageLocalUri="share.png"
 							imagePosition="right"
 						>
 							{ t('cards.card-3-1.text') }

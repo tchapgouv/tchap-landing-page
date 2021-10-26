@@ -3,13 +3,14 @@
 }
 
 .tc_BottomBar_container {
+  margin-top: 50px;
   border-top: 3px solid $color-theme-blue;
   padding-top: 30px;
   padding-bottom: 10px;
 }
 
 .tc_BottomBar_text {
-  font-size: 1em;
+  font-size: $font-size-10;
   letter-spacing: $font-letter-spacing;
   line-height: 25px;
   margin-top: 22px !important;
