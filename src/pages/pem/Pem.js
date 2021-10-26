@@ -39,12 +39,14 @@ class Pem extends Component {
 	}
 
 	_handleClick(e) {
-		const elem = e;
-		TchapUtils.clipboardAnchorUrl(e).then(() => {
+		const currentTarget = e.currentTarget;
+		const linkId = currentTarget.parentNode.id;
+		const anchorUrl = `${window.location.href}#${linkId}`
+		navigator.clipboard.writeText(anchorUrl).then(() => {
 			this.setState({
-				popperAnchorEl: elem.target,
+				popperAnchorEl: currentTarget,
 				popperOpen: true,
-				popperId: "popper_" + elem.target.parentNode.id,
+				popperId: "popper_" + currentTarget.parentNode.id,
 			});
 			setTimeout(() => {
 				this.setState({

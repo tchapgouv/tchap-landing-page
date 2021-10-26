@@ -34,7 +34,7 @@ class MainPanel extends Component {
 					</Grid>
 				</Grid>
 
-				<Grid container spacing={3} className="tc_MainPanel_grid">
+				<Grid container className="tc_MainPanel_grid">
 					<Grid item xs={12}>
 						<LargeCard
 							title={ t('cards.card-1-2.title') }
@@ -47,7 +47,7 @@ class MainPanel extends Component {
 					</Grid>
 				</Grid>
 
-				<Grid container spacing={3} className="tc_MainPanel_grid">
+				<Grid container className="tc_MainPanel_grid">
 					<Grid item xs={12}>
 						<LargeCard
 							title={ t('cards.card-3-1.title') }
