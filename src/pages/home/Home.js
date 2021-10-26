@@ -13,8 +13,8 @@ class Home extends Component {
 			<div className="tc_Home">
 				<TopBar/>
 				<WelcomePanel/>
-				<MainPanel/>
 				<JoinUsPanel/>
+				<MainPanel/>
 				<BottomBar/>
 			</div>
 		);
