@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {t} from "react-i18nify";
+import { matomoHOC } from 'utils/HOC';
+import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
 import Grid from '@mui/material/Grid';
 import Button from "@mui/material/Button";
@@ -10,7 +11,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import { matomoHOC } from 'utils/HOC';
+import ConventionPdf from "public/CONVENTION_DE_SERVICE_TCHAP_2022.pdf";
 
 import "styles/pages/home/panels/TestYourEmail.scss";
 
@@ -54,9 +55,8 @@ class TestYourEmail extends Component {
 
 	_handleClick() {
 		const hooks = this.props.hooks;
-		const conventionUrl = String(t("links.convention"));
 		hooks.trackEvent({ category: 'convention', action: 'download' });
-		window.open(conventionUrl, "_blank", "noreferrer");
+		window.open(ConventionPdf, "_blank");
 	}
 
 	clearField() {
