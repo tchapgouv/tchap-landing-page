@@ -19,6 +19,7 @@ module.exports = {
       images: paths.res + '/images',
       icons: paths.res + '/images/icons',
       locales: paths.res + '/locales',
+      public: paths.public,
     }
   },
 
@@ -119,6 +120,18 @@ module.exports = {
         generator: {
           filename: 'assets/images/[hash][ext][query]'
         }
+      },
+
+      {
+        test: /\.(pdf)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+        ]
       },
 
       {

@@ -5,11 +5,24 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import TopBar from "components/bars/TopBar";
 import BottomBar from "components/bars/BottomBar";
+import GenericLink from "../../components/GenericLink";
+import LinkIcon from '@mui/icons-material/Link';
+import Popper from "@mui/material/Popper";
+import TchapUtils from "../../utils/TchapUtils";
 
 import "styles/pages/pem/Pem.scss";
-import GenericLink from "../../components/GenericLink";
 
 class Pem extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			popperAnchorEl: null,
+			popperOpen: false,
+			popperId: "",
+		};
+		this._handleClick = this._handleClick.bind(this);
+	}
 
 	componentDidMount() {
 		const anchor = location.hash.split("#")[2];
@@ -25,9 +38,36 @@ class Pem extends Component {
 		}
 	}
 
+	_handleClick(e) {
+		const elem = e;
+		TchapUtils.clipboardAnchorUrl(e).then(() => {
+			this.setState({
+				popperAnchorEl: elem.target,
+				popperOpen: true,
+				popperId: "popper_" + elem.target.parentNode.id,
+			});
+			setTimeout(() => {
+				this.setState({
+					popperAnchorEl: null,
+					popperOpen: false,
+					popperId: "",
+				});
+			}, 1200);
+		});
+	}
+
 	render() {
 		return (
 			<React.Fragment>
+				<Popper
+					id={this.state.popperId}
+					open={this.state.popperOpen}
+					anchorEl={this.state.popperAnchorEl}
+					placement="top"
+					className="tc_Pem_Poper"
+				>
+					Copié
+				</Popper>
 				<TopBar/>
 				<Container maxWidth="lg">
 					<Grid container className="tc_Pem_topbar">
@@ -51,7 +91,7 @@ class Pem extends Component {
 								<li><HashLink className="tc_Pem_Menu_item" to="#question" smooth>Des questions ?</HashLink></li>
 							</ul>
 
-							<div className="tc_Pem_Content_title" id="start">Quelques conseils pour bien démarrer...</div>
+							<div className="tc_Pem_Content_title" id="tcp01_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> Quelques conseils pour bien démarrer...</div>
 							<div className="tc_Pem_Content_subtitle">Choisir une photo de profil</div>
 							<div className="tc_Pem_Content_text">Vous pouvez le faire depuis les paramètres généraux de l’application.</div>
 							<div className="tc_Pem_Content_subtitle">Gérer les notifications</div>
@@ -64,7 +104,7 @@ class Pem extends Component {
 							<div className="tc_Pem_Content_text">Chaque utilisateur dispose donc de son propre trousseau de clés afin de chiffrer puis déchiffrer automatiquement ses messages. Or, par mesure de sécurité, ce trousseau se renouvelle régulièrement (notamment à chaque nouvelle connexion).</div>
 							<div className="tc_Pem_Content_text">Si aucun de vos dispositifs ne détient vos clés de chiffrement les plus récentes, vous serez dans l’incapacité de lire l’historique de vos conversations !</div>
 
-							<div className="tc_Pem_Content_title" id="type">Les différents types de conversation</div>
+							<div className="tc_Pem_Content_title" id="tcp02_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> Les différents types de conversation</div>
 							<div className="tc_Pem_Content_withAvatar">
 								<img src={require("images/pem/avatar_dm.jpeg")}  alt="Avatar DM"/>
 								<div>
@@ -87,7 +127,7 @@ class Pem extends Component {
 								</div>
 							</div>
 
-							<div className="tc_Pem_Content_title" id="search">Rechercher des interlocuteurs pour démarrer une conversation</div>
+							<div className="tc_Pem_Content_title" id="tcp03_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> Rechercher des interlocuteurs pour démarrer une conversation</div>
 							<div className="tc_Pem_Content_text">L’annuaire de Tchap vous permet d’entrer en contact direct avec l’ensemble des usagers de l’application en les recherchant par leur nom ou leur adresse mail.</div>
 							<div className="tc_Pem_Content_withImage_double">
 								<div className="tc_Pem_Content_withImage">
@@ -110,7 +150,7 @@ class Pem extends Component {
 								</ul>
 							</div>
 
-							<div className="tc_Pem_Content_title" id="forum">Rejoindre des Salons Forum</div>
+							<div className="tc_Pem_Content_title" id="tcp04_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> Rejoindre des Salons Forum</div>
 							<div className="tc_Pem_Content_text">Pour  tirer le meilleur parti de Tchap, soyez là où se déroulent les conversations, c’est à dire dans les salons forums !</div>
 							<div className="tc_Pem_Content_text">
 								Découvrez-les dans l’annuaire ou essayez quelques-unes de nos recommandations :
@@ -133,7 +173,7 @@ class Pem extends Component {
 							</div>
 							<div className="tc_Pem_Content_text">Et si vous ne trouvez pas votre bonheur, n'hésitez pas à créer un nouveau salon forum pour discuter des sujets qui vous importent !</div>
 
-							<div className="tc_Pem_Content_title" id="admin">Créer et administrer un salon</div>
+							<div className="tc_Pem_Content_title" id="tcp05_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> Créer et administrer un salon</div>
 							<div className="tc_Pem_Content_withAvatar">
 								<img src={require("images/pem/avatar_create_private.jpeg")}  alt="Création d'un salon privé"/>
 								<div>
@@ -155,7 +195,7 @@ class Pem extends Component {
 							<div className="tc_Pem_Content_text tc_text_b">NB : Si un salon se retrouve sans administrateur, plus personne n'aura le pouvoir de l'administrer. Dans le cas d'un salon privé, il sera également impossible d'y inviter de nouveaux membres.</div>
 							<div className="tc_Pem_Content_text"><span className="tc_text_b">Exclure ou bannir des participants si nécessaire : </span>attention, le bannissement d'un membre est irréversible.</div>
 
-							<div className="tc_Pem_Content_title" id="question">Des questions ?</div>
+							<div className="tc_Pem_Content_title" id="tcp06_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> Des questions ?</div>
 							<div className="tc_Pem_Content_text">La FAQ de Tchap est disponible <GenericLink className="tc_Pem_Menu_item" to={t("links.faq")}>ici</GenericLink> pour toute précision supplémentaire.</div>
 							<div className="tc_Pem_Content_text">Et si vous rencontrez des difficultés dans l'utilisation de votre messagerie, n'hésitez pas à contacter le support !</div>
 							<GenericLink className="tc_Pem_Menu_item" to={"mailto:" + t("links.contact")}>{t("links.contact")}</GenericLink>

@@ -41,8 +41,7 @@
     "links": {
       "contact": "tchap@beta.gouv.fr",
       "prise-en-main": "/prise-en-main",
-      "faq": "https://www.tchap.gouv.fr/faq/",
-      "convention": "https://osmose.numerique.gouv.fr/front/publicDownload.jsp?docId=109625574_DBFileDocument&authKey=Y18yMDQwMzQyOjE2MzcxMjg3NjQ5ODg6JDJhJDA0JDNHUktOcDB6YzlnQkRZRURZV3lUZmVYclFCaVN4Zzltd3pWZ3lib3dJOGRhU3oxT3ZrYThp"
+      "faq": "https://www.tchap.gouv.fr/faq/"
     }
   }
 }
