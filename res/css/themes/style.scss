@@ -12,6 +12,7 @@ $color-bg-darkgrey: #efefef;
 /* Fonts */
 $font-letter-spacing: 1px;
 $font-letter-spacing-16: 1.6px;
+$font-letter-spacing-10: 0.08em;
 $font-letter-spacing-08: 0.8px;
 $font-line-height: 30px;
 $font-line-height-20: 20px;
@@ -22,6 +23,7 @@ $font-size-20: 2em;
 $font-size-19: 1.9em;
 $font-size-18: 1.8em;
 $font-size-15: 1.5em;
+$font-size-14: 1.4em;
 $font-size-12: 1.2em;
 $font-size-11: 1.1em;
 $font-size-10: 1em;
@@ -38,6 +40,14 @@ $font-size-08: 0.8em;
 
 .tc_text_u {
   text-decoration: underline !important;
+}
+
+.tc_text_right {
+  text-align: right !important;
+}
+
+.tc_list_nobullet {
+  list-style-type: none;
 }
 
 .tc_link {

@@ -7,16 +7,26 @@
 
 .tc_Pem_Container {
   padding-bottom: 50px;
+  li {
+    list-style-position: inside;
+    margin-left: 10px;
+  }
+}
+
+.tc_Pem_link {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #3d3d3d;
+  &:hover {
+    text-decoration: underline;
+    color: #000000;
+  }
 }
 
 .tc_Pem_Menu {
-  list-style-type: circle;
-  margin-bottom: 50px;
-  li {
-    &:hover {
-      list-style-type: disc;
-    }
-  }
+  list-style-type: decimal;
+  margin-bottom: 100px;
+  list-style-position: inside;
 }
 
 .tc_Pem_Poper {
@@ -31,7 +41,7 @@
   letter-spacing: $font-letter-spacing-08;
   line-height: $font-line-height;
   font-weight: bold;
-  text-decoration: none;
+  text-decoration: underline;
   color: $color-text-darkgrey;
   &:hover {
     text-decoration: underline;
@@ -40,11 +50,13 @@
 }
 
 .tc_Pem_Intro_title {
+  color: $color-theme-blue;
   font-size: $font-size-25;
-  letter-spacing: $font-letter-spacing-08;
+  letter-spacing: 0.08em;
   line-height: $font-line-height;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .tc_Pem_Intro_subtitle {
@@ -55,12 +67,12 @@
 }
 
 .tc_Pem_Content_title {
-  font-size: $font-size-15;
+  color: $color-theme-blue;
+  font-size: $font-size-18;
   letter-spacing: $font-letter-spacing-08;
   line-height: $font-line-height;
   font-weight: bold;
-  margin-bottom: 16px;
-  margin-top: 45px;
+  margin: 80px 0 30px 8px;
 }
 
 .tc_Pem_Content_title_icon {
@@ -75,12 +87,12 @@
 }
 
 .tc_Pem_Content_subtitle {
-  font-size: $font-size-12;
+  font-size: $font-size-14;
   letter-spacing: $font-letter-spacing-08;
   line-height: $font-line-height;
   font-weight: bold;
   margin-bottom: 8px;
-  margin-top: 16px;
+  margin-top: 28px;
 }
 
 .tc_Pem_Content_subsubtitle {
