@@ -76,24 +76,23 @@ class Pem extends Component {
 						<Grid item xs={12} className="tc_Pem_Container">
 
 							<div className="tc_Pem_Intro_title">Prise en main de Tchap</div>
-							<div className="tc_Pem_Intro_subtitle tc_text_b">Bienvenue sur Tchap !</div>
-							<div className="tc_Pem_Intro_subtitle">L'équipe est ravie de vous compter parmi nos nouveaux utilisateurs.</div>
+							<div className="tc_Pem_Intro_subtitle">Vous êtes nouvellement inscrit sur Tchap ? Bienvenue !</div>
 							<div className="tc_Pem_Intro_subtitle">
-								Si ce n’est pas encore fait, n’hésitez pas à télécharger l’application <GenericLink to={"https://play.google.com/store/apps/details?id=fr.gouv.tchap.a"} className="tc_link">Android</GenericLink> ou <GenericLink to={"https://apps.apple.com/fr/app/tchap/id1446253779"} className="tc_link">iOS</GenericLink> depuis votre mobile, ou bien à ouvrir <GenericLink to={"https://www.tchap.gouv.fr/"} className="tc_link">Tchap sur le navigateur</GenericLink> de votre ordinateur.
+								Si ce n’est pas encore fait, n’hésitez pas à télécharger l’application <GenericLink className="tc_Pem_link" to={"https://play.google.com/store/apps/details?id=fr.gouv.tchap.a"}>Android</GenericLink> ou <GenericLink className="tc_Pem_link" to={"https://apps.apple.com/fr/app/tchap/id1446253779"}>iOS</GenericLink> depuis votre mobile, ou bien à ouvrir <GenericLink className="tc_Pem_link" to={"https://www.tchap.gouv.fr/"}>Tchap sur le navigateur</GenericLink> de votre ordinateur.
 							</div>
 							<div className="tc_Pem_Intro_subtitle">Nous avons conçu ce guide pour vous accompagner dans la prise en main de votre compte.</div>
 							<div className="tc_Pem_Intro_subtitle">C'est parti !</div>
 
 							<ul className="tc_Pem_Menu">
-								<li><HashLink className="tc_Pem_Menu_item" to="#start" smooth>Quelques conseils pour bien démarrer...</HashLink></li>
-								<li><HashLink className="tc_Pem_Menu_item" to="#type" smooth>Les différents types de conversation</HashLink></li>
-								<li><HashLink className="tc_Pem_Menu_item" to="#search" smooth>Rechercher des interlocuteurs pour démarrer une conversation</HashLink></li>
-								<li><HashLink className="tc_Pem_Menu_item" to="#forum" smooth>Rejoindre des Salons Forum</HashLink></li>
-								<li><HashLink className="tc_Pem_Menu_item" to="#admin" smooth>Créer et administrer un salon</HashLink></li>
-								<li><HashLink className="tc_Pem_Menu_item" to="#question" smooth>Des questions ?</HashLink></li>
+								<li><GenericLink className="tc_Pem_Menu_item" to="#tcp01_001">Quelques conseils pour bien démarrer...</GenericLink></li>
+								<li><GenericLink className="tc_Pem_Menu_item" to="#tcp02_001">Les différents types de conversation</GenericLink></li>
+								<li><GenericLink className="tc_Pem_Menu_item" to="#tcp03_001">Rechercher des interlocuteurs pour démarrer une conversation</GenericLink></li>
+								<li><GenericLink className="tc_Pem_Menu_item" to="#tcp04_001">Rejoindre des Salons Forum</GenericLink></li>
+								<li><GenericLink className="tc_Pem_Menu_item" to="#tcp05_001">Créer et administrer un salon</GenericLink></li>
+								<li><GenericLink className="tc_Pem_Menu_item" to="#tcp06_001">Des questions ?</GenericLink></li>
 							</ul>
 
-							<div className="tc_Pem_Content_title" id="tcp01_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> Quelques conseils pour bien démarrer...</div>
+							<div className="tc_Pem_Content_title" id="tcp01_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> 1. Quelques conseils pour bien démarrer...</div>
 							<div className="tc_Pem_Content_subtitle">Choisir une photo de profil</div>
 							<div className="tc_Pem_Content_text">Vous pouvez le faire depuis les paramètres généraux de l’application.</div>
 							<div className="tc_Pem_Content_subtitle">Gérer les notifications</div>
@@ -106,38 +105,38 @@ class Pem extends Component {
 							<div className="tc_Pem_Content_text">Chaque utilisateur dispose donc de son propre trousseau de clés afin de chiffrer puis déchiffrer automatiquement ses messages. Or, par mesure de sécurité, ce trousseau se renouvelle régulièrement (notamment à chaque nouvelle connexion).</div>
 							<div className="tc_Pem_Content_text">Si aucun de vos dispositifs ne détient vos clés de chiffrement les plus récentes, vous serez dans l’incapacité de lire l’historique de vos conversations !</div>
 
-							<div className="tc_Pem_Content_title" id="tcp02_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> Les différents types de conversation</div>
+							<div className="tc_Pem_Content_title" id="tcp02_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> 2. Les différents types de conversation</div>
 							<div className="tc_Pem_Content_withAvatar">
-								<img src={require("images/pem/avatar_dm.jpeg")}  alt="Avatar DM"/>
+								<img src={require("images/pem/avatar_dm.png")} alt="Avatar DM"/>
 								<div>
 									<div className="tc_Pem_Content_subsubtitle">Les messages directs</div>
 									<div className="tc_Pem_Content_text">Entre deux utilisateurs, ces conversations privées sont chiffrées de bout en bout.</div>
 								</div>
 							</div>
 							<div className="tc_Pem_Content_withAvatar">
-								<img src={require("images/pem/avatar_private.jpeg")}  alt="Avatar Privé"/>
+								<img src={require("images/pem/avatar_private.png")} alt="Avatar Privé"/>
 								<div>
 									<div className="tc_Pem_Content_subsubtitle">Les salons privés</div>
 									<div className="tc_Pem_Content_text">Trouvables et accessibles uniquement sur invitation d’un de leurs administrateurs, ces conversations de groupe sont chiffrées de bout en bout.</div>
 								</div>
 							</div>
 							<div className="tc_Pem_Content_withAvatar">
-								<img src={require("images/pem/avatar_forum.jpeg")}  alt="Avatar Forum"/>
+								<img src={require("images/pem/avatar_forum.png")} alt="Avatar Forum"/>
 								<div>
 									<div className="tc_Pem_Content_subsubtitle">Les salons forums</div>
 									<div className="tc_Pem_Content_text">Trouvables et accessibles pour tous les utilisateurs de Tchap, ces conversation de groupe publiques ne sont pas chiffrées.</div>
 								</div>
 							</div>
 
-							<div className="tc_Pem_Content_title" id="tcp03_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> Rechercher des interlocuteurs pour démarrer une conversation</div>
+							<div className="tc_Pem_Content_title" id="tcp03_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> 3. Rechercher des interlocuteurs pour démarrer une conversation</div>
 							<div className="tc_Pem_Content_text">L’annuaire de Tchap vous permet d’entrer en contact direct avec l’ensemble des usagers de l’application en les recherchant par leur nom ou leur adresse mail.</div>
 							<div className="tc_Pem_Content_withImage_double">
 								<div className="tc_Pem_Content_withImage">
-									<img src={require("images/pem/dm_mobile.jpeg")}  alt="Nouveau DM mobile" height="250"/>
+									<img src={require("images/pem/create_mobile.png")}  alt="Nouveau DM mobile" height="250"/>
 									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur mobile</span>, cliquez sur le bouton “+” en bas de l’écran et choisissez “nouvelle discussion”.</div>
 								</div>
 								<div className="tc_Pem_Content_withImage">
-									<img src={require("images/pem/dm_web.jpeg")}  alt="Nouveau DM web"/>
+									<img src={require("images/pem/create_dm_web.png")}  alt="Nouveau DM web"/>
 									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur le web</span>, l’annuaire se trouve en cliquant sur le bouton “+” de la section “messages directs”.</div>
 								</div>
 							</div>
@@ -152,7 +151,7 @@ class Pem extends Component {
 								</ul>
 							</div>
 
-							<div className="tc_Pem_Content_title" id="tcp04_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> Rejoindre des Salons Forum</div>
+							<div className="tc_Pem_Content_title" id="tcp04_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> 4. Rejoindre des Salons Forum</div>
 							<div className="tc_Pem_Content_text">Pour  tirer le meilleur parti de Tchap, soyez là où se déroulent les conversations, c’est à dire dans les salons forums !</div>
 							<div className="tc_Pem_Content_text">
 								Découvrez-les dans l’annuaire ou essayez quelques-unes de nos recommandations :
@@ -165,26 +164,26 @@ class Pem extends Component {
 							<div className="tc_Pem_Content_text">L'annuaire des Salons Forum vous permet d'effectuer une recherche par mots clés :</div>
 							<div className="tc_Pem_Content_withImage_double">
 								<div className="tc_Pem_Content_withImage">
-									<img src={require("images/pem/forum_mobile.jpeg")}  alt="Nouveau forum mobile" height="250"/>
+									<img src={require("images/pem/create_mobile.png")}  alt="Nouveau forum mobile" height="250"/>
 									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur mobile</span>, cliquez sur le bouton “+” en bas de l’écran et choisissez “accéder à un salon forum”.</div>
 								</div>
 								<div className="tc_Pem_Content_withImage">
-									<img src={require("images/pem/forum_web.png")}  alt="Nouveau forum web"/>
+									<img src={require("images/pem/create_room_web.png")}  alt="Nouveau forum web"/>
 									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur le web</span>, l’annuaire des salons forums se trouve en cliquant sur le bouton “+” de la section “salons”.</div>
 								</div>
 							</div>
 							<div className="tc_Pem_Content_text">Et si vous ne trouvez pas votre bonheur, n'hésitez pas à créer un nouveau salon forum pour discuter des sujets qui vous importent !</div>
 
-							<div className="tc_Pem_Content_title" id="tcp05_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> Créer et administrer un salon</div>
+							<div className="tc_Pem_Content_title" id="tcp05_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> 5. Créer et administrer un salon</div>
 							<div className="tc_Pem_Content_withAvatar">
-								<img src={require("images/pem/avatar_create_private.jpeg")}  alt="Création d'un salon privé"/>
+								<img src={require("images/pem/avatar_private.png")}  alt="Création d'un salon privé"/>
 								<div>
 									<div className="tc_Pem_Content_subsubtitle">Créer un Salon Privé</div>
 									<div className="tc_Pem_Content_text">Pour que le salon ne soit trouvable et accessible que sur invitation de votre part, choisissez “Salon Privé” ou bien “Salon privé ouvert aux externes” si vous souhaitez pouvoir y inviter des partenaires externes à l'administration.</div>
 								</div>
 							</div>
 							<div className="tc_Pem_Content_withAvatar">
-								<img src={require("images/pem/avatar_create_forum.jpeg")}  alt="Création d'un salon forum"/>
+								<img src={require("images/pem/avatar_forum.png")}  alt="Création d'un salon forum"/>
 								<div>
 									<div className="tc_Pem_Content_subsubtitle">Créer un Salon Forum</div>
 									<div className="tc_Pem_Content_text">Pour que le salon soit visible et ouvert à tous les utilisateurs de Tchap (sauf invités externes), choisissez “Salon Forum”.</div>
@@ -192,19 +191,28 @@ class Pem extends Component {
 							</div>
 							<div className="tc_Pem_Content_text">Une fois que votre salon est créé, vous en êtes l’administrateur par défaut !</div>
 							<div className="tc_Pem_Content_subtitle">Quels pouvoirs cela vous confère-t-il ?</div>
-							<div className="tc_Pem_Content_text"><span className="tc_text_b">Inviter des participants : </span>dans le cas des salons privés, seuls les administrateurs peuvent convier des membres à rejoindre la conversation.</div>
-							<div className="tc_Pem_Content_text"><span className="tc_text_b">Nommer plusieurs autres administrateurs et modérateurs </span>parmi les participants : ceci est fortement recommandé pour qu’un salon ne se retrouve pas “bloqué” sans administrateur en cas de départ de l’un d’entre eux !</div>
-							<div className="tc_Pem_Content_text tc_text_b">NB : Si un salon se retrouve sans administrateur, plus personne n'aura le pouvoir de l'administrer. Dans le cas d'un salon privé, il sera également impossible d'y inviter de nouveaux membres.</div>
-							<div className="tc_Pem_Content_text"><span className="tc_text_b">Exclure ou bannir des participants si nécessaire : </span>attention, le bannissement d'un membre est irréversible.</div>
+							<div className="tc_Pem_Content_text">
+								<ul>
+									<li><span className="tc_text_b">Inviter des participants : </span>dans le cas des salons privés, seuls les administrateurs peuvent convier des membres à rejoindre la conversation.</li>
+									<li>
+										<span className="tc_text_b">Nommer plusieurs autres administrateurs et modérateurs </span>parmi les participants : ceci est fortement recommandé pour qu’un salon ne se retrouve pas “bloqué” sans administrateur en cas de départ de l’un d’entre eux !
+									</li>
+									<li className="tc_list_nobullet">
+										<span className="tc_text_i">NB : Si un salon se retrouve sans administrateur, plus personne n'aura le pouvoir de l'administrer. Dans le cas d'un salon privé, il sera également impossible d'y inviter de nouveaux membres.</span>
+									</li>
+									<li><span className="tc_text_b">Exclure ou bannir des participants si nécessaire : </span>attention, le bannissement d'un membre est irréversible.</li>
+								</ul>
+							</div>
 
-							<div className="tc_Pem_Content_title" id="tcp06_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> Des questions ?</div>
+							<div className="tc_Pem_Content_title" id="tcp06_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> 6. Des questions ?</div>
 							<div className="tc_Pem_Content_text">La FAQ de Tchap est disponible <GenericLink className="tc_Pem_Menu_item" to={t("links.faq")}>ici</GenericLink> pour toute précision supplémentaire.</div>
 							<div className="tc_Pem_Content_text">Et si vous rencontrez des difficultés dans l'utilisation de votre messagerie, n'hésitez pas à contacter le support !</div>
 							<GenericLink className="tc_Pem_Menu_item" to={"mailto:" + t("links.contact")}>{t("links.contact")}</GenericLink>
-							<div className="tc_Pem_Content_subtitle">A très vite sur Tchap !</div>
-							<div className="tc_Pem_Content_subtitle">L'équipe Tchap</div>
-							<div className="tc_Pem_Content_text tc_text_b">NB : Donnez-nous votre avis sur ce guide <GenericLink className="tc_Pem_Menu_item" to={"https://xwfozb619ea.typeform.com/to/Uso2I4Ze"}>ici</GenericLink> et aidez-nous à l'améliorer !</div>
-							<div className="tc_Pem_Content_text tc_text_i">(Cela ne vous prendra pas plus de 5 minutes, promis)</div>
+							<br /><br /><br /><br />
+							<div className="tc_Pem_Content_text tc_text_right">A très vite sur Tchap !</div>
+							<div className="tc_Pem_Content_text tc_text_right">L'équipe Tchap</div>
+							<div className="tc_Pem_Content_text tc_text_b tc_text_right">NB : Donnez-nous votre avis sur ce guide <GenericLink className="tc_Pem_Menu_item" to={"https://xwfozb619ea.typeform.com/to/Uso2I4Ze"}>ici</GenericLink> et aidez-nous à l'améliorer !</div>
+							<div className="tc_Pem_Content_text tc_text_i tc_text_right">(Cela ne vous prendra pas plus de 5 minutes, promis)</div>
 						</Grid>
 					</Grid>
 				</Container>
