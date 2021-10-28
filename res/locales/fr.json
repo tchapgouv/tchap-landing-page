@@ -41,7 +41,7 @@
     "links": {
       "contact": "tchap@beta.gouv.fr",
       "prise-en-main": "/prise-en-main",
-      "faq": "https://www.tchap.gouv.fr/faq/"
+      "faq": "/faq"
     }
   }
 }

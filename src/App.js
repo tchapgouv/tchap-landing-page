@@ -1,11 +1,12 @@
-import {Component} from "react";
+import { Component } from "react";
+import { matomoHOC } from './utils/HOC';
+import { setLocale, setTranslations } from "react-i18nify";
+import { Switch, Route, HashRouter } from "react-router-dom";
 import Home from "pages/home/Home";
 import Convention from "pages/convention/Convention";
 import Suivi from "pages/suivi/Suivi";
 import Pem from "pages/pem/Pem";
-import { setLocale, setTranslations } from "react-i18nify";
-import { Switch, Route, HashRouter } from "react-router-dom";
-import { matomoHOC } from './utils/HOC';
+import Faq from "pages/faq/Faq";
 
 import "@fontsource/roboto";
 
@@ -32,6 +33,9 @@ class App extends Component {
 						</Route>
 						<Route path="/prise-en-main">
 							<Pem />
+						</Route>
+						<Route path="/faq">
+							<Faq />
 						</Route>
 						<Route path="/">
 							<Home />
