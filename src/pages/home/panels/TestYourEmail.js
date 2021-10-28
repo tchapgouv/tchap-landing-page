@@ -30,7 +30,7 @@ class TestYourEmail extends Component {
 		this.clearField = this.clearField.bind(this);
 		this._handleTextFieldChange = this._handleTextFieldChange.bind(this);
 		this._handleKeyDown = this._handleKeyDown.bind(this);
-		this._handleClick = this._handleClick.bind(this);
+		this._hookProbe = this._hookProbe.bind(this);
 	}
 
 	_handleTextFieldChange(e) {
@@ -53,7 +53,7 @@ class TestYourEmail extends Component {
 		}
 	}
 
-	_handleClick() {
+	_hookProbe() {
 		const hooks = this.props.hooks;
 		hooks.trackEvent({ category: 'convention', action: 'download' });
 		window.open(ConventionPdf, "_blank");
@@ -120,7 +120,7 @@ class TestYourEmail extends Component {
 				<div className="tc_TestYourEmail_email_text">
 					<div>Votre administration n'est pas encore présente sur Tchap !</div>
 					<ul className="tc_TestYourEmail_invalid_list">
-						<li>Téléchargez la convention Tchap <a className="tc_TestYourEmail_link" onClick={this._handleClick}>ici</a></li>
+						<li>Téléchargez la convention Tchap <a className="tc_TestYourEmail_link" onClick={this._hookProbe}>ici</a></li>
 						<li>Envoyez la signée par votre direction à <a className="tc_TestYourEmail_link" href={t("links.contact")}>tchap@beta.gouv.fr</a></li>
 						<li>L'équipe Tchap se charge de l'ouverture du service à votre administration</li>
 					</ul>
