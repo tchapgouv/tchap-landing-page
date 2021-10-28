@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import { matomoHOC } from 'utils/HOC';
 import {t} from "react-i18nify";
-import { HashLink } from 'react-router-hash-link';
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import TopBar from "components/bars/TopBar";
@@ -8,7 +8,6 @@ import BottomBar from "components/bars/BottomBar";
 import GenericLink from "../../components/GenericLink";
 import LinkIcon from '@mui/icons-material/Link';
 import Popper from "@mui/material/Popper";
-import TchapUtils from "../../utils/TchapUtils";
 
 import "styles/pages/pem/Pem.scss";
 
@@ -21,7 +20,8 @@ class Pem extends Component {
 			popperOpen: false,
 			popperId: "",
 		};
-		this._handleClick = this._handleClick.bind(this);
+		this._handleCopyClick = this._handleCopyClick.bind(this);
+		this._hookProbe = this._hookProbe.bind(this);
 	}
 
 	componentDidMount() {
@@ -38,7 +38,7 @@ class Pem extends Component {
 		}
 	}
 
-	_handleClick(e) {
+	_handleCopyClick(e) {
 		const currentTarget = e.currentTarget;
 		const linkId = currentTarget.parentNode.id;
 		const anchorUrl = `${window.location.href}#${linkId}`
@@ -56,6 +56,12 @@ class Pem extends Component {
 				});
 			}, 1200);
 		});
+	}
+
+	_hookProbe(e) {
+		const hooks = this.props.hooks;
+		const actionName = e.target.dataset.probeName;
+		hooks.trackEvent({ category: 'pem', action: actionName });
 	}
 
 	render() {
@@ -78,21 +84,21 @@ class Pem extends Component {
 							<div className="tc_Pem_Intro_title">Prise en main de Tchap</div>
 							<div className="tc_Pem_Intro_subtitle">Vous êtes nouvellement inscrit sur Tchap ? Bienvenue !</div>
 							<div className="tc_Pem_Intro_subtitle">
-								Si ce n’est pas encore fait, n’hésitez pas à télécharger l’application <GenericLink className="tc_Pem_link" to={"https://play.google.com/store/apps/details?id=fr.gouv.tchap.a"}>Android</GenericLink> ou <GenericLink className="tc_Pem_link" to={"https://apps.apple.com/fr/app/tchap/id1446253779"}>iOS</GenericLink> depuis votre mobile, ou bien à ouvrir <GenericLink className="tc_Pem_link" to={"https://www.tchap.gouv.fr/"}>Tchap sur le navigateur</GenericLink> de votre ordinateur.
+								Si ce n’est pas encore fait, n’hésitez pas à télécharger l’application <GenericLink data-probe-name="android" onClick={this._hookProbe} className="tc_Pem_link" to={"https://play.google.com/store/apps/details?id=fr.gouv.tchap.a"}>Android</GenericLink> ou <GenericLink data-probe-name="ios" onClick={this._hookProbe} className="tc_Pem_link" to={"https://apps.apple.com/fr/app/tchap/id1446253779"}>iOS</GenericLink> depuis votre mobile, ou bien à ouvrir <GenericLink data-probe-name="web" onClick={this._hookProbe} className="tc_Pem_link" to={"https://www.tchap.gouv.fr/"}>Tchap sur le navigateur</GenericLink> de votre ordinateur.
 							</div>
 							<div className="tc_Pem_Intro_subtitle">Nous avons conçu ce guide pour vous accompagner dans la prise en main de votre compte.</div>
 							<div className="tc_Pem_Intro_subtitle">C'est parti !</div>
 
 							<ul className="tc_Pem_Menu">
-								<li><GenericLink className="tc_Pem_Menu_item" to="#tcp01_001">Quelques conseils pour bien démarrer...</GenericLink></li>
-								<li><GenericLink className="tc_Pem_Menu_item" to="#tcp02_001">Les différents types de conversation</GenericLink></li>
-								<li><GenericLink className="tc_Pem_Menu_item" to="#tcp03_001">Rechercher des interlocuteurs pour démarrer une conversation</GenericLink></li>
-								<li><GenericLink className="tc_Pem_Menu_item" to="#tcp04_001">Rejoindre des Salons Forum</GenericLink></li>
-								<li><GenericLink className="tc_Pem_Menu_item" to="#tcp05_001">Créer et administrer un salon</GenericLink></li>
-								<li><GenericLink className="tc_Pem_Menu_item" to="#tcp06_001">Des questions ?</GenericLink></li>
+								<li><GenericLink data-probe-name="menu-demarrer" onClick={this._hookProbe} className="tc_Pem_Menu_item" to="#tcp01_001">Quelques conseils pour bien démarrer...</GenericLink></li>
+								<li><GenericLink data-probe-name="menu-type" onClick={this._hookProbe} className="tc_Pem_Menu_item" to="#tcp02_001">Les différents types de conversation</GenericLink></li>
+								<li><GenericLink data-probe-name="menu-dm" onClick={this._hookProbe} className="tc_Pem_Menu_item" to="#tcp03_001">Rechercher des interlocuteurs pour démarrer une conversation</GenericLink></li>
+								<li><GenericLink data-probe-name="menu-forum" onClick={this._hookProbe} className="tc_Pem_Menu_item" to="#tcp04_001">Rejoindre des Salons Forum</GenericLink></li>
+								<li><GenericLink data-probe-name="menu-administrer" onClick={this._hookProbe} className="tc_Pem_Menu_item" to="#tcp05_001">Créer et administrer un salon</GenericLink></li>
+								<li><GenericLink data-probe-name="menu-questions" onClick={this._hookProbe} className="tc_Pem_Menu_item" to="#tcp06_001">Des questions ?</GenericLink></li>
 							</ul>
 
-							<div className="tc_Pem_Content_title" id="tcp01_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> 1. Quelques conseils pour bien démarrer...</div>
+							<div className="tc_Pem_Content_title" id="tcp01_001"><LinkIcon onClick={this._handleCopyClick} className="tc_Pem_Content_title_icon" /> 1. Quelques conseils pour bien démarrer...</div>
 							<div className="tc_Pem_Content_subtitle">Choisir une photo de profil</div>
 							<div className="tc_Pem_Content_text">Vous pouvez le faire depuis les paramètres généraux de l’application.</div>
 							<div className="tc_Pem_Content_subtitle">Gérer les notifications</div>
@@ -105,7 +111,7 @@ class Pem extends Component {
 							<div className="tc_Pem_Content_text">Chaque utilisateur dispose donc de son propre trousseau de clés afin de chiffrer puis déchiffrer automatiquement ses messages. Or, par mesure de sécurité, ce trousseau se renouvelle régulièrement (notamment à chaque nouvelle connexion).</div>
 							<div className="tc_Pem_Content_text">Si aucun de vos dispositifs ne détient vos clés de chiffrement les plus récentes, vous serez dans l’incapacité de lire l’historique de vos conversations !</div>
 
-							<div className="tc_Pem_Content_title" id="tcp02_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> 2. Les différents types de conversation</div>
+							<div className="tc_Pem_Content_title" id="tcp02_001"><LinkIcon onClick={this._handleCopyClick} className="tc_Pem_Content_title_icon" /> 2. Les différents types de conversation</div>
 							<div className="tc_Pem_Content_withAvatar">
 								<img src={require("images/pem/avatar_dm.png")} alt="Avatar DM"/>
 								<div>
@@ -128,7 +134,7 @@ class Pem extends Component {
 								</div>
 							</div>
 
-							<div className="tc_Pem_Content_title" id="tcp03_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> 3. Rechercher des interlocuteurs pour démarrer une conversation</div>
+							<div className="tc_Pem_Content_title" id="tcp03_001"><LinkIcon onClick={this._handleCopyClick} className="tc_Pem_Content_title_icon" /> 3. Rechercher des interlocuteurs pour démarrer une conversation</div>
 							<div className="tc_Pem_Content_text">L’annuaire de Tchap vous permet d’entrer en contact direct avec l’ensemble des usagers de l’application en les recherchant par leur nom ou leur adresse mail.</div>
 							<div className="tc_Pem_Content_withImage_double">
 								<div className="tc_Pem_Content_withImage">
@@ -151,7 +157,7 @@ class Pem extends Component {
 								</ul>
 							</div>
 
-							<div className="tc_Pem_Content_title" id="tcp04_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> 4. Rejoindre des Salons Forum</div>
+							<div className="tc_Pem_Content_title" id="tcp04_001"><LinkIcon onClick={this._handleCopyClick} className="tc_Pem_Content_title_icon" /> 4. Rejoindre des Salons Forum</div>
 							<div className="tc_Pem_Content_text">Pour  tirer le meilleur parti de Tchap, soyez là où se déroulent les conversations, c’est à dire dans les salons forums !</div>
 							<div className="tc_Pem_Content_text">
 								Découvrez-les dans l’annuaire ou essayez quelques-unes de nos recommandations :
@@ -174,7 +180,7 @@ class Pem extends Component {
 							</div>
 							<div className="tc_Pem_Content_text">Et si vous ne trouvez pas votre bonheur, n'hésitez pas à créer un nouveau salon forum pour discuter des sujets qui vous importent !</div>
 
-							<div className="tc_Pem_Content_title" id="tcp05_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> 5. Créer et administrer un salon</div>
+							<div className="tc_Pem_Content_title" id="tcp05_001"><LinkIcon onClick={this._handleCopyClick} className="tc_Pem_Content_title_icon" /> 5. Créer et administrer un salon</div>
 							<div className="tc_Pem_Content_withAvatar">
 								<img src={require("images/pem/avatar_private.png")}  alt="Création d'un salon privé"/>
 								<div>
@@ -204,14 +210,14 @@ class Pem extends Component {
 								</ul>
 							</div>
 
-							<div className="tc_Pem_Content_title" id="tcp06_001"><LinkIcon onClick={this._handleClick} className="tc_Pem_Content_title_icon" /> 6. Des questions ?</div>
+							<div className="tc_Pem_Content_title" id="tcp06_001"><LinkIcon onClick={this._handleCopyClick} className="tc_Pem_Content_title_icon" /> 6. Des questions ?</div>
 							<div className="tc_Pem_Content_text">La FAQ de Tchap est disponible <GenericLink className="tc_Pem_Menu_item" to={t("links.faq")}>ici</GenericLink> pour toute précision supplémentaire.</div>
 							<div className="tc_Pem_Content_text">Et si vous rencontrez des difficultés dans l'utilisation de votre messagerie, n'hésitez pas à contacter le support !</div>
 							<GenericLink className="tc_Pem_Menu_item" to={"mailto:" + t("links.contact")}>{t("links.contact")}</GenericLink>
 							<br /><br /><br /><br />
 							<div className="tc_Pem_Content_text tc_text_right">A très vite sur Tchap !</div>
 							<div className="tc_Pem_Content_text tc_text_right">L'équipe Tchap</div>
-							<div className="tc_Pem_Content_text tc_text_b tc_text_right">NB : Donnez-nous votre avis sur ce guide <GenericLink className="tc_Pem_Menu_item" to={"https://xwfozb619ea.typeform.com/to/Uso2I4Ze"}>ici</GenericLink> et aidez-nous à l'améliorer !</div>
+							<div className="tc_Pem_Content_text tc_text_b tc_text_right">NB : Donnez-nous votre avis sur ce guide <GenericLink data-probe-name="satisfaction" onClick={this._hookProbe} className="tc_Pem_Menu_item" to={"https://xwfozb619ea.typeform.com/to/Uso2I4Ze"}>ici</GenericLink> et aidez-nous à l'améliorer !</div>
 							<div className="tc_Pem_Content_text tc_text_i tc_text_right">(Cela ne vous prendra pas plus de 5 minutes, promis)</div>
 						</Grid>
 					</Grid>
@@ -223,4 +229,4 @@ class Pem extends Component {
 	}
 }
 
-export default Pem;
+export default matomoHOC(Pem);

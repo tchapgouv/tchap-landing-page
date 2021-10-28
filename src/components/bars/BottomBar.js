@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+import { matomoHOC } from 'utils/HOC';
 import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -12,6 +13,18 @@ import TchapUtils from "utils/TchapUtils";
 import "styles/components/bars/BottomBar.scss";
 
 class BottomBar extends Component {
+
+	constructor(props) {
+		super(props);
+		this._hookProbe = this._hookProbe.bind(this);
+	}
+
+	_hookProbe(e) {
+		const hooks = this.props.hooks;
+		const actionName = e.target.dataset.probeName;
+		hooks.trackEvent({ category: 'footer', action: actionName });
+	}
+
 	render() {
 		return (
 			<div className="tc_BottomBar">
@@ -26,16 +39,16 @@ class BottomBar extends Component {
 					</Grid>
 					<Grid container className="tc_BottomBar_Menu_container">
 						<Grid item xs={12}>
-							<GenericLink to="https://github.com/tchapgouv/tchap-landing-page" className="tc_BottomBar_Menu_item">
+							<GenericLink data-probe-name="github" onClick={this._hookProbe} to="https://github.com/tchapgouv/tchap-landing-page" className="tc_BottomBar_Menu_item">
 								<GitHub className="tc_BottomBar_Menu_logo" /> GitHub
 							</GenericLink>
-							<GenericLink to="https://www.tchap.gouv.fr/" className="tc_BottomBar_Menu_item">
+							<GenericLink data-probe-name="tchap" onClick={this._hookProbe} to="https://www.tchap.gouv.fr/" className="tc_BottomBar_Menu_item">
 								<TchapLogoMono className="tc_BottomBar_Menu_logo" /> Tchap
 							</GenericLink>
-							<GenericLink to="https://matrix.org/" className="tc_BottomBar_Menu_item">
+							<GenericLink data-probe-name="matrix" onClick={this._hookProbe} to="https://matrix.org/" className="tc_BottomBar_Menu_item">
 								<MatrixLogo className="tc_BottomBar_Menu_logo" /> matrix.org
 							</GenericLink>
-							<GenericLink to="/suivi" className="tc_BottomBar_Menu_item">
+							<GenericLink data-probe-name="personal-data" onClick={this._hookProbe} to="/suivi" className="tc_BottomBar_Menu_item">
 								Données personnelles
 							</GenericLink>
 						</Grid>
@@ -46,4 +59,4 @@ class BottomBar extends Component {
 	}
 }
 
-export default BottomBar;
+export default matomoHOC(BottomBar);

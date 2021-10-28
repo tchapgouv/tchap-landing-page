@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+import { matomoHOC } from 'utils/HOC';
 import Container from "@mui/material/Container";
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from "@mui/material/Button";
@@ -18,16 +19,24 @@ class TopBar extends Component {
 		this.state = {
 			anchorEl: null,
 		}
-		this.handleClose = this.handleClose.bind(this);
-		this.handleClick = this.handleClick.bind(this);
+		this._handleClose = this._handleClose.bind(this);
+		this._handleClick = this._handleClick.bind(this);
+		this._hookProbe = this._hookProbe.bind(this);
 	}
 
-	handleClick(event) {
+	_handleClick(event) {
 		this.setState({ anchorEl: event.currentTarget });
 	}
 
-	handleClose() {
+	_handleClose() {
 		this.setState({ anchorEl: null });
+	}
+
+	_hookProbe(e) {
+		const hooks = this.props.hooks;
+		let actionName = e.target.dataset.probeName;
+		actionName = actionName ? actionName : e.target.parentNode.dataset.probeName;
+		hooks.trackEvent({ category: 'header', action: actionName });
 	}
 
 	render() {
@@ -35,7 +44,7 @@ class TopBar extends Component {
 			<Container maxWidth="lg">
 				<div className="tc_TopBar">
 					<RepLogo width="120"/>
-					<GenericLink to="/" className="tc_TopBar_Left">
+					<GenericLink data-probe-name="home" onClick={this._hookProbe} to="/" className="tc_TopBar_Left">
 						<TchapLogo width="60px" />
 						<span className="tc_TopBar_Left_name">Tchap</span>
 					</GenericLink>
@@ -44,33 +53,33 @@ class TopBar extends Component {
 							className="tc_TopBar_Right_menu_btn"
 							size="large" aria-controls="simple-menu"
 							aria-haspopup="true"
-							onClick={this.handleClick}
+							onClick={this._handleClick}
 							startIcon={<MenuIcon />}
 							title="Top menu" />
 						<Menu
 							anchorEl={this.state.anchorEl}
 							keepMounted
 							open={Boolean(this.state.anchorEl)}
-							onClose={this.handleClose} >
-							<GenericLink className="tc_TopBar_Right_menu_item" to={t('links.prise-en-main')}>
-								<MenuItem onClick={this.handleClose}>Prise en main</MenuItem>
+							onClose={this._handleClose} >
+							<GenericLink data-probe-name="mobile-pem" onClick={this._hookProbe} className="tc_TopBar_Right_menu_item" to={t('links.prise-en-main')}>
+								<MenuItem onClick={this._handleClose}>Prise en main</MenuItem>
 							</GenericLink>
-							<GenericLink className="tc_TopBar_Right_menu_item" to={t('links.faq')}>
-								<MenuItem onClick={this.handleClose}>FAQ</MenuItem>
+							<GenericLink data-probe-name="mobile-faq" onClick={this._hookProbe} className="tc_TopBar_Right_menu_item" to={t('links.faq')}>
+								<MenuItem onClick={this._handleClose}>FAQ</MenuItem>
 							</GenericLink>
-							<GenericLink className="tc_TopBar_Right_menu_item" to={"mailto:" + t('links.contact')}>
-								<MenuItem onClick={this.handleClose}>Contact</MenuItem>
+							<GenericLink data-probe-name="mobile-contact" onClick={this._hookProbe} className="tc_TopBar_Right_menu_item" to={"mailto:" + t('links.contact')}>
+								<MenuItem onClick={this._handleClose}>Contact</MenuItem>
 							</GenericLink>
 						</Menu>
 					</div>
 					<div className="tc_TopBar_Right_text">
-						<GenericLink to={t('links.prise-en-main')}>
+						<GenericLink data-probe-name="pem" onClick={this._hookProbe} to={t('links.prise-en-main')}>
 							Prise en main
 						</GenericLink>
-						<GenericLink to={t('links.faq')}>
+						<GenericLink data-probe-name="faq" onClick={this._hookProbe} to={t('links.faq')}>
 							FAQ
 						</GenericLink>
-						<GenericLink to={"mailto:" + t('links.contact')}>
+						<GenericLink data-probe-name="contact" onClick={this._hookProbe} to={"mailto:" + t('links.contact')}>
 							Contact
 						</GenericLink>
 					</div>
@@ -80,4 +89,4 @@ class TopBar extends Component {
 	}
 }
 
-export default TopBar;
+export default matomoHOC(TopBar);
