@@ -1,11 +1,12 @@
 import { Component } from 'react';
+import PropTypes from "prop-types";
 import { matomoHOC } from 'utils/HOC';
+import {t} from "react-i18nify";
 import Container from "@mui/material/Container";
-import MenuIcon from '@mui/icons-material/Menu';
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import {t} from "react-i18nify";
+import MenuIcon from '@mui/icons-material/Menu';
 import GenericLink from "components/GenericLink";
 import TchapLogo from "icons/tchap-logo.svg";
 import RepLogo from "icons/rep-logo.svg";
@@ -14,10 +15,15 @@ import "styles/components/bars/TopBar.scss";
 
 class TopBar extends Component {
 
+	static propTypes = {
+		borderBottom: PropTypes.bool,
+	};
+
 	constructor(props) {
 		super(props);
 		this.state = {
 			anchorEl: null,
+			borderBottom: this.props.borderBottom || false,
 		}
 		this._handleClose = this._handleClose.bind(this);
 		this._handleClick = this._handleClick.bind(this);
@@ -40,10 +46,14 @@ class TopBar extends Component {
 	}
 
 	render() {
+		let topBarClasses = "tc_TopBar";
+		if (this.state.borderBottom === true) {
+			topBarClasses += " tc_TopBar_border";
+		}
 		return (
 			<Container maxWidth="lg">
-				<div className="tc_TopBar">
-					<RepLogo width="120"/>
+				<div className={topBarClasses}>
+					<RepLogo width="120" className="tc_TopBar_Left_rep"/>
 					<GenericLink data-probe-name="home" onClick={this._hookProbe} to="/" className="tc_TopBar_Left">
 						<TchapLogo width="60px" />
 						<span className="tc_TopBar_Left_name">Tchap</span>

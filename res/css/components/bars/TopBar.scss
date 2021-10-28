@@ -4,6 +4,11 @@
   justify-content: space-between;
 }
 
+.tc_TopBar_border {
+  border-bottom: 3px solid $color-theme-blue;
+  margin-bottom: 30px;
+}
+
 .tc_TopBar_Left {
   display: flex;
   align-items: center;
@@ -52,6 +57,7 @@
 .tc_TopBar_Right_text a {
   font-size: $font-size-11;
   color: $color-theme-blue;
+  font-weight: normal;
   margin-left: 50px;
 
   &:link,
@@ -75,5 +81,11 @@
 
   .tc_TopBar_Right_menu {
     display: flex;
+  }
+}
+
+@media (max-width: 430px) {
+  .tc_TopBar_Left_rep {
+    display: none;
   }
 }
