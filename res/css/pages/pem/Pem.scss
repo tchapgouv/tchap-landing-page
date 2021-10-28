@@ -15,7 +15,7 @@
 
 .tc_Pem_link {
   text-decoration: underline;
-  font-weight: bold;
+  font-weight: normal;
   color: #3d3d3d;
   &:hover {
     text-decoration: underline;
@@ -32,7 +32,7 @@
 .tc_Pem_Poper {
   color: white;
   background-color: $color-text-darkgrey;
-  padding: 5px;
+  padding: 8px;
   border-radius: 3px;
 }
 
@@ -40,7 +40,7 @@
   font-size: $font-size-10;
   letter-spacing: $font-letter-spacing-08;
   line-height: $font-line-height;
-  font-weight: bold;
+  font-weight: normal;
   text-decoration: underline;
   color: $color-text-darkgrey;
   &:hover {
