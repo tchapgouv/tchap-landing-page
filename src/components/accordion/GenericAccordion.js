@@ -15,18 +15,30 @@ class GenericAccordion extends Component {
 		borderTop: PropTypes.bool,
 		rounded: PropTypes.bool,
 		id: PropTypes.string,
+		expanded: PropTypes.bool,
+		onFinish: PropTypes.func,
 	};
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			isExpanded: this.props.defaultExpanded || false,
+			isExpanded: this.props.expanded,
 		}
 		this._handleAccordionChange = this._handleAccordionChange.bind(this);
 	}
 
-	_handleAccordionChange(e, isExpanded) {
-		this.setState({isExpanded})
+	componentWillReceiveProps(nextProps, nextContext) {
+		console.log(nextProps)
+		this.setState({
+			isExpanded: nextProps.expanded,
+		});
+	}
+
+	_handleAccordionChange() {
+		this.setState({
+			isExpanded: !this.state.isExpanded,
+		});
+		this.props.onFinish();
 	}
 
 	render() {
@@ -46,7 +58,7 @@ class GenericAccordion extends Component {
 			classes += " tc_GenericAccordion_bordered";
 		}
 		return (
-			<Accordion className={classes} square={rounded} onChange={this._handleAccordionChange} id={this.props.id} defaultExpanded={this.props.defaultExpanded || false}>
+			<Accordion className={classes} square={rounded} onChange={() => this._handleAccordionChange()} id={this.props.id} expanded={this.state.isExpanded}>
 				<AccordionSummary expandIcon={icon}>
 					<span className="tc_GenericAccordion_title">{title}</span>
 				</AccordionSummary>
@@ -62,6 +74,7 @@ GenericAccordion.defaultProps = {
 	borderTop: true,
 	rounded: false,
 	hoverColor: false,
+	expanded: false,
 }
 
 export default GenericAccordion;
