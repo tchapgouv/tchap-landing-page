@@ -16,6 +16,7 @@ $font-letter-spacing-10: 0.08em;
 $font-letter-spacing-08: 0.8px;
 $font-line-height: 30px;
 $font-line-height-20: 20px;
+$font-line-height-24: 24px;
 $font-line-height-36: 36px;
 $font-size-29: 2.9em;
 $font-size-25: 2.5em;
@@ -48,6 +49,19 @@ $font-size-08: 0.8em;
 
 .tc_list_nobullet {
   list-style-type: none;
+  margin-left: 20px;
+}
+
+.tc_list_decimal {
+  list-style-type: decimal;
+}
+
+.tc_list_alpha {
+  list-style-type: lower-alpha;
+}
+
+.tc_text_nl {
+  margin-bottom: 6px;
 }
 
 .tc_link {

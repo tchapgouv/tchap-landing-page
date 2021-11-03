@@ -1,0 +1,16 @@
+.tc_GenericAccordion_bordered {
+  //border-top: 1px solid $color-text-darkgrey;
+}
+
+.tc_GenericAccordion_title {
+  font-size: $font-size-12;
+}
+
+.tc_GenericAccordion_hover:hover {
+  //background-color: $color-text-lightgrey;
+}
+
+.tc_GenericAccordion_content {
+  line-height: $font-line-height-24;
+  margin-left: 15px;
+}
