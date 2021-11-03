@@ -49,6 +49,19 @@ $font-size-08: 0.8em;
 
 .tc_list_nobullet {
   list-style-type: none;
+  margin-left: 20px;
+}
+
+.tc_list_decimal {
+  list-style-type: decimal;
+}
+
+.tc_list_alpha {
+  list-style-type: lower-alpha;
+}
+
+.tc_text_nl {
+  margin-bottom: 6px;
 }
 
 .tc_link {

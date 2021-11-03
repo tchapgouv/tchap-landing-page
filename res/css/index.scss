@@ -11,3 +11,8 @@ html, body {
 #root {
   margin: 0 auto 0 auto;
 }
+
+ul li {
+  list-style-position: outside;
+  margin-left: 1em;
+}

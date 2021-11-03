@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -31,7 +31,12 @@ class GenericAccordion extends Component {
 
 	render() {
 		let classes = "tc_GenericAccordion";
-		const title = this.props.title || "";
+		let title = null;
+		const titleObj = this.props.children.find(e => e.type && e.type === "title");
+		if (titleObj && titleObj.props && titleObj.props.children) {
+			title = titleObj.props.children;
+		}
+		const children = this.props.children.filter(e => !e.type || e.type !== "title");
 		const icon = !this.state.isExpanded ? <AddIcon /> : <RemoveIcon />;
 		const rounded = this.props.rounded;
 		if (this.props.hoverColor === true) {
@@ -46,7 +51,7 @@ class GenericAccordion extends Component {
 					<span className="tc_GenericAccordion_title">{title}</span>
 				</AccordionSummary>
 				<AccordionDetails className="tc_GenericAccordion_content">
-					{this.props.children}
+					{children}
 				</AccordionDetails>
 			</Accordion>
 		);

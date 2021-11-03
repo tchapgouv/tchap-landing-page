@@ -1,12 +1,10 @@
 .tc_FaqComponent {
   padding-bottom: 50px;
-}
-
-.tc_FaqComponent {
   li {
-    margin-bottom: 8px;
-    margin-left: -10px;
-    list-style-position: outside;
+    margin-bottom: 4px;
+  }
+  div {
+    line-height: $font-line-height-24;
   }
 }
 
@@ -26,12 +24,41 @@
 
 .tc_FaqComponent_seemore {
   font-style: italic;
-  text-decoration: underline;
   font-weight: bold;
   margin-top: 34px;
   margin-bottom: 20px;
+  a {
+    display: block;
+  }
+  .tc_FaqComponent_link {
+    text-decoration: underline;
+  }
+  .tc_FaqComponent_link::before {
+    content: "►\00a0";
+    text-decoration: none;
+    display: inline-block;
+    font-style: normal;
+    margin-left: 3px;
+    position: relative;
+    top: -1px;
+  }
+  &::before {
+    content: "Voir aussi : ";
+    text-decoration: underline;
+  }
 }
 
-.tc_FaqComponent_List_decimal {
-  list-style-type: decimal;
+.tc_FaqComponent_grid {
+  margin-bottom: 24px;
+}
+
+.tc_FaqComponent_list_level_2 {
+  padding-left: 18px;
+}
+
+.tc_FaqComponent_link {
+  color: #3d3d3d;
+  &:hover {
+    color: #000000;
+  }
 }
