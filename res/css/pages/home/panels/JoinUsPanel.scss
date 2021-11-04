@@ -25,7 +25,7 @@
   padding: 15px 30px 15px 30px;
 }
 
-.tc_JoinUsPanel_joinus {
+.tc_JoinUsPanel_testyouremail {
   color: #3d3d3d;
   font-size: $font-size-12;
   letter-spacing: $font-letter-spacing-08;
@@ -34,8 +34,8 @@
   margin: 50px auto 50px auto !important;
 }
 
-.tc_JoinUsPanel_joinus_content {
-  margin-bottom: 20px;
+.tc_JoinUsPanel_joinus {
+  margin: 0 150px 0 150px !important;
 }
 
 .tc_JoinUsPanel_content {
@@ -52,4 +52,16 @@
 .tc_JoinUsPanel_content a:active {
   text-decoration: underline;
   color: #3d3d3d;
+}
+
+@media (max-width: 960px) {
+  .tc_JoinUsPanel_joinus {
+    margin: 0 50px 0 50px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .tc_JoinUsPanel_joinus {
+    margin: 0 15px 0 15px !important;
+  }
 }

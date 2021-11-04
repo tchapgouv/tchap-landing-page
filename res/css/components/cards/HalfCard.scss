@@ -52,3 +52,13 @@
 .tc_HalfCard_image_bottom {
   flex-direction: column-reverse;
 }
+
+@media (max-width: 430px) {
+  .tc_HalfCard_content {
+    padding: 0 15px 30px 15px;
+  }
+  .tc_HalfCard_title {
+    text-align: left;
+    padding-left: 15px;
+  }
+}
