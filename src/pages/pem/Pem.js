@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { matomoHOC } from 'utils/HOC';
-import {t} from "react-i18nify";
+import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import TopBar from "components/bars/TopBar";
@@ -30,13 +30,19 @@ class Pem extends Component {
 			const elemId = anchor.replace("/", "");
 			const elem = document.getElementById(elemId);
 			if (elem) elem.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+		} else {
+			const body = document.body;
+			if (body) body.scrollIntoView( { behavior: 'smooth', block: 'start' } );
 		}
 	}
 
 	_handleCopyClick(e) {
 		const currentTarget = e.currentTarget;
 		const linkId = currentTarget.parentNode.id;
-		const anchorUrl = `${window.location.href}#${linkId}`
+		const baseUrl = location.href;
+		const sHash = location.href.split("#")[2];
+		const anchorUrl = Boolean(sHash) ? baseUrl.replace(sHash, linkId) : `${baseUrl}#${linkId}`;
+
 		navigator.clipboard.writeText(anchorUrl).then(() => {
 			this.setState({
 				popperAnchorEl: currentTarget,
@@ -69,14 +75,14 @@ class Pem extends Component {
 					placement="top"
 					className="tc_Pem_Poper"
 				>
-					Copié
+					&#10004;&nbsp;&nbsp;Lien copié
 				</Popper>
 				<TopBar/>
 				<Container maxWidth="lg">
 					<Grid container className="tc_Pem_topbar">
 						<Grid item xs={12} className="tc_Pem_Container">
 
-							<div className="tc_Pem_Intro_title" id="tcp00_001">Prise en main de Tchap</div>
+							<div className="tc_Pem_Intro_title">Prise en main de Tchap</div>
 							<div className="tc_Pem_Intro_subtitle">Vous êtes nouvellement inscrit sur Tchap ? Bienvenue !</div>
 							<div className="tc_Pem_Intro_subtitle">
 								Si ce n’est pas encore fait, n’hésitez pas à télécharger l’application <GenericLink data-probe-name="android" onClick={this._hookProbe} className="tc_Pem_link" to={"https://play.google.com/store/apps/details?id=fr.gouv.tchap.a"}>Android</GenericLink> ou <GenericLink data-probe-name="ios" onClick={this._hookProbe} className="tc_Pem_link" to={"https://apps.apple.com/fr/app/tchap/id1446253779"}>iOS</GenericLink> depuis votre mobile, ou bien à ouvrir <GenericLink data-probe-name="web" onClick={this._hookProbe} className="tc_Pem_link" to={"https://www.tchap.gouv.fr/"}>Tchap sur le navigateur</GenericLink> de votre ordinateur.
