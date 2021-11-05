@@ -49,7 +49,8 @@ class FaqComponent extends Component {
 
 	constructor(props) {
 		super(props);
-		const anchor = location.hash.split("#")[2];
+		const location = this.props.location;
+		const anchor = location.hash.substring(1);
 		const expanded = FaqComponent.defaultState;
 		if (anchor && this._isAccordion(anchor)) expanded[anchor] = true;
 		this.state = {
@@ -60,11 +61,12 @@ class FaqComponent extends Component {
 	}
 
 	componentDidMount() {
-		const anchor = location.hash.split("#")[2];
+		const location = this.props.location;
+		const anchor = location.hash.substring(1);
 		if (anchor) this._scrollToElem(anchor);
 		this.unlisten = this.props.history.listen((location, action) => {
 			if (location.hash) {
-				const id = location.hash.split("#")[1];
+				const id = location.hash.substring(1);
 				this._onLocationChange(id)
 			}
 		});
@@ -80,12 +82,7 @@ class FaqComponent extends Component {
 
 	_scrollToElem(id) {
 		const elem = document.getElementById(id);
-		if (elem) {
-			window.scrollTo({
-				behavior: "smooth",
-				top: elem.offsetTop
-			});
-		}
+		if (elem) elem.scrollIntoView( { behavior: 'smooth', block: 'start' } );
 	}
 
 	_onLocationChange(id) {
@@ -434,7 +431,7 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl">Vous pouvez également partager le lien d'un salon pour inviter des utilisateurs à le rejoindre.</div>
 									<div className="tc_text_nl">S'il s'agit d'un salon privé, assurez-vous au préalable d'avoir autorisé l'accès au salon par lien (dans les paramètres du salon). Attention : si cette option est activée, chaque personne disposant du lien pourra accéder au salon privé.</div>
 									<div className="tc_FaqComponent_seemore">
-										<GenericLink to="#" className="tc_FaqComponent_link">Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ?</GenericLink>
+										<GenericLink to="#tcq04_004" className="tc_FaqComponent_link">Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ?</GenericLink>
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_004")}>

@@ -29,12 +29,7 @@ class Pem extends Component {
 		if (anchor) {
 			const elemId = anchor.replace("/", "");
 			const elem = document.getElementById(elemId);
-			if (elem) {
-				window.scrollTo({
-					behavior: "smooth",
-					top: elem.offsetTop
-				});
-			}
+			if (elem) elem.scrollIntoView( { behavior: 'smooth', block: 'start' } );
 		}
 	}
 
@@ -81,7 +76,7 @@ class Pem extends Component {
 					<Grid container className="tc_Pem_topbar">
 						<Grid item xs={12} className="tc_Pem_Container">
 
-							<div className="tc_Pem_Intro_title">Prise en main de Tchap</div>
+							<div className="tc_Pem_Intro_title" id="tcp00_001">Prise en main de Tchap</div>
 							<div className="tc_Pem_Intro_subtitle">Vous êtes nouvellement inscrit sur Tchap ? Bienvenue !</div>
 							<div className="tc_Pem_Intro_subtitle">
 								Si ce n’est pas encore fait, n’hésitez pas à télécharger l’application <GenericLink data-probe-name="android" onClick={this._hookProbe} className="tc_Pem_link" to={"https://play.google.com/store/apps/details?id=fr.gouv.tchap.a"}>Android</GenericLink> ou <GenericLink data-probe-name="ios" onClick={this._hookProbe} className="tc_Pem_link" to={"https://apps.apple.com/fr/app/tchap/id1446253779"}>iOS</GenericLink> depuis votre mobile, ou bien à ouvrir <GenericLink data-probe-name="web" onClick={this._hookProbe} className="tc_Pem_link" to={"https://www.tchap.gouv.fr/"}>Tchap sur le navigateur</GenericLink> de votre ordinateur.
