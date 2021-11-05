@@ -8,6 +8,28 @@
   }
 }
 
+.tc_FaqComponent_menu_title {
+  font-size: $font-size-20;
+  font-weight: bold;
+  margin: 20px 0 30px 20px;
+}
+
+.tc_FaqComponent_menu {
+  list-style-type: none;
+  margin-left: -34px !important;
+  line-height: $font-line-height-26;
+  a {
+    color: $color-text-darkgrey;
+  }
+  a:hover {
+    color: $color-text-black;
+  }
+}
+
+.tc_FaqComponent_menu_level_2 {
+  margin-left: 34px;
+}
+
 .tc_FaqComponent_section {
   font-weight: bold;
   font-size: $font-size-15;

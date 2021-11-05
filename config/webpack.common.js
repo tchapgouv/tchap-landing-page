@@ -30,6 +30,7 @@ module.exports = {
     filename: '[name].bundle.js',
     publicPath: '/',
     clean: true,
+    hashFunction: "xxhash64",
   },
 
   plugins: [
