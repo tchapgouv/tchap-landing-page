@@ -1,5 +1,7 @@
-import React, { Component } from "react";
-import {t} from "react-i18nify";
+import { Component } from "react";
+import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
+import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import TopBar from "components/bars/TopBar";
@@ -11,55 +13,159 @@ import "styles/pages/faq/FaqComponent.scss";
 
 class FaqComponent extends Component {
 
+	static defaultState = {
+		"tcq01_001": false,
+		"tcq01_002": false,
+		"tcq02_001": false,
+		"tcq02_002": false,
+		"tcq02_003": false,
+		"tcq02_004": false,
+		"tcq03_001": false,
+		"tcq03_002": false,
+		"tcq03_003": false,
+		"tcq03_004": false,
+		"tcq03_005": false,
+		"tcq03_006": false,
+		"tcq04_001": false,
+		"tcq04_002": false,
+		"tcq04_003": false,
+		"tcq04_004": false,
+		"tcq04_005": false,
+		"tcq04_006": false,
+		"tcq05_001": false,
+		"tcq05_002": false,
+		"tcq05_003": false,
+		"tcq06_001": false,
+		"tcq06_002": false,
+		"tcq06_003": false,
+		"tcq06_004": false,
+	};
+
+	static propTypes = {
+		match: PropTypes.object.isRequired,
+		location: PropTypes.object.isRequired,
+		history: PropTypes.object.isRequired
+	};
+
 	constructor(props) {
 		super(props);
+		const anchor = location.hash.split("#")[2];
+		const expanded = FaqComponent.defaultState;
+		if (anchor && this._isAccordion(anchor)) expanded[anchor] = true;
 		this.state = {
-			hashId: "",
+			expanded,
 		};
+		this._onChange = this._onChange.bind(this);
+		this._onLocationChange = this._onLocationChange.bind(this);
 	}
 
 	componentDidMount() {
-		let hashId = "";
 		const anchor = location.hash.split("#")[2];
-		if (anchor) {
-			hashId = anchor;
-			const elem = document.getElementById(anchor);
-			if (elem) {
-				this.setState({hashId})
-				window.scrollTo({
-					behavior: "smooth",
-					top: elem.offsetTop
-				});
+		if (anchor) this._scrollToElem(anchor);
+		this.unlisten = this.props.history.listen((location, action) => {
+			if (location.hash) {
+				const id = location.hash.split("#")[1];
+				this._onLocationChange(id)
 			}
+		});
+	}
+
+	componentWillUnmount() {
+		this.unlisten();
+	}
+
+	_isAccordion(id) {
+		return !id.split("_")[0].endsWith("0");
+	}
+
+	_scrollToElem(id) {
+		const elem = document.getElementById(id);
+		if (elem) {
+			window.scrollTo({
+				behavior: "smooth",
+				top: elem.offsetTop
+			});
 		}
 	}
 
-	render() {
-		let hashId = this.state.hashId || "";
-		const anchor = location.hash.split("#")[2];
-		if (anchor) {
-			hashId = anchor;
-			const elem = document.getElementById(anchor);
-			if (elem) {
-				window.scrollTo({
-					behavior: "smooth",
-					top: elem.offsetTop
-				});
-			}
+	_onLocationChange(id) {
+		if (this._isAccordion(id)) {
+			const exp = this.state.expanded;
+			exp[id] = true;
+			this.setState({
+				expanded: exp
+			});
 		}
+		this._scrollToElem(id);
+	}
+
+	_onChange(id) {
+		const exp = this.state.expanded;
+		exp[id] = !exp[id];
+		this.setState({
+			expanded: exp
+		});
+	}
+
+	_generateProps(id) {
+		const exp = this.state.expanded;
+		return {
+			id: id,
+			expanded: exp[id],
+			onChange: () => this._onChange(id),
+		};
+	}
+
+	render() {
 		return (
 			<div>
 				<TopBar borderBottom={true} />
 					<Container maxWidth="lg">
 						<Grid container className="tc_FaqComponent">
 							<Grid item xs={12}>
+								<div className="tc_FaqComponent_menu_title">FAQ</div>
+								<ul className="tc_FaqComponent_menu">
+									<li><GenericLink to="#tcq01_000">A propos</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq01_001">Pourquoi Tchap ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq01_002">Qui peut utiliser Tchap ?</GenericLink></li>
+									<li><GenericLink to="#tcq02_000">Gestion du compte</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq02_001">Comment s'inscrire ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq02_002">Pourquoi dois-je renouveler mon compte tous les 2 mois ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq02_003">Un compte peut-il être supprimé ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq02_004">Que deviendra mon compte si je change de poste ou d'affectation ?</GenericLink></li>
+									<li><GenericLink to="#tcq03_000">Echanger sur Tchap</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq03_001">Quels sont les différents types de conversations sur Tchap ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq03_002">Comment conserver l'historique de mes messages ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq03_003">Comment démarrer une nouvelle conversation ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq03_004">Comment inviter un partenaire externe sur Tchap ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq03_005">Que faire si je ne souhaite pas apparaître dans l'annuaire ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq03_006">Comment rejoindre un salon ?</GenericLink></li>
+									<li><GenericLink to="#tcq04_000">Créer et administrer un salon</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq04_001">Comment créer un salon ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq04_002">Qu'est-ce qu'un administrateur ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq04_003">Comment inviter des participants à rejoindre un salon ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq04_004">Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq04_005">Comment retirer une personne d'un salon ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq04_006">Comment supprimer un salon ?</GenericLink></li>
+									<li><GenericLink to="#tcq05_000">Sécurité des échanges</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq05_001">Comment la confidentialité des échanges est-elle garantie ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq05_002">Où les données de Tchap sont-elles stockées ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq05_003">Puis-je utiliser Tchap pour échanger des informations confidentielles ?</GenericLink></li>
+									<li><GenericLink to="#tcq06_000">En cas de problème...</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq06_001">Je ne reçois pas de notifications : que faire ? </GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq06_002">"Déchiffrement impossible" de mes messages :  comment y remédier ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq06_003">Que faire si je ne reçois pas l'e-mail de création de compte ?</GenericLink></li>
+									<li className="tc_FaqComponent_menu_level_2"><GenericLink to="#tcq06_004">Mon compte a expiré : que faire ?</GenericLink></li>
+								</ul>
+							</Grid>
+							<Grid item xs={12}>
 
 								<div id="tcq01_000" className="tc_FaqComponent_section">A propos</div>
-								<GenericAccordion id="tcq01_001" defaultExpanded={hashId === "tcq01_001"}>
+								<GenericAccordion {...this._generateProps("tcq01_001")}>
 									<title>Pourquoi Tchap ?</title>
 									La messagerie instantanée Tchap a été créée pour les agents publics comme l'alternative française et sécurisée aux messageries instantanées grand public.
 								</GenericAccordion>
-								<GenericAccordion id="tcq01_002" defaultExpanded={hashId === "tcq01_002"}>
+								<GenericAccordion {...this._generateProps("tcq01_002")}>
 									<title>Qui peut utiliser Tchap ?</title>
 									<div className="tc_FaqComponent_subtitle">Les agents publics</div>
 									<div>Tchap s'adresse à tous les agents publics, peu importe leur contrat de travail.</div>
@@ -89,7 +195,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 
 								<div id="tcq02_000" className="tc_FaqComponent_section">Gestion du compte</div>
-								<GenericAccordion id="tcq02_001" defaultExpanded={hashId === "tcq02_001"}>
+								<GenericAccordion {...this._generateProps("tcq02_001")}>
 									<title>Comment s'inscrire ?</title>
 									<div>Pour vous inscrire sur Tchap :</div>
 									<ul className="tc_list_decimal">
@@ -111,7 +217,7 @@ class FaqComponent extends Component {
 										<GenericLink to="/prise-en-main" className="tc_FaqComponent_link">Guide de prise en main pour faciliter vos débuts sur Tchap.</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq02_002" defaultExpanded={hashId === "tcq02_002"}>
+								<GenericAccordion {...this._generateProps("tcq02_002")}>
 									<title>Pourquoi dois-je renouveler mon compte tous les 2 mois ?</title>
 									<div className="tc_text_nl">Vous ne pouvez utiliser Tchap qu'avec un e-mail professionnel valide. Tchap doit vérifier que votre e-mail est toujours valide pour <span className="tc_text_b">garder votre compte actif.</span></div>
 									<div className="tc_text_nl">C'est pourquoi vous recevez toutes les 8 semaines un e-mail de Tchap avec un lien sur lequel cliquer pour garder votre compte actif.</div>
@@ -122,26 +228,26 @@ class FaqComponent extends Component {
 										<GenericLink to="#tcq06_004" className="tc_FaqComponent_link">Mon compte a expiré : que faire ?</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq02_003" defaultExpanded={hashId === "tcq02_003"}>
+								<GenericAccordion {...this._generateProps("tcq02_003")}>
 									<title>Un compte peut-il être supprimé ?</title>
 									<div className="tc_text_nl">Vous pouvez désactiver votre compte depuis les <span className="tc_text_b">paramètres généraux</span> de Tchap.</div>
 									<div className="tc_text_nl">En désactivant votre compte, <span className="tc_text_b">vous ne pourrez plus accéder à vos messages</span>, même si vous recréez un compte avec le même e-mail.</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq02_004" defaultExpanded={hashId === "tcq02_004"}>
+								<GenericAccordion {...this._generateProps("tcq02_004")}>
 									<title>Que deviendra mon compte si je change de poste ou d'affectation ?</title>
 									<div className="tc_text_nl">Votre compte Tchap dépend de votre e-mail profsessionnel. Si vous changez d'adresse e-mail, vous devez donc créer un nouveau compte Tchap avec votre e-mail. Le compte précédent sera désactivé. </div>
 									<div className="tc_text_nl">Si votre nouvelle administration n'est pas encore présente sur Tchap, vous pouvez formuler une demande d'ouverture auprès de votre direction informatique. Vous pouvez vérifier la présence de votre administration sur Tchap  <GenericLink className="tc_FaqComponent_link" to={"/#joinUs"}>ici</GenericLink>.</div>
 								</GenericAccordion>
 
 								<div id="tcq03_000" className="tc_FaqComponent_section">Echanger sur Tchap</div>
-								<GenericAccordion id="tcq03_001" defaultExpanded={hashId === "tcq03_001"}>
+								<GenericAccordion {...this._generateProps("tcq03_001")}>
 									<title>Quels sont les différents types de conversations sur Tchap ?</title>
 									<Grid container className="tc_FaqComponent_grid">
 										<Grid item xs={2}>
 											<img src={require("images/pem/avatar_dm.png")} alt="DM"/>
 										</Grid>
 										<Grid item xs={10}>
-											<span className="tc_text_b">Les messages directs sont :</span>
+											<span className="tc_text_b">Les messages directssont :</span>
 											<ul>
 												<li>des conversations entre deux utilisateurs</li>
 												<li>accessibles aux agents publics et aux partenaires externes</li>
@@ -154,7 +260,7 @@ class FaqComponent extends Component {
 											<img src={require("images/pem/avatar_private.png")} alt="Salon Privé"/>
 										</Grid>
 										<Grid item xs={10}>
-											<span className="tc_text_b">Les salons privés sont :</span>
+											<span className="tc_text_b">Les salons privéssont :</span>
 											<ul>
 												<li>des conversations entre plusieurs utilisateurs</li>
 												<li>trouvables et accessibles sur invitation uniquement</li>
@@ -169,7 +275,7 @@ class FaqComponent extends Component {
 											<img src={require("images/pem/avatar_forum.png")} alt="Salon Forum"/>
 										</Grid>
 										<Grid item xs={10}>
-											<span className="tc_text_b">Les messages directs sont :</span>
+											<span className="tc_text_b">Les messages directssont :</span>
 											<ul>
 												<li>des conversations entre plusieurs agents publics</li>
 												<li>trouvables et accessibles à tous, sauf aux partenaires externes</li>
@@ -183,7 +289,7 @@ class FaqComponent extends Component {
 										<GenericLink to="#tcq03_006" className="tc_FaqComponent_link">Comment rejoindre un salon ?</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq03_002" defaultExpanded={hashId === "tcq03_002"}>
+								<GenericAccordion {...this._generateProps("tcq03_002")}>
 									<title>Comment conserver l'historique de mes messages ?</title>
 									<div className="tc_text_nl">Lorsque vous vous déconnectez puis reconnectez, vos messages passés deviennent illisibles. C'est une mesure de sécurité : la déconnexion de Tchap entraîne la perte des clés de chiffrement qui servent à déchiffrer vos messages.</div>
 									<div className="tc_text_nl">Pour conserver tous vos messages, il vous faut <span className="tc_text_b">toujours garder une connexion à Tchap sur au moins 2 appareils</span> (un mobile et un ordinateur par exemple).</div>
@@ -195,7 +301,7 @@ class FaqComponent extends Component {
 										<GenericLink to="#tcq05_001" className="tc_FaqComponent_link">Comment la confidentialité des échanges est-elle garantie ?</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq03_003" defaultExpanded={hashId === "tcq03_003"}>
+								<GenericAccordion {...this._generateProps("tcq03_003")}>
 									<title>Comment démarrer une nouvelle conversation ?</title>
 									<div className="tc_text_nl">L’annuaire intégré vous permet d’entrer en contact direct avec l’ensemble des utilisateurs de Tchap.</div>
 									<div className="tc_text_nl">Pour démarrer une nouvelle conversation : </div>
@@ -221,7 +327,7 @@ class FaqComponent extends Component {
 										<GenericLink to="#tcq03_005" className="tc_FaqComponent_link">Que faire si je ne souhaite pas apparaître dans l'annuaire ?</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq03_004" defaultExpanded={hashId === "tcq03_004"}>
+								<GenericAccordion {...this._generateProps("tcq03_004")}>
 									<title>Comment inviter un partenaire externe sur Tchap ?</title>
 									<ul className="tc_list_decimal">
 										<li>
@@ -231,7 +337,7 @@ class FaqComponent extends Component {
 													<img src={require("images/faq/create_ext_mobile.jpg")} width="500" alt="Création 1:1 externe mobile"/>
 												</Grid>
 												<Grid item xs={6}>
-													<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”.­­­</div>
+													<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”.</div>
 													<img src={require("images/pem/create_dm_web.png")} alt="Création 1:1 externe web"/>
 												</Grid>
 											</Grid>
@@ -243,12 +349,12 @@ class FaqComponent extends Component {
 										<GenericLink to="#tcq01_002" className="tc_FaqComponent_link">Qui peut utiliser Tchap ?</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq03_005" defaultExpanded={hashId === "tcq03_005"}>
+								<GenericAccordion {...this._generateProps("tcq03_005")}>
 									<title>Que faire si je ne souhaite pas apparaître dans l'annuaire ?</title>
 									<div className="tc_text_nl">Si vous ne souhaitez pas apparaître dans les résultats de recherche d'utilisateurs, vous pouvez passer sur <span className="tc_text_b">liste rouge</span> dans les Paramètres de Tchap.</div>
 									<div className="tc_text_nl">Les autres utilisateurs ne pourront ainsi plus vous trouve, ni vous contacter, sauf s'ils renseignent votre e-mail complet dans la barre de recherche.</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq03_006" defaultExpanded={hashId === "tcq03_006"}>
+								<GenericAccordion {...this._generateProps("tcq03_006")}>
 									<title>Comment rejoindre un salon ?</title>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour rejoindre un salon privé</span>, vous devez obligatoirement être invité par un de ses administrateurs.</div>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour trouver et rejoindre un salon forum</span>, vous pouvez rechercher par mots clés : </div>
@@ -258,7 +364,7 @@ class FaqComponent extends Component {
 											<img src={require("images/pem/create_mobile.png")} alt="Création salon mobile"/>
 										</Grid>
 										<Grid item xs={6}>
-											<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”.­­­</div>
+											<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”.</div>
 											<img src={require("images/pem/create_room_web.png")} alt="Création salon web"/>
 										</Grid>
 									</Grid>
@@ -269,7 +375,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 
 								<div id="tcq04_000" className="tc_FaqComponent_section">Créer et administrer un salon</div>
-								<GenericAccordion id="tcq04_001" defaultExpanded={hashId === "tcq04_001"}>
+								<GenericAccordion {...this._generateProps("tcq04_001")}>
 									<title>Comment créer un salon ?</title>
 									<Grid container className="tc_FaqComponent_grid">
 										<Grid item xs={2}>
@@ -301,7 +407,7 @@ class FaqComponent extends Component {
 										<GenericLink to="#tcq04_002" className="tc_FaqComponent_link">Qu'est-ce qu'un administrateur ?</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq04_002" defaultExpanded={hashId === "tcq04_002"}>
+								<GenericAccordion {...this._generateProps("tcq04_002")}>
 									<title>Qu'est-ce qu'un administrateur ?</title>
 									<div className="tc_text_nl">Par défaut, le créateur d'un salon est sont administrateur.</div>
 									<div className="tc_text_nl">Un administrateur peut :</div>
@@ -316,7 +422,7 @@ class FaqComponent extends Component {
 										<GenericLink to="#tcq04_004" className="tc_FaqComponent_link">Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ?</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq04_003" defaultExpanded={hashId === "tcq04_003"}>
+								<GenericAccordion {...this._generateProps("tcq04_003")}>
 									<title>Comment inviter des participants à rejoindre un salon ?</title>
 									<div className="tc_text_nl">Pour les salons privés, seuls les administrateurs peuvent inviter des utilisateurs à rejoindre la conversation.</div>
 									<div className="tc_text_nl">Pour les salons publics, l'invitation n'est pas indispensable mais peut être utilisée pour inviter des utilisateurs à rejoindre le salon.</div>
@@ -331,9 +437,9 @@ class FaqComponent extends Component {
 										<GenericLink to="#" className="tc_FaqComponent_link">Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ?</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq04_004" defaultExpanded={hashId === "tcq04_004"}>
+								<GenericAccordion {...this._generateProps("tcq04_004")}>
 									<title>Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ? </title>
-									<div className="tc_text_nl">Il est fortement recommandé de nommer plusieurs administrateurs et modérateurs parmi les participants d'un salon.</div>
+									<div className="tc_text_nl">Il est fortement recommandé de nommer plusieurs administrateurs et modérateursparmi les participants d'un salon.</div>
 									<div className="tc_text_nl">Ainsi, en cas de départ d'un administrateur, le salon ne se retrouvera pas gelé.</div>
 									<div className="tc_text_nl">En effet, seul un administrateur a le pouvoir de nommer un autre administrateur. Si un salon se retrouve sans administrateur, plus personne n'a donc le pouvoir de l'administrer, et cette situation est irréversible. Dans le cas d'un salon privé, cela rend notamment impossible d'y inviter de nouveaux membres.</div>
 									<div className="tc_text_nl">Pour nommer un administrateur, rendez-vous dans la liste des membres du salon.</div>
@@ -343,7 +449,7 @@ class FaqComponent extends Component {
 										<li>Sur mobile, cliquez sur "Nommer administrateur"</li>
 									</ul>
 								</GenericAccordion>
-								<GenericAccordion id="tcq04_005" defaultExpanded={hashId === "tcq04_005"}>
+								<GenericAccordion {...this._generateProps("tcq04_005")}>
 									<title>Comment retirer une personne d'un salon ?</title>
 									<div className="tc_text_nl">Seul un administrateur ou un modérateur peut retirer un membre d'un salon. Pour ce faire, rendez-vous dans la liste des membres du salon et cliquez sur le nom de la personne : </div>
 									<ul>
@@ -351,14 +457,14 @@ class FaqComponent extends Component {
 										<li>Pour lui laisser la possibilité de revenir, choisissez "exclure" ou "expulser"</li>
 									</ul>
 								</GenericAccordion>
-								<GenericAccordion id="tcq04_006" defaultExpanded={hashId === "tcq04_006"}>
+								<GenericAccordion {...this._generateProps("tcq04_006")}>
 									<title>Comment supprimer un salon ?</title>
 									<div className="tc_text_nl">Si le salon est public, il faut d’abord le transformer en salon privé pour le retirer de la liste des salons publics.</div>
 									<div className="tc_text_nl">Pour fermer complètement un salon, un administrateur doit exclure tous les participants puis le quitter lui-même. Le salon ne sera alors plus visible, et les invitations acceptées ultérieurement ne fonctionneront pas.</div>
 								</GenericAccordion>
 
 								<div id="tcq05_000" className="tc_FaqComponent_section">Sécurité des échanges</div>
-								<GenericAccordion id="tcq05_001" defaultExpanded={hashId === "tcq05_001"}>
+								<GenericAccordion {...this._generateProps("tcq05_001")}>
 									<title>Comment la confidentialité des échanges est-elle garantie ?</title>
 									<div className="tc_text_nl">Tous les messages échangés sur Tchap (hors Salons Forums) sont chiffrés de bout en bout. Concrètement, cela signifie que jamais personne d'autre que les auteurs et destinataires des messages n'y ont accès. </div>
 									<div className="tc_text_nl">Comment cela fonctionne-t-il ? </div>
@@ -370,11 +476,11 @@ class FaqComponent extends Component {
 										<GenericLink to="#tcq06_002" className="tc_FaqComponent_link">"Déchiffrement impossible" de mes messages :  comment y remédier ?</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq05_001" defaultExpanded={hashId === "tcq05_001"}>
+								<GenericAccordion {...this._generateProps("tcq05_001")}>
 									<title>Où les données de Tchap sont-elles stockées ?</title>
 									<div className="tc_text_nl">Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics. N'hésitez pas à consulter nos <GenericLink to="https://www.tchap.gouv.fr/cgu/" className="tc_FaqComponent_link">CGU</GenericLink> pour en savoir plus.</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq05_001" defaultExpanded={hashId === "tcq05_001"}>
+								<GenericAccordion {...this._generateProps("tcq05_002")}>
 									<title>Puis-je utiliser Tchap pour échanger des informations confidentielles ?</title>
 									<div className="tc_text_nl">Tchap garantie la confidentialité des échanges au sein de la messagerie.</div>
 									<div className="tc_text_nl">Cependant, Tchap ne sécurise pas votre téléphone, qui reste exposé aux menaces informatiques.</div>
@@ -385,7 +491,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 
 								<div id="tcq06_000" className="tc_FaqComponent_section">En cas de problème...</div>
-								<GenericAccordion id="tcq06_001" defaultExpanded={hashId === "tcq06_001"}>
+								<GenericAccordion {...this._generateProps("tcq06_001")}>
 									<title>Je ne reçois pas de notifications : que faire ?</title>
 									<div className="tc_text_nl tc_text_b">Il peut arriver de ne plus avoir les notifications pour avertir de l’arrivée de nouveau message, voici un tour des contrôles à effectuer.</div>
 									<div className="tc_text_nl tc_text_b">Sur votre appareil mobile :</div>
@@ -394,8 +500,8 @@ class FaqComponent extends Component {
 											<Grid container className="tc_FaqComponent_grid">
 												<Grid item xs={6}>
 													<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
-														<li>Allez dans les paramètres généraux de votre téléphone ;</li>
-														<li>Puis dans "son" ;</li>
+														<li>Allez dans les paramètres généraux de votre téléphone;</li>
+														<li>Puis dans "son";</li>
 														<li>Vérifier que le mode "Ne pas déranger" est désactivé.</li>
 													</ul>
 												</Grid>
@@ -408,10 +514,10 @@ class FaqComponent extends Component {
 											<Grid container className="tc_FaqComponent_grid">
 												<Grid item xs={6}>
 													<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
-														<li>Allez dans les paramètres généraux de votre téléphone ;</li>
-														<li>Allez dans la section "Applis et notifications" ;</li>
-														<li>Cliquez sur l’application Tchap, vous arrivez sur une fenêtre où il vous sera proposer, entre autre, de désinstaller ou de forcer l’arrêt de l’application ;</li>
-														<li>Cliquez sur "Données mobiles et Wi-Fi" ;</li>
+														<li>Allez dans les paramètres généraux de votre téléphone;</li>
+														<li>Allez dans la section "Applis et notifications";</li>
+														<li>Cliquez sur l’application Tchap, vous arrivez sur une fenêtre où il vous sera proposer, entre autre, de désinstaller ou de forcer l’arrêt de l’application;</li>
+														<li>Cliquez sur "Données mobiles et Wi-Fi";</li>
 														<li>Vérifiez que la consommation des "Données en arrière-plan" est bien activée.</li>
 													</ul>
 												</Grid>
@@ -420,10 +526,10 @@ class FaqComponent extends Component {
 												</Grid>
 											</Grid>
 										</li>
-										<li><span className="tc_text_b">Effectuer une réparation du service des notifications :</span>
+										<li><span className="tc_text_b">Effectuer une réparation du service des notifications:</span>
 											<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
-												<li>Allez dans les paramètres généraux de Tchap ;</li>
-												<li>Allez dans la section "Notifications" ;</li>
+												<li>Allez dans les paramètres généraux de Tchap;</li>
+												<li>Allez dans la section "Notifications";</li>
 												<li>Puis lancer "Résoudre les problèmes de notifications".</li>
 											</ul>
 											<Grid container className="tc_FaqComponent_grid">
@@ -437,10 +543,10 @@ class FaqComponent extends Component {
 										</li>
 										<li><span className="tc_text_b">Forcer l’arrêt de l’application et redémarrer le téléphone</span>
 											<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
-												<li>Allez dans les paramètres généraux de votre téléphone ;</li>
+												<li>Allez dans les paramètres généraux de votre téléphone;</li>
 												<li>Allez dans la section "Applis et notifications" ;</li>
 												<li>Cliquez sur l’application Tchap ;</li>
-												<li>"Forcer l’arrêt" de l’application ;</li>
+												<li>"Forcer l’arrêt" de l’application;</li>
 												<li>Redémarrer votre téléphone.</li>
 											</ul>
 										</li>
@@ -451,11 +557,11 @@ class FaqComponent extends Component {
 										<li><span className="tc_text_b">Vérifier des paramétrages de vos notifications</span>
 											<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
 												<li>
-													Rendez-vous sur la page web de Tchap et connectez-vous: <GenericLink to="https://www.tchap.gouv.fr">https://www.tchap.gouv.fr</GenericLink> ;
+													Rendez-vous sur la page web de Tchap et connectez-vous:<GenericLink to="https://www.tchap.gouv.fr">https://www.tchap.gouv.fr</GenericLink>;
 													<div className="tc_text_i">NB : S'il s’agit de votre première connexion sur le web (ou que vos historiques de navigation ont été effacés), vous pouvez partager vos clés de chiffrement à l’aide de votre téléphone portable pour déchiffrer les messages préalablement reçus</div>
 												</li>
-												<li>Allez dans les paramètres généraux de Tchap ;</li>
-												<li>Allez dans la section "Notifications" ;</li>
+												<li>Allez dans les paramètres généraux de Tchap;</li>
+												<li>Allez dans la section "Notifications";</li>
 												<li>
 													Vérifiez que les paramétrages correspondent à l’image ci-dessous (paramétrage par défaut) :
 													<Grid container className="tc_FaqComponent_grid">
@@ -469,7 +575,7 @@ class FaqComponent extends Component {
 												</li>
 											</ul>
 										</li>
-										<li><span className="tc_text_b">Vérifier le paramétrage des salons :</span>
+										<li><span className="tc_text_b">Vérifier le paramétrage des salons:</span>
 											<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
 												<li>Rendez-vous sur l’écran général de Tchap (où figure la liste de vos conversations sur la colonne de gauche)</li>
 												<li>Cliquez sur les trois petits points à droite d'un ou plusieurs salons (ceux pour lesquels vous semblez ne plus recevoir de notifications)</li>
@@ -487,7 +593,7 @@ class FaqComponent extends Component {
 										</li>
 									</ul>
 								</GenericAccordion>
-								<GenericAccordion id="tcq06_002" defaultExpanded={hashId === "tcq06_002"}>
+								<GenericAccordion {...this._generateProps("tcq06_002")}>
 									<title>"Déchiffrement impossible" de mes messages :  comment y remédier ?</title>
 									<div className="tc_text_nl">Chaque nouvelle connexion à Tchap - c'est-à-dire le fait de renseigner votre e-mail et votre mot de passe - provoque le renouvellement immédiat de vos clés de chiffrement sur l'appareil que vous utilisez. </div>
 									<div className="tc_text_nl">Par conséquent, vous ne pouvez plus lire les messages envoyés ou reçus avant votre connexion. Chaque message reçu ou envoyé est remplacé par cette phrase : </div>
@@ -504,7 +610,7 @@ class FaqComponent extends Component {
 										<GenericLink to="#tcq03_002" className="tc_FaqComponent_link">Comment conserver l'historique de mes messages ?</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq06_003" defaultExpanded={hashId === "tcq06_003"}>
+								<GenericAccordion {...this._generateProps("tcq06_003")}>
 									<title>Que faire si je ne reçois pas l'e-mail de création de compte ?</title>
 									<div className="tc_text_nl">Voici quelques vérifications que vous pouvez effectuer :</div>
 									<ul>
@@ -515,7 +621,7 @@ class FaqComponent extends Component {
 									</ul>
 									<div className="tc_text_nl">Si le problème persiste, n'hésitez pas à contacter le support de Tchap : <GenericLink className="tc_FaqComponent_link" to={"mailto:" + t("links.contact")}>{t("links.contact")}</GenericLink></div>
 								</GenericAccordion>
-								<GenericAccordion id="tcq06_004" defaultExpanded={hashId === "tcq06_004"}>
+								<GenericAccordion {...this._generateProps("tcq06_004")}>
 									<title>Mon compte a expiré : que faire ?</title>
 									<div className="tc_text_nl">Toutes les 8 semaines, vous recevez un e-mail de Tchap avec un lien sur lequel cliquer pour garder votre compte actif.</div>
 									<div className="tc_text_nl">Vous avez 7 jours pour cliquer sur le lien dans l'e-mail.</div>
@@ -535,4 +641,4 @@ class FaqComponent extends Component {
 	}
 }
 
-export default FaqComponent;
+export default withRouter(FaqComponent);
