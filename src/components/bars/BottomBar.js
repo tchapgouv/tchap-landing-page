@@ -38,20 +38,18 @@ class BottomBar extends Component {
 						</Grid>
 					</Grid>
 					<Grid container className="tc_BottomBar_Menu_container">
-						<Grid item xs={12}>
-							<GenericLink data-probe-name="github" onClick={this._hookProbe} to="https://github.com/tchapgouv/tchap-landing-page" className="tc_BottomBar_Menu_item">
-								<GitHub className="tc_BottomBar_Menu_logo" /> GitHub
-							</GenericLink>
-							<GenericLink data-probe-name="tchap" onClick={this._hookProbe} to="https://www.tchap.gouv.fr/" className="tc_BottomBar_Menu_item">
-								<TchapLogoMono className="tc_BottomBar_Menu_logo" /> Tchap
-							</GenericLink>
-							<GenericLink data-probe-name="matrix" onClick={this._hookProbe} to="https://matrix.org/" className="tc_BottomBar_Menu_item">
-								<MatrixLogo className="tc_BottomBar_Menu_logo" /> matrix.org
-							</GenericLink>
-							<GenericLink data-probe-name="personal-data" onClick={this._hookProbe} to="/suivi" className="tc_BottomBar_Menu_item">
-								Données personnelles
-							</GenericLink>
-						</Grid>
+						<GenericLink data-probe-name="github" onClick={this._hookProbe} to="https://github.com/tchapgouv/tchap-landing-page" className="tc_BottomBar_Menu_item">
+							<GitHub className="tc_BottomBar_Menu_logo" /> GitHub
+						</GenericLink>
+						<GenericLink data-probe-name="tchap" onClick={this._hookProbe} to="https://www.tchap.gouv.fr/" className="tc_BottomBar_Menu_item">
+							<TchapLogoMono className="tc_BottomBar_Menu_logo" /> Tchap
+						</GenericLink>
+						<GenericLink data-probe-name="matrix" onClick={this._hookProbe} to="https://matrix.org/" className="tc_BottomBar_Menu_item">
+							<MatrixLogo className="tc_BottomBar_Menu_logo" /> matrix.org
+						</GenericLink>
+						<GenericLink data-probe-name="personal-data" onClick={this._hookProbe} to="/suivi" className="tc_BottomBar_Menu_item">
+							Données personnelles
+						</GenericLink>
 					</Grid>
 				</Container>
 			</div>

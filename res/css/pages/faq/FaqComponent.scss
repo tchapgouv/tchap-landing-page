@@ -84,3 +84,26 @@
     color: #000000;
   }
 }
+
+@media (max-width: 650px) {
+  .tc_FaqComponent_wimg_mobile,
+  .tc_FaqComponent_limg_mobile {
+    width: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+  .tc_FaqComponent_wimg_mobile,
+  .tc_FaqComponent_himg_mobile,
+  .tc_FaqComponent_limg_mobile{
+    width: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+  .tc_FaqComponent_wimg_mobile,
+  .tc_FaqComponent_himg_mobile,
+  .tc_FaqComponent_limg_mobile{
+    width: 200px;
+  }
+}
