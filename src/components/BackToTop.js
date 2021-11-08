@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
@@ -10,24 +11,34 @@ class BackToTop extends Component {
 		this.state = {
 			isVisible: false,
 		};
+		this._handleScroll = this._handleScroll.bind(this);
+		this._scrollToTop = this._scrollToTop.bind(this);
 	}
 
 	componentDidMount() {
-		const that = this;
-		document.addEventListener("scroll", function(e) {
-			if (window.pageYOffset > (window.innerHeight / 2)) {
-				that.setState({
-					isVisible: true,
-				});
-			} else {
-				that.setState({
-					isVisible: false,
-				});
-			}
-		});
+		document.addEventListener("scroll", this._handleScroll);
+	}
+
+	componentWillUnmount() {
+		document.removeEventListener("scroll", this._handleScroll);
+	}
+
+	_handleScroll() {
+		if (window.pageYOffset > (window.innerHeight / 2)) {
+			this.setState({
+				isVisible: true,
+			});
+		} else {
+			this.setState({
+				isVisible: false,
+			});
+		}
 	}
 
 	_scrollToTop() {
+		if (location.hash.split("#").length -1 > 1) {
+			this.props.history.push();
+		}
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth"
@@ -54,4 +65,4 @@ class BackToTop extends Component {
 	}
 }
 
-export default BackToTop;
+export default withRouter(BackToTop);
