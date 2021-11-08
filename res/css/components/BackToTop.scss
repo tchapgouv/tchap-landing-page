@@ -1,0 +1,22 @@
+.tc_BTT {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  transition: opacity .3s;
+  background-color: #110091;
+  border-radius: 4px;
+}
+
+.tc_BTT_visible {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.tc_BTT_invisible {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tc_BTT_icon {
+  color: white;
+}

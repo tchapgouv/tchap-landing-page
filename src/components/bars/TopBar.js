@@ -10,6 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import GenericLink from "components/GenericLink";
 import TchapLogo from "icons/tchap-logo.svg";
 import RepLogo from "icons/rep-logo.svg";
+import BackToTop from "../BackToTop";
 
 import "styles/components/bars/TopBar.scss";
 
@@ -52,6 +53,7 @@ class TopBar extends Component {
 		}
 		return (
 			<Container maxWidth="lg">
+				<BackToTop />
 				<div className={topBarClasses}>
 					<RepLogo width="120" className="tc_TopBar_Left_rep"/>
 					<GenericLink data-probe-name="home" onClick={this._hookProbe} to="/" className="tc_TopBar_Left">
