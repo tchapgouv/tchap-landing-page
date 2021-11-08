@@ -85,6 +85,24 @@
   }
 }
 
+.tc_FaqComponent_Popper {
+  color: white;
+  background-color: $color-text-darkgrey;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.tc_FaqComponent_copy_icon {
+  color: $color-text-lightgrey;
+  position: relative;
+  top: 4px;
+  left: -8px;
+  margin-right: -3px;
+  &:hover {
+    color: $color-text-darkgrey;
+  }
+}
+
 @media (max-width: 650px) {
   .tc_FaqComponent_wimg_mobile,
   .tc_FaqComponent_limg_mobile {
