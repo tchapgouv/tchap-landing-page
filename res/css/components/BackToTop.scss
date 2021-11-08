@@ -5,11 +5,19 @@
   transition: opacity .3s;
   background-color: #110091;
   border-radius: 4px;
+  z-index: 9999;
 }
 
 .tc_BTT_visible {
   opacity: 1;
   pointer-events: initial;
+}
+
+@media (max-width: 500px) {
+  .tc_BTT_visible {
+    opacity: 0;
+    pointer-events: initial;
+  }
 }
 
 .tc_BTT_invisible {

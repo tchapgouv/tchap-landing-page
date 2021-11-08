@@ -240,11 +240,11 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq03_001")}>
 									<title>Quels sont les différents types de conversations sur Tchap ?</title>
 									<Grid container className="tc_FaqComponent_grid">
-										<Grid item xs={2}>
+										<Grid item xl={2}>
 											<img src={require("images/pem/avatar_dm.png")} alt="DM"/>
 										</Grid>
-										<Grid item xs={10}>
-											<span className="tc_text_b">Les messages directssont :</span>
+										<Grid item xl={10}>
+											<span className="tc_text_b">Les messages directs sont :</span>
 											<ul>
 												<li>des conversations entre deux utilisateurs</li>
 												<li>accessibles aux agents publics et aux partenaires externes</li>
@@ -253,11 +253,11 @@ class FaqComponent extends Component {
 										</Grid>
 									</Grid>
 									<Grid container className="tc_FaqComponent_grid">
-										<Grid item xs={2}>
+										<Grid item xl={2}>
 											<img src={require("images/pem/avatar_private.png")} alt="Salon Privé"/>
 										</Grid>
-										<Grid item xs={10}>
-											<span className="tc_text_b">Les salons privéssont :</span>
+										<Grid item xl={10}>
+											<span className="tc_text_b">Les salons privés sont :</span>
 											<ul>
 												<li>des conversations entre plusieurs utilisateurs</li>
 												<li>trouvables et accessibles sur invitation uniquement</li>
@@ -268,11 +268,11 @@ class FaqComponent extends Component {
 										</Grid>
 									</Grid>
 									<Grid container className="tc_FaqComponent_grid">
-										<Grid item xs={2}>
+										<Grid item xl={2}>
 											<img src={require("images/pem/avatar_forum.png")} alt="Salon Forum"/>
 										</Grid>
-										<Grid item xs={10}>
-											<span className="tc_text_b">Les messages directssont :</span>
+										<Grid item xl={10}>
+											<span className="tc_text_b">Les messages directs sont :</span>
 											<ul>
 												<li>des conversations entre plusieurs agents publics</li>
 												<li>trouvables et accessibles à tous, sauf aux partenaires externes</li>
@@ -305,13 +305,13 @@ class FaqComponent extends Component {
 									<ul className="tc_list_decimal">
 										<li>
 											<Grid container className="tc_FaqComponent_grid">
-												<Grid item xs={6}>
+												<Grid item xl={6}>
 													<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, cliquez sur le bouton “+” en bas de l’écran et choisissez “nouvelle discussion”.</div>
-													<img src={require("images/pem/create_mobile.png")} alt="Création 1:1 mobile"/>
+													<img src={require("images/pem/create_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création 1:1 mobile"/>
 												</Grid>
-												<Grid item xs={6}>
+												<Grid item xl={6}>
 													<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”.</div>
-													<img src={require("images/pem/create_dm_web.png")} alt="Création 1:1 web"/>
+													<img src={require("images/pem/create_dm_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création 1:1 web"/>
 												</Grid>
 											</Grid>
 										</li>
@@ -329,13 +329,13 @@ class FaqComponent extends Component {
 									<ul className="tc_list_decimal">
 										<li>
 											<Grid container className="tc_FaqComponent_grid">
-												<Grid item xs={6}>
+												<Grid item xl={6}>
 													<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet "Contacts" et cliquez sur "Inviter des contacts dans Tchap"</div>
-													<img src={require("images/faq/create_ext_mobile.jpg")} width="500" alt="Création 1:1 externe mobile"/>
+													<img src={require("images/faq/create_ext_mobile.jpg")} width="500" className="tc_FaqComponent_wimg_mobile" alt="Création 1:1 externe mobile"/>
 												</Grid>
-												<Grid item xs={6}>
+												<Grid item xl={6}>
 													<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”.</div>
-													<img src={require("images/pem/create_dm_web.png")} alt="Création 1:1 externe web"/>
+													<img src={require("images/pem/create_dm_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création 1:1 externe web"/>
 												</Grid>
 											</Grid>
 										</li>
@@ -356,13 +356,13 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl"><span className="tc_text_b">Pour rejoindre un salon privé</span>, vous devez obligatoirement être invité par un de ses administrateurs.</div>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour trouver et rejoindre un salon forum</span>, vous pouvez rechercher par mots clés : </div>
 									<Grid container className="tc_FaqComponent_grid">
-										<Grid item xs={6}>
+										<Grid item xl={6}>
 											<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet "Contacts" et cliquez sur "Inviter des contacts dans Tchap"</div>
-											<img src={require("images/pem/create_mobile.png")} alt="Création salon mobile"/>
+											<img src={require("images/pem/create_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile"/>
 										</Grid>
-										<Grid item xs={6}>
+										<Grid item xl={6}>
 											<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”.</div>
-											<img src={require("images/pem/create_room_web.png")} alt="Création salon web"/>
+											<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>
 										</Grid>
 									</Grid>
 									<div className="tc_text_nl">Vous pouvez également être invité à rejoindre un salon forum sur invitation d'un membre.</div>
@@ -375,10 +375,10 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq04_001")}>
 									<title>Comment créer un salon ?</title>
 									<Grid container className="tc_FaqComponent_grid">
-										<Grid item xs={2}>
+										<Grid item xl={2}>
 											<img src={require("images/pem/avatar_private.png")} alt="Salon Privé"/>
 										</Grid>
-										<Grid item xs={10}>
+										<Grid item xl={10}>
 											<span className="tc_text_b">Créer un Salon Privé</span>
 											<ul className="tc_list_nobullet">
 												<li>Pour que le salon ne soit trouvable et accessible que sur invitation de votre part, choisissez “Salon Privé” ou “Salon privé ouvert aux externes” si vous souhaitez inviter des partenaires externes à l'administration.</li>
@@ -387,10 +387,10 @@ class FaqComponent extends Component {
 										</Grid>
 									</Grid>
 									<Grid container className="tc_FaqComponent_grid">
-										<Grid item xs={2}>
+										<Grid item xl={2}>
 											<img src={require("images/pem/avatar_forum.png")} alt="Salon Forum"/>
 										</Grid>
-										<Grid item xs={10}>
+										<Grid item xl={10}>
 											<span className="tc_text_b">Créer un Salon Forum</span>
 											<ul className="tc_list_nobullet">
 												<li>Pour que le salon soit visible et ouvert à tous les utilisateurs de Tchap (sauf partenaires externes), choisissez “Salon Forum”.</li>
@@ -473,11 +473,11 @@ class FaqComponent extends Component {
 										<GenericLink to="#tcq06_002" className="tc_FaqComponent_link">"Déchiffrement impossible" de mes messages :  comment y remédier ?</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion {...this._generateProps("tcq05_001")}>
+								<GenericAccordion {...this._generateProps("tcq05_002")}>
 									<title>Où les données de Tchap sont-elles stockées ?</title>
 									<div className="tc_text_nl">Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics. N'hésitez pas à consulter nos <GenericLink to="https://www.tchap.gouv.fr/cgu/" className="tc_FaqComponent_link">CGU</GenericLink> pour en savoir plus.</div>
 								</GenericAccordion>
-								<GenericAccordion {...this._generateProps("tcq05_002")}>
+								<GenericAccordion {...this._generateProps("tcq05_003")}>
 									<title>Puis-je utiliser Tchap pour échanger des informations confidentielles ?</title>
 									<div className="tc_text_nl">Tchap garantie la confidentialité des échanges au sein de la messagerie.</div>
 									<div className="tc_text_nl">Cependant, Tchap ne sécurise pas votre téléphone, qui reste exposé aux menaces informatiques.</div>
@@ -495,21 +495,21 @@ class FaqComponent extends Component {
 									<ul className="tc_list_decimal">
 										<li><span className="tc_text_b">Vérifier l’état du mode "Ne pas déranger"</span>
 											<Grid container className="tc_FaqComponent_grid">
-												<Grid item xs={6}>
+												<Grid item xl={6}>
 													<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
 														<li>Allez dans les paramètres généraux de votre téléphone;</li>
 														<li>Puis dans "son";</li>
 														<li>Vérifier que le mode "Ne pas déranger" est désactivé.</li>
 													</ul>
 												</Grid>
-												<Grid item xs={6}>
-													<img src={require("images/faq/npd.png")} alt="Ne pas déranger"/>
+												<Grid item xl={6}>
+													<img src={require("images/faq/npd.png")} className="tc_FaqComponent_himg_mobile" alt="Ne pas déranger"/>
 												</Grid>
 											</Grid>
 										</li>
 										<li><span className="tc_text_b">Vérifier la consommation en arrière-plan</span>
 											<Grid container className="tc_FaqComponent_grid">
-												<Grid item xs={6}>
+												<Grid item xl={6}>
 													<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
 														<li>Allez dans les paramètres généraux de votre téléphone;</li>
 														<li>Allez dans la section "Applis et notifications";</li>
@@ -518,8 +518,8 @@ class FaqComponent extends Component {
 														<li>Vérifiez que la consommation des "Données en arrière-plan" est bien activée.</li>
 													</ul>
 												</Grid>
-												<Grid item xs={6}>
-													<img src={require("images/faq/dap.png")} alt="Données en arière plan"/>
+												<Grid item xl={6}>
+													<img src={require("images/faq/dap.png")} className="tc_FaqComponent_himg_mobile" alt="Données en arière plan"/>
 												</Grid>
 											</Grid>
 										</li>
@@ -530,11 +530,11 @@ class FaqComponent extends Component {
 												<li>Puis lancer "Résoudre les problèmes de notifications".</li>
 											</ul>
 											<Grid container className="tc_FaqComponent_grid">
-												<Grid item xs={6}>
-													<img src={require("images/faq/notif_mobile_1.png")} alt="Réparer les notifications mobile 1"/>
+												<Grid item xl={6}>
+													<img src={require("images/faq/notif_mobile_1.png")} className="tc_FaqComponent_himg_mobile" alt="Réparer les notifications mobile 1"/>
 												</Grid>
-												<Grid item xs={6}>
-													<img src={require("images/faq/notif_mobile_2.png")} alt="Réparer les notifications mobile 2"/>
+												<Grid item xl={6}>
+													<img src={require("images/faq/notif_mobile_2.png")} className="tc_FaqComponent_himg_mobile" alt="Réparer les notifications mobile 2"/>
 												</Grid>
 											</Grid>
 										</li>
@@ -562,10 +562,10 @@ class FaqComponent extends Component {
 												<li>
 													Vérifiez que les paramétrages correspondent à l’image ci-dessous (paramétrage par défaut) :
 													<Grid container className="tc_FaqComponent_grid">
-														<Grid item xs={6}>
-															<img src={require("images/faq/notif_web_1.png")} alt="Réparer les notifications web 1"/>
+														<Grid item xl={6}>
+															<img src={require("images/faq/notif_web_1.png")} className="tc_FaqComponent_limg_mobile" alt="Réparer les notifications web 1"/>
 														</Grid>
-														<Grid item xs={6}>
+														<Grid item xl={6}>
 															<div className="tc_text_nl">Veillez à ce qu’aucune option ne soit sur « désactivé », hormis la dernière. Vous pouvez ensuite choisir librement si vous souhaitez que les notifications soient sur « Activé » ou « Bruyant ».</div>
 														</Grid>
 													</Grid>
@@ -578,10 +578,10 @@ class FaqComponent extends Component {
 												<li>Cliquez sur les trois petits points à droite d'un ou plusieurs salons (ceux pour lesquels vous semblez ne plus recevoir de notifications)</li>
 												<li>Vérifiez que les paramétrages correspondent à l’image ci-dessous :
 													<Grid container className="tc_FaqComponent_grid">
-														<Grid item xs={4}>
-															<img src={require("images/faq/notif_web_2.png")} alt="Réparer les notifications web 2"/>
+														<Grid item xl={4}>
+															<img src={require("images/faq/notif_web_2.png")} className="tc_FaqComponent_wimg_mobile" alt="Réparer les notifications web 2"/>
 														</Grid>
-														<Grid item xs={8}>
+														<Grid item xl={8}>
 															<div className="tc_text_nl tc_text_i">NB : L’option "Seulement les mentions" n’est pas supportée pour les salons chiffrés dans la version mobile de Tchap (Android et iOS).</div>
 														</Grid>
 													</Grid>

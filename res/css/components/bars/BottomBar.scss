@@ -29,8 +29,9 @@
 .tc_BottomBar_Menu_container {
   border-top: 1px solid $color-border-grey;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   padding-top: 20px;
+  align-items: baseline;
 }
 
 .tc_BottomBar_Menu_item {
@@ -40,6 +41,7 @@
   padding-right: 20px !important;
   border-right: 2px solid $color-border-grey;
   font-size: $font-size-08;
+  margin-bottom: 15px;
 }
 
 .tc_BottomBar_Menu_logo {
