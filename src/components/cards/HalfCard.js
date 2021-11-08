@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from "prop-types";
-import TchapUtils from "utils/TchapUtils";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
@@ -9,7 +8,6 @@ import "styles/components/cards/HalfCard.scss";
 class HalfCard extends Component {
 
 	static propTypes = {
-		title: PropTypes.string.isRequired,
 		imageLocalUri: PropTypes.string.isRequired,
 		imagePosition: PropTypes.oneOf(['top', 'bottom']).isRequired,
 		backgroundColor: PropTypes.oneOf(['light', 'dark']).isRequired,
@@ -22,6 +20,13 @@ class HalfCard extends Component {
 	}
 
 	render() {
+		const children = this.props.children;
+		let title = null;
+		const titleObj = children.find(e => e.type && e.type === "title");
+		if (titleObj && titleObj.props && titleObj.props.children) {
+			title = titleObj.props.children;
+		}
+		const child = children.filter(e => !e.type || e.type !== "title");
 		const classes = `tc_HalfCard tc_HalfCard_${this.props.backgroundColor} tc_HalfCard_image_${this.props.imagePosition}`;
 		return (
 			<Container maxWidth="lg" className={classes}>
@@ -33,9 +38,11 @@ class HalfCard extends Component {
 				</Grid>
 				<Grid container className="tc_HalfCard_text_container">
 					<div className="tc_HalfCard_title">
-						{this.props.title}
+						{title}
 					</div>
-					<div className="tc_HalfCard_content" dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(this.props.children) }} />
+					<div className="tc_HalfCard_content">
+						{child}
+					</div>
 				</Grid>
 			</Container>
 		);

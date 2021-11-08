@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import { matomoHOC } from 'utils/HOC';
-import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import GitHub from '@mui/icons-material/GitHub';
@@ -8,7 +7,6 @@ import GenericLink from "components/GenericLink";
 import RepLogo from "icons/rep-logo.svg";
 import TchapLogoMono from "icons/tchap-logo-mono.svg";
 import MatrixLogo from "icons/matrix-logo.svg";
-import TchapUtils from "utils/TchapUtils";
 
 import "styles/components/bars/BottomBar.scss";
 
@@ -34,7 +32,7 @@ class BottomBar extends Component {
 							<RepLogo width="150"/>
 						</Grid>
 						<Grid item xs={6} className="tc_BottomBar_text">
-							<div dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(t('footer.text')) }} />
+							<div>Le code de Tchap est consultable publiquement et se base sur le protocole <GenericLink to='https://matrix.org/docs/guides/end-to-end-encryption-implementation-guide'>Matrix</GenericLink>. Le développement de l'application bénéficie ainsi des avancées de la communauté Matrix, en terme d'amélioration fonctionnelle et de sécurité.</div>
 						</Grid>
 					</Grid>
 					<Grid container className="tc_BottomBar_Menu_container">

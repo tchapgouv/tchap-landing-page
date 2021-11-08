@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
-import { t } from "react-i18nify";
+import { Component } from 'react';
 import Container from "@mui/material/Container";
 import Grid from '@mui/material/Grid';
-import TchapUtils from "utils/TchapUtils";
 import TestYourEmail from "./TestYourEmail";
 
 import "styles/pages/home/panels/JoinUsPanel.scss";
@@ -14,8 +12,8 @@ class JoinUsPanel extends Component {
 				<Container maxWidth="lg">
 					<Grid container>
 						<Grid item xs={12} className="tc_JoinUsPanel_joinus">
-							<div className="tc_JoinUsPanel_title" dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(t('join.title')) }} />
-							<div className="tc_JoinUsPanel_content" dangerouslySetInnerHTML={{ __html: TchapUtils.sanitize(t('join.text')) }} />
+							<div className="tc_JoinUsPanel_title">Comment rejoindre Tchap ?</div>
+							<div className="tc_JoinUsPanel_content">Tchap est ouvert aux agents des trois fonctions publiques, quel que soit leur statut, à condition que leur administration y soit déjà inscrite.</div>
 						</Grid>
 						<Grid item xs={12} className="tc_JoinUsPanel_testyouremail">
 							<TestYourEmail />

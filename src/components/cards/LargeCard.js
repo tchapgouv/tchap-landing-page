@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+import PropTypes from "prop-types";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import PropTypes from "prop-types";
 
 import "styles/components/cards/LargeCard.scss";
 
 class LargeCard extends Component {
 
 	static propTypes = {
-		title: PropTypes.string.isRequired,
 		imageLocalUri: PropTypes.string.isRequired,
 		imagePosition: PropTypes.oneOf(['left', 'right']).isRequired,
 		backgroundColor: PropTypes.oneOf(['light', 'dark']).isRequired,
@@ -21,6 +20,13 @@ class LargeCard extends Component {
 	}
 
 	render() {
+		const children = this.props.children;
+		let title = null;
+		const titleObj = children.find(e => e.type && e.type === "title");
+		if (titleObj && titleObj.props && titleObj.props.children) {
+			title = titleObj.props.children;
+		}
+		const child = children.filter(e => !e.type || e.type !== "title");
 		const classes = `tc_LargeCard tc_LargeCard_${this.props.backgroundColor}`;
 		const imgContainerClasses = `tc_LargeCard_main tc_LargeCard_image_container_${this.props.imagePosition}`;
 		const textClasses = `tc_LargeCard_text_${this.props.imagePosition}`;
@@ -35,8 +41,8 @@ class LargeCard extends Component {
 							height={this.props.imageHeight}/>
 					</Grid>
 					<Grid item md={6} xs={12} className={textClasses}>
-						<div className="tc_LargeCard_title">{this.props.title}</div>
-						<div className="tc_LargeCard_content">{this.props.children}</div>
+						<div className="tc_LargeCard_title">{title}</div>
+						<div className="tc_LargeCard_content">{child}</div>
 					</Grid>
 				</Grid>
 			</Container>
