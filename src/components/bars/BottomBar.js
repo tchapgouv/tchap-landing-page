@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { matomoHOC } from 'utils/HOC';
+import { matomoHOC } from 'utils/HOC/MatomoHOC';
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import GitHub from '@mui/icons-material/GitHub';
@@ -18,9 +18,9 @@ class BottomBar extends Component {
 	}
 
 	_hookProbe(e) {
-		const hooks = this.props.hooks;
+		const matomoHook = this.props.matomoHook;
 		const actionName = e.target.dataset.probeName;
-		hooks.trackEvent({ category: 'footer', action: actionName });
+		matomoHook.trackEvent({ category: 'footer', action: actionName });
 	}
 
 	render() {

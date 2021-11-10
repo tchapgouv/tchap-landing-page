@@ -1,7 +1,7 @@
 import { Component } from "react";
-import { matomoHOC } from './utils/HOC';
+import { matomoHOC } from 'utils/HOC/MatomoHOC';
 import { setLocale, setTranslations } from "react-i18nify";
-import { Switch, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "pages/home/Home";
 import Convention from "pages/convention/Convention";
 import Suivi from "pages/suivi/Suivi";
@@ -14,35 +14,23 @@ class App extends Component {
 
 	constructor(props) {
 		super(props);
-		const hooks = this.props.hooks;
+		const matomoHook = this.props.matomoHook;
 		setTranslations(require("locales/fr.json"));
 		setLocale('fr');
-		hooks.trackPageView();
+		matomoHook.trackPageView();
 	}
 
 	render() {
 		return (
-			<HashRouter basename="/">
-				<div>
-					<Switch>
-						<Route path="/convention">
-							<Convention />
-						</Route>
-						<Route path="/suivi">
-							<Suivi />
-						</Route>
-						<Route path="/prise-en-main">
-							<Pem />
-						</Route>
-						<Route path="/faq">
-							<Faq />
-						</Route>
-						<Route path="/">
-							<Home />
-						</Route>
-					</Switch>
-				</div>
-			</HashRouter>
+			<BrowserRouter basename="/">
+				<Routes>
+					<Route path="/convention" element={<Convention />} />
+					<Route path="/suivi" element={<Suivi />} />
+					<Route path="/prise-en-main" element={<Pem />} />
+					<Route path="/faq" element={<Faq />} />
+					<Route path="/" element={<Home />} />
+				</Routes>
+			</BrowserRouter>
 		);
 	}
 }

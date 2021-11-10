@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 
 class GenericLink extends Component {
 	static propTypes = {
@@ -16,7 +15,7 @@ class GenericLink extends Component {
 	generateLink() {
 		const url = this.props.to;
 		if (url.startsWith("#") || url.startsWith("/#")) {
-			return <HashLink className="tc_GenericLink_link" to={url} {...this.props} smooth>{this.props.children}</HashLink>;
+			return <Link to={{ hash: url }} {...this.props}>{this.props.children}</Link>;
 		} else if (url.startsWith("/")) {
 			return <Link className="tc_GenericLink_link" to={url} {...this.props}>{this.props.children}</Link>;
 		} else {

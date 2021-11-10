@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { matomoHOC } from 'utils/HOC';
+import { routerHOC } from "utils/HOC/ReactRouterHOC";
+import { matomoHOC } from 'utils/HOC/MatomoHOC';
 import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -22,13 +23,14 @@ class Pem extends Component {
 		};
 		this._handleCopyClick = this._handleCopyClick.bind(this);
 		this._hookProbe = this._hookProbe.bind(this);
+		this._onLocationChange = this._onLocationChange.bind(this);
 	}
 
 	componentDidMount() {
-		const anchor = location.hash.split("#")[2];
+		const location = this.props.routerLocation;
+		const anchor = location.hash.substring(1);
 		if (anchor) {
-			const elemId = anchor.replace("/", "");
-			const elem = document.getElementById(elemId);
+			const elem = document.getElementById(anchor);
 			if (elem) elem.scrollIntoView( { behavior: 'smooth', block: 'start' } );
 		} else {
 			const body = document.body;
@@ -40,7 +42,7 @@ class Pem extends Component {
 		const currentTarget = e.currentTarget;
 		const linkId = currentTarget.parentNode.id;
 		const baseUrl = location.href;
-		const sHash = location.href.split("#")[2];
+		const sHash = location.href.split("#")[1];
 		const anchorUrl = Boolean(sHash) ? baseUrl.replace(sHash, linkId) : `${baseUrl}#${linkId}`;
 
 		navigator.clipboard.writeText(anchorUrl).then(() => {
@@ -59,10 +61,21 @@ class Pem extends Component {
 		});
 	}
 
+	_scrollToElem(id) {
+		const elem = document.getElementById(id);
+		if (elem) elem.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+	}
+
+	_onLocationChange(e) {
+		const id = e.target.hash.substring(1);
+		this._hookProbe(e)
+		this._scrollToElem(id);
+	}
+
 	_hookProbe(e) {
-		const hooks = this.props.hooks;
+		const matomoHook = this.props.matomoHook;
 		const actionName = e.target.dataset.probeName;
-		hooks.trackEvent({ category: 'pem', action: actionName });
+		matomoHook.trackEvent({ category: 'pem', action: actionName });
 	}
 
 	render() {
@@ -91,12 +104,12 @@ class Pem extends Component {
 							<div className="tc_Pem_Intro_subtitle">C'est parti !</div>
 
 							<ul className="tc_Pem_Menu">
-								<li><GenericLink data-probe-name="menu-demarrer" onClick={this._hookProbe} className="tc_Pem_Menu_item" to="#tcp01_001">Quelques conseils pour bien démarrer...</GenericLink></li>
-								<li><GenericLink data-probe-name="menu-type" onClick={this._hookProbe} className="tc_Pem_Menu_item" to="#tcp02_001">Les différents types de conversation</GenericLink></li>
-								<li><GenericLink data-probe-name="menu-dm" onClick={this._hookProbe} className="tc_Pem_Menu_item" to="#tcp03_001">Rechercher des interlocuteurs pour démarrer une conversation</GenericLink></li>
-								<li><GenericLink data-probe-name="menu-forum" onClick={this._hookProbe} className="tc_Pem_Menu_item" to="#tcp04_001">Rejoindre des Salons Forum</GenericLink></li>
-								<li><GenericLink data-probe-name="menu-administrer" onClick={this._hookProbe} className="tc_Pem_Menu_item" to="#tcp05_001">Créer et administrer un salon</GenericLink></li>
-								<li><GenericLink data-probe-name="menu-questions" onClick={this._hookProbe} className="tc_Pem_Menu_item" to="#tcp06_001">Des questions ?</GenericLink></li>
+								<li><GenericLink data-probe-name="menu-demarrer" onClick={this._onLocationChange} className="tc_Pem_Menu_item" to="#tcp01_001">Quelques conseils pour bien démarrer...</GenericLink></li>
+								<li><GenericLink data-probe-name="menu-type" onClick={this._onLocationChange} className="tc_Pem_Menu_item" to="#tcp02_001">Les différents types de conversation</GenericLink></li>
+								<li><GenericLink data-probe-name="menu-dm" onClick={this._onLocationChange} className="tc_Pem_Menu_item" to="#tcp03_001">Rechercher des interlocuteurs pour démarrer une conversation</GenericLink></li>
+								<li><GenericLink data-probe-name="menu-forum" onClick={this._onLocationChange} className="tc_Pem_Menu_item" to="#tcp04_001">Rejoindre des Salons Forum</GenericLink></li>
+								<li><GenericLink data-probe-name="menu-administrer" onClick={this._onLocationChange} className="tc_Pem_Menu_item" to="#tcp05_001">Créer et administrer un salon</GenericLink></li>
+								<li><GenericLink data-probe-name="menu-questions" onClick={this._onLocationChange} className="tc_Pem_Menu_item" to="#tcp06_001">Des questions ?</GenericLink></li>
 							</ul>
 
 							<div className="tc_Pem_Content_title" id="tcp01_001"><LinkIcon onClick={this._handleCopyClick} className="tc_Pem_Content_title_icon" /> 1. Quelques conseils pour bien démarrer...</div>
@@ -230,4 +243,4 @@ class Pem extends Component {
 	}
 }
 
-export default matomoHOC(Pem);
+export default routerHOC(matomoHOC(Pem));

@@ -5,7 +5,7 @@ import Container from "@mui/material/Container";
 import AndroidIcon from '@mui/icons-material/Android';
 import AppleIcon from '@mui/icons-material/Apple';
 import ComputerIcon from '@mui/icons-material/Computer';
-import { matomoHOC } from 'utils/HOC';
+import { matomoHOC } from 'utils/HOC/MatomoHOC';
 
 import "styles/pages/home/panels/WelcomePanelBtns.scss";
 
@@ -17,8 +17,8 @@ class WelcomePanelBtns extends Component {
 
 	_handleClick(e) {
 		e.preventDefault();
-		const hooks = this.props.hooks;
-		hooks.trackEvent({ category: 'platform', action: e.target.dataset.platform });
+		const matomoHook = this.props.matomoHook;
+		matomoHook.trackEvent({ category: 'platform', action: e.target.dataset.platform });
 		window.open(e.target.href, "_blank", "noreferrer");
 	}
 

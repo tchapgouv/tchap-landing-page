@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { matomoHOC } from 'utils/HOC';
+import { matomoHOC } from 'utils/HOC/MatomoHOC';
 import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
 import Grid from '@mui/material/Grid';
@@ -54,8 +54,8 @@ class TestYourEmail extends Component {
 	}
 
 	_hookProbe() {
-		const hooks = this.props.hooks;
-		hooks.trackEvent({ category: 'convention', action: 'download' });
+		const matomoHook = this.props.matomoHook;
+		matomoHook.trackEvent({ category: 'convention', action: 'download' });
 		window.open(ConventionPdf, "_blank");
 	}
 
@@ -68,8 +68,8 @@ class TestYourEmail extends Component {
 	}
 
 	analyzeEmail() {
-		const hooks = this.props.hooks;
-		hooks.trackEvent({ category: 'email', action: 'verification' });
+		const matomoHook = this.props.matomoHook;
+		matomoHook.trackEvent({ category: 'email', action: 'verification' });
 		const email = this.state.textFieldValue;
 		fetch("https://matrix.agent.tchap.gouv.fr/_matrix/identity/api/v1/info?medium=email&address=" + String(email).toLowerCase())
 			.then(res => res.json())

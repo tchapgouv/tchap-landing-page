@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from "react-router-dom";
+import { routerHOC } from "utils/HOC/ReactRouterHOC";
 import IconButton from "@mui/material/IconButton";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
@@ -36,8 +36,8 @@ class BackToTop extends Component {
 	}
 
 	_scrollToTop() {
-		if (location.hash.split("#").length -1 > 1) {
-			this.props.history.push();
+		if (location.hash.split("#").length > 1) {
+			this.props.routerNavigation('');
 		}
 		window.scrollTo({
 			top: 0,
@@ -65,4 +65,4 @@ class BackToTop extends Component {
 	}
 }
 
-export default withRouter(BackToTop);
+export default routerHOC(BackToTop);
