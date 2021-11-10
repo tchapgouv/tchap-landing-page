@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import PropTypes from "prop-types";
-import { matomoHOC } from 'utils/HOC';
+import { matomoHOC } from 'utils/HOC/MatomoHOC';
 import {t} from "react-i18nify";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
@@ -40,10 +40,10 @@ class TopBar extends Component {
 	}
 
 	_hookProbe(e) {
-		const hooks = this.props.hooks;
+		const matomoHook = this.props.matomoHook;
 		let actionName = e.target.dataset.probeName;
 		actionName = actionName ? actionName : e.target.parentNode.dataset.probeName;
-		hooks.trackEvent({ category: 'header', action: actionName });
+		matomoHook.trackEvent({ category: 'header', action: actionName });
 	}
 
 	render() {
