@@ -5,8 +5,8 @@
   "main": "index.js",
   "description": "Tchap landing page",
   "scripts": {
-    "start": "NODE_ENV=development webpack serve --config config/webpack.dev.js --progress",
-    "build": "NODE_ENV=production webpack --config config/webpack.prod.js"
+    "start": "NODE_ENV=development webpack serve --history-api-fallback --config config/webpack.dev.js --progress",
+    "build": "NODE_ENV=production webpack --history-api-fallback --config config/webpack.prod.js"
   },
   "dependencies": {
     "@datapunt/matomo-tracker-react": "^0.5.1",
