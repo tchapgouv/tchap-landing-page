@@ -8,19 +8,25 @@
 
 .tc_TestYourEmail_input {
   min-width: 450px;
-  border-bottom-right-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+  margin-right: 20px;
 }
 
 @media (max-width: 960px) {
   .tc_TestYourEmail_input {
-    min-width: inherit;
+    width: 100%;
+  }
+}
+
+@media (max-width: 675px) {
+  .tc_TestYourEmail_input {
+    margin-bottom: 20px;
+  }
+  .tc_TestYourEmail_email_text {
+    text-align: left;
   }
 }
 
 .tc_TestYourEmail_btn {
-  border-bottom-left-radius: 0 !important;
-  border-top-left-radius: 0 !important;
   line-height: 1.6 !important;
 }
 
