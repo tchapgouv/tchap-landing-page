@@ -68,25 +68,29 @@ class TestYourEmail extends Component {
 	}
 
 	analyzeEmail() {
-		const matomoHook = this.props.matomoHook;
-		matomoHook.trackEvent({ category: 'email', action: 'verification' });
 		const email = this.state.textFieldValue;
-		fetch("https://matrix.agent.tchap.gouv.fr/_matrix/identity/api/v1/info?medium=email&address=" + String(email).toLowerCase())
-			.then(res => res.json())
-			.then(data => {
-				let isWled = false;
-				if (data.hs !== "agent.externe.tchap.gouv.fr") isWled = true;
+		if (email !== null && email !== undefined && email !== "") {
+			const matomoHook = this.props.matomoHook;
+			matomoHook.trackEvent({category: 'email', action: 'verification'});
+			fetch("https://matrix.agent.tchap.gouv.fr/_matrix/identity/api/v1/info?medium=email&address=" + String(email).toLowerCase())
+				.then(res => res.json())
+				.then(data => {
+					let isWled = false;
+					if (data.hs !== "agent.externe.tchap.gouv.fr") isWled = true;
+					this.setState({
+						isWled,
+						isTested: true
+					});
+					const elem = document.getElementById("test-your-email");
+					if (elem) elem.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+				}).catch(err => {
 				this.setState({
-					isWled,
+					errorText: "Erreur : Impossible de joindre le serveur",
+					isWled: false,
 					isTested: true
 				});
-			}).catch(err => {
-			this.setState({
-				errorText: "Erreur : Impossible de joindre le serveur",
-				isWled: false,
-				isTested: true
 			});
-		})
+		}
 	}
 
 	render() {
@@ -121,7 +125,7 @@ class TestYourEmail extends Component {
 					<div>Votre administration n'est pas encore présente sur Tchap !</div>
 					<ul className="tc_TestYourEmail_invalid_list">
 						<li>Téléchargez la convention Tchap <a className="tc_TestYourEmail_link" onClick={this._hookProbe}>ici</a></li>
-						<li>Envoyez la signée par votre direction à <a className="tc_TestYourEmail_link" href={t("links.contact")}>tchap@beta.gouv.fr</a></li>
+						<li>Envoyez-la signée par votre direction à <a className="tc_TestYourEmail_link" href={t("links.contact")}>tchap@beta.gouv.fr</a></li>
 						<li>L'équipe Tchap se charge de l'ouverture du service à votre administration</li>
 					</ul>
 				</div>
@@ -130,7 +134,7 @@ class TestYourEmail extends Component {
 
 		return (
 			<Container maxWidth="lg">
-				<div className="tc_TestYourEmail_label">Votre administration est-elle déjà présente sur Tchap ?</div>
+				<div className="tc_TestYourEmail_label">Votre administration est-elle déjà sur Tchap ?</div>
 				<Grid item xs={12}>
 					<FormControl variant="outlined" size="small">
 						<InputLabel htmlFor="test-your-email" className="tc_TestYourEmail_input_label">Testez votre adresse email professionnelle</InputLabel>
@@ -149,7 +153,7 @@ class TestYourEmail extends Component {
 							label="Testez votre adresse email professionnelle"
 						/>
 					</FormControl>
-					<Button variant="outlined" size="large" disabled={this.state.disabled} onClick={this.analyzeEmail} className={colorClass}>
+					<Button variant="contained" size="large" onClick={this.analyzeEmail} className={colorClass}>
 						Vérifier
 					</Button>
 					{ renderBlock }

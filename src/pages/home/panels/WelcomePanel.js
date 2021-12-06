@@ -15,7 +15,7 @@ class WelcomePanel extends Component {
 							<Grid item md={7} xs={12} className="tc_WelcomePanel_block">
 								<div className="tc_WelcomePanel_title">Tchap, la messagerie instantanée de confiance de l'Administration</div>
 								<div className="tc_WelcomePanel_content">Conçue pour les agents des trois fonctions publiques, pour communiquer facilement en toute sécurité.</div>
-								<div className="tc_WelcomePanel_subcontent">Actuellement utilisée par plus de 260 000 agents publics</div>
+								<div className="tc_WelcomePanel_subcontent">Utilisée par plus de 260 000 agents publics.</div>
 								<div className="tc_WelcomePanel_content">
 									<WelcomePanelBtns />
 								</div>

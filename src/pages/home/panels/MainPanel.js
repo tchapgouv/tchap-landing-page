@@ -37,11 +37,11 @@ class MainPanel extends Component {
 					<Grid item xs={12}>
 						<LargeCard
 							backgroundColor="light"
-							imageLocalUri="collaborate.png"
+							imageLocalUri="contacts.png"
 							imagePosition="left"
 						>
 							<title>Centralisez vos échanges</title>
-							Un seul canal d'échange pour toute l'Administration : tous les agents publics peuvent s'inscrire sur Tchap et y échanger. Vous pouvez également inviter vos partenaires externes à se joindre à certains de vos échanges.
+							Un seul canal d'échange pour toute l'Administration : tous les agents publics peuvent s’inscrire et échanger sur Tchap. Vous pouvez également inviter vos partenaires externes à se joindre à certains de vos échanges.
 						</LargeCard>
 					</Grid>
 				</Grid>
@@ -50,7 +50,7 @@ class MainPanel extends Component {
 					<Grid item xs={12}>
 						<LargeCard
 							backgroundColor="dark"
-							imageLocalUri="share.png"
+							imageLocalUri="forums.png"
 							imagePosition="right"
 						>
 							<title>Partagez vos centres d'intérêt</title>
