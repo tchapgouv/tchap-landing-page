@@ -18,7 +18,7 @@ class MainPanel extends Component {
 							imagePosition="top"
 						>
 							<h3>Utilisez Tchap sur tous vos appareils</h3>
-							En plus d'être compatible avec vos appareils sécurisés, Tchap est disponible sur mobile, tablette et web. Vous pouvez donc l'utiliser simultanément sur l'ensemble de vos appareils, que vous soyez au bureau ou en mobilité.
+							Tchap est disponible simultanément sur mobile, tablette et web, ainsi que sur les appareils sécurisés.
 						</HalfCard>
 					</Grid>
 					<Grid item md={6} xs={12}>
