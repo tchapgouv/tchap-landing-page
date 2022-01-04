@@ -44,6 +44,14 @@
   right: 0;
   top: 30px;
 }
+.tc_WelcomePanel_image .cover_image {
+  display: block;
+  width: 763px;
+  height: 452px;
+  background-image: url('images/intro.png');
+  background-position: left;
+  background-size: cover;
+}
 
 @media (max-width: 899px) {
   .tc_WelcomePanel_image {
