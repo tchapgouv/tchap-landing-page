@@ -1,12 +1,5 @@
 import { Component } from 'react';
 import { matomoHOC } from 'utils/HOC/MatomoHOC';
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import GitHub from '@mui/icons-material/GitHub';
-import GenericLink from "components/GenericLink";
-import RepLogo from "icons/rep-logo.svg";
-import TchapLogoMono from "icons/tchap-logo-mono.svg";
-import MatrixLogo from "icons/matrix-logo.svg";
 
 import "styles/components/bars/BottomBar.scss";
 
@@ -25,32 +18,68 @@ class BottomBar extends Component {
 
 	render() {
 		return (
-			<div className="tc_BottomBar">
-				<Container maxWidth="lg">
-					<Grid container className="tc_BottomBar_container">
-						<Grid item xs={6}>
-							<RepLogo width="150"/>
-						</Grid>
-						<Grid item xs={6} className="tc_BottomBar_text">
-							<div>Le code de Tchap est consultable publiquement et se base sur le protocole <GenericLink to='https://matrix.org/docs/guides/end-to-end-encryption-implementation-guide'>Matrix</GenericLink>. Le développement de l'application bénéficie ainsi des avancées de la communauté Matrix, en terme d'amélioration fonctionnelle et de sécurité.</div>
-						</Grid>
-					</Grid>
-					<Grid container className="tc_BottomBar_Menu_container">
-						<GenericLink data-probe-name="github" onClick={this._hookProbe} to="https://github.com/tchapgouv/tchap-landing-page" className="tc_BottomBar_Menu_item">
-							<GitHub className="tc_BottomBar_Menu_logo" /> GitHub
-						</GenericLink>
-						<GenericLink data-probe-name="tchap" onClick={this._hookProbe} to="https://www.tchap.gouv.fr/" className="tc_BottomBar_Menu_item">
-							<TchapLogoMono className="tc_BottomBar_Menu_logo" /> Tchap
-						</GenericLink>
-						<GenericLink data-probe-name="matrix" onClick={this._hookProbe} to="https://matrix.org/" className="tc_BottomBar_Menu_item">
-							<MatrixLogo className="tc_BottomBar_Menu_logo" /> matrix.org
-						</GenericLink>
-						<GenericLink data-probe-name="personal-data" onClick={this._hookProbe} to="/suivi" className="tc_BottomBar_Menu_item">
-							Données personnelles
-						</GenericLink>
-					</Grid>
-				</Container>
-			</div>
+			<footer class="fr-footer" role="contentinfo" id="footer">
+				<div class="fr-container">
+					<div class="fr-footer__body">
+						<div class="fr-footer__brand fr-enlarge-link">
+							<a href="/" title="Retour à l’accueil">
+								<p class="fr-logo" title="république française">
+									république
+									<br/>française
+								</p>
+							</a>
+						</div>
+						<div class="fr-footer__content">
+							<p class="fr-footer__content-desc">
+							Le code de Tchap est consultable publiquement et se base sur le protocole Matrix. Le développement de l'application bénéficie ainsi des avancées de la communauté Matrix, en terme d'amélioration fonctionnelle et de sécurité.
+							</p>
+							<ul class="fr-footer__content-list">
+								<li class="fr-footer__content-item">
+									<a class="fr-footer__content-link" href="https://www.tchap.gouv.fr" data-probe-name="tchap-app" onClick={this._hookProbe}>
+										Utiliser Tchap
+									</a>
+								</li>
+								<li class="fr-footer__content-item">
+									<a class="fr-footer__content-link" href="https://github.com/tchapgouv" data-probe-name="github" onClick={this._hookProbe}>
+										Le code de Tchap sur Github
+									</a>
+								</li>
+								<li class="fr-footer__content-item">
+									<a class="fr-footer__content-link" href="https://beta.gouv.fr" data-probe-name="betagouv" onClick={this._hookProbe}>
+										beta.gouv.fr
+									</a>
+								</li>
+								<li class="fr-footer__content-item">
+									<a class="fr-footer__content-link" href="https://matrix.org/" data-probe-name="matrix" onClick={this._hookProbe}>
+										matrix.org
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="fr-footer__bottom">
+						<ul class="fr-footer__bottom-list">
+							<li class="fr-footer__bottom-item">
+								<a class="fr-footer__bottom-link">Accessibilité: non conforme</a>
+							</li>
+							<li class="fr-footer__bottom-item">
+								<a class="fr-footer__bottom-link" href="https://www.tchap.gouv.fr/tac/" data-probe-name="terms-of-service" onClick={this._hookProbe}>
+									Mentions légales
+								</a>
+							</li>
+							<li class="fr-footer__bottom-item">
+								<a class="fr-footer__bottom-link" href="/suivi" data-probe-name="personal-data" onClick={this._hookProbe}>
+									Données personnelles
+								</a>
+							</li>
+						</ul>
+						<div class="fr-footer__bottom-copy">
+							<p>Sauf mention contraire, tous les contenus de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence etalab-2.0</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
 		);
 	}
 }
