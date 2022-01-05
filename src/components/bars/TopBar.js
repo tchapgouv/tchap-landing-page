@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import PropTypes from "prop-types";
 import { matomoHOC } from 'utils/HOC/MatomoHOC';
-import {t} from "react-i18nify";
+import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
@@ -16,27 +16,9 @@ import "styles/components/bars/TopBar.scss";
 
 class TopBar extends Component {
 
-	static propTypes = {
-		borderBottom: PropTypes.bool,
-	};
-
 	constructor(props) {
 		super(props);
-		this.state = {
-			anchorEl: null,
-			borderBottom: this.props.borderBottom || false,
-		}
-		this._handleClose = this._handleClose.bind(this);
-		this._handleClick = this._handleClick.bind(this);
-		this._hookProbe = this._hookProbe.bind(this);
-	}
-
-	_handleClick(event) {
-		this.setState({ anchorEl: event.currentTarget });
-	}
-
-	_handleClose() {
-		this.setState({ anchorEl: null });
+		this._hookProbe = this._hookProbe.bind(this); // todo put this back for matomo
 	}
 
 	_hookProbe(e) {
@@ -47,56 +29,59 @@ class TopBar extends Component {
 	}
 
 	render() {
-		let topBarClasses = "tc_TopBar";
-		if (this.state.borderBottom === true) {
-			topBarClasses += " tc_TopBar_border";
-		}
 		return (
-			<Container maxWidth="lg">
+			<header role="banner" class="fr-header">
 				<BackToTop />
-				<div className={topBarClasses}>
-					<RepLogo width="120" className="tc_TopBar_Left_rep"/>
-					<GenericLink data-probe-name="home" onClick={this._hookProbe} to="/" className="tc_TopBar_Left">
-						<TchapLogo width="60px" />
-						<span className="tc_TopBar_Left_name">Tchap</span>
-					</GenericLink>
-					<div className="tc_TopBar_Right_menu">
-						<Button
-							className="tc_TopBar_Right_menu_btn"
-							size="large" aria-controls="simple-menu"
-							aria-haspopup="true"
-							onClick={this._handleClick}
-							startIcon={<MenuIcon />}
-							title="Top menu" />
-						<Menu
-							anchorEl={this.state.anchorEl}
-							keepMounted
-							open={Boolean(this.state.anchorEl)}
-							onClose={this._handleClose} >
-							<GenericLink data-probe-name="mobile-pem" onClick={this._hookProbe} className="tc_TopBar_Right_menu_item" to={t('links.prise-en-main')}>
-								<MenuItem onClick={this._handleClose}>Prise en main</MenuItem>
-							</GenericLink>
-							<GenericLink data-probe-name="mobile-faq" onClick={this._hookProbe} className="tc_TopBar_Right_menu_item" to={t('links.faq')}>
-								<MenuItem onClick={this._handleClose}>FAQ</MenuItem>
-							</GenericLink>
-							<GenericLink data-probe-name="mobile-contact" onClick={this._hookProbe} className="tc_TopBar_Right_menu_item" to={"mailto:" + t('links.contact')}>
-								<MenuItem onClick={this._handleClose}>Contact</MenuItem>
-							</GenericLink>
-						</Menu>
-					</div>
-					<div className="tc_TopBar_Right_text">
-						<GenericLink data-probe-name="pem" onClick={this._hookProbe} to={t('links.prise-en-main')}>
-							Prise en main
-						</GenericLink>
-						<GenericLink data-probe-name="faq" onClick={this._hookProbe} to={t('links.faq')}>
-							FAQ
-						</GenericLink>
-						<GenericLink data-probe-name="contact" onClick={this._hookProbe} to={"mailto:" + t('links.contact')}>
-							Contact
-						</GenericLink>
+				<div class="fr-header__body">
+					<div class="fr-container">
+						<div class="fr-header__body-row">
+							<div class="fr-header__brand fr-enlarge-link">
+								<div class="fr-header__brand-top">
+									<div class="fr-header__logo">
+										<p class="fr-logo">
+											République
+											<br />Française
+										</p>
+									</div>
+									<div class="fr-header__navbar">
+										<button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-833" aria-haspopup="menu" title="Menu" id="fr-btn-menu-mobile">
+											Menu
+										</button>
+									</div>
+								</div>
+								<TchapLogo width="60px" />
+								<div class="fr-header__service">
+									<a href="/" title="Accueil - Tchap">
+										<p class="fr-header__service-title">Tchap</p>
+									</a>
+									<p class="fr-header__service-tagline">La messagerie instantanée de confiance de l'Administration</p>
+								</div>
+							</div>
+							<div class="fr-header__tools">
+								<div class="fr-header__tools-links">
+									<ul class="fr-links-group">
+										<li>
+											<a class="fr-link" href={t('links.prise-en-main')}>Prise en main</a>
+										</li>
+										<li>
+											<a class="fr-link" href={t('links.faq')}>FAQ</a>
+										</li>
+										<li>
+											<a class="fr-link fr-fi-external-link-line" href={'mailto:' + t('links.contact')} target="_blank" rel="noreferer noopener">Contact</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</Container>
+				<div class="fr-header__menu fr-modal" id="modal-833" aria-labelledby="fr-btn-menu-mobile">
+					<div class="fr-container">
+						<button class="fr-link--close fr-link" aria-controls="modal-833">Fermer</button>
+						<div class="fr-header__menu-links"></div>
+					</div>
+				</div>
+			</header>
 		);
 	}
 }
