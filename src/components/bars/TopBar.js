@@ -18,9 +18,11 @@ class TopBar extends Component {
 
 	constructor(props) {
 		super(props);
-		this._hookProbe = this._hookProbe.bind(this); // todo put this back for matomo
+		this._hookProbe = this._hookProbe.bind(this);
 	}
 
+	// todo : make a difference between clicks on mobile and desktop
+	// todo : track click on home
 	_hookProbe(e) {
 		const matomoHook = this.props.matomoHook;
 		let actionName = e.target.dataset.probeName;
@@ -61,13 +63,24 @@ class TopBar extends Component {
 								<div class="fr-header__tools-links">
 									<ul class="fr-links-group">
 										<li>
-											<a class="fr-link" href={t('links.prise-en-main')}>Prise en main</a>
+											<a class="fr-link" href={t('links.prise-en-main')} data-probe-name="pem" onClick={this._hookProbe}>
+												Prise en main
+											</a>
 										</li>
 										<li>
-											<a class="fr-link" href={t('links.faq')}>FAQ</a>
+											<a class="fr-link" href={t('links.faq')} data-probe-name="faq" onClick={this._hookProbe}>
+												FAQ
+											</a>
 										</li>
 										<li>
-											<a class="fr-link fr-fi-external-link-line" href={'mailto:' + t('links.contact')} target="_blank" rel="noreferer noopener">Contact</a>
+											<a class="fr-link fr-fi-external-link-line"
+												href={'mailto:' + t('links.contact')}
+												target="_blank"
+												rel="noreferer noopener"
+												data-probe-name="contact"
+												onClick={this._hookProbe}>
+													Contact
+											</a>
 										</li>
 									</ul>
 								</div>
