@@ -37,9 +37,6 @@ class HalfCard extends Component {
 						height={this.props.imageHeight}/>
 				</Grid>
 				<Grid container className="tc_HalfCard_text_container">
-					<div className="tc_HalfCard_title">
-						{title}
-					</div>
 					<div className="tc_HalfCard_content">
 						{child}
 					</div>
