@@ -21,8 +21,6 @@ class TopBar extends Component {
 		this._hookProbe = this._hookProbe.bind(this);
 	}
 
-	// todo : make a difference between clicks on mobile and desktop
-	// todo : track click on home
 	_hookProbe(e) {
 		const matomoHook = this.props.matomoHook;
 		let actionName = e.target.dataset.probeName;
@@ -53,7 +51,7 @@ class TopBar extends Component {
 								</div>
 								<TchapLogo width="60px" />
 								<div class="fr-header__service">
-									<a href="/" title="Accueil - Tchap">
+									<a href="/" title="Accueil - Tchap" data-probe-name="home" onClick={this._hookProbe}>
 										<p class="fr-header__service-title">Tchap</p>
 									</a>
 									<p class="fr-header__service-tagline">La messagerie instantanée de confiance de l'Administration</p>
