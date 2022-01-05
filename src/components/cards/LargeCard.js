@@ -37,8 +37,8 @@ class LargeCard extends Component {
 					<Grid item md={6} xs={12} className="tc_LargeCard_image">
 						<img src={require(`images/${this.props.imageLocalUri}`)}
 							alt={this.props.imageLocalUri}
-							width={this.props.imageWidth}
-							height={this.props.imageHeight}/>
+							width="341px"
+							height="344px"/>
 					</Grid>
 					<Grid item md={6} xs={12} className={textClasses}>
 						<div className="tc_LargeCard_title">{title}</div>
