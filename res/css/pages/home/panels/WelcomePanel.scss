@@ -53,7 +53,31 @@
 }
 
 @media (max-width: 899px) {
+  .fr-header__brand.fr-enlarge-link svg {
+    margin: 10px;
+    position: absolute;
+    top: 10px;
+    left: 110px;
+  }
+  .fr-header__service {
+    width: 80px;
+    position: absolute;
+    top: 20px;
+    left: 170px;
+    box-shadow: none;
+  }
+  .fr-header__navbar {
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  .tc_WelcomePanel {
+    padding-top: 520px;
+    padding-bottom: 50px;
+  }
   .tc_WelcomePanel_image {
-    display: none;
+    left:  -20px;
+  }
+  .tc_WelcomePanel_content {
+    left: 0;
   }
 }
