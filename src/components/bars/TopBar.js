@@ -49,12 +49,11 @@ class TopBar extends Component {
 										</button>
 									</div>
 								</div>
-								<TchapLogo width="60px" />
+								<TchapLogo width="50px" />
 								<div class="fr-header__service">
 									<a href="/" title="Accueil - Tchap" data-probe-name="home" onClick={this._hookProbe}>
 										<p class="fr-header__service-title">Tchap</p>
 									</a>
-									<p class="fr-header__service-tagline">La messagerie instantanée de confiance de l'Administration</p>
 								</div>
 							</div>
 							<div class="fr-header__tools">
