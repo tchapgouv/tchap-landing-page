@@ -1,15 +1,7 @@
 import { Component } from 'react';
-import PropTypes from "prop-types";
 import { matomoHOC } from 'utils/HOC/MatomoHOC';
 import { t } from "react-i18nify";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import MenuIcon from '@mui/icons-material/Menu';
-import GenericLink from "components/GenericLink";
 import TchapLogo from "icons/tchap-logo.svg";
-import RepLogo from "icons/rep-logo.svg";
 import BackToTop from "../BackToTop";
 
 import "styles/components/bars/TopBar.scss";
