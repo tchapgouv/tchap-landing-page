@@ -28,7 +28,7 @@ class MainPanel extends Component {
 							imagePosition="top"
 						>
 							<h4>Retrouvez facilement vos collaborateurs</h4>
-							L'annuaire intégré de Tchap vous permet d'entrer en contact avec l'ensemble de ses utilisateurs. Pas besoin de connaître le numéro de téléphone de vos interlocuteurs : retrouvez-les simplement en recherchant leur nom ou leur adresse email professionnelle.
+							L'annuaire intégré de Tchap vous permet d'entrer en contact avec l'ensemble de ses utilisateurs. Pas besoin de connaître le numéro de téléphone de vos interlocuteurs&nbsp;: retrouvez-les simplement en recherchant leur nom ou leur adresse email professionnelle.
 						</HalfCard>
 					</Grid>
 				</Grid>
