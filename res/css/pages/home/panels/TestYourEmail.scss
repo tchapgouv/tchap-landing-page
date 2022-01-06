@@ -7,13 +7,18 @@
 }
 
 .tc_TestYourEmail_input {
-  min-width: 450px;
+  min-width: 700px;
   margin-right: 20px;
 }
 
 @media (max-width: 960px) {
   .tc_TestYourEmail_input {
-    width: 100%;
+    min-width: 320px;
+  }
+}
+@media (max-width: 320px) {
+  .tc_TestYourEmail_input {
+    min-width: 250px;
   }
 }
 

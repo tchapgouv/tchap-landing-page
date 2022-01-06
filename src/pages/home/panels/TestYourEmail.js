@@ -133,9 +133,9 @@ class TestYourEmail extends Component {
 		}
 
 		return (
-			<Container maxWidth="lg">
+			<Container maxWidth="lg" className="simple_container">
 				<div className="tc_TestYourEmail_label">Votre administration est-elle déjà sur Tchap ?</div>
-				<Grid item xs={12}>
+				
 					<FormControl variant="outlined" size="small">
 						<InputLabel htmlFor="test-your-email" className="tc_TestYourEmail_input_label">Testez votre adresse email professionnelle</InputLabel>
 						<OutlinedInput
@@ -157,7 +157,7 @@ class TestYourEmail extends Component {
 						Vérifier
 					</Button>
 					{ renderBlock }
-				</Grid>
+				
 			</Container>
 		);
 	}
