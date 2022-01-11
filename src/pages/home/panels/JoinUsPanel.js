@@ -12,11 +12,12 @@ class JoinUsPanel extends Component {
 				<Container maxWidth="lg">
 					<Grid container>
 						<Grid item xs={12} className="tc_JoinUsPanel_joinus">
-							<div className="tc_JoinUsPanel_title">Comment rejoindre Tchap ?</div>
+							<div className="tc_JoinUsPanel_title"><h2>Comment rejoindre Tchap ?</h2></div>
 							<div className="tc_JoinUsPanel_content">Tchap est ouvert aux agents des trois fonctions publiques, quel que soit leur statut, à condition que leur administration y soit déjà présente.</div>
-						</Grid>
-						<Grid item xs={12} className="tc_JoinUsPanel_testyouremail">
+						
+						<div className="tc_JoinUsPanel_testyouremail">
 							<TestYourEmail />
+						</div>
 						</Grid>
 					</Grid>
 				</Container>

@@ -17,8 +17,8 @@ class MainPanel extends Component {
 							imageLocalUri="devices.png"
 							imagePosition="top"
 						>
-							<title>Utilisez Tchap sur tous vos appareils</title>
-							En plus d'être compatible avec vos appareils sécurisés, Tchap est disponible sur mobile, tablette et web. Vous pouvez donc l'utiliser simultanément sur l'ensemble de vos appareils, que vous soyez au bureau ou en mobilité.
+							<h4>Utilisez Tchap sur tous vos appareils</h4>
+							Tchap est disponible simultanément sur mobile, tablette et web, ainsi que sur les appareils sécurisés.
 						</HalfCard>
 					</Grid>
 					<Grid item md={6} xs={12}>
@@ -27,8 +27,8 @@ class MainPanel extends Component {
 							imageLocalUri="centralized.png"
 							imagePosition="top"
 						>
-							<title>Retrouvez facilement vos collaborateurs</title>
-							L'annuaire intégré de Tchap vous permet d'entrer en contact avec l'ensemble de ses utilisateurs. Pas besoin de connaître le numéro de téléphone de vos interlocuteurs : retrouvez-les simplement en recherchant leur nom ou leur adresse email professionnelle.
+							<h4>Retrouvez facilement vos collaborateurs</h4>
+							L'annuaire intégré de Tchap vous permet d'entrer en contact avec l'ensemble de ses utilisateurs. Pas besoin de connaître le numéro de téléphone de vos interlocuteurs&nbsp;: retrouvez-les simplement en recherchant leur nom ou leur adresse email professionnelle.
 						</HalfCard>
 					</Grid>
 				</Grid>
@@ -40,7 +40,7 @@ class MainPanel extends Component {
 							imageLocalUri="contacts.png"
 							imagePosition="left"
 						>
-							<title>Centralisez vos échanges</title>
+							<h4>Centralisez vos échanges</h4>
 							Un seul canal d'échange pour toute l'Administration : tous les agents publics peuvent s’inscrire et échanger sur Tchap. Vous pouvez également inviter vos partenaires externes à se joindre à certains de vos échanges.
 						</LargeCard>
 					</Grid>
@@ -53,7 +53,7 @@ class MainPanel extends Component {
 							imageLocalUri="forums.png"
 							imagePosition="right"
 						>
-							<title>Partagez vos centres d'intérêt</title>
+							<h4>Partagez vos centres d'intérêt</h4>
 							Les forums couvrent vos centres d'intérêt professionnels (mais pas que !), avec des thématiques communes à toutes les administrations : innovation publique, formations en ligne, partage de bons plans... Et si vous ne trouvez pas votre bonheur, créez un nouveau forum !
 						</LargeCard>
 					</Grid>
@@ -66,7 +66,7 @@ class MainPanel extends Component {
 							imageLocalUri="etat.png"
 							imagePosition="top"
 						>
-							<title>Bénéficiez d'une application souveraine</title>
+							<h4>Bénéficiez d'une application souveraine</h4>
 							Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics.
 						</HalfCard>
 					</Grid>
@@ -76,7 +76,7 @@ class MainPanel extends Component {
 							imageLocalUri="secu.png"
 							imagePosition="top"
 						>
-							<title>Echangez en toute sécurité</title>
+							<h4>Echangez en toute sécurité</h4>
 							Tous les messages privés échangés sur Tchap sont chiffrés de bout en bout. Concrètement, cela signifie que jamais personne d'autre que vous ne pourra avoir accès à ces échanges. Ni même nous.
 						</HalfCard>
 					</Grid>

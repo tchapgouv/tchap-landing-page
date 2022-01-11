@@ -4,6 +4,7 @@ import { MatomoProvider, createInstance } from '@datapunt/matomo-tracker-react'
 import '../res/css/index.scss';
 
 import App from "./App"
+import '@gouvfr/dsfr/dist/dsfr/dsfr.module.js'
 
 
 const theme = createTheme({
