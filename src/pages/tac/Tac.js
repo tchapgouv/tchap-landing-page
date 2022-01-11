@@ -1,10 +1,14 @@
 import {Component} from "react";
+import BottomBar from "../../components/bars/BottomBar";
+import TopBar from "../../components/bars/TopBar";
 
 class Tac extends Component {
 
 	render() {
 		return (
 			<div className="tc_Tac">
+        <TopBar borderBottom={true} />
+
         <h1>Conditions générales d'utilisation</h1>
 
         <div className="tc_Tac_paragraph">
@@ -40,6 +44,8 @@ class Tac extends Component {
             Ca fait une liste avec des numéros.
           </div>
         </div>
+
+        <BottomBar />
 			</div>
 		);
 	}
