@@ -72,6 +72,11 @@ class BottomBar extends Component {
 									Données personnelles
 								</a>
 							</li>
+							<li class="fr-footer__bottom-item">
+								<a class="fr-footer__bottom-link" href="/cgu" data-probe-name="terms-and-conditions" onClick={this._hookProbe}>
+									Conditions d'utilisation
+								</a>
+							</li>
 						</ul>
 						<div class="fr-footer__bottom-copy">
 							<p>Sauf mention contraire, tous les contenus de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence etalab-2.0</a>
