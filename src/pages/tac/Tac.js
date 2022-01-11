@@ -3,6 +3,8 @@ import { Component } from "react";
 import BottomBar from "../../components/bars/BottomBar";
 import TopBar from "../../components/bars/TopBar";
 
+import "styles/pages/tac/Tac.scss";
+
 class Tac extends Component {
 
 	render() {
