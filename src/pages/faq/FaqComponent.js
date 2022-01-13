@@ -313,11 +313,20 @@ class FaqComponent extends Component {
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment conserver l'historique de mes messages ?</title>
-									<div className="tc_text_nl">Lorsque vous vous déconnectez puis reconnectez, vos messages passés deviennent illisibles. C'est une mesure de sécurité : la déconnexion de Tchap entraîne la perte des clés de chiffrement qui servent à déchiffrer vos messages.</div>
-									<div className="tc_text_nl">Pour conserver tous vos messages, il vous faut <span className="tc_text_b">toujours garder une connexion à Tchap sur au moins 2 appareils</span> (un mobile et un ordinateur par exemple).</div>
-									<div className="tc_text_nl">Votre mobile garde votre connexion automatiquement, comme pour toute application mobile.</div>
-									<div className="tc_text_nl">Pour assurer que votre navigateur web garde votre connexion, vérifiez dans les réglages de celui-ci que la conservation de vos données de navigation est autorisée pour Tchap (c'est généralement le cas par défaut).</div>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment éviter de perdre l'historique de mes messages ?</title>
+									<div className="tc_text_nl"><span className="tc_text_b">Lorsque vous vous déconnectez de Tchap sur tous vos appareils (ordinateur et mobile), vos messages passés deviennent illisibles</span>. C'est une mesure de sécurité : la déconnexion de Tchap entraîne la perte des clés de chiffrement qui servent à déchiffrer vos messages.</div>
+									<div className="tc_text_nl">
+										Pour conserver tous vos messages, il vous faut donc <span className="tc_text_b">toujours garder une connexion à Tchap sur au moins 2 appareils</span> (un mobile et un ordinateur par exemple).
+										<ul>
+											<li>
+												sur mobile : connectez-vous dans l'appli mobile. Il n'y a rien de spécial à faire ensuite, l'appli mobile garde la connexion.
+											</li>
+											<li>
+												sur ordinateur : certains ordinateurs professionnels sont réglés pour que le navigateur oublie toutes les données de navigation lorqu'on le ferme.
+												<span className="tc_text_b">Vérifiez dans les réglages du navigateur</span> que la conservation de vos données de navigation est autorisée pour Tchap (c'est généralement le cas par défaut).
+											</li>
+										</ul>
+									</div>
 									<div className="tc_text_nl"><span className="tc_text_b">Si vous avez besoin de vous déconnecter</span>, exportez et sauvegardez vos clés de chiffrement en vous rendant dans les réglages de Tchap et en cliquant sur "Exporter les clés de chiffrement".</div>
 									<div className="tc_FaqComponent_seemore">
 										<GenericLink onClick={this._onLocationChange} to="#tcq06_002" className="tc_FaqComponent_link">"Déchiffrement impossible" de mes messages :  comment y remédier ?</GenericLink>
