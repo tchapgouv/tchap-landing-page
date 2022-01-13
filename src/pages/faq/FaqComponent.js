@@ -327,7 +327,7 @@ class FaqComponent extends Component {
 											</li>
 										</ul>
 									</div>
-									<div className="tc_text_nl"><span className="tc_text_b">Si vous avez besoin de vous déconnecter</span>, exportez et sauvegardez vos clés de chiffrement en vous rendant dans les réglages de Tchap et en cliquant sur "Exporter les clés de chiffrement".</div>
+									<div className="tc_text_nl"><span className="tc_text_b">Si vous avez besoin de vous déconnecter, exportez et sauvegardez vos clés de chiffrement</span> en vous rendant dans les réglages de Tchap et en cliquant sur "Exporter les clés de chiffrement".</div>
 									<div className="tc_FaqComponent_seemore">
 										<GenericLink onClick={this._onLocationChange} to="#tcq06_002" className="tc_FaqComponent_link">"Déchiffrement impossible" de mes messages :  comment y remédier ?</GenericLink>
 										<GenericLink onClick={this._onLocationChange} to="#tcq05_001" className="tc_FaqComponent_link">Comment la confidentialité des échanges est-elle garantie ?</GenericLink>
