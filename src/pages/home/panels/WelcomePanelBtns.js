@@ -19,45 +19,24 @@ class WelcomePanelBtns extends Component {
 		e.preventDefault();
 		const matomoHook = this.props.matomoHook;
 		matomoHook.trackEvent({ category: 'platform', action: e.target.dataset.platform });
-		window.open(e.target.href, "_blank", "noreferrer");
+		window.open(e.target.href, "_self", "noreferrer");
 	}
 
 	render() {
 		return (
 			<Container maxWidth="lg" className="tc_WelcomePanelBtn">
 				<Grid container spacing={3}>
-					<Grid item md={4} xs={12}>
+					<Grid item md={6} xs={12}>
 						<Button
 							variant="contained"
 							size="large"
 							className="tc_WelcomePanelBtn_default"
 							onClick={this._handleClick}
-							startIcon={<AppleIcon />}
-							href="https://apps.apple.com/fr/app/tchap/id1446253779"
+							href="#test"
 							data-platform="ios"
-						>iOS</Button>
-					</Grid>
-					<Grid item md={4} xs={12} className="tc_WelcomePanelBtn">
-						<Button
-							variant="contained"
-							size="large"
-							className="tc_WelcomePanelBtn_default"
-							onClick={this._handleClick}
-							startIcon={<AndroidIcon />}
-							href="https://play.google.com/store/apps/details?id=fr.gouv.tchap.a"
-							data-platform="android"
-						>Android</Button>
-					</Grid>
-					<Grid item md={4} xs={12} className="tc_WelcomePanelBtn">
-						<Button
-							variant="contained"
-							size="large"
-							className="tc_WelcomePanelBtn_default"
-							onClick={this._handleClick}
-							startIcon={<ComputerIcon />}
-							href="https://www.tchap.gouv.fr/"
-							data-platform="web"
-						>Web</Button>
+						>S'inscrire</Button>
+					
+					
 					</Grid>
 				</Grid>
 			</Container>

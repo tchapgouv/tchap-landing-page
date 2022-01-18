@@ -111,7 +111,7 @@ class TestYourEmail extends Component {
 			colorClass += " tc_TestYourEmail_btn_valid";
 			renderBlock = (
 				<div className="tc_TestYourEmail_email_text">
-					<div>Votre administration est présente sur Tchap !</div>
+					<div>Votre organisation est présente sur Tchap !</div>
 					<Button variant="text" size="large" href="https://www.tchap.gouv.fr/#/register" target="_blank" rel="noreferrer noopener nofollow">
 						Inscrivez-vous
 					</Button>
@@ -122,11 +122,11 @@ class TestYourEmail extends Component {
 			colorClass += " tc_TestYourEmail_btn_invalid";
 			renderBlock = (
 				<div className="tc_TestYourEmail_email_text">
-					<div>Votre administration n'est pas encore présente sur Tchap !</div>
+					<div>Votre organisation n'est pas encore présente sur Tchap !</div>
 					<ul className="tc_TestYourEmail_invalid_list">
 						<li>Téléchargez la convention Tchap <a className="tc_TestYourEmail_link" onClick={this._hookProbe}>ici</a></li>
 						<li>Envoyez-la signée par votre direction à <a className="tc_TestYourEmail_link" href={t("links.contact")}>tchap@beta.gouv.fr</a></li>
-						<li>L'équipe Tchap se charge de l'ouverture du service à votre administration</li>
+						<li>L'équipe Tchap se charge de l'ouverture du service à votre organisation</li>
 					</ul>
 				</div>
 			);
@@ -134,7 +134,7 @@ class TestYourEmail extends Component {
 
 		return (
 			<Container maxWidth="lg" className="simple_container">
-				<div className="tc_TestYourEmail_label">Votre administration est-elle déjà sur Tchap ?</div>
+				<div className="tc_TestYourEmail_label">Votre organisation est-elle déjà sur Tchap ?</div>
 				
 					<FormControl variant="outlined" size="small">
 						<InputLabel htmlFor="test-your-email" className="tc_TestYourEmail_input_label">Testez votre adresse email professionnelle</InputLabel>
