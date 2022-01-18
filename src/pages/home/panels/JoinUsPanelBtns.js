@@ -32,9 +32,32 @@ class WelcomePanelBtns extends Component {
 							size="large"
 							className="tc_WelcomePanelBtn_default"
 							onClick={this._handleClick}
+							startIcon={<AppleIcon />}
 							href="https://apps.apple.com/fr/app/tchap/id1446253779"
 							data-platform="ios"
-						>S'inscrire</Button>
+						>iOS</Button>
+					</Grid>
+					<Grid item md={4} xs={12} className="tc_WelcomePanelBtn">
+						<Button
+							variant="contained"
+							size="large"
+							className="tc_WelcomePanelBtn_default"
+							onClick={this._handleClick}
+							startIcon={<AndroidIcon />}
+							href="https://play.google.com/store/apps/details?id=fr.gouv.tchap.a"
+							data-platform="android"
+						>Android</Button>
+					</Grid>
+					<Grid item md={4} xs={12} className="tc_WelcomePanelBtn">
+						<Button
+							variant="contained"
+							size="large"
+							className="tc_WelcomePanelBtn_default"
+							onClick={this._handleClick}
+							startIcon={<ComputerIcon />}
+							href="https://www.tchap.gouv.fr/"
+							data-platform="web"
+						>Web</Button>
 					</Grid>
 				</Grid>
 			</Container>

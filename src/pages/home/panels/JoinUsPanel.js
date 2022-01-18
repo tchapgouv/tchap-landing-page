@@ -2,6 +2,7 @@ import { Component } from 'react';
 import Container from "@mui/material/Container";
 import Grid from '@mui/material/Grid';
 import TestYourEmail from "./TestYourEmail";
+import JoinUsPanelBtns from "pages/home/panels/JoinUsPanelBtns";
 
 import "styles/pages/home/panels/JoinUsPanel.scss";
 
@@ -18,6 +19,11 @@ class JoinUsPanel extends Component {
 						<div className="tc_JoinUsPanel_testyouremail">
 							<TestYourEmail />
 						</div>
+						</Grid>
+						<Grid item xs={12} className="tc_JoinUsPanel_joinus tc_JoinUsPanel_apps">
+							
+						<JoinUsPanelBtns />
+					
 						</Grid>
 					</Grid>
 				</Container>

@@ -42,7 +42,7 @@
 }
 
 .tc_TestYourEmail_invalid_list {
-  list-style: decimal inside;
+  list-style: disc inside;
 }
 
 .tc_TestYourEmail_email_text {
@@ -55,4 +55,12 @@
 
 .tc_TestYourEmail_icon_invalid {
   color: red;
+}
+.test_negative {
+  color: red;
+  margin-bottom:20px;
+}
+.test_positive {
+  color: green;
+  margin-bottom:20px;
 }

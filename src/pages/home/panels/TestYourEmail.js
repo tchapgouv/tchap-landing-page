@@ -111,8 +111,8 @@ class TestYourEmail extends Component {
 			colorClass += " tc_TestYourEmail_btn_valid";
 			renderBlock = (
 				<div className="tc_TestYourEmail_email_text">
-					<div>Votre organisation est présente sur Tchap !</div>
-					<Button variant="text" size="large" href="https://www.tchap.gouv.fr/#/register" target="_blank" rel="noreferrer noopener nofollow">
+					<div className="test_positive">Votre organisation est présente sur Tchap !</div>
+					<Button size="large" href="https://www.tchap.gouv.fr/#/register" target="_blank" rel="noreferrer noopener nofollow" className="fr-btn fr-btn--secondary">
 						Inscrivez-vous
 					</Button>
 				</div>
@@ -122,11 +122,13 @@ class TestYourEmail extends Component {
 			colorClass += " tc_TestYourEmail_btn_invalid";
 			renderBlock = (
 				<div className="tc_TestYourEmail_email_text">
-					<div>Votre organisation n'est pas encore présente sur Tchap !</div>
+					<div className="test_negative">Votre organisation n'est pas encore présente sur Tchap !</div>
 					<ul className="tc_TestYourEmail_invalid_list">
-						<li>Téléchargez la convention Tchap <a className="tc_TestYourEmail_link" onClick={this._hookProbe}>ici</a></li>
-						<li>Envoyez-la signée par votre direction à <a className="tc_TestYourEmail_link" href={t("links.contact")}>tchap@beta.gouv.fr</a></li>
-						<li>L'équipe Tchap se charge de l'ouverture du service à votre organisation</li>
+						<li><Button size="large" href="https://www.tchap.gouv.fr/#/register" target="_blank" rel="noreferrer noopener nofollow" className="fr-btn fr-btn--secondary">
+						Contactez moi à l’ouverture de Tchap pour mon organisation
+					</Button></li>
+						<li>Vous pouvez également demander l’ouverture de vos accès en retournant <a className="tc_TestYourEmail_link" onClick={this._hookProbe}>cette convention</a> signée par votre direction à <a className="tc_TestYourEmail_link" href={t("links.contact")}>tchap@beta.gouv.fr</a></li>
+						
 					</ul>
 				</div>
 			);
@@ -153,7 +155,7 @@ class TestYourEmail extends Component {
 							label="Testez votre adresse email professionnelle"
 						/>
 					</FormControl>
-					<Button variant="contained" size="large" onClick={this.analyzeEmail} className={colorClass}>
+					<Button size="large" onClick={this.analyzeEmail} className="fr-btn fr-btn--secondary">
 						Vérifier
 					</Button>
 					{ renderBlock }
