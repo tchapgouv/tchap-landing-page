@@ -19,7 +19,7 @@ class WelcomePanelBtns extends Component {
 		e.preventDefault();
 		const matomoHook = this.props.matomoHook;
 		matomoHook.trackEvent({ category: 'platform', action: e.target.dataset.platform });
-		window.open(e.target.href, "_blank", "noreferrer");
+		window.open(e.target.href, "_self", "noreferrer");
 	}
 
 	render() {
@@ -32,7 +32,7 @@ class WelcomePanelBtns extends Component {
 							size="large"
 							className="tc_WelcomePanelBtn_default"
 							onClick={this._handleClick}
-							href="https://apps.apple.com/fr/app/tchap/id1446253779"
+							href="#test"
 							data-platform="ios"
 						>S'inscrire</Button>
 					</Grid>
