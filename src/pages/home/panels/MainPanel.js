@@ -10,7 +10,9 @@ class MainPanel extends Component {
 	render() {
 		return (
 			<Container maxWidth="lg" className="tc_MainPanel">
+
 				<Grid container spacing={3} className="tc_MainPanel_grid">
+
 					<Grid item md={6} xs={12}>
 						<HalfCard
 							backgroundColor="light"
@@ -40,8 +42,8 @@ class MainPanel extends Component {
 							imageLocalUri="contacts.png"
 							imagePosition="left"
 						>
-							<h4>Centralisez vos échanges</h4>
-							Un seul canal d'échange pour toute l'Administration : tous les agents publics peuvent s’inscrire et échanger sur Tchap. Vous pouvez également inviter vos partenaires externes à se joindre à certains de vos échanges.
+							<h4>Invitez des interlocuteurs externes</h4>
+							Vos partenaires externes à l'administration peuvent aussi participer à vos conversations, sur invitation de votre part. Vous pouvez ainsi centraliser l’ensemble de vos échanges sur Tchap.
 						</LargeCard>
 					</Grid>
 				</Grid>
