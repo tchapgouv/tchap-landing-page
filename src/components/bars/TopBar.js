@@ -62,10 +62,8 @@ class TopBar extends Component {
 											</a>
 										</li>
 										<li>
-											<a class="fr-link fr-fi-external-link-line"
-												href={'mailto:' + t('links.contact')}
-												target="_blank"
-												rel="noreferer noopener"
+											<a class="fr-link"
+												href="#contact"
 												data-probe-name="contact"
 												onClick={this._hookProbe}>
 													Contact
