@@ -7,6 +7,7 @@ import Convention from "pages/convention/Convention";
 import Suivi from "pages/suivi/Suivi";
 import Pem from "pages/pem/Pem";
 import Faq from "pages/faq/Faq";
+import Press from "pages/press/Press";
 
 import "@fontsource/roboto";
 
@@ -28,6 +29,7 @@ class App extends Component {
 					<Route path="/suivi" element={<Suivi />} />
 					<Route path="/prise-en-main" element={<Pem />} />
 					<Route path="/faq" element={<Faq />} />
+					<Route path="/presse" element={<Press />} />
 					<Route path="/" element={<Home />} />
 				</Routes>
 			</BrowserRouter>
