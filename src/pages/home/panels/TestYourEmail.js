@@ -125,7 +125,7 @@ class TestYourEmail extends Component {
 					<div>Votre administration n'est pas encore présente sur Tchap !</div>
 					<ul className="tc_TestYourEmail_invalid_list">
 						<li>Téléchargez la convention Tchap <a className="tc_TestYourEmail_link" onClick={this._hookProbe}>ici</a></li>
-						<li>Envoyez-la signée par votre direction à <a className="tc_TestYourEmail_link" href={t("links.contact")}>tchap@beta.gouv.fr</a></li>
+						<li>Envoyez-la signée par votre direction à <a className="tc_TestYourEmail_link" href={"mailto:" + t("links.contact")}>tchap@beta.gouv.fr</a></li>
 						<li>L'équipe Tchap se charge de l'ouverture du service à votre administration</li>
 					</ul>
 				</div>
