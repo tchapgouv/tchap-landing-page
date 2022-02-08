@@ -18,7 +18,7 @@ class ContactPanel extends Component {
 									Vous avez besoin d'aide pour vous en servir ?
 								</div>
 								<div>
-									Le support est joignable à l'adresse <b>support@tchap.beta.gouv.fr</b>.
+									Le support est joignable à l'adresse <b>{t('links.support')}</b>.
 								</div>
 							  <div>
 									Pour toute sollicitation plus générale, vous pouvez contacter l'équipe à <b>{t('links.contact')}</b>.
