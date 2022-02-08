@@ -63,7 +63,7 @@ class TopBar extends Component {
 										</li>
 										<li>
 											<a class="fr-link"
-												href="#contact"
+												href="/#contact"
 												data-probe-name="contact"
 												onClick={this._hookProbe}>
 													Contact
