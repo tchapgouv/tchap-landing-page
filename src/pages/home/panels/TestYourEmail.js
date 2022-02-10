@@ -11,7 +11,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import ConventionPdf from "public/CONVENTION_DE_SERVICE_TCHAP_2022.pdf";
+import ConventionPdf from "public/CONVENTION DE SERVICE TCHAP 10.02.2022.pdf";
 
 import "styles/pages/home/panels/TestYourEmail.scss";
 
