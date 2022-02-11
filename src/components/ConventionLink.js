@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
-import ConventionPdf from "public/CONVENTION_DE_SERVICE_TCHAP_2022.pdf";
+import ConventionPdf from "public/CONVENTION_DE_SERVICE_TCHAP_2022.02.10.pdf";
 
 class ConventionLink extends Component {
 	static propTypes = {
