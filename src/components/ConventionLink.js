@@ -12,7 +12,6 @@ class ConventionLink extends Component {
 		this._hookProbe = this._hookProbe.bind(this);
 	}
 
-	// TODO : does this actually work ?
 	_hookProbe() {
 		const matomoHook = this.props.matomoHook;
 		matomoHook.trackEvent({ category: 'convention', action: 'download' });
