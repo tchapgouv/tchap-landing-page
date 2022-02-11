@@ -10,7 +10,7 @@ import TopBar from "components/bars/TopBar";
 import BottomBar from "components/bars/BottomBar";
 import GenericAccordion from "components/accordion/GenericAccordion";
 import GenericLink from "components/GenericLink";
-import ConventionPdf from "public/CONVENTION_DE_SERVICE_TCHAP_2022.pdf";
+import ConventionLink from "components/ConventionLink";
 
 import "styles/pages/faq/FaqComponent.scss";
 
@@ -172,7 +172,7 @@ class FaqComponent extends Component {
 									<div>Vous pouvez vérifier si votre e-mail professionnel est bien reconnu par Tchap  <GenericLink className="tc_FaqComponent_link" to={"/#joinUs"}>en cliquant ici</GenericLink>.</div>
 									<div className="tc_text_nl">
 										Si votre e-mail professionnel n'est pas reconnu par Tchap, vous pouvez en faire la demande en
-										envoyant <a href={ConventionPdf} download="CONVENTION_DE_SERVICE_TCHAP.pdf" className="tc_FaqComponent_link" onClick={this._hookProbe}>cette convention</a> signée
+										envoyant <ConventionLink linkText="cette convention"/> signée
 										par votre direction à l'adresse  <GenericLink className="tc_FaqComponent_link" to={"mailto:" + t("links.contact")}>{t("links.contact")}</GenericLink>.</div>
 									<div className="tc_FaqComponent_subtitle">Les partenaires externes</div>
 									<div>Les partenaires externes sont les personnes avec lesquelles vous travaillez qui ne sont pas agents publics.</div>
