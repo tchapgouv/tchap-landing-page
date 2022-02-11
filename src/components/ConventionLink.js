@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import ConventionPdf from "public/CONVENTION_DE_SERVICE_TCHAP_2022.pdf";
 
 class ConventionLink extends Component {
@@ -8,10 +7,15 @@ class ConventionLink extends Component {
 		linkText: PropTypes.string.isRequired,
 	};
 
-	// TODO : add hookProbe
-
 	constructor(props) {
 		super(props);
+		this._hookProbe = this._hookProbe.bind(this);
+	}
+
+	// TODO : does this actually work ?
+	_hookProbe() {
+		const matomoHook = this.props.matomoHook;
+		matomoHook.trackEvent({ category: 'convention', action: 'download' });
 	}
 
 	findFilenameFromPath(fullPath) {

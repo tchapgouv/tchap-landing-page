@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { matomoHOC } from 'utils/HOC/MatomoHOC';
 import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
-import Grid from '@mui/material/Grid';
 import Button from "@mui/material/Button";
 import FormControl from "@mui/material/FormControl";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -11,7 +10,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import ConventionPdf from "public/CONVENTION_DE_SERVICE_TCHAP_2022.pdf";
+import ConventionLink from "components/ConventionLink";
 
 import "styles/pages/home/panels/TestYourEmail.scss";
 
@@ -30,7 +29,6 @@ class TestYourEmail extends Component {
 		this.clearField = this.clearField.bind(this);
 		this._handleTextFieldChange = this._handleTextFieldChange.bind(this);
 		this._handleKeyDown = this._handleKeyDown.bind(this);
-		this._hookProbe = this._hookProbe.bind(this);
 	}
 
 	_handleTextFieldChange(e) {
@@ -51,11 +49,6 @@ class TestYourEmail extends Component {
 			this.setState({errorText: ''})
 			this.analyzeEmail();
 		}
-	}
-
-	_hookProbe() {
-		const matomoHook = this.props.matomoHook;
-		matomoHook.trackEvent({ category: 'convention', action: 'download' });
 	}
 
 	clearField() {
@@ -124,9 +117,7 @@ class TestYourEmail extends Component {
 					<div>Votre administration n'est pas encore présente sur Tchap !</div>
 					<ul className="tc_TestYourEmail_invalid_list">
 						<li>
-							Téléchargez la convention Tchap <a href={ConventionPdf} download="CONVENTION_DE_SERVICE_TCHAP.pdf" className="tc_TestYourEmail_link" onClick={this._hookProbe}>
-								en cliquant ici
-							</a>
+							Téléchargez la convention Tchap <ConventionLink linkText="en cliquant ici"/>
 						</li>
 						<li>Envoyez-la signée par votre direction à <a className="tc_TestYourEmail_link" href={"mailto:" + t("links.contact")}>{t("links.contact")}</a></li>
 						<li>L'équipe Tchap se charge de l'ouverture du service à votre administration</li>
