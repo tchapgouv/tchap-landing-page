@@ -56,7 +56,6 @@ class TestYourEmail extends Component {
 	_hookProbe() {
 		const matomoHook = this.props.matomoHook;
 		matomoHook.trackEvent({ category: 'convention', action: 'download' });
-		window.open(ConventionPdf, "_blank");
 	}
 
 	clearField() {
@@ -124,7 +123,11 @@ class TestYourEmail extends Component {
 				<div className="tc_TestYourEmail_email_text">
 					<div>Votre administration n'est pas encore présente sur Tchap !</div>
 					<ul className="tc_TestYourEmail_invalid_list">
-						<li>Téléchargez la convention Tchap <a className="tc_TestYourEmail_link" onClick={this._hookProbe}>en cliquant ici</a></li>
+						<li>
+							Téléchargez la convention Tchap <a href={ConventionPdf} download="CONVENTION_DE_SERVICE_TCHAP.pdf" className="tc_TestYourEmail_link" onClick={this._hookProbe}>
+								en cliquant ici
+							</a>
+						</li>
 						<li>Envoyez-la signée par votre direction à <a className="tc_TestYourEmail_link" href={"mailto:" + t("links.contact")}>{t("links.contact")}</a></li>
 						<li>L'équipe Tchap se charge de l'ouverture du service à votre administration</li>
 					</ul>
