@@ -11,7 +11,18 @@ class ContactPanel extends Component {
 						<div class="fr-callout fr-mb-4w">
 							<p class="fr-callout__title">Contactez-nous</p>
 							<p class="fr-callout__text">
-							  Pour toute question, vous pouvez nous envoyer un email à <b>{t('links.contact')}</b>.
+								<div>
+									Tchap ne fonctionne pas normalement ?
+								</div>
+								<div>
+									Vous avez besoin d'aide pour vous en servir ?
+								</div>
+								<div>
+									Le support est joignable à l'adresse <b>{t('links.support')}</b>.
+								</div>
+							  <div>
+									Pour toute sollicitation plus générale, vous pouvez contacter l'équipe à <b>{t('links.contact')}</b>.
+								</div>
 							</p>
 							<a class="fr-btn"
 							   href={'mailto:' + t('links.contact')}
