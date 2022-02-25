@@ -434,7 +434,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_004")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ? </title>
-									<div className="tc_text_nl">Il est fortement recommandé de nommer plusieurs administrateurs et modérateursparmi les participants d'un salon.</div>
+									<div className="tc_text_nl">Il est fortement recommandé de nommer plusieurs administrateurs et modérateurs parmi les participants d'un salon.</div>
 									<div className="tc_text_nl">Ainsi, en cas de départ d'un administrateur, le salon ne se retrouvera pas gelé.</div>
 									<div className="tc_text_nl">En effet, seul un administrateur a le pouvoir de nommer un autre administrateur. Si un salon se retrouve sans administrateur, plus personne n'a donc le pouvoir de l'administrer, et cette situation est irréversible. Dans le cas d'un salon privé, cela rend notamment impossible d'y inviter de nouveaux membres.</div>
 									<div className="tc_text_nl">Pour nommer un administrateur, rendez-vous dans la liste des membres du salon.</div>
@@ -594,11 +594,17 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl">Par conséquent, vous ne pouvez plus lire les messages envoyés ou reçus avant votre connexion. Chaque message reçu ou envoyé est remplacé par cette phrase : </div>
 									<div className="tc_text_nl tc_text_i">"Déchiffrement impossible : L'utilisateur n'a pas envoyé les clefs de déchiffrement pour ce message."</div>
 									<div className="tc_text_nl">Pour pouvoir accéder à nouveau à vos anciens messages, vous devez restaurer vos clés de chiffrement. Deux possibilités s'offrent à vous :</div>
-									<ul className="tc_list_decimal">
-										<li>Si vous êtes connecté avec votre compte Tchap sur un autre appareil, vous pouvez demander à ce que ce second appareil vous partage les clés de chiffrement : </li>
-										<li className="tc_list_nobullet">Sur l'appareil qui a perdu les clés, cliquez sur "Re-demander les clés de chiffrement depuis vos autres appareils" (lien cliquable situé juste en-dessous des messages "Déchiffrement impossible : L'utilisateur n'a pas envoyé les clefs de déchiffrement pour ce message"), puis validez les demandes d'envoi de clé qui s'affichent sur l'autre appareil. </li>
+									<ol>
+										<li>
+											<div className="tc_text_nl">
+												Si vous êtes connecté avec votre compte Tchap sur un autre appareil, vous pouvez demander à ce que ce second appareil vous partage les clés de chiffrement :
+											</div>
+											<div className="tc_text_nl">
+												Sur l'appareil qui a perdu les clés, cliquez sur "Re-demander les clés de chiffrement depuis vos autres appareils" (lien cliquable situé juste en-dessous des messages "Déchiffrement impossible : L'utilisateur n'a pas envoyé les clefs de déchiffrement pour ce message"), puis validez les demandes d'envoi de clé qui s'affichent sur l'autre appareil.
+											</div>
+										</li>
 										<li>Restaurer les clés que vous aurez pris le soin de sauvegarder préalablement à votre déconnexion de Tchap. </li>
-									</ul>
+									</ol>
 									<div className="tc_text_nl">Cependant, si vous vous déconnectez de Tchap alors que vous n'avez pas de session Tchap ouverte sur un autre appareil ou si vous n'avez pas préalablement sauvegardé volontairement vos clés, vous ne pourrez pas lire l'historique de vos conversations Tchap.</div>
 									<div className="tc_text_nl">Pour éviter que ce problème ne se reproduise, il est recommandé de ne pas vous déconnecter de Tchap, et de maintenir une session active sur au moins deux appareils différents (un ordinateur et un mobile par exemple).</div>
 									<div className="tc_FaqComponent_seemore">
