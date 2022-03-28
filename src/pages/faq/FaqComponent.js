@@ -472,8 +472,12 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl">Cela signifie que même en cas de vol de vos identifiants ou d'interception de vos messages, vos échanges restent indéchiffrables.</div>
 									<div className="tc_text_nl">Pour vous assurer que vos messages restent toujours lisibles pour vous, pensez à exporter et sauvegarder vos clés de chiffrement à chaque fois que vous envisagez une déconnexion !</div>
 									<div className="tc_FaqComponent_seemore">
-										<GenericLink onClick={this._onLocationChange} to="#tcq03_002" className="tc_FaqComponent_link">Comment conserver l'historique de mes messages ?</GenericLink>
-										<GenericLink onClick={this._onLocationChange} to="#tcq06_002" className="tc_FaqComponent_link">"Déchiffrement impossible" de mes messages :  comment y remédier ?</GenericLink>
+										<GenericLink onClick={this._onLocationChange} to="#tcq07_001" className="tc_FaqComponent_link">
+											Comment m’assurer de toujours pouvoir lire mes messages ?
+										</GenericLink>
+										<GenericLink onClick={this._onLocationChange} to="#tcq08_000" className="tc_FaqComponent_link">
+											Déchiffrement impossible de mes messages : comment y remédier ?
+										</GenericLink>
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq05_002")}>
