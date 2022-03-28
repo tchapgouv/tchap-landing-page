@@ -4,6 +4,8 @@
 
 .tc_GenericAccordion_title {
   font-size: $font-size-12;
+  margin-bottom: 0.4rem;
+  margin-left: 0.5rem;
 }
 
 .tc_GenericAccordion_hover:hover {
@@ -13,4 +15,9 @@
 .tc_GenericAccordion_content {
   line-height: $font-line-height-24;
   margin-left: 15px;
+}
+
+.MuiAccordionSummary-root {
+  /* Display the open/close icon on the left, instead of the right by default. */
+  flex-direction: row-reverse;
 }

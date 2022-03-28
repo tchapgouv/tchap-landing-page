@@ -153,7 +153,7 @@ class FaqComponent extends Component {
 
 								<div id="tcq01_000" className="tc_FaqComponent_section">A propos</div>
 								<GenericAccordion {...this._generateProps("tcq01_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi Tchap ?</title>
+									<title>Pourquoi Tchap ?<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" /></title>
 									La messagerie instantanée Tchap a été créée pour les agents publics comme l'alternative française et sécurisée aux messageries instantanées grand public.
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq01_002")}>
