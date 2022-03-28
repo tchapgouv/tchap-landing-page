@@ -505,14 +505,14 @@ class FaqComponent extends Component {
 										<div className="tc_FaqComponent_subtitle">Voici quelques bonnes pratiques pour vous assurer de toujours pouvoir lire vos messages :</div>
 										<div className="tc_FaqComponent_subtitle">Evitez de vous déconnecter de Tchap</div>
 										<div>
-											**Votre mobile** garde votre connexion automatiquement, même lorsque vous fermez l’application ou éteignez votre téléphone
+											<span className="tc_text_b">Votre mobile</span> garde votre connexion automatiquement, même lorsque vous fermez l’application ou éteignez votre téléphone
 										</div>
 										<div>
-											**Votre navigateur web** provoque peut-être la déconnexion automatique de Tchap lorsque vous le fermez :
+											<span className="tc_text_b">Votre navigateur web</span> provoque peut-être la déconnexion automatique de Tchap lorsque vous le fermez :
 											dans ce cas, allez dans les réglages du navigateur et autorisez la conservation des données de navigation pour Tchap. Une intervention de vos services informatiques peut être nécessaire.
 										</div>
 										<div>
-											*Si vous souhaitez mettre Tchap “en pause” (lors de vos congés par exemple), vous pouvez désactiver les notifications sans avoir à vous déconnecter.*
+											<span class="tc_text_i">Si vous souhaitez mettre Tchap “en pause” (lors de vos congés par exemple), vous pouvez désactiver les notifications sans avoir à vous déconnecter.</span>
 										</div>
 										<div className="tc_FaqComponent_subtitle">Gardez au moins deux appareils connectés à Tchap</div>
 										<div>
@@ -538,15 +538,70 @@ class FaqComponent extends Component {
 
 								<GenericAccordion {...this._generateProps("tcq07_002")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment sauvegarder manuellement mes Clés Tchap (clés de chiffrement) ?</title>
-									<div className="tc_text_nl">Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics. N'hésitez pas à consulter nos <GenericLink onClick={this._onLocationChange} to="https://www.tchap.gouv.fr/cgu/" className="tc_FaqComponent_link">CGU</GenericLink> pour en savoir plus.</div>
+									<div className="tc_text_nl">
+										<div className="tc_FaqComponent_subtitle">Pour sauvegarder vos clés :</div> 
+										<div>
+										<span class="tc_text_i">(Action à effectuer préalablement à une déconnexion ou une réinitialisation de mot de passe pour ne pas perdre accès à vos messages)</span>
+										</div>	
+										<ol>
+											<li>Rendez-vous dans les paramètres de Tchap :
+											<br><span className="tc_text_b">Sur le web :</span> section “Sécurité et Vie Privée” >> “Exporter les clés de chiffrement de salon”</li>
+											<br><span className="tc_text_b">Sur mobile :</span> section “Chiffrement” >> “Exporter les clés”
+												
+											<li>Choisissez un mot de passe (différent de votre mot de passe Tchap) : celui-ci vous sera demandé pour déverrouiller vos messages lors de votre reconnexion.</li>
+											<li>Enregistrez le fichier à un emplacement où vous pourrez le retrouver. Ce fichier s’appelle “Tchap keys” par défaut, mais vous pouvez le renommer.</li>
+											<li>C’est bon, vos clés Tchap sont sauvegardées ! Vous pourrez les importer lors de de votre reconnexion pour déverrouiller vos messages.</li>
+										</ol>
+ 										<div>
+											<a>
+												Comment importer manuellement mes Clés Tchap (clés de chiffrement) ?
+											</a>
+										</div>
+									</div>					
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq07_003")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment importer manuellement mes Clés Tchap (clés de chiffrement) ? </title>
-									<div className="tc_text_nl">Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics. N'hésitez pas à consulter nos <GenericLink onClick={this._onLocationChange} to="https://www.tchap.gouv.fr/cgu/" className="tc_FaqComponent_link">CGU</GenericLink> pour en savoir plus.</div>
+									<div className="tc_text_nl">
+										<div className="tc_FaqComponent_subtitle">Pour importer vos clés si vous les avez préalablement sauvegardées :</div> 
+										<ol>
+											<li>Rendez-vous dans les paramètres de Tchap :
+											<br><span className="tc_text_b">Sur le web :</span> section “Sécurité et Vie Privée” >> “Importer les clés de chiffrement de bout en bout”</li>
+											<br><span className="tc_text_b">Sur mobile :</span> section “Chiffrement” >> “Importer les clés”
+												
+											<li>Sélectionnez le fichier que vous avez préalablement sauvegardé. Par défaut, ce fichier s’appelle “Tchap keys”.</li>
+											<li>Entrez le mot de passe que vous avez choisi au moment de la sauvegarde.</li>
+											<li>C’est bon, vos messages sont déverrouillés et de nouveau lisibles .</li>
+										</ol>			
+									</div>								
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq07_004")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment importer manuellement mes Clés Tchap (clés de chiffrement) ? </title>
-									<div className="tc_text_nl">Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics. N'hésitez pas à consulter nos <GenericLink onClick={this._onLocationChange} to="https://www.tchap.gouv.fr/cgu/" className="tc_FaqComponent_link">CGU</GenericLink> pour en savoir plus.</div>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi mes messages sont-ils verrouillés ? </title>
+									<div className="tc_text_nl">
+										<div>
+											Après une nouvelle connexion (lorsque vous entrez votre mail et votre mot de passe), vous ne pouvez pas lire les messages échangés auparavant.
+										</div>
+										<div>
+											C'est une mesure de sécurité : si une personne vole vos identifiants et se connecte à votre place, il lui est ainsi impossible de lire vos messages parce qu’ils sont verrouillés.
+										</div>
+										<div>
+												Vous pouvez déverrouiller vos messages pour les lire grâce à vos Clés Tchap (clés de chiffrement).
+										</div>
+										<div>
+											<a>
+												Comment déverrouiller mes messages si j’ai un autre appareil connecté à Tchap ?
+											</a>
+										</div>
+										<div>
+											<a>
+												Comment déverrouiller mes messages si j’ai préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ?
+											</a>
+										</div>
+										<div>
+											<a>
+												Comment déverrouiller mes messages si je ne suis pas connecté à Tchap sur un autre appareil et que je n’ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ? 
+											</a>
+										</div>
+									</div>
 								</GenericAccordion>
 
 								<div id="tcq06_000" className="tc_FaqComponent_section">En cas de problème...</div>
