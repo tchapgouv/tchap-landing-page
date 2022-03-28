@@ -521,17 +521,19 @@ class FaqComponent extends Component {
 										<div>
 											Si vos messages sont verrouillés sur votre ordinateur, mais qu’ils sont lisibles sur votre téléphone, alors vous pouvez utiliser votre téléphone pour transmettre les clés à votre ordinateur. Et vice et versa.
 										</div>
-										<div>
-											<a>Comment déverrouiller mes messages si j’ai un autre appareil connecté à Tchap ?</a>
+										<div className="tc_FaqComponent_seemore">
+											<GenericLink onClick={this._onLocationChange} to="#tcq08_001" className="tc_FaqComponent_link">
+												Comment déverrouiller mes messages si j’ai un autre appareil connecté à Tchap ?
+											</GenericLink>
 										</div>
 										<div className="tc_FaqComponent_subtitle">Sauvegardez manuellement vos Clés Tchap (clés de chiffrement) avant toute déconnexion</div>
 										<div>
 											Si vous savez que vous allez vous déconnecter, sauvegarder vos Clés Tchap (clés de chiffrement) vous permettra déverrouiller vos messages lors de votre reconnexion.
 										</div>
-										<div>
-											<a>
+										<div className="tc_FaqComponent_seemore">
+											<GenericLink onClick={this._onLocationChange} to="#tcq07_002" className="tc_FaqComponent_link">
 												Comment sauvegarder manuellement mes Clés Tchap (clés de chiffrement) ?
-											</a>
+											</GenericLink>
 										</div>
 									</div>
 								</GenericAccordion>
@@ -567,10 +569,10 @@ class FaqComponent extends Component {
 											<li>Enregistrez le fichier à un emplacement où vous pourrez le retrouver. Ce fichier s’appelle “Tchap keys” par défaut, mais vous pouvez le renommer.</li>
 											<li>C’est bon, vos clés Tchap sont sauvegardées ! Vous pourrez les importer lors de de votre reconnexion pour déverrouiller vos messages.</li>
 										</ol>
- 										<div>
-											<a>
+										<div className="tc_FaqComponent_seemore">
+											<GenericLink onClick={this._onLocationChange} to="#tcq07_003" className="tc_FaqComponent_link">
 												Comment importer manuellement mes Clés Tchap (clés de chiffrement) ?
-											</a>
+											</GenericLink>
 										</div>
 									</div>
 								</GenericAccordion>
@@ -616,20 +618,17 @@ class FaqComponent extends Component {
 										<div>
 												Vous pouvez déverrouiller vos messages pour les lire grâce à vos Clés Tchap (clés de chiffrement).
 										</div>
-										<div>
-											<a>
+
+										<div className="tc_FaqComponent_seemore">
+											<GenericLink onClick={this._onLocationChange} to="#tcq08_001" className="tc_FaqComponent_link">
 												Comment déverrouiller mes messages si j’ai un autre appareil connecté à Tchap ?
-											</a>
-										</div>
-										<div>
-											<a>
+											</GenericLink>
+											<GenericLink onClick={this._onLocationChange} to="#tcq08_002" className="tc_FaqComponent_link">
 												Comment déverrouiller mes messages si j’ai préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ?
-											</a>
-										</div>
-										<div>
-											<a>
+											</GenericLink>
+											<GenericLink onClick={this._onLocationChange} to="#tcq08_003" className="tc_FaqComponent_link">
 												Comment déverrouiller mes messages si je ne suis pas connecté à Tchap sur un autre appareil et que je n’ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ?
-											</a>
+											</GenericLink>
 										</div>
 									</div>
 								</GenericAccordion>
@@ -657,8 +656,14 @@ class FaqComponent extends Component {
 										<div>
 											Une fois les Clés Tchap partagées entre vos appareils, vos messages sont déverrouillés et deviennent lisibles au fur et à mesure.
 										</div>
-										<a>Pourquoi mes messages sont-ils verrouillés ?</a>
-										<a>Comment éviter que mes messages soient verrouillés ?</a>
+										<div className="tc_FaqComponent_seemore">
+											<GenericLink onClick={this._onLocationChange} to="#tcq07_004" className="tc_FaqComponent_link">
+												Pourquoi mes messages sont-ils verrouillés ?
+											</GenericLink>
+											<GenericLink onClick={this._onLocationChange} to="#tcq07_001" className="tc_FaqComponent_link">
+												Comment m’assurer de toujours pouvoir lire mes messages ?
+											</GenericLink>
+										</div>
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq08_002")}>
@@ -695,8 +700,14 @@ class FaqComponent extends Component {
 										<div>
 											Vos Clés Tchap déverouillent automatiquement vos messages qui seront alors à nouveau lisibles au fur à et mesure.
 										</div>
-										<a>Pourquoi mes messages sont-ils verrouillés ?</a>
-										<a>Comment éviter que mes messages soient verrouillés ?</a>
+										<div className="tc_FaqComponent_seemore">
+											<GenericLink onClick={this._onLocationChange} to="#tcq07_004" className="tc_FaqComponent_link">
+												Pourquoi mes messages sont-ils verrouillés ?
+											</GenericLink>
+											<GenericLink onClick={this._onLocationChange} to="#tcq07_001" className="tc_FaqComponent_link">
+												Comment m’assurer de toujours pouvoir lire mes messages ?
+											</GenericLink>
+										</div>
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq08_003")}>
@@ -711,11 +722,13 @@ class FaqComponent extends Component {
 										<div>
 											En revanche, vos nouveaux messages ne le seront pas : vous pourrez lire tous vos nouveaux messages.
 										</div>
-										<div>
-											<a>Pourquoi mes messages sont-ils verrouillés ?</a>
-										</div>
-										<div>
-											<a>Comment éviter que mes messages soient verrouillés ?</a>
+										<div className="tc_FaqComponent_seemore">
+											<GenericLink onClick={this._onLocationChange} to="#tcq07_004" className="tc_FaqComponent_link">
+												Pourquoi mes messages sont-ils verrouillés ?
+											</GenericLink>
+											<GenericLink onClick={this._onLocationChange} to="#tcq07_001" className="tc_FaqComponent_link">
+												Comment m’assurer de toujours pouvoir lire mes messages ?
+											</GenericLink>
 										</div>
 									</div>
 								</GenericAccordion>
