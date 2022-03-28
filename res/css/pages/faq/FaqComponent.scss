@@ -103,6 +103,11 @@
   }
 }
 
+.tc_FaqComponent_border {
+  border: 1px solid $color-text-darkgrey;
+  border-radius: 3px;
+}
+
 @media (max-width: 650px) {
   .tc_FaqComponent_wimg_mobile,
   .tc_FaqComponent_limg_mobile {
