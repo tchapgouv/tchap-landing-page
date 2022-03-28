@@ -539,15 +539,19 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq07_002")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment sauvegarder manuellement mes Clés Tchap (clés de chiffrement) ?</title>
 									<div className="tc_text_nl">
-										<div className="tc_FaqComponent_subtitle">Pour sauvegarder vos clés :</div> 
+										<div className="tc_FaqComponent_subtitle">Pour sauvegarder vos clés :</div>
 										<div>
 										<span class="tc_text_i">(Action à effectuer préalablement à une déconnexion ou une réinitialisation de mot de passe pour ne pas perdre accès à vos messages)</span>
-										</div>	
+										</div>
 										<ol>
 											<li>Rendez-vous dans les paramètres de Tchap :
-											<br><span className="tc_text_b">Sur le web :</span> section “Sécurité et Vie Privée” >> “Exporter les clés de chiffrement de salon”</li>
-											<br><span className="tc_text_b">Sur mobile :</span> section “Chiffrement” >> “Exporter les clés”
-												
+												<div>
+													<span className="tc_text_b">Sur le web :</span> section “Sécurité et Vie Privée” >> “Exporter les clés de chiffrement de salon”
+												</div>
+												<div>
+													<span className="tc_text_b">Sur mobile :</span> section “Chiffrement” >> “Exporter les clés”
+												</div>
+											</li>
 											<li>Choisissez un mot de passe (différent de votre mot de passe Tchap) : celui-ci vous sera demandé pour déverrouiller vos messages lors de votre reconnexion.</li>
 											<li>Enregistrez le fichier à un emplacement où vous pourrez le retrouver. Ce fichier s’appelle “Tchap keys” par défaut, mais vous pouvez le renommer.</li>
 											<li>C’est bon, vos clés Tchap sont sauvegardées ! Vous pourrez les importer lors de de votre reconnexion pour déverrouiller vos messages.</li>
@@ -557,22 +561,26 @@ class FaqComponent extends Component {
 												Comment importer manuellement mes Clés Tchap (clés de chiffrement) ?
 											</a>
 										</div>
-									</div>					
+									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq07_003")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment importer manuellement mes Clés Tchap (clés de chiffrement) ? </title>
 									<div className="tc_text_nl">
-										<div className="tc_FaqComponent_subtitle">Pour importer vos clés si vous les avez préalablement sauvegardées :</div> 
+										<div className="tc_FaqComponent_subtitle">Pour importer vos clés si vous les avez préalablement sauvegardées :</div>
 										<ol>
 											<li>Rendez-vous dans les paramètres de Tchap :
-											<br><span className="tc_text_b">Sur le web :</span> section “Sécurité et Vie Privée” >> “Importer les clés de chiffrement de bout en bout”</li>
-											<br><span className="tc_text_b">Sur mobile :</span> section “Chiffrement” >> “Importer les clés”
-												
+												<div>
+													<span className="tc_text_b">Sur le web :</span> section “Sécurité et Vie Privée” >> “Importer les clés de chiffrement de bout en bout”
+												</div>
+												<div>
+													<span className="tc_text_b">Sur mobile :</span> section “Chiffrement” >> “Importer les clés”
+												</div>
+											</li>
 											<li>Sélectionnez le fichier que vous avez préalablement sauvegardé. Par défaut, ce fichier s’appelle “Tchap keys”.</li>
 											<li>Entrez le mot de passe que vous avez choisi au moment de la sauvegarde.</li>
 											<li>C’est bon, vos messages sont déverrouillés et de nouveau lisibles .</li>
-										</ol>			
-									</div>								
+										</ol>
+									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq07_004")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi mes messages sont-ils verrouillés ? </title>
@@ -598,7 +606,7 @@ class FaqComponent extends Component {
 										</div>
 										<div>
 											<a>
-												Comment déverrouiller mes messages si je ne suis pas connecté à Tchap sur un autre appareil et que je n’ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ? 
+												Comment déverrouiller mes messages si je ne suis pas connecté à Tchap sur un autre appareil et que je n’ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ?
 											</a>
 										</div>
 									</div>
