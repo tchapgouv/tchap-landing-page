@@ -584,7 +584,18 @@ class FaqComponent extends Component {
 													<span className="tc_text_b">Sur le web :</span> section “Sécurité et Vie Privée” >> “Importer les clés de chiffrement de bout en bout”
 												</div>
 												<div>
+													<img src={require("images/faq/export_keys_web.png")}
+																alt="export des clés sur l'application web"
+																className="tc_FaqComponent_border"/>
+												</div>
+												<div>
 													<span className="tc_text_b">Sur mobile :</span> section “Chiffrement” >> “Importer les clés”
+												</div>
+												<div>
+													<img src={require("images/faq/export_keys_mobile.jpeg")}
+															alt="export des clés sur l'application mobile"
+															width="400px"
+															className="tc_FaqComponent_border"/>
 												</div>
 											</li>
 											<li>Sélectionnez le fichier que vous avez préalablement sauvegardé. Par défaut, ce fichier s’appelle “Tchap keys”.</li>
