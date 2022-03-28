@@ -156,7 +156,7 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi Tchap ?</title>
 									La messagerie instantanée Tchap a été créée pour les agents publics comme l’alternative française et sécurisée aux messageries instantanées grand public.
 									<div>Tchap est conçue et maîtrisée par l’Etat, toutes les données générées par son usage sont hébergées sur des serveurs français, garantissant ainsi que leur gestion répond aux normes européennes en vigueur (RGPD).</div>
-		
+
 									<div className="tc_FaqComponent_seemore">
 										<GenericLink onClick={this._onLocationChange} to="#tcq05_001" className="tc_FaqComponent_link">Comment la confidentialité des échanges est-elle garantie ?</GenericLink>
 									</div>
@@ -488,6 +488,65 @@ class FaqComponent extends Component {
 									<div className="tc_FaqComponent_seemore">
 										<GenericLink onClick={this._onLocationChange} to="#tcq05_001" className="tc_FaqComponent_link">Comment la confidentialité des échanges est-elle garantie ?</GenericLink>
 									</div>
+								</GenericAccordion>
+
+								<div id="tcq07_000" className="tc_FaqComponent_section">Gestion des Clés Tchap (clés de chiffrement)</div>
+								<GenericAccordion {...this._generateProps("tcq07_001")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment m’assurer de toujours pouvoir lire mes messages ?</title>
+									<div className="tc_text_nl">
+										<div>
+											Après une nouvelle connexion (lorsque vous entrez votre mail et votre mot de passe), vous ne pouvez pas
+											lire les messages échangés auparavant.
+										</div>
+										<div>
+											C'est une mesure de sécurité : si une personne vole vos identifiants et se connecte à votre place, il
+											lui est ainsi impossible de lire vos conversations.
+										</div>
+										<div className="tc_FaqComponent_subtitle">Voici quelques bonnes pratiques pour vous assurer de toujours pouvoir lire vos messages :</div>
+										<div className="tc_FaqComponent_subtitle">Evitez de vous déconnecter de Tchap</div>
+										<div>
+											**Votre mobile** garde votre connexion automatiquement, même lorsque vous fermez l’application ou éteignez votre téléphone
+										</div>
+										<div>
+											**Votre navigateur web** provoque peut-être la déconnexion automatique de Tchap lorsque vous le fermez :
+											dans ce cas, allez dans les réglages du navigateur et autorisez la conservation des données de navigation pour Tchap. Une intervention de vos services informatiques peut être nécessaire.
+										</div>
+										<div>
+											*Si vous souhaitez mettre Tchap “en pause” (lors de vos congés par exemple), vous pouvez désactiver les notifications sans avoir à vous déconnecter.*
+										</div>
+										<div className="tc_FaqComponent_subtitle">Gardez au moins deux appareils connectés à Tchap</div>
+										<div>
+											Les appareils peuvent partager entre eux les Clés Tchap (clés de chiffrement) qui permettent de déverrouiller vos messages.
+										</div>
+										<div>
+											Si vos messages sont verrouillés sur votre ordinateur, mais qu’ils sont lisibles sur votre téléphone, alors vous pouvez utiliser votre téléphone pour transmettre les clés à votre ordinateur. Et vice et versa.
+										</div>
+										<div>
+											<a>Comment déverrouiller mes messages si j’ai un autre appareil connecté à Tchap ?</a>
+										</div>
+										<div className="tc_FaqComponent_subtitle">Sauvegardez manuellement vos Clés Tchap (clés de chiffrement) avant toute déconnexion</div>
+										<div>
+											Si vous savez que vous allez vous déconnecter, sauvegarder vos Clés Tchap (clés de chiffrement) vous permettra déverrouiller vos messages lors de votre reconnexion.
+										</div>
+										<div>
+											<a>
+												Comment sauvegarder manuellement mes Clés Tchap (clés de chiffrement) ?
+											</a>
+										</div>
+									</div>
+								</GenericAccordion>
+
+								<GenericAccordion {...this._generateProps("tcq07_002")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment sauvegarder manuellement mes Clés Tchap (clés de chiffrement) ?</title>
+									<div className="tc_text_nl">Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics. N'hésitez pas à consulter nos <GenericLink onClick={this._onLocationChange} to="https://www.tchap.gouv.fr/cgu/" className="tc_FaqComponent_link">CGU</GenericLink> pour en savoir plus.</div>
+								</GenericAccordion>
+								<GenericAccordion {...this._generateProps("tcq07_003")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment importer manuellement mes Clés Tchap (clés de chiffrement) ? </title>
+									<div className="tc_text_nl">Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics. N'hésitez pas à consulter nos <GenericLink onClick={this._onLocationChange} to="https://www.tchap.gouv.fr/cgu/" className="tc_FaqComponent_link">CGU</GenericLink> pour en savoir plus.</div>
+								</GenericAccordion>
+								<GenericAccordion {...this._generateProps("tcq07_004")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment importer manuellement mes Clés Tchap (clés de chiffrement) ? </title>
+									<div className="tc_text_nl">Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics. N'hésitez pas à consulter nos <GenericLink onClick={this._onLocationChange} to="https://www.tchap.gouv.fr/cgu/" className="tc_FaqComponent_link">CGU</GenericLink> pour en savoir plus.</div>
 								</GenericAccordion>
 
 								<div id="tcq06_000" className="tc_FaqComponent_section">En cas de problème...</div>
