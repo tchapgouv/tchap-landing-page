@@ -549,7 +549,18 @@ class FaqComponent extends Component {
 													<span className="tc_text_b">Sur le web :</span> section “Sécurité et Vie Privée” >> “Exporter les clés de chiffrement de salon”
 												</div>
 												<div>
+													<img src={require("images/faq/export_keys_web.png")}
+																alt="export des clés sur l'application web"
+																className="tc_FaqComponent_border"/>
+												</div>
+												<div>
 													<span className="tc_text_b">Sur mobile :</span> section “Chiffrement” >> “Exporter les clés”
+												</div>
+												<div>
+													<img src={require("images/faq/export_keys_mobile.jpeg")}
+															alt="export des clés sur l'application mobile"
+															width="400px"
+															className="tc_FaqComponent_border"/>
 												</div>
 											</li>
 											<li>Choisissez un mot de passe (différent de votre mot de passe Tchap) : celui-ci vous sera demandé pour déverrouiller vos messages lors de votre reconnexion.</li>
