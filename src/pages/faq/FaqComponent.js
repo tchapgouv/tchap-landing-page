@@ -496,7 +496,7 @@ class FaqComponent extends Component {
 
 								<div id="tcq07_000" className="tc_FaqComponent_section">Gestion des Clés Tchap (clés de chiffrement)</div>
 								<GenericAccordion {...this._generateProps("tcq07_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment m’assurer de toujours pouvoir lire mes messages ?</title>
+									<title>Comment m’assurer de toujours pouvoir lire mes messages ?<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" /></title>
 									<div className="tc_text_nl">
 										<div>
 											Après une nouvelle connexion (lorsque vous entrez votre mail et votre mot de passe), vous ne pouvez pas
@@ -543,7 +543,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 
 								<GenericAccordion {...this._generateProps("tcq07_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment sauvegarder manuellement mes Clés Tchap (clés de chiffrement) ?</title>
+									<title>Comment sauvegarder manuellement mes Clés Tchap (clés de chiffrement) ?<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" /></title>
 									<div className="tc_text_nl">
 										<div className="tc_FaqComponent_subtitle">Pour sauvegarder vos clés :</div>
 										<div>
@@ -581,7 +581,7 @@ class FaqComponent extends Component {
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq07_003")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment importer manuellement mes Clés Tchap (clés de chiffrement) ? </title>
+									<title>Comment importer manuellement mes Clés Tchap (clés de chiffrement) ?<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" /></title>
 									<div className="tc_text_nl">
 										<div className="tc_FaqComponent_subtitle">Pour importer vos clés si vous les avez préalablement sauvegardées :</div>
 										<ol>
@@ -611,7 +611,7 @@ class FaqComponent extends Component {
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq07_004")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi mes messages sont-ils verrouillés ? </title>
+									<title>Pourquoi mes messages sont-ils verrouillés ?<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" /></title>
 									<div className="tc_text_nl">
 										<div>
 											Après une nouvelle connexion (lorsque vous entrez votre mail et votre mot de passe), vous ne pouvez pas lire les messages échangés auparavant.
@@ -639,7 +639,7 @@ class FaqComponent extends Component {
 
 								<div id="tcq08_000" className="tc_FaqComponent_section">“Déchiffrement impossible” de mes messages : comment y remédier ?</div>
 								<GenericAccordion {...this._generateProps("tcq08_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si j’ai un autre appareil déjà connecté à Tchap</title>
+									<title>Si j’ai un autre appareil déjà connecté à Tchap<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" /></title>
 									<div className="tc_text_nl">
 										<div className="tc_FaqComponent_subtitle">Vous êtes déjà connecté à Tchap depuis un autre appareil sur lequel vos messages sont lisibles ? </div>
 										<div>Vous pouvez déverrouiller vos messages comme suit :</div>
@@ -671,7 +671,7 @@ class FaqComponent extends Component {
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq08_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si j’ai préalablement sauvegardé mes Clés Tchap (clés de chiffrement)</title>
+									<title>Si j’ai préalablement sauvegardé mes Clés Tchap (clés de chiffrement)<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" /></title>
 									<div className="tc_text_nl">
 										<div className="tc_text_b">
 											Vous avez préalablement sauvegardé vos Clés Tchap sur l’appareil que vous utilisez en ce moment ?
@@ -715,7 +715,7 @@ class FaqComponent extends Component {
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq08_003")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si je ne suis pas encore connecté à Tchap sur un autre appareil et que je n’ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement)</title>
+									<title>Si je ne suis pas encore connecté à Tchap sur un autre appareil et que je n’ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement)<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" /></title>
 									<div className="tc_text_nl">
 										<div className="tc_text_b">
 											Vous n’êtes pas connecté à Tchap sur un autre appareil et vous n’avez pas préalablement sauvegardé vos Clés Tchap ?
