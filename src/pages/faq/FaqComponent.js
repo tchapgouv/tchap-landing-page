@@ -634,6 +634,92 @@ class FaqComponent extends Component {
 									</div>
 								</GenericAccordion>
 
+								<div id="tcq08_000" className="tc_FaqComponent_section">“Déchiffrement impossible” de mes messages : comment y remédier ?</div>
+								<GenericAccordion {...this._generateProps("tcq08_001")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si j’ai un autre appareil déjà connecté à Tchap</title>
+									<div className="tc_text_nl">
+										<div className="tc_FaqComponent_subtitle">Vous êtes déjà connecté à Tchap depuis un autre appareil sur lequel vos messages sont lisibles ? </div>
+										<div>Vous pouvez déverrouiller vos messages comme suit :</div>
+										<ol>
+											<li>
+												Sur l’appareil sur lequel les messages sont verrouillés, cliquez sur “Renvoyer” (en dessous du texte qui s’affiche à la place de vos messages)
+											</li>
+											<div>
+													<img src={require("images/faq/resend_request.png")}
+																alt="texte qui s'affiche dans l'appli : renvoyer"
+																className="tc_FaqComponent_border"
+																width="400px"/>
+											</div>
+											<li>
+												Sur l’appareil sur lequel les messages sont lisibles, suivez les indications qui apparaissent automatiquement pour partager les Clés Tchap (clés de chiffrement) entre vos appareils
+											</li>
+										</ol>
+										<div>
+											Une fois les Clés Tchap partagées entre vos appareils, vos messages sont déverrouillés et deviennent lisibles au fur et à mesure.
+										</div>
+										<a>Pourquoi mes messages sont-ils verrouillés ?</a>
+										<a>Comment éviter que mes messages soient verrouillés ?</a>
+									</div>
+								</GenericAccordion>
+								<GenericAccordion {...this._generateProps("tcq08_002")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si j’ai préalablement sauvegardé mes Clés Tchap (clés de chiffrement)</title>
+									<div className="tc_text_nl">
+										<div className="tc_text_b">
+											Vous avez préalablement sauvegardé vos Clés Tchap sur l’appareil que vous utilisez en ce moment ?
+										</div>
+										<div>
+											Vous pouvez déverrouiller vos messages comme suit :
+										</div>
+										<ol>
+											<li>
+												<span className="tc_text_b">Allez dans les Paramètres</span> de Tchap :
+												<ul>
+													<li>
+														Sur ordinateur, allez dans Paramètres > Sécurité & Vie Privée et cliquez sur “Importer les clés de chiffrement de bout en bout”.
+													</li>
+													<li>
+														Sur Android, allez dans Paramètres > Sécurité & Vie Privée et cliquez sur “Importer les clés des conversations”.
+													</li>
+													<li>
+														Sur iOS, allez dans Paramètres > Sécurité & Vie Privée et cliquez sur “Importer les clés de chiffrement de bout en bout”.
+													</li>
+												</ul>
+											</li>
+											<li>
+											  <span className="tc_text_b">Sélectionnez le fichier “Tchap Keys” (ce fichier portera un autre nom si vous l’avez renommé lors de la sauvegarde)</span>
+											</li>
+											<li>
+											  <span className="tc_text_b">Entrez votre mot de passe</span> que vous avez créé pour sauvegarder vos Clés Tchap (clé de chiffrement).
+											</li>
+										</ol>
+										<div>
+											Vos Clés Tchap déverouillent automatiquement vos messages qui seront alors à nouveau lisibles au fur à et mesure.
+										</div>
+										<a>Pourquoi mes messages sont-ils verrouillés ?</a>
+										<a>Comment éviter que mes messages soient verrouillés ?</a>
+									</div>
+								</GenericAccordion>
+								<GenericAccordion {...this._generateProps("tcq08_003")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si je ne suis pas encore connecté à Tchap sur un autre appareil et que je n’ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement)</title>
+									<div className="tc_text_nl">
+										<div className="tc_text_b">
+											Vous n’êtes pas connecté à Tchap sur un autre appareil et vous n’avez pas préalablement sauvegardé vos Clés Tchap ?
+										</div>
+										<div>
+											Par mesure de sécurité, vos messages resteront verrouillés si vous n’avez pas vos Clés Tchap (clés de chiffrement).
+										</div>
+										<div>
+											En revanche, vos nouveaux messages ne le seront pas : vous pourrez lire tous vos nouveaux messages.
+										</div>
+										<div>
+											<a>Pourquoi mes messages sont-ils verrouillés ?</a>
+										</div>
+										<div>
+											<a>Comment éviter que mes messages soient verrouillés ?</a>
+										</div>
+									</div>
+								</GenericAccordion>
+
 								<div id="tcq06_000" className="tc_FaqComponent_section">En cas de problème...</div>
 								<GenericAccordion {...this._generateProps("tcq06_001")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je ne reçois pas de notifications : que faire ?</title>
