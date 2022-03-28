@@ -156,7 +156,7 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi Tchap ?</title>
 									La messagerie instantanée Tchap a été créée pour les agents publics comme l’alternative française et sécurisée aux messageries instantanées grand public.
 									<div>Tchap est conçue et maîtrisée par l’Etat, toutes les données générées par son usage sont hébergées sur des serveurs français, garantissant ainsi que leur gestion répond aux normes européennes en vigueur (RGPD).</div>
-									</ul>
+		
 									<div className="tc_FaqComponent_seemore">
 										<GenericLink onClick={this._onLocationChange} to="#tcq05_001" className="tc_FaqComponent_link">Comment la confidentialité des échanges est-elle garantie ?</GenericLink>
 									</div>
