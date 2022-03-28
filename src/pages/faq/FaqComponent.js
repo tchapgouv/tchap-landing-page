@@ -283,19 +283,6 @@ class FaqComponent extends Component {
 										<GenericLink onClick={this._onLocationChange} to="#tcq03_006" className="tc_FaqComponent_link">Comment rejoindre un salon ?</GenericLink>
 									</div>
 								</GenericAccordion>
-								<GenericAccordion {...this._generateProps("tcq03_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment conserver l'historique de mes messages ?</title>
-									<div className="tc_text_nl">Lorsque vous vous déconnectez puis reconnectez, vos messages passés deviennent illisibles. C'est une mesure de sécurité : la déconnexion de Tchap entraîne la perte des clés de chiffrement qui servent à déchiffrer vos messages.</div>
-									<div className="tc_text_nl"><span className="tc_text_b">Pour conserver tous vos messages, il vous faut donc garder une connexion continue à Tchap sur au moins un appareil.</span></div>
-									<div className="tc_text_nl">Pour vous assurer d'avoir toujours au moins un appareil connecté, une mesure préventive peut être de vous connecter depuis plusieurs appareils (un mobile et un ordinateur par exemple). Si l'un se déconnecte, vous pourrez alors récupérer vos clés de chiffrement grâce au second.</div>
-									<div className="tc_text_nl">Votre mobile garde votre connexion automatiquement, comme pour toute application mobile.</div>
-									<div className="tc_text_nl"><span className="tc_text_b">Pour assurer que votre navigateur web garde votre connexion, vérifiez dans les réglages de celui-ci que la conservation de vos données de navigation est autorisée pour Tchap</span> (c'est généralement le cas par défaut). Une intervention de vos services informatiques peut être nécéssaire s’il faut procéder à un changement de ce réglage.</div>
-									<div className="tc_text_nl">Enfin, si vous anticipez une déconnexion, vous pouvez <span className="tc_text_b">exporter et sauvegarder vos clés de chiffrement en vous rendant dans les réglages de Tchap et en cliquant sur "Exporter les clés de chiffrement"</span>. Vous pourrez ensuite importer ces mêmes clés lors de votre prochaine connexion afin de récupérer l’historique de vos conversations.</div>
-									<div className="tc_FaqComponent_seemore">
-										<GenericLink onClick={this._onLocationChange} to="#tcq06_002" className="tc_FaqComponent_link">"Déchiffrement impossible" de mes messages :  comment y remédier ?</GenericLink>
-										<GenericLink onClick={this._onLocationChange} to="#tcq05_001" className="tc_FaqComponent_link">Comment la confidentialité des échanges est-elle garantie ?</GenericLink>
-									</div>
-								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_003")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment démarrer une nouvelle conversation ?</title>
 									<div className="tc_text_nl">L’annuaire intégré vous permet d’entrer en contact direct avec l’ensemble des utilisateurs de Tchap.</div>
@@ -587,29 +574,6 @@ class FaqComponent extends Component {
 											</ul>
 										</li>
 									</ul>
-								</GenericAccordion>
-								<GenericAccordion {...this._generateProps("tcq06_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />"Déchiffrement impossible" de mes messages :  comment y remédier ?</title>
-									<div className="tc_text_nl">Chaque nouvelle connexion à Tchap - c'est-à-dire le fait de renseigner votre e-mail et votre mot de passe - provoque le renouvellement immédiat de vos clés de chiffrement sur l'appareil que vous utilisez. </div>
-									<div className="tc_text_nl">Par conséquent, vous ne pouvez plus lire les messages envoyés ou reçus avant votre connexion. Chaque message reçu ou envoyé est remplacé par cette phrase : </div>
-									<div className="tc_text_nl tc_text_i">"Déchiffrement impossible : L'utilisateur n'a pas envoyé les clefs de déchiffrement pour ce message."</div>
-									<div className="tc_text_nl">Pour pouvoir accéder à nouveau à vos anciens messages, vous devez restaurer vos clés de chiffrement. Deux possibilités s'offrent à vous :</div>
-									<ol>
-										<li>
-											<div className="tc_text_nl">
-												Si vous êtes connecté avec votre compte Tchap sur un autre appareil, vous pouvez demander à ce que ce second appareil vous partage les clés de chiffrement :
-											</div>
-											<div className="tc_text_nl">
-												Sur l'appareil qui a perdu les clés, cliquez sur "Re-demander les clés de chiffrement depuis vos autres appareils" (lien cliquable situé juste en-dessous des messages "Déchiffrement impossible : L'utilisateur n'a pas envoyé les clefs de déchiffrement pour ce message"), puis validez les demandes d'envoi de clé qui s'affichent sur l'autre appareil.
-											</div>
-										</li>
-										<li>Restaurer les clés que vous aurez pris le soin de sauvegarder préalablement à votre déconnexion de Tchap. </li>
-									</ol>
-									<div className="tc_text_nl">Cependant, si vous vous déconnectez de Tchap alors que vous n'avez pas de session Tchap ouverte sur un autre appareil ou si vous n'avez pas préalablement sauvegardé volontairement vos clés, vous ne pourrez pas lire l'historique de vos conversations Tchap.</div>
-									<div className="tc_text_nl">Pour éviter que ce problème ne se reproduise, il est recommandé de ne pas vous déconnecter de Tchap, et de maintenir une session active sur au moins deux appareils différents (un ordinateur et un mobile par exemple).</div>
-									<div className="tc_FaqComponent_seemore">
-										<GenericLink onClick={this._onLocationChange} to="#tcq03_002" className="tc_FaqComponent_link">Comment conserver l'historique de mes messages ?</GenericLink>
-									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq06_003")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que faire si je ne reçois pas l'e-mail de création de compte ?</title>
