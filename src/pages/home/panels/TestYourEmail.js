@@ -115,12 +115,11 @@ class TestYourEmail extends Component {
 			renderBlock = (
 				<div className="tc_TestYourEmail_email_text">
 					<div>Votre administration n'est pas encore présente sur Tchap !</div>
-					<ul className="tc_TestYourEmail_invalid_list">
-						<li>
-							Demandez l'accès à Tchap pour votre administration via <a href="https://www.demarches-simplifiees.fr/commencer/utiliser-tchap">ce formulaire</a>
-						</li>
-						<li>L'équipe Tchap reviendra rapidement vers vous.</li>
-					</ul>
+					<ol className="tc_TestYourEmail_invalid_list">
+						<li>Demandez l'accès à Tchap pour votre administration via <a href="https://www.demarches-simplifiees.fr/commencer/utiliser-tchap">ce formulaire</a></li>
+						<li>L'équipe Tchap ouvrira l’accès à votre administration si toutes les conditions sont remplies (délai : environ 15 jours)</li>
+						<li>Les agents de votre administration pourront ensuite s'inscrire et communiquer sur Tchap !</li>
+					</ol>
 				</div>
 			);
 		}
