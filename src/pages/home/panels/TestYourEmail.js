@@ -117,10 +117,9 @@ class TestYourEmail extends Component {
 					<div>Votre administration n'est pas encore présente sur Tchap !</div>
 					<ul className="tc_TestYourEmail_invalid_list">
 						<li>
-							Téléchargez la convention Tchap <ConventionLink linkText="en cliquant ici"/>
+							Demandez l'accès à Tchap pour votre administration via <a href="https://www.demarches-simplifiees.fr/commencer/utiliser-tchap">ce formulaire</a>
 						</li>
-						<li>Envoyez-la signée par votre direction à <a className="tc_TestYourEmail_link" href={"mailto:" + t("links.contact")}>{t("links.contact")}</a></li>
-						<li>L'équipe Tchap se charge de l'ouverture du service à votre administration</li>
+						<li>L'équipe Tchap reviendra rapidement vers vous.</li>
 					</ul>
 				</div>
 			);
