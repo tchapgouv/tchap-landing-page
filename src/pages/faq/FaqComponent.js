@@ -177,8 +177,8 @@ class FaqComponent extends Component {
 									<div>Vous pouvez vérifier si votre e-mail professionnel est bien reconnu par Tchap  <GenericLink className="tc_FaqComponent_link" to={"/#joinUs"}>en cliquant ici</GenericLink>.</div>
 									<div className="tc_text_nl">
 										Si votre e-mail professionnel n'est pas reconnu par Tchap, vous pouvez en faire la demande en
-										envoyant <ConventionLink linkText="cette convention"/> signée
-										par votre direction à l'adresse  <GenericLink className="tc_FaqComponent_link" to={"mailto:" + t("links.contact")}>{t("links.contact")}</GenericLink>.</div>
+										renseignant <a href="https://www.demarches-simplifiees.fr/commencer/utiliser-tchap">ce formulaire.</a>
+									</div>
 									<div className="tc_FaqComponent_subtitle">Les partenaires externes</div>
 									<div>Les partenaires externes sont les personnes avec lesquelles vous travaillez qui ne sont pas agents publics.</div>
 									<div>Ils peuvent utiliser Tchap, mais n'ont pas les mêmes droits que les agents publics :</div>
