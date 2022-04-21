@@ -45,28 +45,13 @@
 }
 
 .tc_FaqComponent_seemore {
-  font-style: italic;
-  font-weight: bold;
   margin-top: 34px;
   margin-bottom: 20px;
-  a {
-    display: block;
-  }
-  .tc_FaqComponent_link {
-    text-decoration: underline;
-  }
-  .tc_FaqComponent_link::before {
-    content: "►\00a0";
-    text-decoration: none;
-    display: inline-block;
-    font-style: normal;
-    margin-left: 3px;
-    position: relative;
-    top: -1px;
+  ul {
+    list-style-type: "► ";
   }
   &::before {
     content: "Voir aussi : ";
-    text-decoration: underline;
   }
 }
 
@@ -76,13 +61,6 @@
 
 .tc_FaqComponent_list_level_2 {
   padding-left: 18px;
-}
-
-.tc_FaqComponent_link {
-  color: #3d3d3d;
-  &:hover {
-    color: #000000;
-  }
 }
 
 .tc_FaqComponent_Popper {
