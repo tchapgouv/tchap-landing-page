@@ -161,7 +161,7 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq05_001', text: 'Comment la confidentialité des échanges est-elle garantie ?' },
+											{ to: "#tcq05_001", text: "Comment la confidentialité des échanges est-elle garantie ?" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq01_002")}>
@@ -195,7 +195,7 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq03_004', text: 'Comment inviter un partenaire externe à rejoindre Tchap ?' },
+											{ to: "#tcq03_004", text: "Comment inviter un partenaire externe à rejoindre Tchap ?" },
 										]}/>
 								</GenericAccordion>
 
@@ -220,8 +220,8 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq01_002', text: 'Qui peut utiliser Tchap ?' },
-											{ to: '/prise-en-main', text: 'Guide de prise en main pour faciliter vos débuts sur Tchap' },
+											{ to: "#tcq01_002", text: "Qui peut utiliser Tchap ?" },
+											{ to: "/prise-en-main", text: "Guide de prise en main pour faciliter vos débuts sur Tchap" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_002")}>
@@ -234,7 +234,7 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq06_004', text: 'Mon compte a expiré : que faire ?' },
+											{ to: "#tcq06_004", text: "Mon compte a expiré : que faire ?" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_003")}>
@@ -296,8 +296,8 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq03_003', text: 'Comment démarrer une nouvelle conversation ?' },
-											{ to: '#tcq03_006', text: 'Comment rejoindre un salon ?' },
+											{ to: "#tcq03_003", text: "Comment démarrer une nouvelle conversation ?" },
+											{ to: "#tcq03_006", text: "Comment rejoindre un salon ?" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_003")}>
@@ -324,8 +324,8 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq03_004', text: 'Comment inviter un partenaire externe sur Tchap ?' },
-											{ to: '#tcq03_005', text: 'Que faire si je ne souhaite pas apparaître dans l\'annuaire ?' },
+											{ to: "#tcq03_004", text: "Comment inviter un partenaire externe sur Tchap ?" },
+											{ to: "#tcq03_005", text: "Que faire si je ne souhaite pas apparaître dans l'annuaire ?" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_004")}>
@@ -349,7 +349,7 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq01_002', text: 'Qui peut utiliser Tchap ?' },
+											{ to: "#tcq01_002", text: "Qui peut utiliser Tchap ?" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_005")}>
@@ -375,7 +375,7 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq04_000', text: 'Créer et administrer un salon' },
+											{ to: "#tcq04_000", text: "Créer et administrer un salon" },
 										]}/>
 								</GenericAccordion>
 
@@ -411,7 +411,7 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq04_002', text: 'Qu\'est-ce qu\'un administrateur ?' },
+											{ to: "#tcq04_002", text: "Qu'est-ce qu'un administrateur ?" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_002")}>
@@ -428,7 +428,7 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq04_004', text: 'Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ?' },
+											{ to: "#tcq04_004", text: "Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ?" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_003")}>
@@ -445,7 +445,7 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq04_004', text: 'Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ?' },
+											{ to: "#tcq04_004", text: "Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ?" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_004")}>
@@ -485,8 +485,8 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq07_001', text: 'Comment m\'assurer de toujours pouvoir lire mes messages ?' },
-											{ to: '#tcq08_000', text: 'Déchiffrement impossible de mes messages : comment y remédier ?' },
+											{ to: "#tcq07_001", text: "Comment m'assurer de toujours pouvoir lire mes messages ?" },
+											{ to: "#tcq08_000", text: "Déchiffrement impossible de mes messages : comment y remédier ?" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq05_002")}>
@@ -501,7 +501,7 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: '#tcq05_001', text: 'Comment la confidentialité des échanges est-elle garantie ?' },
+											{ to: "#tcq05_001", text: "Comment la confidentialité des échanges est-elle garantie ?" },
 										]}/>
 								</GenericAccordion>
 
@@ -539,7 +539,7 @@ class FaqComponent extends Component {
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
 											links={[
-												{ to: '#tcq08_001', text: 'Comment déverrouiller mes messages si j\'ai un autre appareil connecté à Tchap ?' },
+												{ to: "#tcq08_001", text: "Comment déverrouiller mes messages si j'ai un autre appareil connecté à Tchap ?" },
 											]}/>
 
 										<div className="tc_FaqComponent_subtitle">Sauvegardez manuellement vos Clés Tchap (clés de chiffrement) avant toute déconnexion</div>
@@ -549,7 +549,7 @@ class FaqComponent extends Component {
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
 											links={[
-												{ to: '#tcq07_002', text: 'Comment sauvegarder manuellement mes Clés Tchap (clés de chiffrement) ?' },
+												{ to: "#tcq07_002", text: "Comment sauvegarder manuellement mes Clés Tchap (clés de chiffrement) ?" },
 											]}/>
 									</div>
 								</GenericAccordion>
@@ -588,7 +588,7 @@ class FaqComponent extends Component {
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
 											links={[
-												{ to: '#tcq07_003', text: 'Comment importer manuellement mes Clés Tchap (clés de chiffrement) ?' },
+												{ to: "#tcq07_003", text: "Comment importer manuellement mes Clés Tchap (clés de chiffrement) ?" },
 											]}/>
 									</div>
 								</GenericAccordion>
@@ -638,9 +638,9 @@ class FaqComponent extends Component {
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
 											links={[
-												{ to: '#tcq08_001', text: 'Comment déverrouiller mes messages si j\'ai un autre appareil connecté à Tchap ?' },
-												{ to: '#tcq08_002', text: 'Comment déverrouiller mes messages si j’ai préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ?' },
-												{ to: '#tcq08_003', text: 'Comment déverrouiller mes messages si je ne suis pas connecté à Tchap sur un autre appareil et que je n’ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ?' },
+												{ to: "#tcq08_001", text: "Comment déverrouiller mes messages si j'ai un autre appareil connecté à Tchap ?" },
+												{ to: "#tcq08_002", text: "Comment déverrouiller mes messages si j'ai préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ?" },
+												{ to: "#tcq08_003", text: "Comment déverrouiller mes messages si je ne suis pas connecté à Tchap sur un autre appareil et que je n’ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ?" },
 											]}/>
 									</div>
 								</GenericAccordion>
@@ -671,8 +671,8 @@ class FaqComponent extends Component {
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
 											links={[
-												{ to: '#tcq07_004', text: 'Pourquoi mes messages sont-ils verrouillés ?' },
-												{ to: '#tcq07_001', text: 'Comment m’assurer de toujours pouvoir lire mes messages ?' },
+												{ to: "#tcq07_004", text: "Pourquoi mes messages sont-ils verrouillés ?" },
+												{ to: "#tcq07_001", text: "Comment m’assurer de toujours pouvoir lire mes messages ?" },
 											]}/>
 									</div>
 								</GenericAccordion>
@@ -713,8 +713,8 @@ class FaqComponent extends Component {
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
 											links={[
-												{ to: '#tcq07_004', text: 'Pourquoi mes messages sont-ils verrouillés ?' },
-												{ to: '#tcq07_001', text: 'Comment m’assurer de toujours pouvoir lire mes messages ?' },
+												{ to: "#tcq07_004", text: "Pourquoi mes messages sont-ils verrouillés ?" },
+												{ to: "#tcq07_001", text: "Comment m’assurer de toujours pouvoir lire mes messages ?" },
 											]}/>
 									</div>
 								</GenericAccordion>
@@ -733,8 +733,8 @@ class FaqComponent extends Component {
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
 											links={[
-												{ to: '#tcq07_004', text: 'Pourquoi mes messages sont-ils verrouillés ?' },
-												{ to: '#tcq07_001', text: 'Comment m’assurer de toujours pouvoir lire mes messages ?' },
+												{ to: "#tcq07_004", text: "Pourquoi mes messages sont-ils verrouillés ?" },
+												{ to: "#tcq07_001", text: "Comment m’assurer de toujours pouvoir lire mes messages ?" },
 											]}/>
 									</div>
 								</GenericAccordion>
@@ -863,7 +863,7 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 											onClick={this._onLocationChange}
 											links={[
-												{ to: '#tcq02_002', text: 'Pourquoi dois-je renouveler mon compte tous les 2 mois ?' },
+												{ to: "#tcq02_002", text: "Pourquoi dois-je renouveler mon compte tous les 2 mois ?" },
 											]}/>
 								</GenericAccordion>
 							</Grid>
