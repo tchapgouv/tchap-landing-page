@@ -23,6 +23,7 @@ class Tac extends Component {
 							<div>Tchap est développée et opérée par la direction interministérielle du numérique de l'Etat (DINUM) des services du Premier ministre. Toute utilisation de Tchap doit respecter les présentes conditions générales d'utilisation.</div>
 							<div>L'utilisation de l’Application est libre et gratuite.</div>
 						</div>
+					</div>
 					<div className="tc_Tac_paragraph">
 						<h2>2.Modalités d’utilisation</h2>
 						<div className="tc_Tac_subparagraph">
@@ -35,14 +36,14 @@ class Tac extends Component {
 							<div>L'Utilisateur ou Utilisatrice s'inscrit sur l’Application en créant un profil. Cette inscription est personnelle.</div>
 							<div>Un compte Tchap est associé à une adresse de messagerie électronique que l’Utilisateur ou Utilisatrice doit périodiquement valider. En l’absence de validation, le compte est désactivé. Après 6 mois de désactivation, le compte est révoqué.</div>
 							<div>Les domaines des adresses électroniques de l’administration centrale sont automatiquement autorisés sur l’Application. Les autres domaines éligibles sont autorisés après validation de leur demande d’inscription par la DINUM (contact : tchap@beta.gouv.fr).</div>
-							<div>La création de compte avec une adresse électronique appartenant à un domaine autorisé permet la création d’un profil « Agent ». Toute personne ayant une adresse de domaine autorisé peut s’inscrire. Dès validation de son inscription, les différentes fonctionnalités sont disponibles.</div> 
+							<div>La création de compte avec une adresse électronique appartenant à un domaine autorisé permet la création d’un profil « Agent ». Toute personne ayant une adresse de domaine autorisé peut s’inscrire. Dès validation de son inscription, les différentes fonctionnalités sont disponibles.</div>
 							<div>La création de compte avec une adresse électronique n’appartenant pas à un domaine autorisé dans Tchap s’effectue uniquement à la suite d’une invitation électronique. Elle est associée à un profil « Externe » permettant uniquement de participer à des échanges privés auxquels l’Utilisateur ou Utilisatrice est convié. En effet certaines restrictions sont appliquées aux utilisateurs et utilisatrices avec un profil « Externe » :</div>
 							<div>
-							<ul>
-								<li>Les profiles « Externes » ne peuvent pas accéder à la liste des salons publics, rejoindre ou être invités dans un salon public.</li>
-								<li>Ils ne peuvent pas créer de salons publics ou privés, ni engager de conversations.</li>
-								<li>Ils ne peuvent pas consulter l’annuaire des utilisateurs et utilisatrices.</li>
-							</ul>
+								<ul>
+									<li>Les profiles « Externes » ne peuvent pas accéder à la liste des salons publics, rejoindre ou être invités dans un salon public.</li>
+									<li>Ils ne peuvent pas créer de salons publics ou privés, ni engager de conversations.</li>
+									<li>Ils ne peuvent pas consulter l’annuaire des utilisateurs et utilisatrices.</li>
+								</ul>
 							</div>
 							<div>Si le domaine de l’adresse de l’Utilisateur ou Utilisatrice « Externe » devient autorisé, l’Utilisateur ou Utilisatrice doit fermer son compte « Externe » pour créer un compte « Agent » afin de bénéficier des fonctionnalités complètes de Tchap.</div>
 						</div>
@@ -54,9 +55,9 @@ class Tac extends Component {
 							<div>L’Application est mise à disposition pour faciliter les échanges professionnels entre les agents publics et entre ces derniers et leurs collaborateurs extérieurs à l’administration.</div>
 							<div>L’Utilisateur ou l’Utilisatrice est responsable des données ou contenus qu'il ou elle échange sur l’Application. Il ou elle veille à ne proposer que des contenus multimédias appropriés dans le cadre de relations professionnelles et à respecter les principes de la netiquette.</div>
 							<div>L’Utilisateur ou l’Utilisatrice assure la confidentialité de ses identifiants et veille à éviter toute imprudence pouvant favoriser un usage frauduleux de l’Application.</div>
-							<div>L’Utilisateur ou l’Utilisatrice utilise l’Application dans le respect du secret professionnel et doit faire preuve de discrétion professionnelle pour tous les faits, informations ou documents dont il ou elle a connaissance dans l’exercice ou à l’occasion de ses fonctions.</div>							
+							<div>L’Utilisateur ou l’Utilisatrice utilise l’Application dans le respect du secret professionnel et doit faire preuve de discrétion professionnelle pour tous les faits, informations ou documents dont il ou elle a connaissance dans l’exercice ou à l’occasion de ses fonctions.</div>
 							<div>Si l’Utilisateur ou l’Utilisatrice estime que son mot de passe est compromis, il ou elle doit le modifier sans délai.</div>
-							<div>En cas de compromission de son compte, l’Utilisateur ou l’Utilisatrice doit contacter l’équipe Tchap à l’adresse : tchap@beta.gouv.fr.</div>							
+							<div>En cas de compromission de son compte, l’Utilisateur ou l’Utilisatrice doit contacter l’équipe Tchap à l’adresse : tchap@beta.gouv.fr.</div>
 						</div>
 						<div className="tc_Tac_subparagraph">
 							<h3>3.2 Usages interdits </h3>
@@ -132,7 +133,7 @@ class Tac extends Component {
 							<div>L’adresse mail de contact est la suivante : tchap@beta.gouv.fr</div>
 						</div>
 					</div>
-			</Container>
+				</Container>
 				<BottomBar />
 			</div>
 		);
