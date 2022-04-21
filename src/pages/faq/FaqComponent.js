@@ -155,8 +155,8 @@ class FaqComponent extends Component {
 								<div id="tcq01_000" className="tc_FaqComponent_section">A propos</div>
 								<GenericAccordion {...this._generateProps("tcq01_001")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi Tchap ?</title>
-									La messagerie instantanée Tchap a été créée pour les agents publics comme l’alternative française et sécurisée aux messageries instantanées grand public.
-									<div>Tchap est conçue et maîtrisée par l’Etat, toutes les données générées par son usage sont hébergées sur des serveurs français, garantissant ainsi que leur gestion répond aux normes européennes en vigueur (RGPD).</div>
+									La messagerie instantanée Tchap a été créée pour les agents publics comme l'alternative française et sécurisée aux messageries instantanées grand public.
+									<div>Tchap est conçue et maîtrisée par l'Etat, toutes les données générées par son usage sont hébergées sur des serveurs français, garantissant ainsi que leur gestion répond aux normes européennes en vigueur (RGPD).</div>
 
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
@@ -170,8 +170,8 @@ class FaqComponent extends Component {
 									<div>Tchap s'adresse à tous les agents publics, peu importe leur contrat de travail.</div>
 									<div>Pour utiliser Tchap, il faut un <span className="tc_text_b">e-mail professionnel d'une administration reconnue</span> comme :</div>
 									<ul>
-										<li>L’ensemble de l’administration et de la fonction publique (d’Etat, hospitalière et territoriale)</li>
-										<li>L’ensemble des établissements publics comme les Etablissements Publics Administratifs (EPA) et Etablissements Publics Industriels et Commerciaux (EPIC)</li>
+										<li>L'ensemble de l'administration et de la fonction publique (d'Etat, hospitalière et territoriale)</li>
+										<li>L'ensemble des établissements publics comme les Etablissements Publics Administratifs (EPA) et Etablissements Publics Industriels et Commerciaux (EPIC)</li>
 										<li>Les Autorités Administratives Indépendantes (AAI)</li>
 										<li>Les universités</li>
 										<li>Les collectivités</li>
@@ -180,8 +180,8 @@ class FaqComponent extends Component {
 									<div>Vous pouvez vérifier si votre e-mail professionnel est bien reconnu par Tchap  <GenericLink className="tc_FaqComponent_link" to={"/#joinUs"}>en cliquant ici</GenericLink>.</div>
 									<div className="tc_text_nl">
 										Si votre e-mail professionnel n'est pas reconnu par Tchap, vous pouvez en faire la demande en
-										envoyant <ConventionLink linkText="cette convention"/> signée
-										par votre direction à l'adresse  <GenericLink className="tc_FaqComponent_link" to={"mailto:" + t("links.contact")}>{t("links.contact")}</GenericLink>.</div>
+										renseignant <a target="_blank" rel="noreferrer noopener nofollow" href="https://www.demarches-simplifiees.fr/commencer/utiliser-tchap">ce formulaire.</a>
+									</div>
 									<div className="tc_FaqComponent_subtitle">Les partenaires externes</div>
 									<div>Les partenaires externes sont les personnes avec lesquelles vous travaillez qui ne sont pas agents publics.</div>
 									<div>Ils peuvent utiliser Tchap, mais n'ont pas les mêmes droits que les agents publics :</div>
@@ -302,13 +302,13 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_003")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment démarrer une nouvelle conversation ?</title>
-									<div className="tc_text_nl">L’annuaire intégré vous permet d’entrer en contact direct avec l’ensemble des utilisateurs de Tchap.</div>
+									<div className="tc_text_nl">L'annuaire intégré vous permet d'entrer en contact direct avec l'ensemble des utilisateurs de Tchap.</div>
 									<div className="tc_text_nl">Pour démarrer une nouvelle conversation : </div>
 									<ul className="tc_list_decimal">
 										<li>
 											<Grid container className="tc_FaqComponent_grid">
 												<Grid item xl={6}>
-													<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, cliquez sur le bouton “+” en bas de l’écran et choisissez “nouvelle discussion”.</div>
+													<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, cliquez sur le bouton “+” en bas de l'écran et choisissez “nouvelle discussion”.</div>
 													<img src={require("images/pem/create_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création 1:1 mobile"/>
 												</Grid>
 												<Grid item xl={6}>
@@ -407,7 +407,7 @@ class FaqComponent extends Component {
 											</ul>
 										</Grid>
 									</Grid>
-									<div className="tc_text_nl">Une fois que votre salon est créé, vous en êtes l’administrateur par défaut.</div>
+									<div className="tc_text_nl">Une fois que votre salon est créé, vous en êtes l'administrateur par défaut.</div>
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
@@ -470,7 +470,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_006")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment supprimer un salon ?</title>
-									<div className="tc_text_nl">Si le salon est public, il faut d’abord le transformer en salon privé pour le retirer de la liste des salons publics.</div>
+									<div className="tc_text_nl">Si le salon est public, il faut d'abord le transformer en salon privé pour le retirer de la liste des salons publics.</div>
 									<div className="tc_text_nl">Pour fermer complètement un salon, un administrateur doit exclure tous les participants puis le quitter lui-même. Le salon ne sera alors plus visible, et les invitations acceptées ultérieurement ne fonctionneront pas.</div>
 								</GenericAccordion>
 
@@ -497,7 +497,7 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Puis-je utiliser Tchap pour échanger des informations confidentielles ?</title>
 									<div className="tc_text_nl">Tchap garantie la confidentialité des échanges au sein de la messagerie.</div>
 									<div className="tc_text_nl">Cependant, Tchap ne sécurise pas votre téléphone, qui reste exposé aux menaces informatiques.</div>
-									<div className="tc_text_nl">’échange d’informations et de documents sensibles ne doit donc pas être effectué sur Tchap, même dans une conversation à deux. Pour cela, vous devez utiliser les canaux et appareils sécurisés mis à disposition par votre direction.</div>
+									<div className="tc_text_nl">L'échange d'informations et de documents sensibles ne doit donc pas être effectué sur Tchap, même dans une conversation à deux. Pour cela, vous devez utiliser les canaux et appareils sécurisés mis à disposition par votre direction.</div>
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
@@ -507,7 +507,7 @@ class FaqComponent extends Component {
 
 								<div id="tcq07_000" className="tc_FaqComponent_section">Gestion des Clés Tchap (clés de chiffrement)</div>
 								<GenericAccordion {...this._generateProps("tcq07_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment m’assurer de toujours pouvoir lire mes messages ?</title>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment m'assurer de toujours pouvoir lire mes messages ?</title>
 									<div className="tc_text_nl">
 										<div>
 											Après une nouvelle connexion (lorsque vous entrez votre mail et votre mot de passe), vous ne pouvez pas
@@ -520,7 +520,7 @@ class FaqComponent extends Component {
 										<div className="tc_FaqComponent_subtitle">Voici quelques bonnes pratiques pour vous assurer de toujours pouvoir lire vos messages :</div>
 										<div className="tc_FaqComponent_subtitle">Evitez de vous déconnecter de Tchap</div>
 										<div>
-											<span className="tc_text_b">Votre mobile</span> garde votre connexion automatiquement, même lorsque vous fermez l’application ou éteignez votre téléphone
+											<span className="tc_text_b">Votre mobile</span> garde votre connexion automatiquement, même lorsque vous fermez l'application ou éteignez votre téléphone
 										</div>
 										<div>
 											<span className="tc_text_b">Votre navigateur web</span> provoque peut-être la déconnexion automatique de Tchap lorsque vous le fermez :
@@ -534,7 +534,7 @@ class FaqComponent extends Component {
 											Les appareils peuvent partager entre eux les Clés Tchap (clés de chiffrement) qui permettent de déverrouiller vos messages.
 										</div>
 										<div>
-											Si vos messages sont verrouillés sur votre ordinateur, mais qu’ils sont lisibles sur votre téléphone, alors vous pouvez utiliser votre téléphone pour transmettre les clés à votre ordinateur. Et vice et versa.
+											Si vos messages sont verrouillés sur votre ordinateur, mais qu'ils sont lisibles sur votre téléphone, alors vous pouvez utiliser votre téléphone pour transmettre les clés à votre ordinateur. Et vice et versa.
 										</div>
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
@@ -582,8 +582,8 @@ class FaqComponent extends Component {
 												</div>
 											</li>
 											<li>Choisissez un mot de passe (différent de votre mot de passe Tchap) : celui-ci vous sera demandé pour déverrouiller vos messages lors de votre reconnexion.</li>
-											<li>Enregistrez le fichier à un emplacement où vous pourrez le retrouver. Ce fichier s’appelle “Tchap keys” par défaut, mais vous pouvez le renommer.</li>
-											<li>C’est bon, vos clés Tchap sont sauvegardées ! Vous pourrez les importer lors de de votre reconnexion pour déverrouiller vos messages.</li>
+											<li>Enregistrez le fichier à un emplacement où vous pourrez le retrouver. Ce fichier s'appelle “Tchap keys” par défaut, mais vous pouvez le renommer.</li>
+											<li>C'est bon, vos clés Tchap sont sauvegardées ! Vous pourrez les importer lors de de votre reconnexion pour déverrouiller vos messages.</li>
 										</ol>
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
@@ -616,9 +616,9 @@ class FaqComponent extends Component {
 															className="tc_FaqComponent_border"/>
 												</div>
 											</li>
-											<li>Sélectionnez le fichier que vous avez préalablement sauvegardé. Par défaut, ce fichier s’appelle “Tchap keys”.</li>
+											<li>Sélectionnez le fichier que vous avez préalablement sauvegardé. Par défaut, ce fichier s'appelle “Tchap keys”.</li>
 											<li>Entrez le mot de passe que vous avez choisi au moment de la sauvegarde.</li>
-											<li>C’est bon, vos messages sont déverrouillés et de nouveau lisibles .</li>
+											<li>C'est bon, vos messages sont déverrouillés et de nouveau lisibles .</li>
 										</ol>
 									</div>
 								</GenericAccordion>
@@ -629,7 +629,7 @@ class FaqComponent extends Component {
 											Après une nouvelle connexion (lorsque vous entrez votre mail et votre mot de passe), vous ne pouvez pas lire les messages échangés auparavant.
 										</div>
 										<div>
-											C'est une mesure de sécurité : si une personne vole vos identifiants et se connecte à votre place, il lui est ainsi impossible de lire vos messages parce qu’ils sont verrouillés.
+											C'est une mesure de sécurité : si une personne vole vos identifiants et se connecte à votre place, il lui est ainsi impossible de lire vos messages parce qu'ils sont verrouillés.
 										</div>
 										<div>
 												Vous pouvez déverrouiller vos messages pour les lire grâce à vos Clés Tchap (clés de chiffrement).
@@ -640,20 +640,20 @@ class FaqComponent extends Component {
 											links={[
 												{ to: "#tcq08_001", text: "Comment déverrouiller mes messages si j'ai un autre appareil connecté à Tchap ?" },
 												{ to: "#tcq08_002", text: "Comment déverrouiller mes messages si j'ai préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ?" },
-												{ to: "#tcq08_003", text: "Comment déverrouiller mes messages si je ne suis pas connecté à Tchap sur un autre appareil et que je n’ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ?" },
+												{ to: "#tcq08_003", text: "Comment déverrouiller mes messages si je ne suis pas connecté à Tchap sur un autre appareil et que je n'ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement) ?" },
 											]}/>
 									</div>
 								</GenericAccordion>
 
 								<div id="tcq08_000" className="tc_FaqComponent_section">“Déchiffrement impossible” de mes messages : comment y remédier ?</div>
 								<GenericAccordion {...this._generateProps("tcq08_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si j’ai un autre appareil déjà connecté à Tchap</title>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si j'ai un autre appareil déjà connecté à Tchap</title>
 									<div className="tc_text_nl">
 										<div className="tc_FaqComponent_subtitle">Vous êtes déjà connecté à Tchap depuis un autre appareil sur lequel vos messages sont lisibles ? </div>
 										<div>Vous pouvez déverrouiller vos messages comme suit :</div>
 										<ol>
 											<li>
-												Sur l’appareil sur lequel les messages sont verrouillés, cliquez sur “Renvoyer” (en dessous du texte qui s’affiche à la place de vos messages)
+												Sur l'appareil sur lequel les messages sont verrouillés, cliquez sur “Renvoyer” (en dessous du texte qui s'affiche à la place de vos messages)
 											</li>
 											<div>
 													<img src={require("images/faq/resend_request.png")}
@@ -662,7 +662,7 @@ class FaqComponent extends Component {
 																width="400px"/>
 											</div>
 											<li>
-												Sur l’appareil sur lequel les messages sont lisibles, suivez les indications qui apparaissent automatiquement pour partager les Clés Tchap (clés de chiffrement) entre vos appareils
+												Sur l'appareil sur lequel les messages sont lisibles, suivez les indications qui apparaissent automatiquement pour partager les Clés Tchap (clés de chiffrement) entre vos appareils
 											</li>
 										</ol>
 										<div>
@@ -672,15 +672,15 @@ class FaqComponent extends Component {
 											onClick={this._onLocationChange}
 											links={[
 												{ to: "#tcq07_004", text: "Pourquoi mes messages sont-ils verrouillés ?" },
-												{ to: "#tcq07_001", text: "Comment m’assurer de toujours pouvoir lire mes messages ?" },
+												{ to: "#tcq07_001", text: "Comment m'assurer de toujours pouvoir lire mes messages ?" },
 											]}/>
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq08_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si j’ai préalablement sauvegardé mes Clés Tchap (clés de chiffrement)</title>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si j'ai préalablement sauvegardé mes Clés Tchap (clés de chiffrement)</title>
 									<div className="tc_text_nl">
 										<div className="tc_text_b">
-											Vous avez préalablement sauvegardé vos Clés Tchap sur l’appareil que vous utilisez en ce moment ?
+											Vous avez préalablement sauvegardé vos Clés Tchap sur l'appareil que vous utilisez en ce moment ?
 										</div>
 										<div>
 											Vous pouvez déverrouiller vos messages comme suit :
@@ -701,7 +701,7 @@ class FaqComponent extends Component {
 												</ul>
 											</li>
 											<li>
-											  <span className="tc_text_b">Sélectionnez le fichier “Tchap Keys” (ce fichier portera un autre nom si vous l’avez renommé lors de la sauvegarde)</span>
+											  <span className="tc_text_b">Sélectionnez le fichier “Tchap Keys” (ce fichier portera un autre nom si vous l'avez renommé lors de la sauvegarde)</span>
 											</li>
 											<li>
 											  <span className="tc_text_b">Entrez votre mot de passe</span> que vous avez créé pour sauvegarder vos Clés Tchap (clé de chiffrement).
@@ -714,18 +714,18 @@ class FaqComponent extends Component {
 											onClick={this._onLocationChange}
 											links={[
 												{ to: "#tcq07_004", text: "Pourquoi mes messages sont-ils verrouillés ?" },
-												{ to: "#tcq07_001", text: "Comment m’assurer de toujours pouvoir lire mes messages ?" },
+												{ to: "#tcq07_001", text: "Comment m'assurer de toujours pouvoir lire mes messages ?" },
 											]}/>
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq08_003")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si je ne suis pas encore connecté à Tchap sur un autre appareil et que je n’ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement)</title>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si je ne suis pas encore connecté à Tchap sur un autre appareil et que je n'ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement)</title>
 									<div className="tc_text_nl">
 										<div className="tc_text_b">
-											Vous n’êtes pas connecté à Tchap sur un autre appareil et vous n’avez pas préalablement sauvegardé vos Clés Tchap ?
+											Vous n'êtes pas connecté à Tchap sur un autre appareil et vous n'avez pas préalablement sauvegardé vos Clés Tchap ?
 										</div>
 										<div>
-											Par mesure de sécurité, vos messages resteront verrouillés si vous n’avez pas vos Clés Tchap (clés de chiffrement).
+											Par mesure de sécurité, vos messages resteront verrouillés si vous n'avez pas vos Clés Tchap (clés de chiffrement).
 										</div>
 										<div>
 											En revanche, vos nouveaux messages ne le seront pas : vous pourrez lire tous vos nouveaux messages.
@@ -734,7 +734,7 @@ class FaqComponent extends Component {
 											onClick={this._onLocationChange}
 											links={[
 												{ to: "#tcq07_004", text: "Pourquoi mes messages sont-ils verrouillés ?" },
-												{ to: "#tcq07_001", text: "Comment m’assurer de toujours pouvoir lire mes messages ?" },
+												{ to: "#tcq07_001", text: "Comment m'assurer de toujours pouvoir lire mes messages ?" },
 											]}/>
 									</div>
 								</GenericAccordion>
@@ -742,10 +742,10 @@ class FaqComponent extends Component {
 								<div id="tcq06_000" className="tc_FaqComponent_section">En cas de problème...</div>
 								<GenericAccordion {...this._generateProps("tcq06_001")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je ne reçois pas de notifications : que faire ?</title>
-									<div className="tc_text_nl tc_text_b">Il peut arriver de ne plus avoir les notifications pour avertir de l’arrivée de nouveau message, voici un tour des contrôles à effectuer.</div>
+									<div className="tc_text_nl tc_text_b">Il peut arriver de ne plus avoir les notifications pour avertir de l'arrivée de nouveau message, voici un tour des contrôles à effectuer.</div>
 									<div className="tc_text_nl tc_text_b">Sur votre appareil mobile :</div>
 									<ul className="tc_list_decimal">
-										<li><span className="tc_text_b">Vérifier l’état du mode "Ne pas déranger"</span>
+										<li><span className="tc_text_b">Vérifier l'état du mode "Ne pas déranger"</span>
 											<Grid container className="tc_FaqComponent_grid">
 												<Grid item xl={6}>
 													<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
@@ -765,7 +765,7 @@ class FaqComponent extends Component {
 													<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
 														<li>Allez dans les paramètres généraux de votre téléphone;</li>
 														<li>Allez dans la section "Applis et notifications";</li>
-														<li>Cliquez sur l’application Tchap, vous arrivez sur une fenêtre où il vous sera proposer, entre autre, de désinstaller ou de forcer l’arrêt de l’application;</li>
+														<li>Cliquez sur l'application Tchap, vous arrivez sur une fenêtre où il vous sera proposer, entre autre, de désinstaller ou de forcer l'arrêt de l'application;</li>
 														<li>Cliquez sur "Données mobiles et Wi-Fi";</li>
 														<li>Vérifiez que la consommation des "Données en arrière-plan" est bien activée.</li>
 													</ul>
@@ -790,12 +790,12 @@ class FaqComponent extends Component {
 												</Grid>
 											</Grid>
 										</li>
-										<li><span className="tc_text_b">Forcer l’arrêt de l’application et redémarrer le téléphone</span>
+										<li><span className="tc_text_b">Forcer l'arrêt de l'application et redémarrer le téléphone</span>
 											<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
 												<li>Allez dans les paramètres généraux de votre téléphone;</li>
 												<li>Allez dans la section "Applis et notifications" ;</li>
-												<li>Cliquez sur l’application Tchap ;</li>
-												<li>"Forcer l’arrêt" de l’application;</li>
+												<li>Cliquez sur l'application Tchap ;</li>
+												<li>"Forcer l'arrêt" de l'application;</li>
 												<li>Redémarrer votre téléphone.</li>
 											</ul>
 										</li>
@@ -807,18 +807,18 @@ class FaqComponent extends Component {
 											<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
 												<li>
 													Rendez-vous sur la page web de Tchap et connectez-vous:<GenericLink onClick={this._onLocationChange} to="https://www.tchap.gouv.fr">https://www.tchap.gouv.fr</GenericLink>;
-													<div className="tc_text_i">NB : S'il s’agit de votre première connexion sur le web (ou que vos historiques de navigation ont été effacés), vous pouvez partager vos clés de chiffrement à l’aide de votre téléphone portable pour déchiffrer les messages préalablement reçus</div>
+													<div className="tc_text_i">NB : S'il s'agit de votre première connexion sur le web (ou que vos historiques de navigation ont été effacés), vous pouvez partager vos clés de chiffrement à l'aide de votre téléphone portable pour déchiffrer les messages préalablement reçus</div>
 												</li>
 												<li>Allez dans les paramètres généraux de Tchap;</li>
 												<li>Allez dans la section "Notifications";</li>
 												<li>
-													Vérifiez que les paramétrages correspondent à l’image ci-dessous (paramétrage par défaut) :
+													Vérifiez que les paramétrages correspondent à l'image ci-dessous (paramétrage par défaut) :
 													<Grid container className="tc_FaqComponent_grid">
 														<Grid item xl={6}>
 															<img src={require("images/faq/notif_web_1.png")} className="tc_FaqComponent_limg_mobile" alt="Réparer les notifications web 1"/>
 														</Grid>
 														<Grid item xl={6}>
-															<div className="tc_text_nl">Veillez à ce qu’aucune option ne soit sur « désactivé », hormis la dernière. Vous pouvez ensuite choisir librement si vous souhaitez que les notifications soient sur « Activé » ou « Bruyant ».</div>
+															<div className="tc_text_nl">Veillez à ce qu'aucune option ne soit sur « désactivé », hormis la dernière. Vous pouvez ensuite choisir librement si vous souhaitez que les notifications soient sur « Activé » ou « Bruyant ».</div>
 														</Grid>
 													</Grid>
 												</li>
@@ -826,15 +826,15 @@ class FaqComponent extends Component {
 										</li>
 										<li><span className="tc_text_b">Vérifier le paramétrage des salons:</span>
 											<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
-												<li>Rendez-vous sur l’écran général de Tchap (où figure la liste de vos conversations sur la colonne de gauche)</li>
+												<li>Rendez-vous sur l'écran général de Tchap (où figure la liste de vos conversations sur la colonne de gauche)</li>
 												<li>Cliquez sur les trois petits points à droite d'un ou plusieurs salons (ceux pour lesquels vous semblez ne plus recevoir de notifications)</li>
-												<li>Vérifiez que les paramétrages correspondent à l’image ci-dessous :
+												<li>Vérifiez que les paramétrages correspondent à l'image ci-dessous :
 													<Grid container className="tc_FaqComponent_grid">
 														<Grid item xl={4}>
 															<img src={require("images/faq/notif_web_2.png")} className="tc_FaqComponent_wimg_mobile" alt="Réparer les notifications web 2"/>
 														</Grid>
 														<Grid item xl={8}>
-															<div className="tc_text_nl tc_text_i">NB : L’option "Seulement les mentions" n’est pas supportée pour les salons chiffrés dans la version mobile de Tchap (Android et iOS).</div>
+															<div className="tc_text_nl tc_text_i">NB : L'option "Seulement les mentions" n'est pas supportée pour les salons chiffrés dans la version mobile de Tchap (Android et iOS).</div>
 														</Grid>
 													</Grid>
 												</li>
