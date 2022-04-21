@@ -119,7 +119,7 @@ class Tac extends Component {
 					<div className="tc_Tac_paragraph">
 						<h2>8. Mentions légales</h2>
 						<div className="tc_Tac_subparagraph">
-							<div><u>Sites</u> : <a href="https://www.tchap.gouv.fr">www.tchap.gouv.fr</a> et <a href="https://www.tchap.beta.gouv.fr">www.tchap.beta.gouv.fr</a></div>
+							<div><u>Sites</u> : <a href="https://www.tchap.gouv.fr">www.tchap.gouv.fr</a> et <a href="https://tchap.beta.gouv.fr">tchap.beta.gouv.fr</a></div>
 							<div><u>Editeur</u> : Direction interministérielle du numérique de l’Etat (DINUM). 20 avenue de Ségur 75007 Paris - Tel. Accueil : 01.71.21.01.70 SIRET : 12000101100010 (secrétariat général du gouvernement) SIREN : 120 001 011</div>
 							<div><u>Directeur de la publication</u> : Monsieur Xavier ALBOUY, Directeur par intérim de la Direction interministérielle du numérique.</div>
 							<div><u>Conception et gestion</u> : Le suivi éditorial et graphique est assuré par la DINUM.</div>
