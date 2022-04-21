@@ -116,9 +116,9 @@ class TestYourEmail extends Component {
 				<div className="tc_TestYourEmail_email_text">
 					<div>Votre administration n'est pas encore présente sur Tchap !</div>
 					<ol className="tc_TestYourEmail_invalid_list">
-						<li>Demandez l'accès à Tchap pour votre administration via <a href="https://www.demarches-simplifiees.fr/commencer/utiliser-tchap">ce formulaire</a></li>
-						<li>L'équipe Tchap ouvrira l’accès à votre administration si toutes les conditions sont remplies (délai : environ 15 jours)</li>
-						<li>Les agents de votre administration pourront ensuite s'inscrire et communiquer sur Tchap !</li>
+						<li>Demandez l'accès à Tchap pour votre administration via <a target="_blank" rel="noreferrer noopener nofollow" href="https://www.demarches-simplifiees.fr/commencer/utiliser-tchap">ce formulaire</a>.</li>
+						<li>L'équipe Tchap ouvrira l'accès à votre administration si toutes les conditions sont remplies (délai : environ 15 jours)</li>
+						<li>Les agents de votre administration pourront ensuite s'inscrire et communiquer sur Tchap.</li>
 					</ol>
 				</div>
 			);
