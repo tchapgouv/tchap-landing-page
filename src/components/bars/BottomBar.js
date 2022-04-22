@@ -63,11 +63,6 @@ class BottomBar extends Component {
 								<a class="fr-footer__bottom-link">Accessibilité: non conforme</a>
 							</li>
 							<li class="fr-footer__bottom-item">
-								<a class="fr-footer__bottom-link" href="https://www.tchap.gouv.fr/tac/" data-probe-name="terms-of-service" onClick={this._hookProbe}>
-									Mentions légales
-								</a>
-							</li>
-							<li class="fr-footer__bottom-item">
 								<a class="fr-footer__bottom-link" href="/suivi" data-probe-name="personal-data" onClick={this._hookProbe}>
 									Données personnelles
 								</a>
