@@ -491,7 +491,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq05_002")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Où les données de Tchap sont-elles stockées ?</title>
-									<div className="tc_text_nl">Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics. N'hésitez pas à consulter nos <GenericLink onClick={this._onLocationChange} to="https://www.tchap.gouv.fr/cgu/" className="tc_FaqComponent_link">CGU</GenericLink> pour en savoir plus.</div>
+									<div className="tc_text_nl">Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics. N'hésitez pas à consulter nos <GenericLink onClick={this._onLocationChange} to="/cgu" className="tc_FaqComponent_link">CGU</GenericLink> pour en savoir plus.</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq05_003")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Puis-je utiliser Tchap pour échanger des informations confidentielles ?</title>
