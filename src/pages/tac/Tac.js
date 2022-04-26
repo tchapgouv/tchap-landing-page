@@ -40,7 +40,7 @@ class Tac extends Component {
 							<div>La création de compte avec une adresse électronique n'appartenant pas à un domaine autorisé dans Tchap s'effectue uniquement à la suite d'une invitation électronique. Elle est associée à un profil « Externe » permettant uniquement de participer à des échanges privés auxquels l'Utilisateur ou Utilisatrice est convié. En effet certaines restrictions sont appliquées aux utilisateurs et utilisatrices avec un profil « Externe » :</div>
 							<div>
 								<ul>
-									<li>Les profiles « Externes » ne peuvent pas accéder à la liste des salons publics, rejoindre ou être invités dans un salon public.</li>
+									<li>Les profils « Externes » ne peuvent pas accéder à la liste des salons publics, rejoindre ou être invités dans un salon public.</li>
 									<li>Ils ne peuvent pas créer de salons publics ou privés, ni engager de conversations.</li>
 									<li>Ils ne peuvent pas consulter l'annuaire des utilisateurs et utilisatrices.</li>
 								</ul>
