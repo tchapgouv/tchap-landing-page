@@ -154,7 +154,10 @@ class FaqComponent extends Component {
 
 								<div id="tcq01_000" className="tc_FaqComponent_section">A propos</div>
 								<GenericAccordion {...this._generateProps("tcq01_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi Tchap ?</title>
+									<title>
+										Pourquoi Tchap ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									La messagerie instantanée Tchap a été créée pour les agents publics comme l'alternative française et sécurisée aux messageries instantanées grand public.
 									<div>Tchap est conçue et maîtrisée par l'Etat, toutes les données générées par son usage sont hébergées sur des serveurs français, garantissant ainsi que leur gestion répond aux normes européennes en vigueur (RGPD).</div>
 
@@ -165,7 +168,10 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq01_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Qui peut utiliser Tchap ?</title>
+									<title>
+										Qui peut utiliser Tchap ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_FaqComponent_subtitle">Les agents publics</div>
 									<div>Tchap s'adresse à tous les agents publics, peu importe leur contrat de travail.</div>
 									<div>Pour utiliser Tchap, il faut un <span className="tc_text_b">e-mail professionnel d'une administration reconnue</span> comme :</div>
@@ -201,7 +207,10 @@ class FaqComponent extends Component {
 
 								<div id="tcq02_000" className="tc_FaqComponent_section">Gestion du compte</div>
 								<GenericAccordion {...this._generateProps("tcq02_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment s'inscrire ?</title>
+									<title>
+										Comment s'inscrire ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div>Pour vous inscrire sur Tchap :</div>
 									<ul className="tc_list_decimal">
 										<li>
@@ -225,7 +234,10 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi dois-je renouveler mon compte tous les 2 mois ?</title>
+									<title>
+										Pourquoi dois-je renouveler mon compte tous les 2 mois ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Vous ne pouvez utiliser Tchap qu'avec un e-mail professionnel valide. Tchap doit vérifier que votre e-mail est toujours valide pour <span className="tc_text_b">garder votre compte actif.</span></div>
 									<div className="tc_text_nl">C'est pourquoi vous recevez toutes les 8 semaines un e-mail de Tchap avec un lien sur lequel cliquer pour garder votre compte actif.</div>
 									<div className="tc_text_nl">Vous avez 7 jours pour cliquer sur le lien dans l'e-mail. </div>
@@ -238,19 +250,28 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_003")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Un compte peut-il être supprimé ?</title>
+									<title>
+										Un compte peut-il être supprimé ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Vous pouvez désactiver votre compte depuis les <span className="tc_text_b">paramètres généraux</span> de Tchap.</div>
 									<div className="tc_text_nl">En désactivant votre compte, <span className="tc_text_b">vous ne pourrez plus accéder à vos messages</span>, même si vous recréez un compte avec le même e-mail.</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_004")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que deviendra mon compte si je change de poste ou d'affectation ?</title>
+									<title>
+										Que deviendra mon compte si je change de poste ou d'affectation ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Votre compte Tchap dépend de votre e-mail profsessionnel. Si vous changez d'adresse e-mail, vous devez donc créer un nouveau compte Tchap avec votre e-mail. Le compte précédent sera désactivé. </div>
 									<div className="tc_text_nl">Si votre nouvelle administration n'est pas encore présente sur Tchap, vous pouvez formuler une demande d'ouverture auprès de votre direction informatique. Vous pouvez vérifier la présence de votre administration sur Tchap  <GenericLink className="tc_FaqComponent_link" to={"/#joinUs"}>ici</GenericLink>.</div>
 								</GenericAccordion>
 
 								<div id="tcq03_000" className="tc_FaqComponent_section">Echanger sur Tchap</div>
 								<GenericAccordion {...this._generateProps("tcq03_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Quels sont les différents types de conversations sur Tchap ?</title>
+									<title>
+										Quels sont les différents types de conversations sur Tchap ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<Grid container className="tc_FaqComponent_grid">
 										<Grid item xl={2}>
 											<img src={require("images/pem/avatar_dm.png")} alt="DM"/>
@@ -301,7 +322,10 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_003")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment démarrer une nouvelle conversation ?</title>
+									<title>
+										Comment démarrer une nouvelle conversation ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">L'annuaire intégré vous permet d'entrer en contact direct avec l'ensemble des utilisateurs de Tchap.</div>
 									<div className="tc_text_nl">Pour démarrer une nouvelle conversation : </div>
 									<ul className="tc_list_decimal">
@@ -329,7 +353,10 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_004")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment inviter un partenaire externe sur Tchap ?</title>
+									<title>
+										Comment inviter un partenaire externe sur Tchap ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<ul className="tc_list_decimal">
 										<li>
 											<Grid container className="tc_FaqComponent_grid">
@@ -353,12 +380,19 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_005")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que faire si je ne souhaite pas apparaître dans l'annuaire ?</title>
+									<title>
+										Que faire si je ne souhaite pas apparaître dans l'annuaire ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+
+									</title>
 									<div className="tc_text_nl">Si vous ne souhaitez pas apparaître dans les résultats de recherche d'utilisateurs, vous pouvez passer sur <span className="tc_text_b">liste rouge</span> dans les Paramètres de Tchap.</div>
 									<div className="tc_text_nl">Les autres utilisateurs ne pourront ainsi plus vous trouve, ni vous contacter, sauf s'ils renseignent votre e-mail complet dans la barre de recherche.</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_006")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment rejoindre un salon ?</title>
+									<title>
+										Comment rejoindre un salon ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour rejoindre un salon privé</span>, vous devez obligatoirement être invité par un de ses administrateurs.</div>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour trouver et rejoindre un salon forum</span>, vous pouvez rechercher par mots clés : </div>
 									<Grid container className="tc_FaqComponent_grid">
@@ -381,7 +415,10 @@ class FaqComponent extends Component {
 
 								<div id="tcq04_000" className="tc_FaqComponent_section">Créer et administrer un salon</div>
 								<GenericAccordion {...this._generateProps("tcq04_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment créer un salon ?</title>
+									<title>
+										Comment créer un salon ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<Grid container className="tc_FaqComponent_grid">
 										<Grid item xl={2}>
 											<img src={require("images/pem/avatar_private.png")} alt="Salon Privé"/>
@@ -415,7 +452,10 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Qu'est-ce qu'un administrateur ?</title>
+									<title>
+										Qu'est-ce qu'un administrateur ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Par défaut, le créateur d'un salon est sont administrateur.</div>
 									<div className="tc_text_nl">Un administrateur peut :</div>
 									<ul>
@@ -432,7 +472,10 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_003")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment inviter des participants à rejoindre un salon ?</title>
+									<title>
+										Comment inviter des participants à rejoindre un salon ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Pour les salons privés, seuls les administrateurs peuvent inviter des utilisateurs à rejoindre la conversation.</div>
 									<div className="tc_text_nl">Pour les salons publics, l'invitation n'est pas indispensable mais peut être utilisée pour inviter des utilisateurs à rejoindre le salon.</div>
 									<div className="tc_text_nl">Pour envoyer des invitations, rendez-vous dans les paramètres du salon, et cliquez sur "inviter dans ce salon". Plusieurs possibilités s'offrent alors à vous :</div>
@@ -449,7 +492,10 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_004")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ? </title>
+									<title>
+										Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Il est fortement recommandé de nommer plusieurs administrateurs et modérateurs parmi les participants d'un salon.</div>
 									<div className="tc_text_nl">Ainsi, en cas de départ d'un administrateur, le salon ne se retrouvera pas gelé.</div>
 									<div className="tc_text_nl">En effet, seul un administrateur a le pouvoir de nommer un autre administrateur. Si un salon se retrouve sans administrateur, plus personne n'a donc le pouvoir de l'administrer, et cette situation est irréversible. Dans le cas d'un salon privé, cela rend notamment impossible d'y inviter de nouveaux membres.</div>
@@ -461,7 +507,10 @@ class FaqComponent extends Component {
 									</ul>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_005")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment retirer une personne d'un salon ?</title>
+									<title>
+										Comment retirer une personne d'un salon ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Seul un administrateur ou un modérateur peut retirer un membre d'un salon. Pour ce faire, rendez-vous dans la liste des membres du salon et cliquez sur le nom de la personne : </div>
 									<ul>
 										<li>Pour qu'il lui soit impossible de revenir, choisissez "bannir"</li>
@@ -469,14 +518,20 @@ class FaqComponent extends Component {
 									</ul>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_006")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment supprimer un salon ?</title>
+									<title>
+										Comment supprimer un salon ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Si le salon est public, il faut d'abord le transformer en salon privé pour le retirer de la liste des salons publics.</div>
 									<div className="tc_text_nl">Pour fermer complètement un salon, un administrateur doit exclure tous les participants puis le quitter lui-même. Le salon ne sera alors plus visible, et les invitations acceptées ultérieurement ne fonctionneront pas.</div>
 								</GenericAccordion>
 
 								<div id="tcq05_000" className="tc_FaqComponent_section">Sécurité des échanges</div>
 								<GenericAccordion {...this._generateProps("tcq05_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment la confidentialité des échanges est-elle garantie ?</title>
+									<title>
+										Comment la confidentialité des échanges est-elle garantie ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Tous les messages échangés sur Tchap (hors Salons Forums) sont chiffrés de bout en bout. Concrètement, cela signifie que jamais personne d'autre que les auteurs et destinataires des messages n'y ont accès. </div>
 									<div className="tc_text_nl">Comment cela fonctionne-t-il ? </div>
 									<div className="tc_text_nl">Chaque utilisateur de Tchap dispose de clés de chiffrement qui permettent de chiffrer et de déchiffrer les messages reçus et envoyés. Ces clés sont stockées sur vos appareils, et se renouvellent régulièrement de façon automatique (à chaque nouvelle connexion par exemple).</div>
@@ -490,11 +545,17 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq05_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Où les données de Tchap sont-elles stockées ?</title>
+									<title>
+										Où les données de Tchap sont-elles stockées ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Tchap est conçue et hébergée en France. L'Etat en maîtrise donc l'infrastructure et les développements, spécialement pensés pour répondre aux besoins des agents publics. N'hésitez pas à consulter nos <GenericLink onClick={this._onLocationChange} to="/cgu" className="tc_FaqComponent_link">CGU</GenericLink> pour en savoir plus.</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq05_003")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Puis-je utiliser Tchap pour échanger des informations confidentielles ?</title>
+									<title>
+										Puis-je utiliser Tchap pour échanger des informations confidentielles ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Tchap garantie la confidentialité des échanges au sein de la messagerie.</div>
 									<div className="tc_text_nl">Cependant, Tchap ne sécurise pas votre téléphone, qui reste exposé aux menaces informatiques.</div>
 									<div className="tc_text_nl">L'échange d'informations et de documents sensibles ne doit donc pas être effectué sur Tchap, même dans une conversation à deux. Pour cela, vous devez utiliser les canaux et appareils sécurisés mis à disposition par votre direction.</div>
@@ -507,7 +568,10 @@ class FaqComponent extends Component {
 
 								<div id="tcq07_000" className="tc_FaqComponent_section">Gestion des Clés Tchap (clés de chiffrement)</div>
 								<GenericAccordion {...this._generateProps("tcq07_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment m'assurer de toujours pouvoir lire mes messages ?</title>
+									<title>
+										Comment m'assurer de toujours pouvoir lire mes messages ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">
 										<div>
 											Après une nouvelle connexion (lorsque vous entrez votre mail et votre mot de passe), vous ne pouvez pas
@@ -555,7 +619,10 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 
 								<GenericAccordion {...this._generateProps("tcq07_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment sauvegarder manuellement mes Clés Tchap (clés de chiffrement) ?</title>
+									<title>
+										Comment sauvegarder manuellement mes Clés Tchap (clés de chiffrement) ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">
 										<div className="tc_FaqComponent_subtitle">Pour sauvegarder vos clés :</div>
 										<div>
@@ -593,7 +660,10 @@ class FaqComponent extends Component {
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq07_003")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment importer manuellement mes Clés Tchap (clés de chiffrement) ? </title>
+									<title>
+										Comment importer manuellement mes Clés Tchap (clés de chiffrement) ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">
 										<div className="tc_FaqComponent_subtitle">Pour importer vos clés si vous les avez préalablement sauvegardées :</div>
 										<ol>
@@ -623,7 +693,10 @@ class FaqComponent extends Component {
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq07_004")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi mes messages sont-ils verrouillés ? </title>
+									<title>
+										Pourquoi mes messages sont-ils verrouillés ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">
 										<div>
 											Après une nouvelle connexion (lorsque vous entrez votre mail et votre mot de passe), vous ne pouvez pas lire les messages échangés auparavant.
@@ -647,7 +720,10 @@ class FaqComponent extends Component {
 
 								<div id="tcq08_000" className="tc_FaqComponent_section">“Déchiffrement impossible” de mes messages : comment y remédier ?</div>
 								<GenericAccordion {...this._generateProps("tcq08_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si j'ai un autre appareil déjà connecté à Tchap</title>
+									<title>
+										Si j'ai un autre appareil déjà connecté à Tchap
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">
 										<div className="tc_FaqComponent_subtitle">Vous êtes déjà connecté à Tchap depuis un autre appareil sur lequel vos messages sont lisibles ? </div>
 										<div>Vous pouvez déverrouiller vos messages comme suit :</div>
@@ -677,7 +753,10 @@ class FaqComponent extends Component {
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq08_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si j'ai préalablement sauvegardé mes Clés Tchap (clés de chiffrement)</title>
+									<title>
+										Si j'ai préalablement sauvegardé mes Clés Tchap (clés de chiffrement)
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">
 										<div className="tc_text_b">
 											Vous avez préalablement sauvegardé vos Clés Tchap sur l'appareil que vous utilisez en ce moment ?
@@ -719,7 +798,10 @@ class FaqComponent extends Component {
 									</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq08_003")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si je ne suis pas encore connecté à Tchap sur un autre appareil et que je n'ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement)</title>
+									<title>
+										Si je ne suis pas encore connecté à Tchap sur un autre appareil et que je n'ai pas préalablement sauvegardé mes Clés Tchap (clés de chiffrement)
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">
 										<div className="tc_text_b">
 											Vous n'êtes pas connecté à Tchap sur un autre appareil et vous n'avez pas préalablement sauvegardé vos Clés Tchap ?
@@ -741,7 +823,10 @@ class FaqComponent extends Component {
 
 								<div id="tcq06_000" className="tc_FaqComponent_section">En cas de problème...</div>
 								<GenericAccordion {...this._generateProps("tcq06_001")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je ne reçois pas de notifications : que faire ?</title>
+									<title>
+										Je ne reçois pas de notifications : que faire ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl tc_text_b">Il peut arriver de ne plus avoir les notifications pour avertir de l'arrivée de nouveau message, voici un tour des contrôles à effectuer.</div>
 									<div className="tc_text_nl tc_text_b">Sur votre appareil mobile :</div>
 									<ul className="tc_list_decimal">
@@ -843,7 +928,10 @@ class FaqComponent extends Component {
 									</ul>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq06_003")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que faire si je ne reçois pas l'e-mail de création de compte ?</title>
+									<title>
+										Que faire si je ne reçois pas l'e-mail de création de compte ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Voici quelques vérifications que vous pouvez effectuer :</div>
 									<ul>
 										<li>Vérifiez vos spams</li>
@@ -854,7 +942,10 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl">Si le problème persiste, n'hésitez pas à contacter le support de Tchap : <GenericLink className="tc_FaqComponent_link" to={"mailto:" + t("links.contact")}>{t("links.contact")}</GenericLink></div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq06_004")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Mon compte a expiré : que faire ?</title>
+									<title>
+										Mon compte a expiré : que faire ?
+										<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+									</title>
 									<div className="tc_text_nl">Toutes les 8 semaines, vous recevez un e-mail de Tchap avec un lien sur lequel cliquer pour garder votre compte actif.</div>
 									<div className="tc_text_nl">Vous avez 7 jours pour cliquer sur le lien dans l'e-mail.</div>
 									<div className="tc_text_nl">Si vous dépassez les 7 jours, votre compte se désactive automatiquement.</div>
