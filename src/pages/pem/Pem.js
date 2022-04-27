@@ -227,7 +227,7 @@ class Pem extends Component {
 							<div className="tc_Pem_Content_title" id="tcp06_001"><LinkIcon onClick={this._handleCopyClick} className="tc_Pem_Content_title_icon" /> 6. Des questions ?</div>
 							<div className="tc_Pem_Content_text">La FAQ de Tchap est disponible <GenericLink className="tc_Pem_Menu_item" to={t("links.faq")}>ici</GenericLink> pour toute précision supplémentaire.</div>
 							<div className="tc_Pem_Content_text">Et si vous rencontrez des difficultés dans l'utilisation de votre messagerie, n'hésitez pas à contacter le support !</div>
-							<GenericLink className="tc_Pem_Menu_item" to={"mailto:" + t("links.contact")}>{t("links.contact")}</GenericLink>
+							<GenericLink className="tc_Pem_Menu_item" to={"mailto:" + t("links.support")}>{t("links.support")}</GenericLink>
 							<br /><br /><br /><br />
 							<div className="tc_Pem_Content_text tc_text_right">A très vite sur Tchap !</div>
 							<div className="tc_Pem_Content_text tc_text_right">L'équipe Tchap</div>
