@@ -851,7 +851,7 @@ class FaqComponent extends Component {
 										<li>Vérifiez que votre compte a bien été créé, en recommençant votre procédure d'inscription</li>
 										<li>Contactez vos services informatiques pour vous assurer que les e-mails de Tchap ne sont pas bloqués</li>
 									</ul>
-									<div className="tc_text_nl">Si le problème persiste, n'hésitez pas à contacter le support de Tchap : <GenericLink className="tc_FaqComponent_link" to={"mailto:" + t("links.contact")}>{t("links.contact")}</GenericLink></div>
+									<div className="tc_text_nl">Si le problème persiste, n'hésitez pas à contacter le support de Tchap : <GenericLink className="tc_FaqComponent_link" to={"mailto:" + t("links.support")}>{t("links.support")}</GenericLink></div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq06_004")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Mon compte a expiré : que faire ?</title>
