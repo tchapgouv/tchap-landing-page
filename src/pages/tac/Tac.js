@@ -124,7 +124,7 @@ class Tac extends Component {
 							<div><u>Directeur de la publication</u> : Monsieur Xavier ALBOUY, Directeur par intérim de la Direction interministérielle du numérique.</div>
 							<div><u>Conception et gestion</u> : Le suivi éditorial et graphique est assuré par la DINUM.</div>
 							<div><u>Code source</u> : Tout site public ou privé est autorisé à établir, sans autorisation préalable, un lien (y compris profond) vers les informations diffusées sur le site.</div>
-							<div><u>Hébergement de la messagerie de la messagerie Tchap (tchap.gouv.fr)</u> : Ministère de l'Intérieur, Place Beauvau, 75800 Paris CEDEX 08</div>
+							<div><u>Hébergement de la messagerie Tchap (tchap.gouv.fr)</u> : Ministère de l'Intérieur, Place Beauvau, 75800 Paris CEDEX 08</div>
 							<div><u>Prestataire d'Hébergement du site vitrine (tchap.beta.gouv.fr)</u> : Scalingo SAS, 15 avenue du Rhin, 67100 Strasbourg, France.</div>
 						</div>
 					</div>
