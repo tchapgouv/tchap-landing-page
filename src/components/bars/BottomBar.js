@@ -64,7 +64,7 @@ class BottomBar extends Component {
 							</li>
 							<li class="fr-footer__bottom-item">
 								<a class="fr-footer__bottom-link" href="/suivi" data-probe-name="personal-data" onClick={this._hookProbe}>
-									Données personnelles
+									Gestion des cookies
 								</a>
 							</li>
 							<li class="fr-footer__bottom-item">
