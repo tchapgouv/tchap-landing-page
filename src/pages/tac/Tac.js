@@ -63,7 +63,7 @@ class Tac extends Component {
 							<h3>3.2 Usages interdits </h3>
 							<div>L'Utilisateur ou l'Utilisatrice s'engage à ne pas mettre en ligne et communiquer de contenus ou informations contraires aux dispositions légales et réglementaires en vigueur. Il ou elle veille notamment à ne jamais tenir de propos ou échanger de contenus insultants, diffamatoires ou indécents.</div>
 							<div>L'Utilisateur ou l'Utilisatrice n'envoie pas de pièces jointes qui contiennent des virus, des fichiers corrompus ou tout autre logiciel ou programme similaire susceptible d'endommager le fonctionnement d'un autre ordinateur et de mettre en péril la sécurité informatique de l'Application ou aux fins de commettre des infractions.</div>
-							<div>L'échange de messages est effectué pour des communications interpersonnelles dont la vocation est éphémère et exclut les usages à fins d'archivage ou d'historisation.</div>
+							<div>La conservation des échanges sur Tchap est limitée dans le temps. Tchap n'est pas destiné à conserver les informations échangées sur la messagerie à des fins d'archivage.</div>
 						</div>
 						<div className="tc_Tac_subparagraph">
 							<h3>3.3 Limites d'utilisation du Service</h3>
