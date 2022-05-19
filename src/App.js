@@ -6,6 +6,7 @@ import Home from "pages/home/Home";
 import Convention from "pages/convention/Convention";
 import Suivi from "pages/suivi/Suivi";
 import Pem from "pages/pem/Pem";
+import PrivacyPolicy from "pages/privacy-policy/PrivacyPolicy";
 import Faq from "pages/faq/Faq";
 import Tac from "pages/tac/Tac";
 
@@ -30,6 +31,7 @@ class App extends Component {
 					<Route path="/prise-en-main" element={<Pem />} />
 					<Route path="/faq" element={<Faq />} />
 					<Route path="/cgu" element={<Tac />} />
+					<Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
 					<Route path="/" element={<Home />} />
 				</Routes>
 			</BrowserRouter>
