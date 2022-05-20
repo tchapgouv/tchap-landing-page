@@ -86,6 +86,42 @@ class PrivacyPolicy extends Component {
 						<div className="tc_Tac_subparagraph">
 							<div>Certaines données sont envoyées à des sous-traitants. Le responsable de traitement s’est assuré de la mise en œuvre par ses sous-traitants de garanties adéquates et du respect de conditions strictes de confidentialité, d’usage et de protection des données.</div>
 							<div>Tableau à insérer ici</div>
+
+							<table>
+								<tr>
+									<th>Company</th>
+									<th>Contact</th>
+									<th>Country</th>
+								</tr>
+								<tr>
+									<td>Alfreds Futterkiste</td>
+									<td>Maria Anders</td>
+									<td>Germany</td>
+								</tr>
+								<tr>
+									<td>Centro comercial Moctezuma</td>
+									<td>Francisco Chang</td>
+									<td>Mexico</td>
+								</tr>
+							</table>
+
+							<table class="full-width">
+								<tr>
+									<th>Company</th>
+									<th>Contact</th>
+									<th>Country</th>
+								</tr>
+								<tr>
+									<td>Alfreds Futterkiste</td>
+									<td>Maria Anders</td>
+									<td>Germany</td>
+								</tr>
+								<tr>
+									<td>Centro comercial Moctezuma</td>
+									<td>Francisco Chang</td>
+									<td>Mexico</td>
+								</tr>
+							</table>
 						</div>
 					</div>
 					<div className="tc_Tac_paragraph">
