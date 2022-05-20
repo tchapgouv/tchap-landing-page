@@ -61,6 +61,7 @@ class PrivacyPolicy extends Component {
 							<div>Ce traitement est nécessaire au respect d'une obligation légale à laquelle le responsable de traitement est soumis au sens de l'article 6-c du Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données.</div>
 							<div>L'obligation légale est posée par la loi LCEN n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique et par l’article 5 du décret n° 2021-1362 du 20 octobre 2021.</div>
 						</div>
+					</div>
 					<div className="tc_Tac_paragraph">
 						<h2>4. Durée de conservation</h2>
 						<div className="tc_Tac_subparagraph">
@@ -92,10 +93,10 @@ class PrivacyPolicy extends Component {
 						<div className="tc_Tac_subparagraph">
 							<div>Lors de son utilisation sur un téléphone, Tchap vous demande l’autorisation d’accéder à la liste de vos contacts locaux. Il n’y a pas d’obligation à autoriser cet accès, l’Application fonctionne sans cette autorisation.</div>
 							<div>Lorsque vous autorisez cet accès, Tchap l’utilise de deux manières :</div>
-								<ul>
-									<li>Tchap parcourt les adresses emails de vos contacts pour découvrir d’autres Utilisateurs et Utilisatrices inscrits sur Tchap. Ces Utilisateurs et Utilisatrices sont listés dans la section ‘Contacts’ de l’Application. Ils vous sont proposés également lorsque vous souhaitez inviter des nouveaux membres à un salon. Aucune adresse email n’est stockée sur les serveurs ;</li>
-									<li>Lorsque vous souhaitez inviter des nouvelles personnes à rejoindre Tchap, les coordonnées de vos contacts locaux vous sont proposées.</li>
-								</ul>
+							<ul>
+								<li>Tchap parcourt les adresses emails de vos contacts pour découvrir d’autres Utilisateurs et Utilisatrices inscrits sur Tchap. Ces Utilisateurs et Utilisatrices sont listés dans la section ‘Contacts’ de l’Application. Ils vous sont proposés également lorsque vous souhaitez inviter des nouveaux membres à un salon. Aucune adresse email n’est stockée sur les serveurs ;</li>
+								<li>Lorsque vous souhaitez inviter des nouvelles personnes à rejoindre Tchap, les coordonnées de vos contacts locaux vous sont proposées.</li>
+							</ul>
 						</div>
 					</div>
 					<div className="tc_Tac_paragraph">
@@ -104,17 +105,18 @@ class PrivacyPolicy extends Component {
 							<div>Le site dépose des cookies de mesure d’audience (nombre de visites, pages consultées), respectant les conditions d’exemption du consentement de l’internaute définies par la recommandation « Cookies » de la Commission nationale informatique et libertés (CNIL). Cela signifie, notamment, que ces cookies ne servent qu’à la production de statistiques anonymes et ne permettent pas de suivre la navigation de l’internaute sur d’autres sites.</div>
 							<div>Nous utilisons pour cela Matomo, un outil de mesure d’audience web libre, paramétré pour être en conformité avec la recommandation « Cookies » de la CNIL. Cela signifie que votre adresse IP, par exemple, est anonymisée avant d’être enregistrée. Il est donc impossible d’associer vos visites sur ce site à votre personne.</div>
 							<div>Il convient d’indiquer que :</div>
-								<ul>
-									<li>Les données collectées ne sont pas recoupées avec d’autres traitements.</li>
-									<li>Les cookies ne permettent pas de suivre la navigation de l’internaute sur d’autres sites.</li>
-								</ul>
+							<ul>
+								<li>Les données collectées ne sont pas recoupées avec d’autres traitements.</li>
+								<li>Les cookies ne permettent pas de suivre la navigation de l’internaute sur d’autres sites.</li>
+							</ul>
+						</div>
 						<div className="tc_Tac_subparagraph">
 							<h3>Modifier les réglages</h3>
 							<div>Pour aller plus loin, vous pouvez consulter les fiches proposées par la Commission Nationale de l'Informatique et des Libertés (CNIL) :</div>
-								<ul>
-									<li><a href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi">Cookies & traceurs : que dit la loi ?</a></li>
-									<li><a href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser">Cookies : les outils pour les maîtriser</a></li>
-								</ul>
+							<ul>
+								<li><a href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi">Cookies & traceurs : que dit la loi ?</a></li>
+								<li><a href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser">Cookies : les outils pour les maîtriser</a></li>
+							</ul>
 							<div>Tchap utilise également des cookies strictement nécessaires au bon fonctionnement de l’Application sans lesquels l’accès à la plateforme ne peut être pleinement garanti.</div>
 						</div>
 					</div>
@@ -131,14 +133,18 @@ class PrivacyPolicy extends Component {
 						<div className="tc_Tac_subparagraph">
 							<div>Vous disposez d’un droit d’accès et de modification des données à caractère personnel qui vous concernent. Vous pouvez également vous opposer aux traitements réalisés par l’Application. Ces droits s’exercent auprès de la DINUMà l’adresse tchap@beta.gouv.fr</div>
 							<div>Pour exercer vos droits, vous pouvez également contacter le délégué à la protection des données (DPD) des services du Premier Ministre :</div>
-								<ul>
-									<li>par mail à dpd@pm.gouv.fr</li>
-									<li>ou par courrier à l’adresse suivante :</li>
-									<div>Services du Premier Ministre</div>
-									<div>À l’attention du délégué à la protection des données (DPD)</div>
-									<div>56 rue de Varenne</div>
-									<div>75007 Paris</div>
-								</ul>
+							<ul>
+								<li>par mail à dpd@pm.gouv.fr</li>
+								<li>
+									ou par courrier à l’adresse suivante :
+									<div>
+										<div>Services du Premier Ministre</div>
+										<div>À l’attention du délégué à la protection des données (DPD)</div>
+										<div>56 rue de Varenne</div>
+										<div>75007 Paris</div>
+									</div>
+								</li>
+							</ul>
 							<div>Conformément au règlement général sur la protection des données, vous disposez du droit d’introduire une réclamation auprès de la CNIL (3 place de Fontenoy – TSA 80715 – 75334 PARIS CEDEX 07). Les modalités de réclamation sont précisées sur le site de la CNIL : <a href="https://www.cnil.fr/">www.cnil.fr</a></div>
 							<div>Tchap utilise les adresses mails professionnelles issues des domaines autorisés et les noms, prénoms, qui en découlent. Toute demande relative à une modification d’adresse mail professionnelle ou relative aux noms et prénoms, devra être adressée à l’administration concernée.</div>
 						</div>
