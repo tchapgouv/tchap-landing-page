@@ -10,7 +10,6 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import ConventionLink from "components/ConventionLink";
 
 import "styles/pages/home/panels/TestYourEmail.scss";
 

@@ -11,7 +11,6 @@ import BottomBar from "components/bars/BottomBar";
 import GenericAccordion from "components/accordion/GenericAccordion";
 import GenericLink from "components/GenericLink";
 import SeeMoreLinks from "components/SeeMoreLinks";
-import ConventionLink from "components/ConventionLink";
 
 import "styles/pages/faq/FaqComponent.scss";
 
