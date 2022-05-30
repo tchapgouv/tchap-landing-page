@@ -18,7 +18,8 @@ class PrivacyPolicy extends Component {
 
 					<div className="tc_Tac_paragraph">
 						<div className="tc_Tac_subparagraph">
-							<div>La DINUM est responsable des traitements de données à caractère personnel réalisés dans l’Application. Elle s’engage à assurer un traitement de ces données conforme au Règlement (UE) 2016/679 relatif à la protection des données à caractère personnel et à la libre circulation de ces données et à la loi n° 78-17 du 6 janvier 1978 relative à l’informatique aux fichiers et aux libertés.</div>
+							<div>La DINUM est responsable des traitements de données à caractère personnel réalisés dans l’Application. 
+							Elle s’engage à assurer un traitement de ces données conforme au Règlement (UE) 2016/679 relatif à la protection des données à caractère personnel et à la libre circulation de ces données et à la loi n° 78-17 du 6 janvier 1978 relative à l’informatique aux fichiers et aux libertés.</div>
 						</div>
 					</div>
 
@@ -64,8 +65,44 @@ class PrivacyPolicy extends Component {
 					</div>
 					<div className="tc_Tac_paragraph">
 						<h2>4. Durée de conservation</h2>
-						<div className="tc_Tac_subparagraph">
-							<div>Tableau à insérer ici</div>
+							<table class="full-width">
+								<tr>
+									<th>Type de donnée</th>
+									<th>Durée de conservation</th>
+								</tr>
+								<tr>
+									<th>Données relatives au profil
+									</th>
+									<td>Les données de profil sont conservées 36 mois après la désactivation d’un compte.<br>
+									     L’utilisateur ou l’utilisatrice peut à tout moment demander la désactivation de son compte.<br>
+								             Un compte inactif pendant une période de 6 mois est automatiquement désactivé. 
+									</td>
+								</tr>
+								<tr>
+									<th>Données de contenus du service de messagerie instantanée
+									</th>
+									<td>Les contenus du service de messagerie sont conservés 36 mois après la date d’envoi du message.  
+									</td>
+								</tr>
+								<tr>
+									<th>Données de contact téléphoniques
+									</th>
+									<td>L’application a accès aux contacts du téléphone de l’utilisateur ou de l’utilisatrice en lecture seule. Les contacts du téléphone ne sont pas importés sur les serveurs, et ne sont donc pas stockés. 
+									</td>
+								</tr>
+								<tr>
+									<th>Données de connexion
+									</th>
+									<td>Les données de connexion sont conservées 1 an, conformément au décret n° 2021-1362 du 20 octobre 2021. 
+									</td>
+								</tr>
+								<tr>
+									<th>Cookies
+									</th>
+									<td>Les cookies sont conservés jusqu’au retrait du consentement, si applicable, ou dans un délai de 13 mois, conformément aux recommandations de la CNIL. 
+									</td>
+								</tr>
+							</table>
 						</div>
 					</div>
 					<div className="tc_Tac_paragraph">
@@ -85,41 +122,36 @@ class PrivacyPolicy extends Component {
 						<h2>6. Sous-traitants</h2>
 						<div className="tc_Tac_subparagraph">
 							<div>Certaines données sont envoyées à des sous-traitants. Le responsable de traitement s’est assuré de la mise en œuvre par ses sous-traitants de garanties adéquates et du respect de conditions strictes de confidentialité, d’usage et de protection des données.</div>
-							<div>Tableau à insérer ici</div>
-
-							<table>
-								<tr>
-									<th>Company</th>
-									<th>Contact</th>
-									<th>Country</th>
-								</tr>
-								<tr>
-									<td>Alfreds Futterkiste</td>
-									<td>Maria Anders</td>
-									<td>Germany</td>
-								</tr>
-								<tr>
-									<td>Centro comercial Moctezuma</td>
-									<td>Francisco Chang</td>
-									<td>Mexico</td>
-								</tr>
-							</table>
-
 							<table class="full-width">
 								<tr>
-									<th>Company</th>
-									<th>Contact</th>
-									<th>Country</th>
+									<th>Partenaire</th>
+									<th>Traitement réalisé</th>
+									<th>Pays destinataire</th>
+									<th>Garanties</th>
 								</tr>
 								<tr>
-									<td>Alfreds Futterkiste</td>
-									<td>Maria Anders</td>
-									<td>Germany</td>
+									<th>Sendinblue</th>
+									<td>Service d’envoi de mail</td>
+									<td>UE et hors UE </td>
+									<td>https://fr.sendinblue.com/rgpd/</td>
 								</tr>
 								<tr>
-									<td>Centro comercial Moctezuma</td>
-									<td>Francisco Chang</td>
-									<td>Mexico</td>
+									<th>Dolist</th>
+									<td>Service d’envoi de mail</td>
+									<td>France et Suisse</td>
+									<td>https://www.dolist.com/societe/politique-rgpd/</td>
+								</tr>
+								<tr>
+									<th>Cloud du Ministère de l’Intérieur</th>
+									<td>Hébergement</td>
+									<td>France</td>
+									<td>https://www.numerique.gouv.fr/services/cloud/cloud-interne/</td>
+								</tr>
+								<tr>
+									<th>Crisp</th>
+									<td>Support utilisateurs par email</td>
+									<td>Pays Bas et Allemagne</td>
+									<td>https://crisp.chat/fr/</td>
 								</tr>
 							</table>
 						</div>
