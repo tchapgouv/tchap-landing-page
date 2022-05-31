@@ -18,16 +18,22 @@ class PrivacyPolicy extends Component {
 
 					<div className="tc_Tac_paragraph">
 						<div className="tc_Tac_subparagraph">
-							<div>La DINUM est responsable des traitements de données à caractère personnel réalisés dans l’Application. 
-							Elle s’engage à assurer un traitement de ces données conforme au Règlement (UE) 2016/679 relatif à la protection des données à caractère personnel et à la libre circulation de ces données et à la loi n° 78-17 du 6 janvier 1978 relative à l’informatique aux fichiers et aux libertés.</div>
+							<div>
+								La DINUM est responsable des traitements de données à caractère personnel réalisés dans l’Application. 
+								Elle s’engage à assurer un traitement de ces données conforme au Règlement (UE) 2016/679 relatif à la protection des données à caractère personnel et à la libre circulation de ces données et à la loi n° 78-17 du 6 janvier 1978 relative à l’informatique aux fichiers et aux libertés.
+							</div>
 						</div>
 					</div>
 
 					<div className="tc_Tac_paragraph">
 						<h2>1. Données à caractère personnel traitées</h2>
 						<div className="tc_Tac_subparagraph">
-							<div>Ne sont traitées que les données strictement nécessaires au fonctionnement de l’Application. Ces données ne pourront en aucun cas servir au contrôle et à la surveillance de l’activité des Utilisateurs et Utilisatrices.</div>
-							<div>Les données à caractère personnel concernées sont les suivantes :</div>
+							<div>
+								Ne sont traitées que les données strictement nécessaires au fonctionnement de l’Application. Ces données ne pourront en aucun cas servir au contrôle et à la surveillance de l’activité des Utilisateurs et Utilisatrices.
+							</div>
+							<div>
+								Les données à caractère personnel concernées sont les suivantes :
+							</div>
 							<div>
 								<ul>
 									<li><span className="tc_text_b">Données relatives au profil :</span> prénom, nom, organisation et adresse mail professionnelle (obligatoire), une photographie d’identité (optionnel) ;</li>
@@ -65,45 +71,45 @@ class PrivacyPolicy extends Component {
 					</div>
 					<div className="tc_Tac_paragraph">
 						<h2>4. Durée de conservation</h2>
-							<table class="full-width">
-								<tr>
-									<th>Type de donnée</th>
-									<th>Durée de conservation</th>
-								</tr>
-								<tr>
-									<th>Données relatives au profil
-									</th>
-									<td>Les données de profil sont conservées 36 mois après la désactivation d’un compte.<br>
-									     L’utilisateur ou l’utilisatrice peut à tout moment demander la désactivation de son compte.<br>
-								             Un compte inactif pendant une période de 6 mois est automatiquement désactivé. 
-									</td>
-								</tr>
-								<tr>
-									<th>Données de contenus du service de messagerie instantanée
-									</th>
-									<td>Les contenus du service de messagerie sont conservés 36 mois après la date d’envoi du message.  
-									</td>
-								</tr>
-								<tr>
-									<th>Données de contact téléphoniques
-									</th>
-									<td>L’application a accès aux contacts du téléphone de l’utilisateur ou de l’utilisatrice en lecture seule. Les contacts du téléphone ne sont pas importés sur les serveurs, et ne sont donc pas stockés. 
-									</td>
-								</tr>
-								<tr>
-									<th>Données de connexion
-									</th>
-									<td>Les données de connexion sont conservées 1 an, conformément au décret n° 2021-1362 du 20 octobre 2021. 
-									</td>
-								</tr>
-								<tr>
-									<th>Cookies
-									</th>
-									<td>Les cookies sont conservés jusqu’au retrait du consentement, si applicable, ou dans un délai de 13 mois, conformément aux recommandations de la CNIL. 
-									</td>
-								</tr>
-							</table>
-						</div>
+						<table class="full-width">
+							<tr>
+								<th>Type de donnée</th>
+								<th>Durée de conservation</th>
+							</tr>
+							<tr>
+								<th>Données relatives au profil
+								</th>
+								<td>
+									Les données de profil sont conservées 36 mois après la désactivation d’un compte.<br/>
+									L’utilisateur ou l’utilisatrice peut à tout moment demander la désactivation de son compte.<br/>
+									Un compte inactif pendant une période de 6 mois est automatiquement désactivé.<br/>
+								</td>
+							</tr>
+							<tr>
+								<th>Données de contenus du service de messagerie instantanée
+								</th>
+								<td>Les contenus du service de messagerie sont conservés 36 mois après la date d’envoi du message.  
+								</td>
+							</tr>
+							<tr>
+								<th>Données de contact téléphoniques
+								</th>
+								<td>L’application a accès aux contacts du téléphone de l’utilisateur ou de l’utilisatrice en lecture seule. Les contacts du téléphone ne sont pas importés sur les serveurs, et ne sont donc pas stockés. 
+								</td>
+							</tr>
+							<tr>
+								<th>Données de connexion
+								</th>
+								<td>Les données de connexion sont conservées 1 an, conformément au décret n° 2021-1362 du 20 octobre 2021. 
+								</td>
+							</tr>
+							<tr>
+								<th>Cookies
+								</th>
+								<td>Les cookies sont conservés jusqu’au retrait du consentement, si applicable, ou dans un délai de 13 mois, conformément aux recommandations de la CNIL. 
+								</td>
+							</tr>
+						</table>
 					</div>
 					<div className="tc_Tac_paragraph">
 						<h2>5. Destinataires</h2>
@@ -224,7 +230,7 @@ class PrivacyPolicy extends Component {
 						</div>
 					</div>
           </Container>
-				<BottomBar />
+				<BottomBar/>
 			</div>
 		);
 	}
