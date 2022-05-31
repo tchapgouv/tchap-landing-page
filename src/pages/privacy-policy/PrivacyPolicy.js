@@ -185,8 +185,15 @@ class PrivacyPolicy extends Component {
 							</ul>
 						</div>
 						<div className="tc_Tac_subparagraph">
-							<h3>Modifier les réglages</h3>
-							<div>Pour aller plus loin, vous pouvez consulter les fiches proposées par la Commission Nationale de l'Informatique et des Libertés (CNIL) :</div>
+						<Button
+							variant="contained"
+							size="large"
+							className="tc_WelcomePanelBtn_default"
+							onClick={this._handleClick}
+							href="https://tchap.beta.gouv.fr/suivi"
+							data-platform="Modifier les réglages">Modifier les réglages
+						</Button>
+						<div>Pour aller plus loin, vous pouvez consulter les fiches proposées par la Commission Nationale de l'Informatique et des Libertés (CNIL) :</div>
 							<ul>
 								<li><a href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi">Cookies & traceurs : que dit la loi ?</a></li>
 								<li><a href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser">Cookies : les outils pour les maîtriser</a></li>
