@@ -55,7 +55,14 @@ class PrivacyPolicy extends Component {
 							<h3>3.1 Données relatives au profil</h3>
 							<div>Le traitement est nécessaire à l’exécution d’une mission d’intérêt public ou relevant de l’exercice de l’autorité publique dont est investi le responsable de traitement au sens de l’article 6-e du règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données.</div>
 							<br/>
-							<div>La mission d’intérêt public constitue la mise à disposition et le développement d’outils collaboratifs par la DINUM en vue de leur intégration dans les ministères <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000039281619/2019-10-28#_blank">(article 6 du décret n°2019-1088 du 25 octobre 2019 relatif au système d’information et de communication de l’Etat et à la direction interministérielle du numérique).</a></div>
+							<div>La mission d’intérêt public constitue la mise à disposition et le développement d’outils collaboratifs par la DINUM en vue de leur intégration dans les ministères
+								<a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000039281619/2019-10-28#_blank"
+									target="_blank"
+									rel="noreferrer noopener nofollow"
+								>
+									(article 6 du décret n°2019-1088 du 25 octobre 2019 relatif au système d’information et de communication de l’Etat et à la direction interministérielle du numérique).
+								</a>
+							</div>
 							<br/>
 							<div>Les données de profil permettent également de réaliser des statistiques anonymisées sur l’usage de la plateforme.</div>
 						</div>
@@ -63,7 +70,14 @@ class PrivacyPolicy extends Component {
 							<h3>3.2 Données de contenus du service de messagerie instantanée</h3>
 							<div>Le traitement est nécessaire à l’exécution d’une mission d’intérêt public ou relevant de l’exercice de l’autorité publique dont est investi le responsable de traitement au sens de l’article 6-e du règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données.</div>
 							<br/>
-							<div>La mission d’intérêt public constitue la mise à disposition et le développement d’outils collaboratifs par la DINUM en vue de leur intégration dans les ministères <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000039281619/2019-10-28#_blank">(article 6 du décret n°2019-1088 du 25 octobre 2019 relatif au système d’information et de communication de l’Etat et à la direction interministérielle du numérique).</a></div>
+							<div>La mission d’intérêt public constitue la mise à disposition et le développement d’outils collaboratifs par la DINUM en vue de leur intégration dans les ministères
+								<a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000039281619/2019-10-28#_blank"
+									target="_blank"
+									rel="noreferrer noopener nofollow"
+								>
+									(article 6 du décret n°2019-1088 du 25 octobre 2019 relatif au système d’information et de communication de l’Etat et à la direction interministérielle du numérique).
+								</a>
+							</div>
 						</div>
 						<div className="tc_subparagraph">
 							<h3>3.3 Données de connexion </h3>
@@ -199,18 +213,30 @@ class PrivacyPolicy extends Component {
 						</div>
 						<div className="tc_subparagraph">
 						<a class="fr-btn"
-							   href={'https://tchap.beta.gouv.fr/suivi'}
-								 target="_blank"
-								 rel="noreferer noopener"
-								 data-probe-name="cookies">
+  							href={'https://tchap.beta.gouv.fr/suivi'}
+								data-probe-name="cookies">
 								Modifier les réglages
 						</a>
 						<br/>
 						<br/>
 						<div>Pour aller plus loin, vous pouvez consulter les fiches proposées par la Commission Nationale de l'Informatique et des Libertés (CNIL) :</div>
 							<ul>
-								<li><a href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi">Cookies & traceurs : que dit la loi ?</a></li>
-								<li><a href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser">Cookies : les outils pour les maîtriser</a></li>
+								<li>
+									<a href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi"
+										target="_blank"
+										rel="noreferrer noopener nofollow"
+									>
+										Cookies & traceurs : que dit la loi ?
+									</a>
+								</li>
+								<li>
+									<a href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser"
+										target="_blank"
+										rel="noreferrer noopener nofollow"
+									>
+										Cookies : les outils pour les maîtriser
+									</a>
+								</li>
 							</ul>
 							<div>Tchap utilise également des cookies strictement nécessaires au bon fonctionnement de l’Application sans lesquels l’accès à la plateforme ne peut être pleinement garanti.</div>
 						</div>
@@ -243,7 +269,14 @@ class PrivacyPolicy extends Component {
 									</div>
 								</li>
 							</ul>
-							<div>Conformément au règlement général sur la protection des données, vous disposez du droit d’introduire une réclamation auprès de la CNIL (3 place de Fontenoy – TSA 80715 – 75334 PARIS CEDEX 07). Les modalités de réclamation sont précisées sur le site de la CNIL : <a href="https://www.cnil.fr/">www.cnil.fr</a></div>
+							<div>Conformément au règlement général sur la protection des données, vous disposez du droit d’introduire une réclamation auprès de la CNIL (3 place de Fontenoy – TSA 80715 – 75334 PARIS CEDEX 07). Les modalités de réclamation sont précisées sur le site de la CNIL :
+								<a href="https://www.cnil.fr/"
+									target="_blank"
+									rel="noreferrer noopener nofollow"
+								>
+									www.cnil.fr
+								</a>
+							</div>
 							<div>Tchap utilise les adresses mails professionnelles issues des domaines autorisés et les noms, prénoms, qui en découlent. Toute demande relative à une modification d’adresse mail professionnelle ou relative aux noms et prénoms, devra être adressée à l’administration concernée.</div>
 						</div>
 					</div>
