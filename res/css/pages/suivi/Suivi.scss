@@ -1,27 +1,6 @@
-.tc_Suivi_topbar {
-  border-top: 3px solid $color-theme-blue;
-  padding-top: 30px;
-  padding-bottom: 10px;
-}
-
-.tc_Suivi_title {
-  font-size: $font-size-25;
-  letter-spacing: $font-letter-spacing-08;
-  line-height: $font-line-height-36;
-  margin-bottom: 20px;
-}
-
-.tc_Suivi_subtitle {
-  font-size: $font-size-18;
-  letter-spacing: $font-letter-spacing-08;
-  line-height: $font-line-height-36;
-  margin-bottom: 18px;
-}
-
-.tc_Suivi_content {
-  font-size: $font-size-10;
-  letter-spacing: $font-letter-spacing-08;
-  line-height: $font-line-height;
+.tc_Suivi .MuiContainer-root {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .tc_Suivi_checkbox {
