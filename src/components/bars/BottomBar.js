@@ -68,6 +68,11 @@ class BottomBar extends Component {
 								</a>
 							</li>
 							<li class="fr-footer__bottom-item">
+								<a class="fr-footer__bottom-link" href="/politique-de-confidentialite" data-probe-name="personal-data" onClick={this._hookProbe}>
+									Politique de confidentialité
+								</a>
+							</li>
+							<li class="fr-footer__bottom-item">
 								<a class="fr-footer__bottom-link" href="/cgu" data-probe-name="terms-and-conditions" onClick={this._hookProbe}>
 									Conditions d'utilisation
 								</a>
