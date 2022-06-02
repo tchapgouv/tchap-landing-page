@@ -7,9 +7,9 @@ import Grid from "@mui/material/Grid";
 import TopBar from "components/bars/TopBar";
 import BottomBar from "components/bars/BottomBar";
 
-import "styles/pages/suivi/Suivi.scss";
+import "styles/pages/cookiesManagement/CookiesManagement.scss";
 
-class Suivi extends Component {
+class CookiesManagement extends Component {
 
 	constructor(props) {
 		super(props);
@@ -37,7 +37,7 @@ class Suivi extends Component {
 
 	render() {
 		return (
-			<div className="tc_Suivi">
+			<div className="tc_Cookies">
 				<TopBar/>
 				<Container maxWidth="lg">
 					<Grid container>
@@ -51,7 +51,7 @@ class Suivi extends Component {
 								Vous pouvez vous opposer au suivi de votre navigation sur ce site web. Cela protégera votre vie privée, mais empêchera également le propriétaire d'apprendre de vos actions et de créer une meilleure expérience pour vous et les autres utilisateurs.
 							</div>
 							<FormGroup>
-								<FormControlLabel className="tc_Suivi_checkbox" control={
+								<FormControlLabel className="tc_Cookies_checkbox" control={
 									<Checkbox
 										checked={this.isTrackingEnabled(this.state.tracking)}
 										onChange={this._handleCheckboxChange}
@@ -67,4 +67,4 @@ class Suivi extends Component {
 	}
 }
 
-export default Suivi;
+export default CookiesManagement;
