@@ -27,7 +27,7 @@ class App extends Component {
 			<BrowserRouter basename="/">
 				<Routes>
 					<Route path="/convention" element={<Convention />} />
-					<Route path="/suivi" element={<Suivi />} />
+					<Route path="/gestion-des-cookies" element={<Suivi />} />
 					<Route path="/prise-en-main" element={<Pem />} />
 					<Route path="/faq" element={<Faq />} />
 					<Route path="/cgu" element={<Tac />} />

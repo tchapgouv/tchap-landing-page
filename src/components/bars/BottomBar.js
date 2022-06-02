@@ -63,7 +63,7 @@ class BottomBar extends Component {
 								<a class="fr-footer__bottom-link">Accessibilité: non conforme</a>
 							</li>
 							<li class="fr-footer__bottom-item">
-								<a class="fr-footer__bottom-link" href="/suivi" data-probe-name="personal-data" onClick={this._hookProbe}>
+								<a class="fr-footer__bottom-link" href="/gestion-des-cookies" data-probe-name="personal-data" onClick={this._hookProbe}>
 									Gestion des cookies
 								</a>
 							</li>
