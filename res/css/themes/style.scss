@@ -84,3 +84,8 @@ $font-size-08: 0.8em;
 .tc_paragraph .tc_subparagraph {
   margin-bottom: 1.5rem;
 }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
