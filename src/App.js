@@ -5,6 +5,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "pages/home/Home";
 import Convention from "pages/convention/Convention";
 import Suivi from "pages/suivi/Suivi";
+import Stats from "pages/stats/Stats";
 import Pem from "pages/pem/Pem";
 import PrivacyPolicy from "pages/privacy-policy/PrivacyPolicy";
 import Faq from "pages/faq/Faq";
@@ -32,6 +33,7 @@ class App extends Component {
 					<Route path="/faq" element={<Faq />} />
 					<Route path="/cgu" element={<Tac />} />
 					<Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
+					<Route path="/stats" element={<Stats />} />
 					<Route path="/" element={<Home />} />
 				</Routes>
 			</BrowserRouter>
