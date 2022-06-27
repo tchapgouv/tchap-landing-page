@@ -4,7 +4,6 @@ import { setLocale, setTranslations } from "react-i18nify";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "pages/home/Home";
 import Convention from "pages/convention/Convention";
-import Suivi from "pages/suivi/Suivi";
 import Stats from "pages/stats/Stats";
 import CookiesManagement from "pages/cookiesManagement/CookiesManagement";
 import Pem from "pages/pem/Pem";
