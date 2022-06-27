@@ -213,7 +213,7 @@ class PrivacyPolicy extends Component {
 						</div>
 						<div className="tc_subparagraph">
 						<a class="fr-btn"
-  							href={'https://tchap.beta.gouv.fr/suivi'}
+  							href="gestion-des-cookies"
 								data-probe-name="cookies">
 								Modifier les réglages
 						</a>

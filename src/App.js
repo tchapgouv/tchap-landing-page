@@ -6,6 +6,7 @@ import Home from "pages/home/Home";
 import Convention from "pages/convention/Convention";
 import Suivi from "pages/suivi/Suivi";
 import Stats from "pages/stats/Stats";
+import CookiesManagement from "pages/cookiesManagement/CookiesManagement";
 import Pem from "pages/pem/Pem";
 import PrivacyPolicy from "pages/privacy-policy/PrivacyPolicy";
 import Faq from "pages/faq/Faq";
@@ -28,7 +29,7 @@ class App extends Component {
 			<BrowserRouter basename="/">
 				<Routes>
 					<Route path="/convention" element={<Convention />} />
-					<Route path="/suivi" element={<Suivi />} />
+					<Route path="/gestion-des-cookies" element={<CookiesManagement />} />
 					<Route path="/prise-en-main" element={<Pem />} />
 					<Route path="/faq" element={<Faq />} />
 					<Route path="/cgu" element={<Tac />} />
