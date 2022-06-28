@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { MatomoProvider, createInstance } from '@datapunt/matomo-tracker-react'
 import '../res/css/index.scss';
+import config from './config'
 
 import App from "./App"
 import '@gouvfr/dsfr/dist/dsfr/dsfr.module.js'
@@ -30,10 +31,10 @@ const isTrackingEnabled = () => {
 };
 
 const instance = createInstance({
-	urlBase: 'https://stats.data.gouv.fr/',
+	urlBase: config.MATOMO_URL,
 	siteId: 203,
-	trackerUrl: 'https://stats.data.gouv.fr/piwik.php',
-	srcUrl: 'https://stats.data.gouv.fr/piwik.js',
+	trackerUrl: config.MATOMO_URL + '/piwik.php',
+	srcUrl: config.MATOMO_URL + '/piwik.js',
 	disabled: isTrackingEnabled(),
 	heartBeat: {
 		active: false,
