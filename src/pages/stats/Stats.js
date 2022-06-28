@@ -2,6 +2,7 @@ import { Container } from "@mui/material";
 import { Component } from "react";
 import BottomBar from "../../components/bars/BottomBar";
 import TopBar from "../../components/bars/TopBar";
+import config from "../../config"
 
 class Stats extends Component {
 
@@ -12,7 +13,7 @@ class Stats extends Component {
 				<Container maxWidth="lg">
 
 					<iframe
-							src="https://stats.tchap.incubateur.net/public/dashboard/c117db35-4909-4b0c-a5f0-e6852d6d6fb7"
+							src={config.STATS_DASHBOARD_URL}
 							frameBorder="0"
 							width="100%"
 							height="2200px"
