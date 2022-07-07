@@ -342,7 +342,7 @@ class FaqComponent extends Component {
 												</Grid>
 											</Grid>
 										</li>
-										<li>Dans la barre de recherche, Dans la barre de recherche, tapez l'adresse mail professionnelle de la personne que vous voulez inviter et validez.</li>
+										<li>Dans la barre de recherche, renseignez l'adresse mail professionnelle de la personne que vous voulez inviter et validez.</li>
 										<li>Une invitation lui est automatiquement envoyée par e-mail. Vous serez notifié lorsque cette personne aura créé son compte, et pourrez ensuite commencer à échanger.</li>
 									</ul>
 									<SeeMoreLinks
