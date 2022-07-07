@@ -208,7 +208,7 @@ class FaqComponent extends Component {
 											<br />
 											Vous pourrez utiliser Tchap sur tous vos appareils. Choisissez-en un pour vous inscrire.
 										</li>
-										<li>Utilisez votre e-mail professionnel comme identifiant.</li>
+										<li>Utilisez votre adresse mail professionnelle comme identifiant.</li>
 										<li>
 											Confirmez la création de votre compte en cliquant sur le lien dans l'e-mail que vous aurez reçu.
 											<br />
@@ -225,7 +225,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_002")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi dois-je renouveler mon compte tous les 2 mois ?</title>
-									<div className="tc_text_nl">Vous ne pouvez utiliser Tchap qu'avec un e-mail professionnel valide. Tchap doit vérifier que votre e-mail est toujours valide pour <span className="tc_text_b">garder votre compte actif.</span></div>
+									<div className="tc_text_nl">Vous ne pouvez utiliser Tchap qu'avec une adresse mail professionnelle valide. Tchap doit vérifier que votre adresse mail est toujours valide pour <span className="tc_text_b">garder votre compte actif.</span></div>
 									<div className="tc_text_nl">C'est pourquoi vous recevez toutes les 8 semaines un e-mail de Tchap avec un lien sur lequel cliquer pour garder votre compte actif.</div>
 									<div className="tc_text_nl">Vous avez 7 jours pour cliquer sur le lien dans l'e-mail. </div>
 									<div className="tc_text_nl">Si vous dépassez les 7 jours, vous pouvez réactiver votre compte depuis l'application mobile de Tchap en demandant l'envoi d'un nouvel e-mail de réactivation.</div>
@@ -239,11 +239,11 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq02_003")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Un compte peut-il être supprimé ?</title>
 									<div className="tc_text_nl">Vous pouvez désactiver votre compte depuis les <span className="tc_text_b">paramètres généraux</span> de Tchap.</div>
-									<div className="tc_text_nl">En désactivant votre compte, <span className="tc_text_b">vous ne pourrez plus accéder à vos messages</span>, même si vous recréez un compte avec le même e-mail.</div>
+									<div className="tc_text_nl">En désactivant votre compte, <span className="tc_text_b">vous ne pourrez plus accéder à vos messages</span>, même si vous recréez un compte avec la même adresse mail.</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_004")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que deviendra mon compte si je change de poste ou d'affectation ?</title>
-									<div className="tc_text_nl">Votre compte Tchap dépend de votre e-mail profsessionnel. Si vous changez d'adresse e-mail, vous devez donc créer un nouveau compte Tchap avec votre e-mail. Le compte précédent sera désactivé. </div>
+									<div className="tc_text_nl">Votre compte Tchap dépend de votre adresse mail professionnelle. Si vous changez d'adresse mail, vous devrez donc créer un nouveau compte Tchap avec la nouvelle. Le compte précédent sera désactivé. </div>
 									<div className="tc_text_nl">Si votre nouvelle administration n'est pas encore présente sur Tchap, vous pouvez formuler une demande d'ouverture auprès de votre direction informatique. Vous pouvez vérifier la présence de votre administration sur Tchap  <GenericLink className="tc_FaqComponent_link" to={"/#joinUs"}>ici</GenericLink>.</div>
 								</GenericAccordion>
 
@@ -283,7 +283,7 @@ class FaqComponent extends Component {
 											<img src={require("images/pem/avatar_forum.png")} alt="Salon Forum"/>
 										</Grid>
 										<Grid item xl={10}>
-											<span className="tc_text_b">Les messages directs sont :</span>
+											<span className="tc_text_b">Les salons forums sont :</span>
 											<ul>
 												<li>des conversations entre plusieurs agents publics</li>
 												<li>trouvables et accessibles à tous, sauf aux partenaires externes</li>
