@@ -582,7 +582,7 @@ class FaqComponent extends Component {
 											</li>
 											<li>Choisissez un mot de passe (différent de votre mot de passe Tchap) : celui-ci vous sera demandé pour déverrouiller vos messages lors de votre reconnexion.</li>
 											<li>Enregistrez le fichier à un emplacement où vous pourrez le retrouver. Ce fichier s'appelle “Tchap keys” par défaut, mais vous pouvez le renommer.</li>
-											<li>Exportation réussie, vos "Clés Tchap" sont sauvegardées ! Vous pourrez les importer lors de de votre reconnexion pour déverrouiller vos messages.</li>
+											<li>Exportation réussie, vos Clés Tchap sont sauvegardées ! Vous pourrez les importer lors de de votre reconnexion pour déverrouiller vos messages.</li>
 										</ol>
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
