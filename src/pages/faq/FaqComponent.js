@@ -741,7 +741,7 @@ class FaqComponent extends Component {
 								<div id="tcq06_000" className="tc_FaqComponent_section">En cas de problème...</div>
 								<GenericAccordion {...this._generateProps("tcq06_001")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je ne reçois pas de notifications : que faire ?</title>
-									<div className="tc_text_nl tc_text_b">Il peut arriver de ne plus avoir les notifications pour avertir de l'arrivée de nouveau message, voici un tour des contrôles à effectuer.</div>
+									<div className="tc_text_nl tc_text_b">En cas de non réception des notifications avertissant de l'arrivée de nouveaux messages, voici la liste des contrôles à effectuer.</div>
 									<div className="tc_text_nl tc_text_b">Sur votre appareil mobile :</div>
 									<ul className="tc_list_decimal">
 										<li><span className="tc_text_b">Vérifier l'état du mode "Ne pas déranger"</span>
@@ -764,7 +764,7 @@ class FaqComponent extends Component {
 													<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
 														<li>Allez dans les paramètres généraux de votre téléphone;</li>
 														<li>Allez dans la section "Applis et notifications";</li>
-														<li>Cliquez sur l'application Tchap, vous arrivez sur une fenêtre où il vous sera proposer, entre autre, de désinstaller ou de forcer l'arrêt de l'application;</li>
+														<li>Cliquez sur l'application Tchap, vous arrivez sur une fenêtre où il vous sera proposé, entre autres, de désinstaller ou de forcer l'arrêt de l'application;</li>
 														<li>Cliquez sur "Données mobiles et Wi-Fi";</li>
 														<li>Vérifiez que la consommation des "Données en arrière-plan" est bien activée.</li>
 													</ul>
@@ -778,7 +778,7 @@ class FaqComponent extends Component {
 											<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
 												<li>Allez dans les paramètres généraux de Tchap;</li>
 												<li>Allez dans la section "Notifications";</li>
-												<li>Puis lancer "Résoudre les problèmes de notifications".</li>
+												<li>Puis lancez "Résoudre les problèmes de notifications".</li>
 											</ul>
 											<Grid container className="tc_FaqComponent_grid">
 												<Grid item xl={6}>
@@ -795,7 +795,7 @@ class FaqComponent extends Component {
 												<li>Allez dans la section "Applis et notifications" ;</li>
 												<li>Cliquez sur l'application Tchap ;</li>
 												<li>"Forcer l'arrêt" de l'application;</li>
-												<li>Redémarrer votre téléphone.</li>
+												<li>Redémarrez votre téléphone.</li>
 											</ul>
 										</li>
 									</ul>
@@ -806,7 +806,7 @@ class FaqComponent extends Component {
 											<ul className="tc_list_alpha tc_FaqComponent_list_level_2">
 												<li>
 													Rendez-vous sur la page web de Tchap et connectez-vous:<GenericLink onClick={this._onLocationChange} to="https://www.tchap.gouv.fr">https://www.tchap.gouv.fr</GenericLink>;
-													<div className="tc_text_i">NB : S'il s'agit de votre première connexion sur le web (ou que vos historiques de navigation ont été effacés), vous pouvez partager vos clés de chiffrement à l'aide de votre téléphone portable pour déchiffrer les messages préalablement reçus</div>
+													<div className="tc_text_i">NB : S'il s'agit de votre première connexion sur le web (ou que vos historiques de navigation ont été effacés), vous pouvez partager vos Clés Tchap à l'aide de votre téléphone portable pour déchiffrer les messages préalablement reçus</div>
 												</li>
 												<li>Allez dans les paramètres généraux de Tchap;</li>
 												<li>Allez dans la section "Notifications";</li>
@@ -833,7 +833,7 @@ class FaqComponent extends Component {
 															<img src={require("images/faq/notif_web_2.png")} className="tc_FaqComponent_wimg_mobile" alt="Réparer les notifications web 2"/>
 														</Grid>
 														<Grid item xl={8}>
-															<div className="tc_text_nl tc_text_i">NB : L'option "Seulement les mentions" n'est pas supportée pour les salons chiffrés dans la version mobile de Tchap (Android et iOS).</div>
+															<div className="tc_text_nl tc_text_i">NB : L'option "Seulement les mentions" n'est pas supportée pour les salons privés dans la version mobile de Tchap (Android et iOS).</div>
 														</Grid>
 													</Grid>
 												</li>
@@ -845,8 +845,8 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que faire si je ne reçois pas l'e-mail de création de compte ?</title>
 									<div className="tc_text_nl">Voici quelques vérifications que vous pouvez effectuer :</div>
 									<ul>
-										<li>Vérifiez vos spams</li>
-										<li>Vérifiez que vous ne possédez pas déjà un compte Tchap avec cet e-mail, par exemple en faisant une demande de réinitialisation de mot de passe sur Tchap</li>
+										<li>Vérifiez votre dossier "courriers indésirables", "pourriels" ou "spams"</li>
+										<li>Vérifiez que vous ne possédez pas déjà un compte Tchap avec cette adresse mail, par exemple en faisant une demande de réinitialisation de mot de passe sur Tchap</li>
 										<li>Vérifiez que votre compte a bien été créé, en recommençant votre procédure d'inscription</li>
 										<li>Contactez vos services informatiques pour vous assurer que les e-mails de Tchap ne sont pas bloqués</li>
 									</ul>
