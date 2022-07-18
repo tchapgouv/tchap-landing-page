@@ -379,9 +379,13 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_007")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Qu’est-ce qu’un contenu inapproprié sur Tchap ?</title>
-									<div className="tc_text_nl">Le cadre de l’usage de Tchap est fixé par ses <a target="_blank" rel="noreferrer noopener nofollow" href="https://tchap.beta.gouv.fr/cgu">Conditions Générales d’Utilisation</a>, et notamment par leur article n°3. 
-									Chaque utilisateur de Tchap est tenu de respecter ces directives.</div>
-									<div className="tc_text_nl">Sont notamment considérés comme inappropriés :</div>
+									<div className="tc_text_nl">
+									Le cadre de l’usage de Tchap est fixé par ses <a target="_blank" rel="noreferrer noopener nofollow" href="https://tchap.beta.gouv.fr/cgu">Conditions Générales d’Utilisation</a>, et notamment par leur article n°3. 
+									Chaque utilisateur de Tchap est tenu de respecter ces directives.
+									</div>
+									<div className="tc_text_nl">
+									Sont notamment considérés comme inappropriés :
+									</div>
 									<ul>
 										<li>Les contenus insultants, diffamatoires ou indécents</li>
 										<li>Les contenus pouvant s’apparenter à du spam ou à de la publicité</li>
@@ -403,7 +407,7 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: "#tcq03_009", text: "Que se passe-t-il lorsque je signale un contenu inapproprié sur Tchap ?  },
+											{ to: "#tcq03_009", text: "Que se passe-t-il lorsque je signale un contenu inapproprié sur Tchap ?" },
 											{ to: "#tcq04_0021", text: "Quelles sont les responsabilités de l’administrateur d’un salon ?" },
 
 										]}/>
@@ -485,8 +489,10 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_0021")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Quelles sont les responsabilités de l’administrateur d’un salon ?</title>
-									<div className="tc_text_nl">En cas de violation des <a target="_blank" rel="noreferrer noopener nofollow" href="https://tchap.beta.gouv.fr/cgu">Conditions Générales d’Utilisation de Tchap</a> au sein d’un salon, 
-										notamment en cas de diffusion de contenus inappropriés, les administrateurs et modérateurs du salon ont le devoir d’intervenir :</div>
+									<div className="tc_text_nl">
+									En cas de violation des <a target="_blank" rel="noreferrer noopener nofollow" href="https://tchap.beta.gouv.fr/cgu">Conditions Générales d’Utilisation de Tchap</a> au sein d’un salon, 
+									notamment en cas de diffusion de contenus inappropriés, les administrateurs et modérateurs du salon ont le devoir d’intervenir :
+									</div>
 									<ul>
 										<li>en rappelant à l’ordre les utilisateurs concernés</li>
 										<li>en supprimant les contenus non conformes</li>
