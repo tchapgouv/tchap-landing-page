@@ -377,7 +377,60 @@ class FaqComponent extends Component {
 											{ to: "#tcq04_000", text: "Créer et administrer un salon" },
 										]}/>
 								</GenericAccordion>
+								<GenericAccordion {...this._generateProps("tcq03_007")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Qu’est-ce qu’un contenu inapproprié sur Tchap ?</title>
+									<div className="tc_text_nl">Le cadre de l’usage de Tchap est fixé par ses <a target="_blank" rel="noreferrer noopener nofollow" href="https://tchap.beta.gouv.fr/cgu">Conditions Générales d’Utilisation</a>, et notamment par leur article n°3. 
+									Chaque utilisateur de Tchap est tenu de respecter ces directives.</div>
+									<div className="tc_text_nl">Sont notamment considérés comme inappropriés :</div>
+									<ul>
+										<li>Les contenus insultants, diffamatoires ou indécents</li>
+										<li>Les contenus pouvant s’apparenter à du spam ou à de la publicité</li>
+										<li>Les contenus corrompus, contenant des virus</li>
+										<li>La violation du secret professionnel par le partage de contenus confidentiels dans des salons inadéquats</li>
+									</ul>
+									<SeeMoreLinks
+										onClick={this._onLocationChange}
+										links={[
+											{ to: "#tcq03_008", text: "Comment signaler un contenu inapproprié sur Tchap ?" },
+										        { to: "#tcq04_0021", text: "Quelles sont les responsabilités de l’administrateur d’un salon ?" },
+										]}/>
+								</GenericAccordion>
+								<GenericAccordion {...this._generateProps("tcq03_008")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment signaler un contenu inapproprié sur Tchap ? /title>
+									<div className="tc_text_nl">Lorsque vous constatez la présence d’un contenu inapproprié sur Tchap, il est recommandé de demander à un administrateur ou modérateur du salon d'intervenir pour retirer le contenu problématique.</div> 
+									<div className="tc_text_nl">Si nécéssaire, vous pouvez également effectuer un signalement en cliquant sur le message, puis sur “…”, puis sur “Signaler le contenu”.</div>
+									<div className="tc_text_nl">Vous pouvez également écrire un e-mail à support@tchap.beta.gouv.fr en précisant les motifs de votre signalement.</div>
+									<SeeMoreLinks
+										onClick={this._onLocationChange}
+										links={[
+											{ to: "#tcq03_009", text: "Que se passe-t-il lorsque je signale un contenu inapproprié sur Tchap ?  },
+											{ to: "#tcq04_0021", text: "Quelles sont les responsabilités de l’administrateur d’un salon ?" },
 
+										]}/>
+								</GenericAccordion>
+								<GenericAccordion {...this._generateProps("tcq03_009")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que se passe-t-il lorsque je signale un contenu inapproprié sur Tchap ?</title>
+									<div className="tc_text_nl">Tout dépend du salon duquel provient le contenu signalé.</div>
+									<div className="tc_text_nl"></div>
+									<div className="tc_text_nl"><span className="tc_text_b">Si le salon est privé</span></div>
+									<div className="tc_text_nl">Il vous sera recommandé de contacter les administrateurs ou modérateurs du salon pour demander la suppression des contenus jugés problématiques.</div>
+									<div className="tc_text_nl">Les coordonnées d’un référent à contacter au sein de votre administration vous seront également transmises.</div>
+     									<div className="tc_text_nl"></div>
+									<div className="tc_text_nl"><span className="tc_text_b">Si le salon est un Forum public</span></div>
+									<ol>
+										<li>L’équipe Tchap contacte directement les administrateurs et modérateurs du forum pour demander une mise en conformité du salon avec les CGU.</li>
+										<li>Sans mise en conformité dans les délais indiqués, l’équipe Tchap poste un message de rappel à l’ordre aux utilisateurs sur le forum.</li>
+										<li>Si malgré cela, le salon n’est pas mis en conformité, l’équipe contacte le correspondant Tchap de l’administration dont dépend le forum, afin de lui demander la nomination d’un nouvel administrateur.</li>
+										<li>En l’absence de réponse du correspondant, ou à sa demande, et après en avoir informé les utilisateurs, le forum peut éventuellement être fermé.</li>
+									</ol>
+									<SeeMoreLinks
+										onClick={this._onLocationChange}
+										links={[
+											{ to: "#tcq03_008", text: "Comment signaler un contenu inapproprié sur Tchap ?" },
+										       	{ to: "#tcq04_0021", text: "Quelles sont les responsabilités de l’administrateur d’un salon ?" },
+
+										]}/>
+								</GenericAccordion>
 								<div id="tcq04_000" className="tc_FaqComponent_section">Créer et administrer un salon</div>
 								<GenericAccordion {...this._generateProps("tcq04_001")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment créer un salon ?</title>
@@ -428,6 +481,22 @@ class FaqComponent extends Component {
 										onClick={this._onLocationChange}
 										links={[
 											{ to: "#tcq04_004", text: "Pourquoi est-il indispensable de nommer plusieurs administrateurs par salon et comment procéder ?" },
+										]}/>
+								</GenericAccordion>
+								<GenericAccordion {...this._generateProps("tcq04_0021")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Quelles sont les responsabilités de l’administrateur d’un salon ?</title>
+									<div className="tc_text_nl">En cas de violation des <a target="_blank" rel="noreferrer noopener nofollow" href="https://tchap.beta.gouv.fr/cgu">Conditions Générales d’Utilisation de Tchap</a> au sein d’un salon, 
+										notamment en cas de diffusion de contenus inappropriés, les administrateurs et modérateurs du salon ont le devoir d’intervenir :</div>
+									<ul>
+										<li>en rappelant à l’ordre les utilisateurs concernés</li>
+										<li>en supprimant les contenus non conformes</li>
+										<li>en bannissant les utilisateurs concernés du salon en cas de récidive</li>
+									</ul>
+									<div className="tc_text_nl">Si un salon n’est pas administré en conformité avec les CGU de Tchap, une intervention de l’administration d’origine de ses administrateurs peut être sollicitée, et la fermeture du salon peut être envisagée.</div>
+									<SeeMoreLinks
+										onClick={this._onLocationChange}
+										links={[
+											{ to: "#tcq03_007", text: "Qu’est-ce qu’un contenu inapproprié sur Tchap ?" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_003")}>
