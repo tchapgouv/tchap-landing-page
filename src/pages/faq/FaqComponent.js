@@ -491,7 +491,8 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq04_0021")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Quelles sont les responsabilités de l’administrateur d’un salon ?</title>
 									<div className="tc_text_nl">
-									En cas de violation des <a target="_blank" rel="noreferrer noopener nofollow" href="https://tchap.beta.gouv.fr/cgu">Conditions Générales d’Utilisation de Tchap</a> au sein d’un salon, 
+									En cas de violation des <a target="_blank" href="/cgu">Conditions Générales d’Utilisation de Tchap</a> au sein d’un salon, 
+
 									notamment en cas de diffusion de contenus inappropriés, les administrateurs et modérateurs du salon ont le devoir d’intervenir :
 									</div>
 									<ul>
