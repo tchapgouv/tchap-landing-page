@@ -381,9 +381,11 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Qu’est-ce qu’un contenu inapproprié sur Tchap ?</title>
 									<div className="tc_text_nl">
 									Le cadre de l’usage de Tchap est fixé par ses <a target="_blank" href="/cgu">Conditions Générales d’Utilisation</a>, et notamment par leur article n°3. 
-
+									</div>
+									<div className="tc_text_nl">
 									Chaque utilisateur de Tchap est tenu de respecter ces directives.
 									</div>
+									<br>
 									<div className="tc_text_nl">
 									Sont notamment considérés comme inappropriés :
 									</div>
@@ -403,8 +405,8 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq03_008")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment signaler un contenu inapproprié sur Tchap ?</title>
 									<div className="tc_text_nl">Lorsque vous constatez la présence d’un contenu inapproprié sur Tchap, il est recommandé de demander à un administrateur ou modérateur du salon d'intervenir pour retirer le contenu problématique.</div> 
-									<div className="tc_text_nl">Si nécéssaire, vous pouvez également effectuer un signalement en cliquant sur le message, puis sur “…”, puis sur “Signaler le contenu”.</div>
-									<div className="tc_text_nl">Vous pouvez également écrire un e-mail à support@tchap.beta.gouv.fr en précisant les motifs de votre signalement.</div>
+									<div className="tc_text_nl">Si nécessaire, vous pouvez également effectuer un signalement en cliquant sur le message, puis sur “…”, puis sur “Signaler le contenu”.</div>
+									<div className="tc_text_nl">Vous pouvez également écrire un e-mail à <span className="tc_text_b">support@tchap.beta.gouv.fr</span> en précisant les motifs de votre signalement.</div>
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
@@ -416,11 +418,11 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq03_009")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que se passe-t-il lorsque je signale un contenu inapproprié sur Tchap ?</title>
 									<div className="tc_text_nl">Tout dépend du salon duquel provient le contenu signalé.</div>
-									<div className="tc_text_nl"></div>
+									<br>
 									<div className="tc_text_nl"><span className="tc_text_b">Si le salon est privé</span></div>
 									<div className="tc_text_nl">Il vous sera recommandé de contacter les administrateurs ou modérateurs du salon pour demander la suppression des contenus jugés problématiques.</div>
 									<div className="tc_text_nl">Les coordonnées d’un référent à contacter au sein de votre administration vous seront également transmises.</div>
-     									<div className="tc_text_nl"></div>
+     									<br>
 									<div className="tc_text_nl"><span className="tc_text_b">Si le salon est un Forum public</span></div>
 									<ol>
 										<li>L’équipe Tchap contacte directement les administrateurs et modérateurs du forum pour demander une mise en conformité du salon avec les CGU.</li>
