@@ -400,7 +400,7 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_008")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment signaler un contenu inapproprié sur Tchap ? /title>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment signaler un contenu inapproprié sur Tchap ?</title>
 									<div className="tc_text_nl">Lorsque vous constatez la présence d’un contenu inapproprié sur Tchap, il est recommandé de demander à un administrateur ou modérateur du salon d'intervenir pour retirer le contenu problématique.</div> 
 									<div className="tc_text_nl">Si nécéssaire, vous pouvez également effectuer un signalement en cliquant sur le message, puis sur “…”, puis sur “Signaler le contenu”.</div>
 									<div className="tc_text_nl">Vous pouvez également écrire un e-mail à support@tchap.beta.gouv.fr en précisant les motifs de votre signalement.</div>
