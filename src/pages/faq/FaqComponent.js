@@ -385,7 +385,7 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl">
 									Chaque utilisateur de Tchap est tenu de respecter ces directives.
 									</div>
-									<br>
+									<div></div>
 									<div className="tc_text_nl">
 									Sont notamment considérés comme inappropriés :
 									</div>
@@ -418,11 +418,11 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq03_009")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que se passe-t-il lorsque je signale un contenu inapproprié sur Tchap ?</title>
 									<div className="tc_text_nl">Tout dépend du salon duquel provient le contenu signalé.</div>
-									<br>
+									<div></div>
 									<div className="tc_text_nl"><span className="tc_text_b">Si le salon est privé</span></div>
 									<div className="tc_text_nl">Il vous sera recommandé de contacter les administrateurs ou modérateurs du salon pour demander la suppression des contenus jugés problématiques.</div>
 									<div className="tc_text_nl">Les coordonnées d’un référent à contacter au sein de votre administration vous seront également transmises.</div>
-     									<br>
+     									<div></div>
 									<div className="tc_text_nl"><span className="tc_text_b">Si le salon est un Forum public</span></div>
 									<ol>
 										<li>L’équipe Tchap contacte directement les administrateurs et modérateurs du forum pour demander une mise en conformité du salon avec les CGU.</li>
