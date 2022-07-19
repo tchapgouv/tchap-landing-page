@@ -380,7 +380,8 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq03_007")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Qu’est-ce qu’un contenu inapproprié sur Tchap ?</title>
 									<div className="tc_text_nl">
-									Le cadre de l’usage de Tchap est fixé par ses <a target="_blank" rel="noreferrer noopener nofollow" href="https://tchap.beta.gouv.fr/cgu">Conditions Générales d’Utilisation</a>, et notamment par leur article n°3. 
+									Le cadre de l’usage de Tchap est fixé par ses <a target="_blank" href="/cgu">Conditions Générales d’Utilisation</a>, et notamment par leur article n°3. 
+
 									Chaque utilisateur de Tchap est tenu de respecter ces directives.
 									</div>
 									<div className="tc_text_nl">
