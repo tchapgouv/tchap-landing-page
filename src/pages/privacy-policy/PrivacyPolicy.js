@@ -158,20 +158,8 @@ class PrivacyPolicy extends Component {
 										<th>Garanties</th>
 									</tr>
 									<tr>
-										<th>Sendinblue</th>
-										<td>Service d’envoi de mail</td>
-										<td>UE et hors UE </td>
-										<td>https://fr.sendinblue.com/rgpd/</td>
-									</tr>
-									<tr>
-										<th>Dolist</th>
-										<td>Service d’envoi de mail</td>
-										<td>France et Suisse</td>
-										<td>https://www.dolist.com/societe/politique-rgpd/</td>
-									</tr>
-									<tr>
 										<th>Cloud du Ministère de l’Intérieur</th>
-										<td>Hébergement</td>
+										<td>Hébergement et envoi d’emails</td>
 										<td>France</td>
 										<td>https://www.numerique.gouv.fr/services/cloud/cloud-interne/</td>
 									</tr>
@@ -180,6 +168,24 @@ class PrivacyPolicy extends Component {
 										<td>Support utilisateurs par email</td>
 										<td>Pays Bas et Allemagne</td>
 										<td>https://crisp.chat/fr/</td>
+									</tr>
+									<tr>
+										<th>Dolist</th>
+										<td>Service d’envoi d’emails d’informations</td>
+										<td>France et Suisse</td>
+										<td>https://www.dolist.com/societe/politique-rgpd/</td>
+									</tr>
+									<tr>
+										<th>Sendinblue</th>
+										<td>Service d’envoi d’emails d’informations de secours</td>
+										<td>UE et hors UE </td>
+										<td>https://fr.sendinblue.com/rgpd/</td>
+									</tr>
+									<tr>
+										<th>Scalingo</th>
+										<td>Hébergement de la présente page d’accueil</td>
+										<td>France</td>
+										<td>https://scalingo.com/fr/privacy-policy</td>
 									</tr>
 								</tbody>
 							</table>
