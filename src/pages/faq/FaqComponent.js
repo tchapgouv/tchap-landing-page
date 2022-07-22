@@ -480,7 +480,7 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl">Comment cela fonctionne-t-il ? </div>
 									<div className="tc_text_nl">Chaque utilisateur de Tchap dispose de clés de chiffrement appelées Clés Tchap qui permettent de chiffrer et de déchiffrer les messages reçus et envoyés. Ces clés sont stockées sur vos appareils, et se renouvellent régulièrement de façon automatique (à chaque nouvelle connexion par exemple).</div>
 									<div className="tc_text_nl">Cela signifie que même en cas de vol de vos identifiants ou d'interception de vos messages, vos échanges restent indéchiffrables.</div>
-									<div className="tc_text_nl">Pour vous assurer que vos messages restent toujours lisibles pour vous, pensez à exporter et sauvegarder vos Clés Tchap à chaque fois que vous envisagez une déconnexion ! !</div>
+									<div className="tc_text_nl">Pour vous assurer que vos messages restent toujours lisibles pour vous, pensez à exporter et sauvegarder vos Clés Tchap à chaque fois que vous envisagez une déconnexion !</div>
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
