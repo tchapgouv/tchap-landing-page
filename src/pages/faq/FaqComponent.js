@@ -475,7 +475,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_002")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Qu'est-ce qu'un administrateur ?</title>
-									<div className="tc_text_nl">Par défaut, le créateur d'un salon est sont administrateur.</div>
+									<div className="tc_text_nl">Par défaut, le créateur d'un salon est son administrateur.</div>
 									<div className="tc_text_nl">Un administrateur peut :</div>
 									<ul>
 										<li>inviter des personnes à rejoindre un salon</li>
@@ -548,7 +548,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_006")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment supprimer un salon ?</title>
-									<div className="tc_text_nl">Si le salon est public, il faut d'abord le transformer en salon privé pour le retirer de la liste des salons publics.</div>
+									<div className="tc_text_nl">Si le salon est public, il faut d'abord le transformer en salon privé pour le retirer de la liste des salons forums.</div>
 									<div className="tc_text_nl">Pour fermer complètement un salon, un administrateur doit exclure tous les participants puis le quitter lui-même. Le salon ne sera alors plus visible, et les invitations acceptées ultérieurement ne fonctionneront pas.</div>
 								</GenericAccordion>
 
