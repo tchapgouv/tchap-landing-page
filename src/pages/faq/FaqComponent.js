@@ -768,13 +768,13 @@ class FaqComponent extends Component {
 												<span className="tc_text_b">Allez dans les Paramètres</span> de Tchap :
 												<ul>
 													<li>
-														Sur ordinateur, allez dans Paramètres > Sécurité & Vie Privée et cliquez sur “Importer les clés de chiffrement de bout en bout”.
+														Sur ordinateur, allez dans Paramètres > Sécurité & Vie Privée et cliquez sur “Importez vos Clés Tchap depuis le fichier sauvegardé”.
 													</li>
 													<li>
-														Sur Android, allez dans Paramètres > Sécurité & Vie Privée et cliquez sur “Importer les clés des conversations”.
+														Sur Android, allez dans Paramètres > Sécurité & Vie Privée et cliquez sur “Importer les clés de chiffrement des conversations”.
 													</li>
 													<li>
-														Sur iOS, allez dans Paramètres > Sécurité & Vie Privée et cliquez sur “Importer les clés de chiffrement de bout en bout”.
+														Sur iOS, allez dans Paramètres > Sécurité & Vie Privée et cliquez sur “Importer les Clés”.
 													</li>
 												</ul>
 											</li>
