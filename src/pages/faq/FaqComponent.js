@@ -588,7 +588,7 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment m'assurer de toujours pouvoir lire mes messages ?</title>
 									<div className="tc_text_nl">
 										<div>
-											Après une nouvelle connexion (lorsque vous entrez votre mail et votre mot de passe), vous ne pouvez pas
+											Après une nouvelle connexion (lorsque vous entrez votre adresse mail professionnelle et votre mot de passe), vous ne pouvez pas
 											lire les messages échangés auparavant.
 										</div>
 										<div>
@@ -598,7 +598,7 @@ class FaqComponent extends Component {
 										<div className="tc_FaqComponent_subtitle">Voici quelques bonnes pratiques pour vous assurer de toujours pouvoir lire vos messages :</div>
 										<div className="tc_FaqComponent_subtitle">Evitez de vous déconnecter de Tchap</div>
 										<div>
-											<span className="tc_text_b">Votre mobile</span> garde votre connexion automatiquement, même lorsque vous fermez l'application ou éteignez votre téléphone
+											<span className="tc_text_b">Votre téléphone mobile</span> garde automatiquement votre connexion, même lorsque vous l'éteignez ou fermez l'application Tchap.
 										</div>
 										<div>
 											<span className="tc_text_b">Votre navigateur web</span> provoque peut-être la déconnexion automatique de Tchap lorsque vous le fermez :
@@ -622,7 +622,7 @@ class FaqComponent extends Component {
 
 										<div className="tc_FaqComponent_subtitle">Sauvegardez manuellement vos Clés Tchap (clés de chiffrement) avant toute déconnexion</div>
 										<div>
-											Si vous savez que vous allez vous déconnecter, sauvegarder vos Clés Tchap (clés de chiffrement) vous permettra déverrouiller vos messages lors de votre reconnexion.
+											Si vous envisagez de vous déconnecter, sauvegarder vos Clés Tchap vous permettra déverrouiller vos messages lors de votre reconnexion.
 										</div>
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
@@ -661,7 +661,7 @@ class FaqComponent extends Component {
 											</li>
 											<li>Choisissez un mot de passe (différent de votre mot de passe Tchap) : celui-ci vous sera demandé pour déverrouiller vos messages lors de votre reconnexion.</li>
 											<li>Enregistrez le fichier à un emplacement où vous pourrez le retrouver. Ce fichier s'appelle “Tchap keys” par défaut, mais vous pouvez le renommer.</li>
-											<li>C'est bon, vos clés Tchap sont sauvegardées ! Vous pourrez les importer lors de de votre reconnexion pour déverrouiller vos messages.</li>
+											<li>Exportation réussie, vos Clés Tchap sont sauvegardées ! Vous pourrez les importer lors de votre reconnexion pour déverrouiller vos messages.</li>
 										</ol>
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
@@ -696,7 +696,7 @@ class FaqComponent extends Component {
 											</li>
 											<li>Sélectionnez le fichier que vous avez préalablement sauvegardé. Par défaut, ce fichier s'appelle “Tchap keys”.</li>
 											<li>Entrez le mot de passe que vous avez choisi au moment de la sauvegarde.</li>
-											<li>C'est bon, vos messages sont déverrouillés et de nouveau lisibles .</li>
+											<li>Importation réussie, vos messages sont déverrouillés et de nouveau lisibles.</li>
 										</ol>
 									</div>
 								</GenericAccordion>
@@ -704,7 +704,7 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi mes messages sont-ils verrouillés ? </title>
 									<div className="tc_text_nl">
 										<div>
-											Après une nouvelle connexion (lorsque vous entrez votre mail et votre mot de passe), vous ne pouvez pas lire les messages échangés auparavant.
+											Après une nouvelle connexion (lorsque vous entrez votre adresse mail professionnelle et votre mot de passe), vous ne pouvez pas lire les messages échangés auparavant.
 										</div>
 										<div>
 											C'est une mesure de sécurité : si une personne vole vos identifiants et se connecte à votre place, il lui est ainsi impossible de lire vos messages parce qu'ils sont verrouillés.
