@@ -939,7 +939,7 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 											onClick={this._onLocationChange}
 											links={[
-												{ to: "#tcq02_002", text: "Pourquoi dois-je renouveler mon compte tous les 2 mois ?" },
+												{ to: "#tcq02_002", text: "Pourquoi dois-je renouveler mon compte tous les 3 mois ?" },
 											]}/>
 								</GenericAccordion>
 							</Grid>
