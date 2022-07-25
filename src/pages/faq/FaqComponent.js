@@ -224,12 +224,11 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_002")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi dois-je renouveler mon compte tous les 2 mois ?</title>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi dois-je renouveler mon compte tous les 3 mois ?</title>
 									<div className="tc_text_nl">Vous ne pouvez utiliser Tchap qu'avec une adresse mail professionnelle valide. Tchap doit vérifier que votre adresse mail est toujours valide pour <span className="tc_text_b">garder votre compte actif.</span></div>
-									<div className="tc_text_nl">C'est pourquoi vous recevez toutes les 8 semaines un e-mail de Tchap avec un lien sur lequel cliquer pour garder votre compte actif.</div>
-									<div className="tc_text_nl">Vous avez 7 jours pour cliquer sur le lien dans l'e-mail. </div>
-									<div className="tc_text_nl">Si vous dépassez les 7 jours, vous pouvez réactiver votre compte depuis l'application mobile de Tchap en demandant l'envoi d'un nouvel e-mail de réactivation.</div>
-									<div className="tc_text_nl">Attention : Veillez à bien utiliser le dernier e-mail de réactivation reçu. Toute nouvelle demande d'e-mail de réactivation annule et remplace le précédent e-mail.</div>
+									<div className="tc_text_nl">C'est pourquoi vous recevez tous les 3 mois un e-mail de Tchap avec un lien sur lequel cliquer pour garder votre compte actif.</div>
+									<div className="tc_text_nl">Si vous dépassez le délai imparti, vous pouvez réactiver votre compte depuis Tchap en demandant l'envoi d'un nouvel e-mail de réactivation.</div>
+									<div className="tc_text_nl">Attention : toute nouvelle demande d'e-mail de réactivation annule et remplace le précédent e-mail. Veillez à bien utiliser le lien contenu dans le dernier e-mail de réactivation reçu.</div>
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
@@ -933,11 +932,10 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq06_004")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Mon compte a expiré : que faire ?</title>
-									<div className="tc_text_nl">Toutes les 8 semaines, vous recevez un e-mail de Tchap avec un lien sur lequel cliquer pour garder votre compte actif.</div>
-									<div className="tc_text_nl">Vous avez 7 jours pour cliquer sur le lien dans l'e-mail.</div>
-									<div className="tc_text_nl">Si vous dépassez les 7 jours, votre compte se désactive automatiquement.</div>
-									<div className="tc_text_nl">Cette situation n'est cependant pas irréversible. Vous pouvez réactiver votre compte depuis l'application mobile de Tchap en demandant l'envoi d'un nouvel e-mail de réactivation.</div>
-									<div className="tc_text_nl">Attention : Veillez à bien utiliser le dernier e-mail de réactivation reçu. Toute nouvelle demande d'e-mail de réactivation annule et remplace le précédent e-mail.</div>
+									<div className="tc_text_nl">Tous les 3 mois, vous recevez un e-mail de Tchap avec un lien sur lequel cliquer pour garder votre compte actif.</div>
+									<div className="tc_text_nl">Si vous dépassez le délai imparti, votre compte se désactive automatiquement.</div>
+									<div className="tc_text_nl">Cette situation n'est cependant pas irréversible. Vous pouvez réactiver votre compte depuis Tchap en demandant l'envoi d'un nouvel e-mail de réactivation.</div>
+									<div className="tc_text_nl">Attention : toute nouvelle demande d'e-mail de réactivation annule et remplace le précédent e-mail. Veillez à bien utiliser le dernier e-mail de réactivation reçu.</div>
 									<SeeMoreLinks
 											onClick={this._onLocationChange}
 											links={[
