@@ -12,4 +12,6 @@ module.exports = {
 
   // Static files that get copied to build folder
   public: path.resolve(__dirname, '../public'),
+
+  root: path.resolve(__dirname, '..'),
 }

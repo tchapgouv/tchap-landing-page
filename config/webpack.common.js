@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
 
@@ -80,6 +81,7 @@ module.exports = {
       }
     }),
     new webpack.EnvironmentPlugin(['NODE_ENV']),
+    new Dotenv({ path: paths.root + '/.env' }),
   ],
 
   module: {

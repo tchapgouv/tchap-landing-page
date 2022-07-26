@@ -4,6 +4,7 @@ import { setLocale, setTranslations } from "react-i18nify";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "pages/home/Home";
 import Convention from "pages/convention/Convention";
+import Stats from "pages/stats/Stats";
 import CookiesManagement from "pages/cookiesManagement/CookiesManagement";
 import Pem from "pages/pem/Pem";
 import PrivacyPolicy from "pages/privacy-policy/PrivacyPolicy";
@@ -32,6 +33,7 @@ class App extends Component {
 					<Route path="/faq" element={<Faq />} />
 					<Route path="/cgu" element={<Tac />} />
 					<Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
+					<Route path="/stats" element={<Stats />} />
 					<Route path="/" element={<Home />} />
 				</Routes>
 			</BrowserRouter>
