@@ -942,6 +942,25 @@ class FaqComponent extends Component {
 												{ to: "#tcq02_002", text: "Pourquoi dois-je renouveler mon compte tous les 3 mois ?" },
 											]}/>
 								</GenericAccordion>
+                                                                <GenericAccordion {...this._generateProps("tcq06_005")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />J’ai reçu une pièce jointe mais je ne parviens pas à l’ouvrir : que dois-je faire ?</title>
+									<div className="tc_text_nl">Si vous avez reçu une pièce jointe sur Tchap, mais que vous ne parvenez pas à l’ouvrir (message d’erreur, ou absence de réaction), il est possible de recharger à nouveau la pièce jointe.</div>
+									<div className="tc_text_nl">Pour cela, vous pouvez vous rendre dans les paramètres de Tchap, puis :</div>
+                                                                        <div className="tc_text_b"> 
+                                                                                                   Sur la version mobile de Tchap :
+                                                                        </div>
+                                                                        <li>Rendez-vous dans la section “Autres”</li>
+                                                                        <li>Cliquez sur “Vider le cache”</li>
+                                                                        <div className="tc_text_b">
+                                                                                                  Sur la version Web de Tchap :
+                                                                        </div>
+                                                                        <li>Rendez-vous dans la section “Aide & A propos”</li>
+                                                                        <li>Cliquez sur “Vider le cache et rafraîchir”</li>
+                                                                        <div className="tc_text_nl">Rendez-vous ensuite dans l’échange sur lequel vous avez reçu la pièce jointe, et essayez à nouveau de l’ouvrir.</div> 
+                                                                        <div className="tc_text_nl">Si la difficulté persiste, vous pouvez contacter l’équipe de Tchap par mail à :</div> 
+                                                                        <div className="tc_text_nl"><GenericLink className="tc_FaqComponent_link" to={"mailto:" + t("links.support")}>{t("links.support")}</GenericLink></div>
+                                                                                                                     
+								</GenericAccordion>
 							</Grid>
 						</Grid>
 					</Container>
