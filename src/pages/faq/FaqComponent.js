@@ -930,7 +930,7 @@ class FaqComponent extends Component {
 									</ul>
 									<div className="tc_text_nl">Si le problème persiste, n'hésitez pas à contacter le support de Tchap : <GenericLink className="tc_FaqComponent_link" to={"mailto:" + t("links.support")}>{t("links.support")}</GenericLink></div>
 								</GenericAccordion>
-								<GenericAccordion {...this._generateProps("tcq06_005")}>
+								<GenericAccordion {...this._generateProps("tcq06_004")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Mon compte a expiré : que faire ?</title>
 									<div className="tc_text_nl">Tous les 3 mois, vous recevez un e-mail de Tchap avec un lien sur lequel cliquer pour garder votre compte actif.</div>
 									<div className="tc_text_nl">Si vous dépassez le délai imparti, votre compte se désactive automatiquement.</div>
@@ -942,7 +942,7 @@ class FaqComponent extends Component {
 												{ to: "#tcq02_002", text: "Pourquoi dois-je renouveler mon compte tous les 3 mois ?" },
 											]}/>
 								</GenericAccordion>
-                                                                <GenericAccordion {...this._generateProps("tcq06_004")}>
+                                                                <GenericAccordion {...this._generateProps("tcq06_005")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />J’ai reçu une pièce jointe mais je ne parviens pas à l’ouvrir : que dois-je faire ?</title>
 									<div className="tc_text_nl">Si vous avez reçu une pièce jointe sur Tchap, mais que vous ne parvenez pas à l’ouvrir (message d’erreur, ou absence de réaction), il est possible de recharger à nouveau la pièce jointe.</div>
 									<div className="tc_text_nl">Pour cela, vous pouvez vous rendre dans les paramètres de Tchap, puis :</div>
