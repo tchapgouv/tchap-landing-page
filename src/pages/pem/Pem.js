@@ -184,7 +184,7 @@ class Pem extends Component {
 							<div className="tc_Pem_Content_text">L'annuaire des Salons Forum vous permet d'effectuer une recherche par mots clés :</div>
 							<div className="tc_Pem_Content_withImage_double">
 								<div className="tc_Pem_Content_withImage">
-									<img src={require("images/pem/create_mobile.png")}  alt="Nouveau forum mobile" height="250"/>
+									<img src={require("images/pem/create_room_mobile.png")}  alt="Nouveau forum mobile" height="250"/>
 									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur mobile</span>, cliquez sur le bouton “+” en bas de l’écran et choisissez “accéder à un salon forum”.</div>
 								</div>
 								<div className="tc_Pem_Content_withImage">
