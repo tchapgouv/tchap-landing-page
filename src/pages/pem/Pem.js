@@ -149,11 +149,11 @@ class Pem extends Component {
 							</div>
 
 							<div className="tc_Pem_Content_title" id="tcp03_001"><LinkIcon onClick={this._handleCopyClick} className="tc_Pem_Content_title_icon" /> 3. Rechercher des interlocuteurs pour démarrer une conversation</div>
-							<div className="tc_Pem_Content_text">L’annuaire de Tchap vous permet d’entrer en contact direct avec l’ensemble des usagers de l’application en les recherchant par leur nom ou leur adresse mail.</div>
+							<div className="tc_Pem_Content_text">L'annuaire intégré vous permet d'entrer en contact direct avec l'ensemble des utilisateurs de Tchap.</div>
 							<div className="tc_Pem_Content_withImage_double">
 								<div className="tc_Pem_Content_withImage">
 									<img src={require("images/pem/create_mobile.png")}  alt="Nouveau DM mobile" height="250"/>
-									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur mobile</span>, cliquez sur le bouton “+” en bas de l’écran et choisissez “nouvelle discussion”.</div>
+									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l’onglet des messages directs et cliquez sur le bouton “💬+” en bas de l'écran </div>
 								</div>
 								<div className="tc_Pem_Content_withImage">
 									<img src={require("images/pem/create_dm_web.png")}  alt="Nouveau DM web"/>
@@ -184,12 +184,12 @@ class Pem extends Component {
 							<div className="tc_Pem_Content_text">L'annuaire des Salons Forum vous permet d'effectuer une recherche par mots clés :</div>
 							<div className="tc_Pem_Content_withImage_double">
 								<div className="tc_Pem_Content_withImage">
-									<img src={require("images/pem/create_room_mobile.png")}  alt="Nouveau forum mobile" height="250"/>
-									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur mobile</span>, cliquez sur le bouton “+” en bas de l’écran et choisissez “accéder à un salon forum”.</div>
+									<img src={require("images/pem/create_mobile.png")}  alt="Nouveau forum mobile" height="250"/>
+									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un salon forum”. </div>
 								</div>
 								<div className="tc_Pem_Content_withImage">
 									<img src={require("images/pem/create_room_web.png")}  alt="Nouveau forum web"/>
-									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur le web</span>, l’annuaire des salons forums se trouve en cliquant sur le bouton “+” de la section “salons”.</div>
+									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “Salons”.</div>
 								</div>
 							</div>
 							<div className="tc_Pem_Content_text">Et si vous ne trouvez pas votre bonheur, n'hésitez pas à créer un nouveau salon forum pour discuter des sujets qui vous importent !</div>
