@@ -301,13 +301,13 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq03_003")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment démarrer une nouvelle conversation ?</title>
 									<div className="tc_text_nl">L'annuaire intégré vous permet d'entrer en contact direct avec l'ensemble des utilisateurs de Tchap.</div>
-									<div className="tc_text_nl">Pour démarrer une nouvelle conversation : </div>
+									<div className="tc_text_nl">Pour démarrer une nouvelle conversation :</div>
 									<ul className="tc_list_decimal">
 										<li>
 											<Grid container className="tc_FaqComponent_grid">
 												<Grid item xl={6}>
-													<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, cliquez sur le bouton “+” en bas de l'écran et choisissez “nouvelle discussion”.</div>
-													<img src={require("images/pem/create_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création 1:1 mobile"/>
+													<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l’onglet des messages directs et cliquez sur le bouton “💬+” en bas de l'écran </div>
+													<img src={require("images/pem/create_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création 1:1 mobile" width="485" />
 												</Grid>
 												<Grid item xl={6}>
 													<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”.</div>
@@ -316,7 +316,7 @@ class FaqComponent extends Component {
 											</Grid>
 										</li>
 										<li>Dans la barre de recherche, tapez le prénom suivi du nom de la personne que vous voulez contacter, ou son adresse mail.</li>
-										<li>Une liste de personnes apparaîtra. Cliquez sur le nom de la personne qui vous intéresse.</li>
+										<li>Une liste de personnes apparaîtra. Cliquez sur le nom de la personne que vous souhaitez contacter.</li>
 										<li>Une invitation lui est automatiquement envoyée. Dès qu'elle est acceptée, vous pourrez communiquer.</li>
 									</ul>
 									<SeeMoreLinks
@@ -332,7 +332,7 @@ class FaqComponent extends Component {
 										<li>
 											<Grid container className="tc_FaqComponent_grid">
 												<Grid item xl={6}>
-													<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet "Contacts" et cliquez sur "Inviter des contacts dans Tchap"</div>
+													<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet des "Messages directs" et cliquez sur le bouton “💬+”</div>
 													<img src={require("images/faq/create_ext_mobile.jpg")} width="500" className="tc_FaqComponent_wimg_mobile" alt="Création 1:1 externe mobile"/>
 												</Grid>
 												<Grid item xl={6}>
@@ -357,19 +357,20 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_006")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment rejoindre un salon ?</title>
-									<div className="tc_text_nl"><span className="tc_text_b">Pour rejoindre un salon privé</span>, vous devez obligatoirement être invité par un de ses administrateurs.</div>
-									<div className="tc_text_nl"><span className="tc_text_b">Pour trouver et rejoindre un salon forum</span>, vous pouvez rechercher par mots clés : </div>
+									<div className="tc_text_nl"><span className="tc_text_b">Pour rejoindre un salon privé</span>, vous devez recevoir une invitation de la part d’un de ses administrateurs.</div>
+									<div className="tc_text_nl"><span className="tc_text_b">Pour trouver et rejoindre un salon forum</span>, vous pouvez rechercher par mots clés :</div>
 									<Grid container className="tc_FaqComponent_grid">
 										<Grid item xl={6}>
-											<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet "Contacts" et cliquez sur "Inviter des contacts dans Tchap"</div>
-											<img src={require("images/pem/create_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile"/>
+											<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un salon forum”.</div>
+											<img src={require("images/pem/create_room_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile" width="485"/>
 										</Grid>
 										<Grid item xl={6}>
 											<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”.</div>
-											<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>
+											<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>					
 										</Grid>
 									</Grid>
-									<div className="tc_text_nl">Vous pouvez également être invité à rejoindre un salon forum sur invitation d'un membre.</div>
+									<div className="tc_text_nl">Vous pouvez ensuite parcourir la liste des salons forums, ou procéder à une recherche par mots clés.</div>
+									<div className="tc_text_nl">Il est également possible de rejoindre un salon forum sur invitation d'un membre.</div>
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
@@ -483,6 +484,10 @@ class FaqComponent extends Component {
 										<li>changer le nom du salon</li>
 									</ul>
 									<div className="tc_text_nl">Un administrateur peut aussi désigner d'autres administrateurs et modérateurs, et partager certains pouvoirs avec eux, depuis les paramètres du Salon, dans les Rôles et Permissions.</div>
+									<div className="tc_text_nl">Attention : seul un administrateur est en mesure de se rétrograder, ou de s’expulser.
+									Si le dernier administrateur quitte le salon, ce salon ne sera plus administrable.
+									Il sera impossible de nommer un nouvel administrateur.</div>
+									
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
@@ -539,11 +544,13 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_005")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment retirer une personne d'un salon ?</title>
-									<div className="tc_text_nl">Seul un administrateur ou un modérateur peut retirer un membre d'un salon. Pour ce faire, rendez-vous dans la liste des membres du salon et cliquez sur le nom de la personne : </div>
+									<div className="tc_text_nl">Seul un administrateur ou un modérateur peut retirer un membre d'un salon. Pour ce faire, rendez-vous dans la liste des membres du salon et cliquez sur le nom de la personne :</div>
 									<ul>
 										<li>Pour qu'il lui soit impossible de revenir, choisissez "bannir"</li>
 										<li>Pour lui laisser la possibilité de revenir, choisissez "exclure" ou "expulser"</li>
 									</ul>
+									<div className="tc_text_nl">Il est en revanche impossible de retirer un administrateur d’un salon : dans ce cas de figure, la personne doit elle-même quitter le salon.</div>
+
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_006")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment supprimer un salon ?</title>
