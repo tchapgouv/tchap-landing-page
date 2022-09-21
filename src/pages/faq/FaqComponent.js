@@ -306,7 +306,7 @@ class FaqComponent extends Component {
 										<li>
 											<Grid container className="tc_FaqComponent_grid">
 												<Grid item xl={6}>
-													<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, cliquez sur le bouton “+” en bas de l'écran et choisissez “nouvelle discussion”.</div>
+													<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l’onglet des messages directs et cliquez sur le bouton “💬+” en bas de l'écran </div>
 													<img src={require("images/pem/create_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création 1:1 mobile"/>
 												</Grid>
 												<Grid item xl={6}>
