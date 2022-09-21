@@ -366,10 +366,10 @@ class FaqComponent extends Component {
 										</Grid>
 										<Grid item xl={6}>
 											<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”.</div>
-											<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>
-											<div className="tc_text_nl">Vous pouvez ensuite parcourir la liste des salons forums, ou procéder à une recherche par mots clés.</div>
+											<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>					
 										</Grid>
 									</Grid>
+									<div className="tc_text_nl">Vous pouvez ensuite parcourir la liste des salons forums, ou procéder à une recherche par mots clés.</div>
 									<div className="tc_text_nl">Il est également possible de rejoindre un salon forum sur invitation d'un membre.</div>
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
