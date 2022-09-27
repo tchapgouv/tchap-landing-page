@@ -790,8 +790,9 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq07_005")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment faire en sorte que ma session sur Tchap web ne se déconnecte pas automatiquement ? </title>
 									<div className="tc_text_nl">
-										<div>Lorsque vous utilisez la version web de Tchap, il est possible que votre session Tchap se déconnecte à chaque fermeture de votre navigateur, entrainant une perte vos clés Tchap (clés de chiffrement).<div>
-										<div>Pour palier à cette difficulté, vous devez vous rendre dans les paramètres de votre navigateur et autoriser la conservation des cookies pour la page https://www.tchap.gouv.fr/.<div>
+										<div>Lorsque vous utilisez la version web de Tchap, il est possible que votre session Tchap se déconnecte à chaque fermeture de votre navigateur, entrainant une perte vos clés Tchap (clés de chiffrement).</div>
+										<div>Pour palier à cette difficulté, vous devez vous rendre dans les paramètres de votre navigateur et autoriser la conservation des cookies pour la page https://www.tchap.gouv.fr/.</div>
+
 
 										<div>La marche à suivre dépend de votre navigateur :</div>
 										<ul>
