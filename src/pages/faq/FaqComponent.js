@@ -797,7 +797,8 @@ class FaqComponent extends Component {
 										<ul>
 											<li><GenericLink onClick={this._onLocationChange} to="https://support.mozilla.org/fr/kb/api-stockage-sites-web-enregistrer-fichiers#w_autoriser-ou-bloquer-les-sites-web-de-stocker-des-informations">Firefox</GenericLink> (section Autoriser ou bloquer les sites web de stocker des informations)</li>
 											<li><GenericLink onClick={this._onLocationChange} to="https://support.google.com/chrome/answer/95647#zippy=%2Cautoriser-ou-bloquer-les-cookies-dun-site-sp%C3%A9cifique">Chrome</GenericLink> (section Autoriser ou bloquer les cookies d'un site spécifique)</li>
-											<li>Edge : Paramètres et plus… > Paramètres > Autorisations du site > cookies et données de site</li>
+											<li>Edge : Paramètres et plus… &gt; Paramètres &gt; Autorisations du site &gt; cookies et données de site</li>
+
 										</ul>
 										<div>A noter : il est possible qu’une intervention de vos services informatiques soit nécéssaire pour modifier ces paramètres.</div>
 										<div>Voici aussi :</div>
