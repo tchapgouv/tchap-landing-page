@@ -801,13 +801,13 @@ class FaqComponent extends Component {
 										</ul>
 										<div>A noter : il est possible qu’une intervention de vos services informatiques soit nécéssaire pour modifier ces paramètres.</div>
 										<div>Voici aussi :</div>
+									</div>
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
 											links={[
-												{ to: "#tcq02_008", text: "Pourquoi dois-je activer la conservation des cookies pour Tchap sur mon navigateur ? 
-												" },
+												{ to: "#tcq02_008", text: "Pourquoi dois-je activer la conservation des cookies pour Tchap sur mon navigateur ?"},
 											]}/>
-									</div>
+									
 								</GenericAccordion>
 
 								<div id="tcq08_000" className="tc_FaqComponent_section">“Déchiffrement impossible” de mes messages : comment y remédier ?</div>
