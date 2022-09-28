@@ -247,7 +247,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_005")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment réinitialiser mon mot de passe ?</title>
-									<div className="tc_text_nl">Pour réinitialiser votre mot de passe Tchap, veuillez suivre minutieusement les étapes décrites <GenericLink className="tc_FaqComponent_link" to={"../public/bonnes_pratiques_reinitialisation_du_mot_de_passe.pdf"}>dans ce guide</GenericLink>.</div>
+									<div className="tc_text_nl">Pour réinitialiser votre mot de passe Tchap, veuillez suivre minutieusement les étapes décrites <GenericLink className="tc_FaqComponent_link" to={"pdf/bonnes_pratiques_reinitialisation_du_mot_de_passe.pdf"}>dans ce guide</GenericLink>.</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_006")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je change de téléphone ou d’ordinateur : que faire ?</title>
