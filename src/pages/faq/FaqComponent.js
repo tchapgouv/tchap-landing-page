@@ -251,12 +251,12 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_006")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je change de téléphone ou d’ordinateur : que faire ?</title>
-									<div className="tc_text_nl">Si vous vous connectez à Tchap avec un nouvel appareil, celui-ci ne sera pas en possession de vos Clés Tchap. Cela signifie que vous ne pourrez pas lire vos messages antérieurs à votre connexion sur cet appareil.</div>
+									<div className="tc_text_nl">Si vous vous connectez à Tchap avec un nouvel appareil, celui-ci ne sera pas en possession de vos Clés Tchap.</div>
+									<div className="tc_text_nl">Cela signifie que vous ne pourrez pas lire les messages échangés avant votre connexion sur cet appareil.</div>
 									<div className="tc_text_nl">Les messages échangés après votre connexion seront en revanche lisibles.</div>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour rendre possible la lecture de l’historique antérieur à votre connexion, vous devrez récupérer vos clés Tchap depuis un autre appareil sur lequel cet historique est déjà lisible. </span></div>
 									<div className="tc_text_nl">Le partage de clés peut vous être proposé automatiquement lorsque vous ouvrez Tchap sur le second appareil. Dans ce cas, acceptez la demande qui s’affiche en simultané sur les deux appareils et suivez les instructions.</div>
 									<div className="tc_text_nl">Si le partage automatique ne fonctionne pas, vous pouvez également sauvegarder manuellement les clés depuis l’appareil sur lequel tous vos messages sont lisibles, puis importer les clés sur le nouvel appareil.</div>	
-									<div className="tc_text_nl">Voir aussi :</div>
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
@@ -266,14 +266,13 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_007")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment modifier mon nom sur Tchap ? </title>
-									<div className="tc_text_nl">Votre nom d’affichage sur Tchap est automatiquement déduit de votre adresse e-mail, sur la base d’une construction prénom.nom@adresse.fr</div>
-									<div className="tc_text_nl">Pour des raisons de sécurité, il est impossible de le modifier.<br/>Si vous souhaitez changer votre nom d’utilisateur, il vous faudra créer une nouvelle adresse, puis créer un nouveau compte Tchap. </div>
+									<div className="tc_text_nl">Votre nom d’affichage sur Tchap est automatiquement déduit de votre adresse mail, sur la base d’une construction prénom.nom@adresse.fr</div>
+									<div className="tc_text_nl">Pour des raisons de sécurité, il est impossible de le modifier.<br/>Si vous souhaitez changer votre nom d’utilisateur, il vous faudra créer une nouvelle adresse mail, puis créer un nouveau compte Tchap. </div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_008")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi dois-je activer la conservation des cookies pour Tchap sur mon navigateur web ? </title>
 									<div className="tc_text_nl">Après une nouvelle connexion (lorsque vous entrez votre adresse e-mail professionnelle et votre mot de passe), vous ne pouvez pas lire les messages échangés auparavant.</div>
 									<div className="tc_text_nl">Pour cette raison, il est déconseillé de se déconnecter de Tchap.<br/>Si votre navigateur web provoque une déconnexion automatique de votre session Tchap à chaque fermeture, il est recommandé de changer ce réglage dans les paramètres de votre navigateur en autorisant la conservation des cookies pour  <GenericLink className="tc_FaqComponent_link" to={"https://www.tchap.gouv.fr"}> https://www.tchap.gouv.fr/</GenericLink></div>
-									<div className="tc_text_nl">Voir aussi :</div>
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
@@ -371,14 +370,15 @@ class FaqComponent extends Component {
 													<img src={require("images/faq/create_ext_mobile.jpg")} width="500" className="tc_FaqComponent_wimg_mobile" alt="Création 1:1 externe mobile"/>
 												</Grid>
 												<Grid item xl={6}>
-													<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”. Dans la barre de saisie, renseignez l'adresse mail professionnelle de la personne que vous voulez inviter et validez.</div>
+													<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”.</div>
 													<img src={require("images/pem/create_dm_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création 1:1 externe web"/>
 												</Grid>
 											</Grid>
 										</li>
+										<li>Dans la barre de saisie, renseignez l'adresse mail professionnelle de la personne que vous voulez inviter et validez.</li>
 										<li>Une invitation lui est automatiquement envoyée par e-mail. Vous serez notifié lorsque cette personne aura créé son compte, et pourrez ensuite commencer à échanger.</li>
 									</ul>
-									<div className="tc_text_nl"><span className="tc_text_b">Pour inviter un partenaire externe à rejoindre un salon privé</span>, assurez-vous d’abord que ce salon privé est bien “ouvert aux externes” (depuis les paramètres du salon). Si vous en êtes administrateur ou modérateur, vous pourrez ensuite inviter la personne en renseignant son adresse e-mail depuis l’interface de gestion des membres du salon.</div>
+									<div className="tc_text_nl"><span className="tc_text_b">Pour inviter un partenaire externe à rejoindre un salon privé</span>, assurez-vous d’abord que ce salon privé est bien “ouvert aux externes” (depuis les paramètres du salon). Si vous en êtes administrateur ou modérateur, vous pourrez ensuite inviter la personne en renseignant son adresse mail depuis l’interface de gestion des membres du salon.</div>
 									<div className="tc_text_nl"><span className="tc_text_b">À noter:</span> les partenaires externes n’ont pas accès aux salons forums.</div>
 
 									<SeeMoreLinks
@@ -402,7 +402,7 @@ class FaqComponent extends Component {
 											<img src={require("images/pem/create_room_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile" width="485"/>
 										</Grid>
 										<Grid item xl={6}>
-											<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “messages directs”.</div>
+											<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “salons”.</div>
 											<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>					
 										</Grid>
 									</Grid>
@@ -707,7 +707,7 @@ class FaqComponent extends Component {
 										<ol>
 											<li>Rendez-vous dans les paramètres de Tchap :
 												<div>
-													<span className="tc_text_b">Sur le web :</span> section “Sécurité et Vie Privée” >> “Exporter les clés de chiffrement de salon”
+													<span className="tc_text_b">Sur le web :</span> section “Sécurité et Vie Privée” >> “Sauvegardez vos Clés Tchap”
 												</div>
 												<div>
 													<img src={require("images/faq/export_keys_web.png")}
@@ -715,7 +715,7 @@ class FaqComponent extends Component {
 																className="tc_FaqComponent_border"/>
 												</div>
 												<div>
-													<span className="tc_text_b">Sur mobile :</span> section “Chiffrement” >> “Exporter les clés”
+													<span className="tc_text_b">Sur mobile :</span> section “Chiffrement” >> “Exporter les clés manuellement”
 												</div>
 												<div>
 													<img src={require("images/faq/export_keys_mobile.jpeg")}
@@ -742,7 +742,7 @@ class FaqComponent extends Component {
 										<ol>
 											<li>Rendez-vous dans les paramètres de Tchap :
 												<div>
-													<span className="tc_text_b">Sur le web :</span> section “Sécurité et Vie Privée” >> “Importer les clés de chiffrement de bout en bout”
+													<span className="tc_text_b">Sur le web :</span> section “Sécurité et Vie Privée” >> “Importez vos Clés Tchap depuis le fichier sauvegardé”
 												</div>
 												<div>
 													<img src={require("images/faq/export_keys_web.png")}
@@ -791,7 +791,7 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment faire en sorte que ma session sur Tchap web ne se déconnecte pas automatiquement ? </title>
 									<div className="tc_text_nl">
 										<div>Lorsque vous utilisez la version web de Tchap, il est possible que votre session Tchap se déconnecte à chaque fermeture de votre navigateur, entrainant une perte vos clés Tchap (clés de chiffrement).</div>
-										<div>Pour palier à cette difficulté, vous devez vous rendre dans les paramètres de votre navigateur et autoriser la conservation des cookies pour la page https://www.tchap.gouv.fr/.</div>
+										<div>Pour pallier à cette difficulté, vous devez vous rendre dans les paramètres de votre navigateur et autoriser la conservation des cookies pour la page https://www.tchap.gouv.fr/.</div>
 
 
 										<div>La marche à suivre dépend de votre navigateur :</div>
@@ -802,7 +802,6 @@ class FaqComponent extends Component {
 
 										</ul>
 										<div>A noter : il est possible qu’une intervention de vos services informatiques soit nécéssaire pour modifier ces paramètres.</div>
-										<div>Voici aussi :</div>
 									</div>
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
@@ -820,7 +819,7 @@ class FaqComponent extends Component {
 										<div>Vous pouvez déverrouiller vos messages comme suit :</div>
 										<ol>
 											<li>
-												Sur l'appareil sur lequel les messages sont verrouillés, cliquez sur “Renvoyer” (en dessous du texte qui s'affiche à la place de vos messages)
+												Sur l'appareil sur lequel les messages sont verrouillés, cliquez sur “Renvoyer une demande à un autre appareil” (en dessous du texte qui s'affiche à la place de vos messages)
 											</li>
 											<div>
 													<img src={require("images/faq/resend_request.png")}
@@ -1010,13 +1009,13 @@ class FaqComponent extends Component {
 									</ul>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq06_003")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que faire si je ne reçois pas l'e-mail de création de compte ?</title>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que faire si je ne reçois pas le mail de création de compte ?</title>
 									<div className="tc_text_nl">Voici quelques vérifications que vous pouvez effectuer :</div>
 									<ul>
 										<li>Vérifiez votre dossier "courriers indésirables", "pourriels" ou "spams"</li>
 										<li>Vérifiez que vous ne possédez pas déjà un compte Tchap avec cette adresse mail, par exemple en faisant une demande de réinitialisation de mot de passe sur Tchap</li>
 										<li>Vérifiez que votre compte a bien été créé, en recommençant votre procédure d'inscription</li>
-										<li>Contactez vos services informatiques pour vous assurer que les e-mails de Tchap ne sont pas bloqués</li>
+										<li>Contactez vos services informatiques pour vous assurer que les mails de Tchap ne sont pas bloqués</li>
 									</ul>
 									<div className="tc_text_nl">Si le problème persiste, n'hésitez pas à contacter le support de Tchap : <GenericLink className="tc_FaqComponent_link" to={"mailto:" + t("links.support")}>{t("links.support")}</GenericLink></div>
 								</GenericAccordion>
@@ -1054,12 +1053,12 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq02_004")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Un partenaire externe ne parvient pas à créer son compte : que faire ?</title>
 									<ul>
-										<li>Vérifier que l’e-mail d’invitation n’a pas été filtré dans les spams du partenaire externe</li>
-										<li>Vérifier que le partenaire externe utilise bien l’adresse e-mail qui a été renseignée dans l’invitation pour créer son compte</li>
-										<li>Vérifier que l’adresse e-mail saisie au moment de l’invitation ne contient pas de coquille</li>
-										<li>Vérifier que l’adresse e-mail a été saisie sans majuscules : Tchap étant sensible à la casse, il est important que l’adresse e-mail soit renseignée sans majuscules dans l’invitation et au moment de l’inscription.</li>
+										<li>Vérifier que le mail d’invitation n’a pas été filtré dans les spams du partenaire externe</li>
+										<li>Vérifier que le partenaire externe utilise bien l’adresse mail qui a été renseignée dans l’invitation pour créer son compte</li>
+										<li>Vérifier que l’adresse mail saisie au moment de l’invitation ne contient pas de coquille</li>
+										<li>Vérifier que l’adresse mail a été saisie sans majuscules : Tchap étant sensible à la casse, il est important que l’adresse mail soit renseignée sans majuscules dans l’invitation et au moment de l’inscription.</li>
 									</ul>
-									<div className="tc_text_nl">Si l’adresse e-mail saisie au moment de l’invitation contient une erreur ou des majuscules, il sera nécessaire de recommencer l’invitation.</div>
+									<div className="tc_text_nl">Si l’adresse mail saisie au moment de l’invitation contient une erreur ou des majuscules, il sera nécessaire de recommencer l’invitation.</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_004")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je ne parviens pas à lire les messages provenant d’une personne en particulier</title>
