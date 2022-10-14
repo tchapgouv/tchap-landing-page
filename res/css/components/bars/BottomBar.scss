@@ -1,0 +1,6 @@
+/* Makes the footer content larger to feature more secondary links */
+@media (min-width: 62em) {
+    .fr-footer__content {
+        flex-basis: 70%;
+    }
+}
