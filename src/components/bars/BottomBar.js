@@ -45,6 +45,11 @@ class BottomBar extends Component {
 									</a>
 								</li>
 								<li class="fr-footer__content-item">
+									<a class="fr-footer__content-link" href="/assets/download/Tchap-KitVisuel.zip" data-probe-name="github" onClick={this._hookProbe}>
+										Télécharger le kit visuel Tchap
+									</a>
+								</li>
+								<li class="fr-footer__content-item">
 									<a class="fr-footer__content-link" href="https://beta.gouv.fr" data-probe-name="betagouv" onClick={this._hookProbe}>
 										beta.gouv.fr
 									</a>
