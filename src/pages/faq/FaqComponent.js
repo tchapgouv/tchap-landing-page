@@ -291,7 +291,8 @@ class FaqComponent extends Component {
 								</GenericAccordion>
                                                                 <GenericAccordion {...this._generateProps("tcq02_009")}>
                                                                 <title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" /> Je ne parviens pas à confirmer le mail de réinitialisation du mot de passe.</title> 
-								<div className="tc_text_nl">Nous vous invitons à transférer le mail de réinitialisation du mot de passe sur une adresse mail accesible sur un appareil ayant un accès à internet afin de poursuivre la procédure de réinitialisation.</div>
+								<div className="tc_text_nl">Nous vous invitons à transférer le mail de réinitialisation du mot de passe sur une adresse mail accessible sur un appareil ayant un accès à internet afin de poursuivre la procédure de réinitialisation.</div>
+
                                                                 <div className="tc_text_nl">En effet certains appareils sécurisés ne permettent pas l’accès à internet et donc de confirmer la réinitialisation du mot de passe.</div>
 								</GenericAccordion>
                                                                 <div id="tcq03_000" className="tc_FaqComponent_section">Echanger sur Tchap</div>
