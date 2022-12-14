@@ -16,6 +16,7 @@ import "styles/pages/faq/FaqComponent.scss";
 
 class FaqComponent extends Component {
 
+	//is this var still needed?
 	static defaultState = {
 		"tcq01_001": false,
 		"tcq01_002": false,
@@ -197,18 +198,18 @@ class FaqComponent extends Component {
 											{ to: "#tcq03_004", text: "Comment inviter un partenaire externe à rejoindre Tchap ?" },
 										]}/>
 								</GenericAccordion>
-                                                                <GenericAccordion {...this._generateProps("tcq01_003")}>
-                                                                <title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je ne suis pas agent public, comment accéder à Tchap ?"</title>
-                                                                <div className="tc_text_nl">Tchap est une messagerie sécurisée réservée aux agents publics.</div>
-                                                                <div className="tc_text_nl">Si vous souhaitez accéder à Tchap, vous devez être invité par un agent public ayant un compte actif.</div>
-                                                                <div className="tc_text_nl">En tant qu’invité, vous ne pouvez accéder qu’aux conversations (privées ou salons) pour lesquelles vous avez reçu un lien d’invitation.</div>
-								<SeeMoreLinks
-										onClick={this._onLocationChange}
-										links={[
-											{ to: "#tcq03_004", text: "Comment inviter un partenaire externe à rejoindre Tchap ?" },
-										]}/>
-                                                                </GenericAccordion>
-                                                                <div id="tcq02_000" className="tc_FaqComponent_section">Gestion du compte</div>
+								<GenericAccordion {...this._generateProps("tcq01_003")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je ne suis pas agent public, comment accéder à Tchap ?</title>
+									<div className="tc_text_nl">Tchap est une messagerie sécurisée réservée aux agents publics.</div>
+									<div className="tc_text_nl">Si vous souhaitez accéder à Tchap, vous devez être invité par un agent public ayant un compte actif.</div>
+									<div className="tc_text_nl">En tant qu’invité, vous ne pouvez accéder qu’aux conversations (privées ou salons) pour lesquelles vous avez reçu un lien d’invitation.</div>
+									<SeeMoreLinks
+											onClick={this._onLocationChange}
+											links={[
+												{ to: "#tcq03_004", text: "Comment inviter un partenaire externe à rejoindre Tchap ?" },
+											]}/>
+								</GenericAccordion>
+								<div id="tcq02_000" className="tc_FaqComponent_section">Gestion du compte</div>
 								<GenericAccordion {...this._generateProps("tcq02_001")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment s'inscrire ?</title>
 									<div>Pour vous inscrire sur Tchap :</div>
@@ -289,13 +290,12 @@ class FaqComponent extends Component {
 											{ to: "#tcq07_005", text: "Comment faire pour que ma session sur Tchap web ne se déconnecte pas automatiquement ?" },
 										]}/>
 								</GenericAccordion>
-                                                                <GenericAccordion {...this._generateProps("tcq02_009")}>
-                                                                <title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" /> Je ne parviens pas à confirmer le mail de réinitialisation du mot de passe.</title> 
-								<div className="tc_text_nl">Nous vous invitons à transférer le mail de réinitialisation du mot de passe sur une adresse mail accessible sur un appareil ayant un accès à internet afin de poursuivre la procédure de réinitialisation.</div>
-
-                                                                <div className="tc_text_nl">En effet certains appareils sécurisés ne permettent pas l’accès à internet et donc de confirmer la réinitialisation du mot de passe.</div>
+								<GenericAccordion {...this._generateProps("tcq02_009")}>
+										<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" /> Je ne parviens pas à confirmer le mail de réinitialisation du mot de passe.</title> 
+										<div className="tc_text_nl">Nous vous invitons à transférer le mail de réinitialisation du mot de passe sur une adresse mail accessible sur un appareil ayant un accès à internet afin de poursuivre la procédure de réinitialisation.</div>
+										<div className="tc_text_nl">En effet certains appareils sécurisés ne permettent pas l’accès à internet et donc de confirmer la réinitialisation du mot de passe.</div>
 								</GenericAccordion>
-                                                                <div id="tcq03_000" className="tc_FaqComponent_section">Echanger sur Tchap</div>
+								<div id="tcq03_000" className="tc_FaqComponent_section">Echanger sur Tchap</div>
 								<GenericAccordion {...this._generateProps("tcq03_001")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Quels sont les différents types de conversations sur Tchap ?</title>
 									<Grid container className="tc_FaqComponent_grid">
@@ -631,17 +631,17 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl">Si le salon est public, il faut d'abord le transformer en salon privé pour le retirer de la liste des salons forums.</div>
 									<div className="tc_text_nl">Pour fermer complètement un salon, un administrateur doit exclure tous les participants puis le quitter lui-même. Le salon ne sera alors plus visible, et les invitations acceptées ultérieurement ne fonctionneront pas.</div>
 								</GenericAccordion>
-                                                                <GenericAccordion {...this._generateProps("tcq04_007")}>
+								<GenericAccordion {...this._generateProps("tcq04_007")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je souhaite créer un salon privé où seuls les administrateurs peuvent envoyer des messages, comment procéder ?</title> 
-                                                                    <ul>
-                                                                               <li>Créer votre salon (privé, privé avec externes ou forum public)</li>
-                                                                               <li>Vous rendre dans les informations du salon</li> 
-                                                                               <li>Cliquer sur “Paramètres du Salon”</li>
-                                                                               <li>Aller dans “Rôles et Permissions”</li>
-                                                                               <li> Donner les droits "envoyer des messages" à l’administrateur</li>
-                                                                     </ul>
-                                                                           <div className="tc_text_nl">Ainsi les participants ne pourront envoyer des messages.</div>
-                                                                </GenericAccordion>
+									<ul>
+												<li>Créer votre salon (privé, privé avec externes ou forum public)</li>
+												<li>Vous rendre dans les informations du salon</li> 
+												<li>Cliquer sur “Paramètres du Salon”</li>
+												<li>Aller dans “Rôles et Permissions”</li>
+												<li>Donner les droits "envoyer des messages" à l’administrateur</li>
+										</ul>
+											<div className="tc_text_nl">Ainsi les participants ne pourront envoyer des messages.</div>
+								</GenericAccordion>
 								<div id="tcq05_000" className="tc_FaqComponent_section">Sécurité des échanges</div>
 								<GenericAccordion {...this._generateProps("tcq05_001")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment la confidentialité des échanges est-elle garantie ?</title>
