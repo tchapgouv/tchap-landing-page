@@ -417,6 +417,7 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que faire si je ne souhaite pas apparaître dans l'annuaire ?</title>
 									<div className="tc_text_nl">Si vous ne souhaitez pas apparaître dans les résultats de recherche d'utilisateurs, vous pouvez vous mettre sur <span className="tc_text_b">liste rouge</span> dans les Paramètres de Tchap.</div>
 									<div className="tc_text_nl">Les autres utilisateurs ne pourront ainsi plus vous trouver, ni vous contacter, sauf s'ils renseignent votre adresse mail complète dans la barre de recherche.</div>
+									<div className="tc_text_nl">Cette option est disponible uniquement sur les appareils mobiles Android et iOS (iPhone, iPad)</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_006")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment rejoindre un salon ?</title>
