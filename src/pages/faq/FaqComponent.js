@@ -42,6 +42,17 @@ class FaqComponent extends Component {
 		"tcq06_002": false,
 		"tcq06_003": false,
 		"tcq06_004": false,
+		"tcq06_005": false,
+		"tcq06_006": false,
+		"tcq06_007": false,
+		"tcq07_001": false,
+		"tcq07_002": false,
+		"tcq07_003": false,
+		"tcq07_004": false,
+		"tcq07_005": false,
+		"tcq08_001": false,
+		"tcq08_002": false,
+		"tcq08_003": false,
 	};
 
 	constructor(props) {
@@ -101,7 +112,7 @@ class FaqComponent extends Component {
 		const ancestorWithId = currentTarget.closest(".tc_FaqComponent_Accordion");
 		const linkId = ancestorWithId.id;
 		const baseUrl = location.href;
-		const sHash = location.href.split("#")[2];
+		const sHash = location.href.split("#")[1];
 		const anchorUrl = Boolean(sHash) ? baseUrl.replace(sHash, linkId) : `${baseUrl}#${linkId}`;
 
 		navigator.clipboard.writeText(anchorUrl).then(() => {
@@ -1050,7 +1061,7 @@ class FaqComponent extends Component {
                                                                         <div className="tc_text_nl"><GenericLink className="tc_FaqComponent_link" to={"mailto:" + t("links.support")}>{t("links.support")}</GenericLink></div>
                                                                                                                      
 								</GenericAccordion>
-								<GenericAccordion {...this._generateProps("tcq02_004")}>
+								<GenericAccordion {...this._generateProps("tcq06_006")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Un partenaire externe ne parvient pas à créer son compte : que faire ?</title>
 									<ul>
 										<li>Vérifier que le mail d’invitation n’a pas été filtré dans les spams du partenaire externe</li>
@@ -1060,7 +1071,7 @@ class FaqComponent extends Component {
 									</ul>
 									<div className="tc_text_nl">Si l’adresse mail saisie au moment de l’invitation contient une erreur ou des majuscules, il sera nécessaire de recommencer l’invitation.</div>
 								</GenericAccordion>
-								<GenericAccordion {...this._generateProps("tcq02_004")}>
+								<GenericAccordion {...this._generateProps("tcq06_007")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je ne parviens pas à lire les messages provenant d’une personne en particulier</title>
 									<div className="tc_text_nl">Il peut arriver que les messages d’une personne spécifique deviennent illisibles. Il s’agit d’une anomalie qui peut être résolue de la façon suivante : </div>									<ul>
 										<li>Rendez-vous dans les paramètres de Tchap </li>
