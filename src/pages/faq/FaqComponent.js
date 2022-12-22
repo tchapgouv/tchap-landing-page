@@ -200,7 +200,7 @@ class FaqComponent extends Component {
 										<li>Ils doivent être invités par un agent public pour pouvoir créer un compte.</li>
 										<li>Ils ne peuvent participer qu'aux échanges auxquels ils ont été invités.</li>
 										<li>Ils ne peuvent pas créer d'échanges en dehors de ceux auxquels ils ont été invités.</li>
-										<li>Ils n'ont pas accès à l'annuaire des utilisateurs de Tchap, ni aux salons forums.</li>
+										<li>Ils n'ont pas accès à l'annuaire des membres de Tchap, ni aux salons forums.</li>
 									</ul>
 
 									<SeeMoreLinks
@@ -289,7 +289,7 @@ class FaqComponent extends Component {
 								<GenericAccordion {...this._generateProps("tcq02_007")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment modifier mon nom sur Tchap ?</title>
 									<div className="tc_text_nl">Votre nom d’affichage sur Tchap est automatiquement déduit de votre adresse mail, sur la base d’une construction prénom.nom@adresse.fr</div>
-									<div className="tc_text_nl">Pour des raisons de sécurité, il est impossible de le modifier.<br/>Si vous souhaitez changer votre nom d’utilisateur, il vous faudra créer une nouvelle adresse mail, puis créer un nouveau compte Tchap. </div>
+									<div className="tc_text_nl">Pour des raisons de sécurité, il est impossible de le modifier.<br/>Si vous souhaitez changer votre nom de membre, il vous faudra créer une nouvelle adresse mail, puis créer un nouveau compte Tchap. </div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_008")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi dois-je activer la conservation des cookies pour Tchap sur mon navigateur web ? </title>
@@ -316,7 +316,7 @@ class FaqComponent extends Component {
 										<Grid item xl={10}>
 											<span className="tc_text_b">Les messages directs sont :</span>
 											<ul>
-												<li>des conversations entre deux utilisateurs</li>
+												<li>des conversations entre deux membres de Tchap</li>
 												<li>accessibles aux agents publics et aux partenaires externes</li>
 												<li>chiffrés de bout en bout</li>
 											</ul>
@@ -329,7 +329,7 @@ class FaqComponent extends Component {
 										<Grid item xl={10}>
 											<span className="tc_text_b">Les salons privés sont :</span>
 											<ul>
-												<li>des conversations entre plusieurs utilisateurs</li>
+												<li>des conversations entre plusieurs membres de Tchap</li>
 												<li>trouvables et accessibles sur invitation uniquement</li>
 												<li>accessibles aux agents publics et aux partenaires externes</li>
 												<li>chiffrés de bout en bout</li>
@@ -360,7 +360,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_003")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment démarrer une nouvelle conversation ?</title>
-									<div className="tc_text_nl">L'annuaire intégré vous permet d'entrer en contact direct avec l'ensemble des utilisateurs de Tchap.</div>
+									<div className="tc_text_nl">L'annuaire intégré vous permet d'entrer en contact direct avec l'ensemble des membres de Tchap.</div>
 									<div className="tc_text_nl">Pour démarrer une nouvelle conversation :</div>
 									<ul className="tc_list_decimal">
 										<li>
@@ -415,8 +415,8 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_005")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que faire si je ne souhaite pas apparaître dans l'annuaire ?</title>
-									<div className="tc_text_nl">Si vous ne souhaitez pas apparaître dans les résultats de recherche d'utilisateurs, vous pouvez vous mettre sur <span className="tc_text_b">liste rouge</span> dans les Paramètres de Tchap.</div>
-									<div className="tc_text_nl">Les autres utilisateurs ne pourront ainsi plus vous trouver, ni vous contacter, sauf s'ils renseignent votre adresse mail complète dans la barre de recherche.</div>
+									<div className="tc_text_nl">Si vous ne souhaitez pas apparaître dans les résultats de recherche des membres, vous pouvez vous mettre sur <span className="tc_text_b">liste rouge</span> dans les Paramètres de Tchap.</div>
+									<div className="tc_text_nl">Les autres membres de Tchap ne pourront ainsi plus vous trouver, ni vous contacter, sauf s'ils renseignent votre adresse mail complète dans la barre de recherche.</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_006")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment rejoindre un salon ?</title>
@@ -446,7 +446,7 @@ class FaqComponent extends Component {
 									Le cadre de l’usage de Tchap est fixé par ses <a target="_blank" href="/cgu">Conditions Générales d’Utilisation</a>, et notamment par leur article n°3. 
 									</div>
 									<div className="tc_text_nl">
-									Chaque utilisateur de Tchap est tenu de respecter ces directives.
+									Chaque membre de Tchap est tenu de respecter ces directives.
 									</div>
 									<div> </div>
 									<div className="tc_text_nl">
@@ -489,9 +489,9 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl"><span className="tc_text_b">Si le salon est un Forum public</span></div>
 									<ol>
 										<li>L’équipe Tchap contacte directement les administrateurs et modérateurs du forum pour demander une mise en conformité du salon avec les CGU.</li>
-										<li>Sans mise en conformité dans les délais indiqués, l’équipe Tchap poste un message de rappel à l’ordre aux utilisateurs sur le forum.</li>
+										<li>Sans mise en conformité dans les délais indiqués, l’équipe Tchap poste un message de rappel à l’ordre aux membres sur le forum.</li>
 										<li>Si malgré cela, le salon n’est pas mis en conformité, l’équipe contacte le correspondant Tchap de l’administration dont dépend le forum, afin de lui demander la nomination d’un nouvel administrateur.</li>
-										<li>En l’absence de réponse du correspondant, ou à sa demande, et après en avoir informé les utilisateurs, le forum peut éventuellement être fermé.</li>
+										<li>En l’absence de réponse du correspondant, ou à sa demande, et après en avoir informé les membres, le forum peut éventuellement être fermé.</li>
 									</ol>
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
@@ -540,9 +540,9 @@ class FaqComponent extends Component {
 										<Grid item xl={10}>
 											<span className="tc_text_b">Créer un Salon Forum</span>
 											<ul className="tc_list_nobullet">
-												<li>Pour que le salon soit visible et ouvert à tous les utilisateurs de Tchap (sauf partenaires externes), choisissez “Salon Forum”.</li>
-												<li>Le Salon Forum est recommandé s'il vise à aborder des sujets transverses susceptibles d'intéresser d'autres utilisateurs de Tchap.</li>
-												<li>Veillez à ce que le nom du Salon Forum soit le plus explicite possible pour que les utilisateurs puissent le trouver facilement.</li>
+												<li>Pour que le salon soit visible et ouvert à tous les membres de Tchap (sauf partenaires externes), choisissez “Salon Forum”.</li>
+												<li>Le Salon Forum est recommandé s'il vise à aborder des sujets transverses susceptibles d'intéresser d'autres membres de Tchap.</li>
+												<li>Veillez à ce que le nom du Salon Forum soit le plus explicite possible pour que les membres puissent le trouver facilement.</li>
 											</ul>
 										</Grid>
 									</Grid>
@@ -587,9 +587,9 @@ class FaqComponent extends Component {
 									notamment en cas de diffusion de contenus inappropriés, les administrateurs et modérateurs du salon ont le devoir d’intervenir :
 									</div>
 									<ul>
-										<li>en rappelant à l’ordre les utilisateurs concernés</li>
+										<li>en rappelant à l’ordre les membres concernés</li>
 										<li>en supprimant les contenus non conformes</li>
-										<li>en bannissant les utilisateurs concernés du salon en cas de récidive</li>
+										<li>en bannissant les membres concernés du salon en cas de récidive</li>
 									</ul>
 									<div className="tc_text_nl">Si un salon n’est pas administré en conformité avec les CGU de Tchap, une intervention de l’administration d’origine de ses administrateurs peut être sollicitée, et la fermeture du salon peut être envisagée.</div>
 									<SeeMoreLinks
@@ -600,14 +600,14 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_003")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment inviter des participants à rejoindre un salon ?</title>
-									<div className="tc_text_nl">Pour les salons privés, seuls les administrateurs peuvent inviter des utilisateurs à rejoindre la conversation.</div>
-									<div className="tc_text_nl">Pour les salons publics, l'invitation n'est pas indispensable mais peut être utilisée pour inviter des utilisateurs à rejoindre le salon.</div>
+									<div className="tc_text_nl">Pour les salons privés, seuls les administrateurs peuvent inviter des membres à rejoindre la conversation.</div>
+									<div className="tc_text_nl">Pour les salons publics, l'invitation n'est pas indispensable mais peut être utilisée pour inviter des membres à rejoindre le salon.</div>
 									<div className="tc_text_nl">Pour envoyer des invitations, rendez-vous dans les paramètres du salon, et cliquez sur "inviter dans ce salon". Plusieurs possibilités s'offrent alors à vous :</div>
 									<ul>
-										<li>Inviter les membres un par un en les recherchant dans l'annuaire des utilisateurs de Tchap</li>
+										<li>Inviter les membres un par un en les recherchant dans l'annuaire des membres de Tchap</li>
 										<li>Inviter plusieurs membres à la fois en important un fichier .txt ou .csv contenant les adresses e-mail des interlocuteurs visés.</li>
 									</ul>
-									<div className="tc_text_nl">Vous pouvez également partager le lien d'un salon pour inviter des utilisateurs à le rejoindre.</div>
+									<div className="tc_text_nl">Vous pouvez également partager le lien d'un salon pour inviter des membres à le rejoindre.</div>
 									<div className="tc_text_nl">S'il s'agit d'un salon privé, assurez-vous au préalable d'avoir autorisé l'accès au salon par lien (dans les paramètres du salon). Attention : si cette option est activée, chaque personne disposant du lien pourra accéder au salon privé.</div>
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
@@ -658,7 +658,7 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment la confidentialité des échanges est-elle garantie ?</title>
 									<div className="tc_text_nl">Tous les messages échangés sur Tchap (hors Salons Forums) sont chiffrés de bout en bout. Concrètement, cela signifie que jamais personne d'autre que les auteurs et destinataires des messages n'y ont accès. </div>
 									<div className="tc_text_nl">Comment cela fonctionne-t-il ? </div>
-									<div className="tc_text_nl">Chaque utilisateur de Tchap dispose de clés de chiffrement appelées Clés Tchap qui permettent de chiffrer et de déchiffrer les messages reçus et envoyés. Ces clés sont stockées sur vos appareils, et se renouvellent régulièrement de façon automatique (à chaque nouvelle connexion par exemple).</div>
+									<div className="tc_text_nl">Chaque membres de Tchap dispose de clés de chiffrement appelées Clés Tchap qui permettent de chiffrer et de déchiffrer les messages reçus et envoyés. Ces clés sont stockées sur vos appareils, et se renouvellent régulièrement de façon automatique (à chaque nouvelle connexion par exemple).</div>
 									<div className="tc_text_nl">Cela signifie que même en cas de vol de vos identifiants ou d'interception de vos messages, vos échanges restent indéchiffrables.</div>
 									<div className="tc_text_nl">Pour vous assurer que vos messages restent toujours lisibles pour vous, pensez à exporter et sauvegarder vos Clés Tchap à chaque fois que vous envisagez une déconnexion !</div>
 									<SeeMoreLinks
