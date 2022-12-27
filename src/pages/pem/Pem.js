@@ -119,18 +119,18 @@ class Pem extends Component {
 							<div className="tc_Pem_Content_text">Si celles de l’application sont activées par défaut, pensez à les autoriser sur votre appareil. Un simple tour dans les réglages de votre dispositif devrait vous permettre de vous en assurer ! Vous pouvez également choisir les notifications que vous souhaitez recevoir en les activant ou désactivant pour chaque salon.</div>
 							<div className="tc_Pem_Content_subtitle">Conserver son historique</div>
 							<div className="tc_Pem_Content_text">Pour conserver l’historique de vos échanges, nous vous recommandons de ne pas vous déconnecter de Tchap. A ce titre, nous vous invitons à maintenir une session active sur au moins deux appareils (un mobile et un ordinateur par exemple).</div>
-							<div className="tc_Pem_Content_text">Nous vous invitons également à exporter vos clés de chiffrement à chaque fois que vous envisagez une déconnexion (Réglages >> Exporter les clés de chiffrement).</div>
+							<div className="tc_Pem_Content_text">Nous vous invitons également à exporter vos clés Tchap à chaque fois que vous envisagez une déconnexion (Réglages >> Exporter les clés Tchap).</div>
 							<div className="tc_Pem_Content_subtitle">Pourquoi est-il important de suivre cette ultime recommandation ?</div>
 							<div className="tc_Pem_Content_text">Afin de garantir la sécurité des échanges au sein de l’application, Tchap a mis en place un chiffrement de bout en bout des messages échangés.</div>
-							<div className="tc_Pem_Content_text">Chaque utilisateur dispose donc de son propre trousseau de clés afin de chiffrer puis déchiffrer automatiquement ses messages. Or, par mesure de sécurité, ce trousseau se renouvelle régulièrement (notamment à chaque nouvelle connexion).</div>
-							<div className="tc_Pem_Content_text">Si aucun de vos dispositifs ne détient vos clés de chiffrement les plus récentes, vous serez dans l’incapacité de lire l’historique de vos conversations !</div>
+							<div className="tc_Pem_Content_text">Chaque membre dispose donc de son propre trousseau de clés afin de chiffrer puis déchiffrer automatiquement ses messages. Or, par mesure de sécurité, ce trousseau se renouvelle régulièrement (notamment à chaque nouvelle connexion).</div>
+							<div className="tc_Pem_Content_text">Si aucun de vos dispositifs ne détient vos clés Tchap les plus récentes, vous serez dans l’incapacité de lire l’historique de vos conversations !</div>
 
 							<div className="tc_Pem_Content_title" id="tcp02_001"><LinkIcon onClick={this._handleCopyClick} className="tc_Pem_Content_title_icon" /> 2. Les différents types de conversation</div>
 							<div className="tc_Pem_Content_withAvatar">
 								<img src={require("images/pem/avatar_dm.png")} alt="Avatar DM"/>
 								<div>
 									<div className="tc_Pem_Content_subsubtitle">Les messages directs</div>
-									<div className="tc_Pem_Content_text">Entre deux utilisateurs, ces conversations privées sont chiffrées de bout en bout.</div>
+									<div className="tc_Pem_Content_text">Entre deux membres, ces conversations privées sont chiffrées de bout en bout.</div>
 								</div>
 							</div>
 							<div className="tc_Pem_Content_withAvatar">
@@ -144,12 +144,12 @@ class Pem extends Component {
 								<img src={require("images/pem/avatar_forum.png")} alt="Avatar Forum"/>
 								<div>
 									<div className="tc_Pem_Content_subsubtitle">Les salons forums</div>
-									<div className="tc_Pem_Content_text">Trouvables et accessibles pour tous les utilisateurs de Tchap, ces conversation de groupe publiques ne sont pas chiffrées.</div>
+									<div className="tc_Pem_Content_text">Trouvables et accessibles pour tous les membres de Tchap, ces conversation de groupe publiques ne sont pas chiffrées.</div>
 								</div>
 							</div>
 
 							<div className="tc_Pem_Content_title" id="tcp03_001"><LinkIcon onClick={this._handleCopyClick} className="tc_Pem_Content_title_icon" /> 3. Rechercher des interlocuteurs pour démarrer une conversation</div>
-							<div className="tc_Pem_Content_text">L'annuaire intégré vous permet d'entrer en contact direct avec l'ensemble des utilisateurs de Tchap.</div>
+							<div className="tc_Pem_Content_text">L'annuaire intégré vous permet d'entrer en contact direct avec l'ensemble des membres de Tchap.</div>
 							<div className="tc_Pem_Content_withImage_double">
 								<div className="tc_Pem_Content_withImage">
 									<img src={require("images/pem/create_mobile.png")}  alt="Nouveau DM mobile" height="250"/>
@@ -164,7 +164,7 @@ class Pem extends Component {
 							<div className="tc_Pem_Content_subtitle">Qu'est-ce qu'un “invité externe” ?</div>
 							<div className="tc_Pem_Content_text">Afin de centraliser vos échanges, vous pouvez inviter des partenaires externes à l'administration à rejoindre vos discussions sur Tchap. Ils ne pourront néanmoins participer qu'aux conversations auxquelles ils seront expressément invités, et n'auront accès ni à l'annuaire, ni aux salons forums.</div>
 							<div className="tc_Pem_Content_text">
-								Pour inviter un partenaire externe, recherchez l’adresse e-mail de votre interlocuteur dans l’annuaire :
+								Pour inviter un partenaire externe, recherchez l’adresse mail de votre interlocuteur dans l’annuaire :
 								<ul>
 									<li>Si cette personne utilise déjà Tchap, vous pourrez démarrer la conversation</li>
 									<li>Si ce n’est pas le cas, une invitation à créer un compte “invité externe” lui sera adressée par courriel</li>
@@ -206,7 +206,7 @@ class Pem extends Component {
 								<img src={require("images/pem/avatar_forum.png")}  alt="Création d'un salon forum"/>
 								<div>
 									<div className="tc_Pem_Content_subsubtitle">Créer un Salon Forum</div>
-									<div className="tc_Pem_Content_text">Pour que le salon soit visible et ouvert à tous les utilisateurs de Tchap (sauf invités externes), choisissez “Salon Forum”.</div>
+									<div className="tc_Pem_Content_text">Pour que le salon soit visible et ouvert à tous les membres de Tchap (sauf invités externes), choisissez “Salon Forum”.</div>
 								</div>
 							</div>
 							<div className="tc_Pem_Content_text">Une fois que votre salon est créé, vous en êtes l’administrateur par défaut !</div>
