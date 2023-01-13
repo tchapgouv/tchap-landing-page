@@ -185,14 +185,14 @@ class Pem extends Component {
 							<div className="tc_Pem_Content_withImage_double">
 								<div className="tc_Pem_Content_withImage">
 									<img src={require("images/pem/create_mobile.png")}  alt="Nouveau forum mobile" height="250"/>
-									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un salon forum”. </div>
+									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un forum”. </div>
 								</div>
 								<div className="tc_Pem_Content_withImage">
 									<img src={require("images/pem/create_room_web.png")}  alt="Nouveau forum web"/>
 									<div className="tc_Pem_Content_text"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “Salons”.</div>
 								</div>
 							</div>
-							<div className="tc_Pem_Content_text">Et si vous ne trouvez pas votre bonheur, n'hésitez pas à créer un nouveau salon forum pour discuter des sujets qui vous importent !</div>
+							<div className="tc_Pem_Content_text">Et si vous ne trouvez pas votre bonheur, n'hésitez pas à créer un nouveau forum pour discuter des sujets qui vous importent !</div>
 
 							<div className="tc_Pem_Content_title" id="tcp05_001"><LinkIcon onClick={this._handleCopyClick} className="tc_Pem_Content_title_icon" /> 5. Créer et administrer un salon</div>
 							<div className="tc_Pem_Content_withAvatar">
@@ -203,10 +203,10 @@ class Pem extends Component {
 								</div>
 							</div>
 							<div className="tc_Pem_Content_withAvatar">
-								<img src={require("images/pem/avatar_forum.png")}  alt="Création d'un salon forum"/>
+								<img src={require("images/pem/avatar_forum.png")}  alt="Création d'un forum"/>
 								<div>
-									<div className="tc_Pem_Content_subsubtitle">Créer un Salon Forum</div>
-									<div className="tc_Pem_Content_text">Pour que le salon soit visible et ouvert à tous les membres de Tchap (sauf invités externes), choisissez “Salon Forum”.</div>
+									<div className="tc_Pem_Content_subsubtitle">Créer un forum</div>
+									<div className="tc_Pem_Content_text">Pour que le salon soit visible et ouvert à tous les membres de Tchap (sauf invités externes), choisissez “forum”.</div>
 								</div>
 							</div>
 							<div className="tc_Pem_Content_text">Une fois que votre salon est créé, vous en êtes l’administrateur par défaut !</div>
