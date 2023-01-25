@@ -6,6 +6,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import LinkIcon from '@mui/icons-material/Link';
 import Popper from "@mui/material/Popper";
+import Chip from "@mui/material/Chip";
+
 import TopBar from "components/bars/TopBar";
 import BottomBar from "components/bars/BottomBar";
 import GenericAccordion from "components/accordion/GenericAccordion";
@@ -638,7 +640,14 @@ class FaqComponent extends Component {
 
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq04_006")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment supprimer un salon ?</title>
+									<title>
+										<div className="tc_align_horizontal">
+											<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+											Comment supprimer un salon ?
+											<div className="tc_tag_margin" />
+											<Chip color="warning" label="iOS seulement" />
+										</div>
+									</title>
 									<div className="tc_text_nl">Si le salon est public, il faut d'abord le transformer en salon privé pour le retirer de la liste des salons forums.</div>
 									<div className="tc_text_nl">Pour fermer complètement un salon, un administrateur doit exclure tous les participants puis le quitter lui-même. Le salon ne sera alors plus visible, et les invitations acceptées ultérieurement ne fonctionneront pas.</div>
 								</GenericAccordion>
