@@ -71,6 +71,7 @@ class FaqComponent extends Component {
 		this._onChange = this._onChange.bind(this);
 		this._onLocationChange = this._onLocationChange.bind(this);
 		this._handleCopyClick = this._handleCopyClick.bind(this);
+		this.detectIfMobileDevice = this.detectIfMobileDevice.bind(this);
 	}
 
 	componentDidMount() {
@@ -141,6 +142,11 @@ class FaqComponent extends Component {
 			onChange: () => this._onChange(id),
 			className: "tc_FaqComponent_Accordion"
 		};
+	}
+
+	detectIfMobileDevice() {
+		return navigator?.userAgentData?.mobile
+		// return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 	}
 
 	render() {
@@ -362,6 +368,7 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment envoyer un nouveau message direct ?</title>
 									<div className="tc_text_nl">L'annuaire intégré vous permet d'entrer en contact direct avec l'ensemble des membres de Tchap.</div>
 									<div className="tc_text_nl">Pour démarrer une nouvelle conversation :</div>
+
 									<ul className="tc_list_decimal">
 										<li>
 											<Grid container className="tc_FaqComponent_grid">
@@ -422,16 +429,31 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment rejoindre un salon ?</title>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour rejoindre un salon privé</span>, vous devez recevoir une invitation de la part d’un de ses administrateurs.</div>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour trouver et rejoindre un forum</span>, vous pouvez rechercher par mots clés :</div>
-									<Grid container className="tc_FaqComponent_grid">
-										<Grid item xl={6}>
-											<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un forum”.</div>
-											<img src={require("images/pem/create_room_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile" width="485"/>
-										</Grid>
-										<Grid item xl={6}>
-											<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “salons”.</div>
-											<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>					
-										</Grid>
-									</Grid>
+									
+									<div className="fr-tabs">
+										<ul className="fr-tabs__list" role="tablist" aria-label="[A modifier | nom du système d'onglet]">
+											<li role="presentation">
+												<button id="tabpanel-404" className="fr-tabs__tab fr-icon-checkbox-line fr-tabs__tab--icon-left" tabIndex="0" role="tab" aria-selected="true" aria-controls="tabpanel-404-panel">Mobile</button>
+											</li>
+											<li role="presentation">
+												<button id="tabpanel-405" className="fr-tabs__tab fr-icon-checkbox-line fr-tabs__tab--icon-left" tabIndex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-405-panel">Web</button>
+											</li>
+										</ul>
+										<div id="tabpanel-404-panel" className="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel" aria-labelledby="tabpanel-404" tabIndex="0">
+											{/* <p>Contenu 1</p> */}
+											<Grid item xl={6}>
+												<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un forum”.</div>
+												<img src={require("images/pem/create_room_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile" width="485"/>
+											</Grid>
+										</div>
+										<div id="tabpanel-405-panel" className="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-405" tabIndex="0">
+											{/* <p>Contenu 2</p> */}
+											<Grid item xl={6}>
+												<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “salons”.</div>
+												<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>					
+											</Grid>
+										</div>
+									</div>
 									<div className="tc_text_nl">Vous pouvez ensuite parcourir la liste des salons forums, ou procéder à une recherche par mots clés.</div>
 									<div className="tc_text_nl">Il est également possible de rejoindre un forum sur invitation d'un membre.</div>
 									<SeeMoreLinks
@@ -706,7 +728,7 @@ class FaqComponent extends Component {
 											dans ce cas, allez dans les réglages du navigateur et autorisez la conservation des données de navigation pour Tchap. Une intervention de vos services informatiques peut être nécessaire.
 										</div>
 										<div>
-											<span class="tc_text_i">Si vous souhaitez mettre Tchap “en pause” (lors de vos congés par exemple), vous pouvez désactiver les notifications sans avoir à vous déconnecter.</span>
+											<span className="tc_text_i">Si vous souhaitez mettre Tchap “en pause” (lors de vos congés par exemple), vous pouvez désactiver les notifications sans avoir à vous déconnecter.</span>
 										</div>
 										<div className="tc_FaqComponent_subtitle">Gardez au moins deux appareils connectés à Tchap</div>
 										<div>
@@ -738,7 +760,7 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl">
 										<div className="tc_FaqComponent_subtitle">Pour sauvegarder vos clés :</div>
 										<div>
-										<span class="tc_text_i">(Action à effectuer préalablement à une déconnexion ou une réinitialisation de mot de passe pour ne pas perdre accès à vos messages)</span>
+										<span className="tc_text_i">(Action à effectuer préalablement à une déconnexion ou une réinitialisation de mot de passe pour ne pas perdre accès à vos messages)</span>
 										</div>
 										<ol>
 											<li>Rendez-vous dans les paramètres de Tchap :
