@@ -46,6 +46,7 @@ class FaqComponent extends Component {
 		"tcq06_005": false,
 		"tcq06_006": false,
 		"tcq06_007": false,
+		"tcq06_008": false,
 		"tcq07_001": false,
 		"tcq07_002": false,
 		"tcq07_003": false,
@@ -665,7 +666,7 @@ class FaqComponent extends Component {
 										onClick={this._onLocationChange}
 										links={[
 											{ to: "#tcq07_001", text: "Comment m'assurer de toujours pouvoir lire mes messages ?" },
-											{ to: "#tcq08_000", text: "Déchiffrement impossible de mes messages : comment y remédier ?" },
+											{ to: "#tcq08_000", text: "Messages verrouillés : comment y remédier ?" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq05_002")}>
@@ -847,7 +848,7 @@ class FaqComponent extends Component {
 									
 								</GenericAccordion>
 
-								<div id="tcq08_000" className="tc_FaqComponent_section">“Déchiffrement impossible” de mes messages : comment y remédier ?</div>
+								<div id="tcq08_000" className="tc_FaqComponent_section">Messages verrouillés : comment y remédier ?</div>
 								<GenericAccordion {...this._generateProps("tcq08_001")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Si j'ai un autre appareil déjà connecté à Tchap</title>
 									<div className="tc_text_nl">
@@ -870,11 +871,13 @@ class FaqComponent extends Component {
 										<div>
 											Une fois les Clés Tchap partagées entre vos appareils, vos messages sont déverrouillés et deviennent lisibles au fur et à mesure.
 										</div>
+										<div>Il faut parfois attendre ou re-cliquer sur le lien pour forcer le déverrouillage des messages.</div>
 										<SeeMoreLinks
 											onClick={this._onLocationChange}
 											links={[
 												{ to: "#tcq07_004", text: "Pourquoi mes messages sont-ils verrouillés ?" },
 												{ to: "#tcq07_001", text: "Comment m'assurer de toujours pouvoir lire mes messages ?" },
+												{ to: "#tcq07_005", text: "Comment faire pour que ma session sur Tchap web ne se déconnecte pas automatiquement ?" },
 											]}/>
 									</div>
 								</GenericAccordion>
@@ -1098,6 +1101,16 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq06_007")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je ne parviens pas à lire les messages provenant d’une personne en particulier</title>
+									<div className="tc_text_nl">Il peut arriver que les messages d’une personne spécifique deviennent illisibles. Il s’agit d’une anomalie qui peut être résolue de la façon suivante : </div>									<ul>
+										<li>Rendez-vous dans les paramètres de Tchap </li>
+										<li>Si vous êtes sur le web, allez dans la section “Aide et à propos”.<br/>
+											Si vous êtes sur mobile, allez dans la section “Avancé”.</li>
+										<li>Cliquez sur “Vider le cache”</li>
+										<li>Demandez à la personne dont vous ne pouvez pas lire les messages de faire la même manipulation</li>
+									</ul>
+								</GenericAccordion>
+								<GenericAccordion {...this._generateProps("tcq06_008")}>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Mes contacts ne peuvent pas lire mes messages</title>
 									<div className="tc_text_nl">Il peut arriver que les messages d’une personne spécifique deviennent illisibles. Il s’agit d’une anomalie qui peut être résolue de la façon suivante : </div>									<ul>
 										<li>Rendez-vous dans les paramètres de Tchap </li>
 										<li>Si vous êtes sur le web, allez dans la section “Aide et à propos”.<br/>
