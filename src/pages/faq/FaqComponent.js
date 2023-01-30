@@ -71,6 +71,9 @@ class FaqComponent extends Component {
 		this._onChange = this._onChange.bind(this);
 		this._onLocationChange = this._onLocationChange.bind(this);
 		this._handleCopyClick = this._handleCopyClick.bind(this);
+		this.getQuestions = this.getQuestions.bind(this);
+		// this._getQuestionLink = this._getQuestionLink.bind(this);
+		this._getSections = this._getSections.bind(this);
 	}
 
 	componentDidMount() {
@@ -136,11 +139,99 @@ class FaqComponent extends Component {
 	_generateProps(id) {
 		const exp = this.state.expanded;
 		return {
-			id: id,
+			id,
 			expanded: exp[id],
 			onChange: () => this._onChange(id),
 			className: "tc_FaqComponent_Accordion"
 		};
+	}
+
+	_getSections() {
+		return [
+			{
+				id: 'tcq01_000',
+				title: 'A propos',
+				questionIds: [
+					'tcq01_001',
+					'tcq01_002',
+					'tcq01_003'
+				]
+			},
+			{
+				id: 'tcq02_000',
+				title: 'Gestion du compte',
+				questionIds: []
+			},
+			{
+				id: 'tcq03_000',
+				title: 'Echanger sur Tchap',
+				questionIds: []
+			},
+			{
+				id: 'tcq04_000',
+				title: 'Créer et administrer un salon',
+				questionIds: []
+			},
+			{
+				id: 'tcq05_000',
+				title: 'Sécurité des échanges',
+				questionIds: []
+			},
+			{
+				id: 'tcq07_000',
+				title: 'Gestion des Clés Tchap (clés de chiffrement)',
+				questionIds: []
+			},
+			{
+				id: 'tcq08_000',
+				title: '“Déchiffrement impossible” de mes messages : comment y remédier ?',
+				questionIds: []
+			},
+			{
+				id: 'tcq06_000',
+				title: 'En cas de problème...',
+				questionIds: []
+			},
+		]
+	}
+
+	tcq01_001Title = 'Pourquoi Tchap ?';
+	tcq05_001Title = 'Test ?';
+
+	_getQuestionLink(questionId) {
+		return { to: `#${questionId}`, text: this[`${questionId}Title`] };
+	}
+
+	getQuestions() {
+		return {
+			tcq01_001: [
+				<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />{this.tcq01_001Title}</title>,
+				<>
+					La messagerie instantanée Tchap a été créée pour les agents publics comme l'alternative française et sécurisée aux messageries instantanées grand public.
+					<div>Tchap est conçue et maîtrisée par l'Etat, toutes les données générées par son usage sont hébergées sur des serveurs français, garantissant ainsi que leur gestion répond aux normes européennes en vigueur (RGPD).</div>
+
+					<SeeMoreLinks
+						onClick={this._onLocationChange}
+						links={[
+							this._getQuestionLink('tcq05_001')
+						]}
+					/>
+				</>
+			],
+			tcq05_001: [
+				<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />{this.tcq05_001Title}</title>,
+				<>
+					hello
+
+					<SeeMoreLinks
+						onClick={this._onLocationChange}
+						links={[
+							this._getQuestionLink('tcq01_001')
+						]}
+					/>
+				</>
+			]
+		}
 	}
 
 	render() {
@@ -163,7 +254,22 @@ class FaqComponent extends Component {
 							</Grid>
 							<Grid item xs={12}>
 
-								<div id="tcq01_000" className="tc_FaqComponent_section">A propos</div>
+								{this._getSections().map(section => (
+									<div key={section.id}>
+										<div id={section.id} className="tc_FaqComponent_section">{section.title}</div>
+										{section.questionIds.map(questionId => {
+											if (!this.getQuestions()[questionId]) {
+												return <div key={questionId} />
+											}
+
+											const content = this.getQuestions()[questionId];
+
+											return <GenericAccordion key={questionId} {...this._generateProps(questionId)}>{content}</GenericAccordion>;
+										})}
+									</div>
+								))}
+
+								{/* <div id="tcq01_000" className="tc_FaqComponent_section">A propos</div>
 								<GenericAccordion {...this._generateProps("tcq01_001")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Pourquoi Tchap ?</title>
 									La messagerie instantanée Tchap a été créée pour les agents publics comme l'alternative française et sécurisée aux messageries instantanées grand public.
@@ -173,7 +279,8 @@ class FaqComponent extends Component {
 										onClick={this._onLocationChange}
 										links={[
 											{ to: "#tcq05_001", text: "Comment la confidentialité des échanges est-elle garantie ?" },
-										]}/>
+										]}
+									/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq01_002")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Qui peut utiliser Tchap ?</title>
@@ -207,7 +314,8 @@ class FaqComponent extends Component {
 										onClick={this._onLocationChange}
 										links={[
 											{ to: "#tcq03_004", text: "Comment inviter un partenaire externe à rejoindre Tchap ?" },
-										]}/>
+										]}
+									/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq01_003")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je ne suis pas agent public, comment accéder à Tchap ?</title>
@@ -1105,7 +1213,7 @@ class FaqComponent extends Component {
 										<li>Cliquez sur “Vider le cache”</li>
 										<li>Demandez à la personne dont vous ne pouvez pas lire les messages de faire la même manipulation</li>
 									</ul>
-								</GenericAccordion>
+								</GenericAccordion> */}
 							</Grid>
 						</Grid>
 					</Container>
