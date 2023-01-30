@@ -1,5 +1,4 @@
 import { Component } from "react";
-import PropTypes from "prop-types";
 import { routerHOC } from "utils/HOC/ReactRouterHOC";
 import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
@@ -11,6 +10,7 @@ import BottomBar from "components/bars/BottomBar";
 import GenericAccordion from "components/accordion/GenericAccordion";
 import GenericLink from "components/GenericLink";
 import SeeMoreLinks from "components/SeeMoreLinks";
+import { Tabs } from "components/tabs/Tabs";
 
 import "styles/pages/faq/FaqComponent.scss";
 
@@ -71,7 +71,6 @@ class FaqComponent extends Component {
 		this._onChange = this._onChange.bind(this);
 		this._onLocationChange = this._onLocationChange.bind(this);
 		this._handleCopyClick = this._handleCopyClick.bind(this);
-		this.detectIfMobileDevice = this.detectIfMobileDevice.bind(this);
 	}
 
 	componentDidMount() {
@@ -142,11 +141,6 @@ class FaqComponent extends Component {
 			onChange: () => this._onChange(id),
 			className: "tc_FaqComponent_Accordion"
 		};
-	}
-
-	detectIfMobileDevice() {
-		return navigator?.userAgentData?.mobile
-		// return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 	}
 
 	render() {
@@ -368,7 +362,6 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment envoyer un nouveau message direct ?</title>
 									<div className="tc_text_nl">L'annuaire intégré vous permet d'entrer en contact direct avec l'ensemble des membres de Tchap.</div>
 									<div className="tc_text_nl">Pour démarrer une nouvelle conversation :</div>
-
 									<ul className="tc_list_decimal">
 										<li>
 											<Grid container className="tc_FaqComponent_grid">
@@ -429,31 +422,28 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment rejoindre un salon ?</title>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour rejoindre un salon privé</span>, vous devez recevoir une invitation de la part d’un de ses administrateurs.</div>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour trouver et rejoindre un forum</span>, vous pouvez rechercher par mots clés :</div>
-									
-									<div className="fr-tabs">
-										<ul className="fr-tabs__list" role="tablist" aria-label="[A modifier | nom du système d'onglet]">
-											<li role="presentation">
-												<button id="tabpanel-404" className="fr-tabs__tab fr-icon-checkbox-line fr-tabs__tab--icon-left" tabIndex="0" role="tab" aria-selected="true" aria-controls="tabpanel-404-panel">Mobile</button>
-											</li>
-											<li role="presentation">
-												<button id="tabpanel-405" className="fr-tabs__tab fr-icon-checkbox-line fr-tabs__tab--icon-left" tabIndex="-1" role="tab" aria-selected="false" aria-controls="tabpanel-405-panel">Web</button>
-											</li>
-										</ul>
-										<div id="tabpanel-404-panel" className="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel" aria-labelledby="tabpanel-404" tabIndex="0">
-											{/* <p>Contenu 1</p> */}
-											<Grid item xl={6}>
-												<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un forum”.</div>
-												<img src={require("images/pem/create_room_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile" width="485"/>
-											</Grid>
-										</div>
-										<div id="tabpanel-405-panel" className="fr-tabs__panel" role="tabpanel" aria-labelledby="tabpanel-405" tabIndex="0">
-											{/* <p>Contenu 2</p> */}
-											<Grid item xl={6}>
-												<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “salons”.</div>
-												<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>					
-											</Grid>
-										</div>
-									</div>
+
+									<Tabs
+										tabs={[
+											{ id: 'mobile', label: 'Mobile' },
+											{ id: 'web', label: 'Web' }
+										]}
+										tabPanels={{
+											mobile: (
+												<>
+													<div className="tc_text_nl">Rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un forum”.</div>
+													<img src={require("images/pem/create_room_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile" width="485"/>
+												</>
+											),
+											web: (
+												<>
+													<div className="tc_text_nl">Cliquez sur le bouton “+” de la section “salons”.</div>
+													<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>
+												</>
+											)
+										}}
+									/>
+
 									<div className="tc_text_nl">Vous pouvez ensuite parcourir la liste des salons forums, ou procéder à une recherche par mots clés.</div>
 									<div className="tc_text_nl">Il est également possible de rejoindre un forum sur invitation d'un membre.</div>
 									<SeeMoreLinks
