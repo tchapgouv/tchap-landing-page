@@ -424,6 +424,7 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl"><span className="tc_text_b">Pour trouver et rejoindre un forum</span>, vous pouvez rechercher par mots clés :</div>
 
 									<Tabs
+										id="tcq03_006"
 										tabs={[
 											{ id: 'mobile', label: 'Mobile' },
 											{ id: 'web', label: 'Web' }
@@ -614,13 +615,65 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment inviter des participants à rejoindre un salon ?</title>
 									<div className="tc_text_nl">Pour les salons privés, seuls les administrateurs peuvent inviter des membres à rejoindre la conversation.</div>
 									<div className="tc_text_nl">Pour les salons publics, l'invitation n'est pas indispensable mais peut être utilisée pour inviter des membres à rejoindre le salon.</div>
-									<div className="tc_text_nl">Pour envoyer des invitations, rendez-vous dans les paramètres du salon, et cliquez sur "inviter dans ce salon". Plusieurs possibilités s'offrent alors à vous :</div>
+
+									<Tabs
+										id="tcq04_003"
+										tabs={[
+											{ id: 'mobile_tcq04_003', label: 'Mobile' },
+											{ id: 'web_tcq04_003', label: 'Web' }
+										]}
+										tabPanels={{
+											mobile_tcq04_003: (
+												<>
+													<div className="tc_text_nl">Pour envoyer des invitations, rendez-vous dans les paramètres du salon, et cliquez sur "inviter dans ce salon". Plusieurs possibilités s'offrent alors à vous :</div>
+													<ul>
+														<li>Inviter les membres un par un en les recherchant dans l'annuaire des membres de Tchap.</li>
+														<li>Inviter plusieurs membres à la fois en important un fichier .txt ou .csv contenant les adresses e-mail des interlocuteurs visés.</li>
+													</ul>
+													<div className="tc_text_nl">Vous pouvez également partager le lien d'un salon pour inviter des membres à le rejoindre.</div>
+													<div className="tc_text_nl">S'il s'agit d'un salon privé, assurez-vous au préalable d'avoir autorisé l'accès au salon par lien (dans les paramètres du salon). Attention : si cette option est activée, chaque personne disposant du lien pourra accéder au salon privé.</div>
+												</>
+											),
+											web_tcq04_003: (
+												<>
+													<div className="tc_text_nl">Pour envoyer des invitations, rendez-vous dans les paramètres du salon, et cliquez sur "inviter dans ce salon". Vous pouvez alors inviter les membres un par un en les recherchant dans l'annuaire des membres de Tchap.</div>
+													<div className="tc_text_nl">Vous pouvez également partager le lien d'un salon pour inviter des membres à le rejoindre.</div>
+													<div className="tc_text_nl">S'il s'agit d'un salon privé, assurez-vous au préalable d'avoir autorisé l'accès au salon par lien (dans les paramètres du salon). Attention : si cette option est activée, chaque personne disposant du lien pourra accéder au salon privé.</div>
+												</>
+											)
+										}}
+									/>
+
+									{/*
+									<Tabs
+										tabs={[
+											{ id: 'mobile', label: 'Mobile' },
+											{ id: 'web', label: 'Web' }
+										]}
+										tabPanels={{
+											mobile: (
+												<>
+													<div className="tc_text_nl">Rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un forum”.</div>
+													<img src={require("images/pem/create_room_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile" width="485"/>
+												</>
+											),
+											web: (
+												<>
+													<div className="tc_text_nl">Cliquez sur le bouton “+” de la section “salons”.</div>
+													<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>
+												</>
+											)
+										}}
+									/>
+									 */}
+
+									{/* <div className="tc_text_nl">Pour envoyer des invitations, rendez-vous dans les paramètres du salon, et cliquez sur "inviter dans ce salon". Plusieurs possibilités s'offrent alors à vous :</div>
 									<ul>
 										<li>Inviter les membres un par un en les recherchant dans l'annuaire des membres de Tchap</li>
 										<li>Inviter plusieurs membres à la fois en important un fichier .txt ou .csv contenant les adresses e-mail des interlocuteurs visés.</li>
 									</ul>
 									<div className="tc_text_nl">Vous pouvez également partager le lien d'un salon pour inviter des membres à le rejoindre.</div>
-									<div className="tc_text_nl">S'il s'agit d'un salon privé, assurez-vous au préalable d'avoir autorisé l'accès au salon par lien (dans les paramètres du salon). Attention : si cette option est activée, chaque personne disposant du lien pourra accéder au salon privé.</div>
+									<div className="tc_text_nl">S'il s'agit d'un salon privé, assurez-vous au préalable d'avoir autorisé l'accès au salon par lien (dans les paramètres du salon). Attention : si cette option est activée, chaque personne disposant du lien pourra accéder au salon privé.</div> */}
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
