@@ -424,6 +424,7 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl"><span className="tc_text_b">Pour trouver et rejoindre un forum</span>, vous pouvez rechercher par mots clés :</div>
 
 									<Tabs
+										id="tcq03_006"
 										tabs={[
 											{ id: 'mobile', label: 'Mobile' },
 											{ id: 'web', label: 'Web' }
