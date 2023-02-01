@@ -615,11 +615,7 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment inviter des participants à rejoindre un salon ?</title>
 									<div className="tc_text_nl">Pour les salons privés, seuls les administrateurs peuvent inviter des membres à rejoindre la conversation.</div>
 									<div className="tc_text_nl">Pour les salons publics, l'invitation n'est pas indispensable mais peut être utilisée pour inviter des membres à rejoindre le salon.</div>
-									<div className="tc_text_nl">Pour envoyer des invitations, rendez-vous dans les paramètres du salon, et cliquez sur "inviter dans ce salon". Plusieurs possibilités s'offrent alors à vous :</div>
-									<ul>
-										<li>Inviter les membres un par un en les recherchant dans l'annuaire des membres de Tchap</li>
-										<li>Inviter plusieurs membres à la fois en important un fichier .txt ou .csv contenant les adresses e-mail des interlocuteurs visés.</li>
-									</ul>
+									<div className="tc_text_nl">Pour envoyer des invitations, rendez-vous dans les paramètres du salon, et cliquez sur "inviter dans ce salon". Vous pouvez alors inviter les membres un par un en les recherchant dans l'annuaire des membres de Tchap.</div>
 									<div className="tc_text_nl">Vous pouvez également partager le lien d'un salon pour inviter des membres à le rejoindre.</div>
 									<div className="tc_text_nl">S'il s'agit d'un salon privé, assurez-vous au préalable d'avoir autorisé l'accès au salon par lien (dans les paramètres du salon). Attention : si cette option est activée, chaque personne disposant du lien pourra accéder au salon privé.</div>
 									<SeeMoreLinks
