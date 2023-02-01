@@ -1,5 +1,4 @@
 import { Component } from "react";
-import PropTypes from "prop-types";
 import { routerHOC } from "utils/HOC/ReactRouterHOC";
 import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
@@ -11,6 +10,7 @@ import BottomBar from "components/bars/BottomBar";
 import GenericAccordion from "components/accordion/GenericAccordion";
 import GenericLink from "components/GenericLink";
 import SeeMoreLinks from "components/SeeMoreLinks";
+import { Tabs } from "components/tabs/Tabs";
 
 import "styles/pages/faq/FaqComponent.scss";
 
@@ -422,16 +422,29 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment rejoindre un salon ?</title>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour rejoindre un salon privé</span>, vous devez recevoir une invitation de la part d’un de ses administrateurs.</div>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour trouver et rejoindre un forum</span>, vous pouvez rechercher par mots clés :</div>
-									<Grid container className="tc_FaqComponent_grid">
-										<Grid item xl={6}>
-											<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un forum”.</div>
-											<img src={require("images/pem/create_room_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile" width="485"/>
-										</Grid>
-										<Grid item xl={6}>
-											<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “salons”.</div>
-											<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>					
-										</Grid>
-									</Grid>
+
+									<Tabs
+										id="tcq03_006"
+										tabs={[
+											{ id: 'mobile', label: 'Mobile' },
+											{ id: 'web', label: 'Web' }
+										]}
+										tabPanels={{
+											mobile: (
+												<>
+													<div className="tc_text_nl">Rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un forum”.</div>
+													<img src={require("images/pem/create_room_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile" width="485"/>
+												</>
+											),
+											web: (
+												<>
+													<div className="tc_text_nl">Cliquez sur le bouton “+” de la section “salons”.</div>
+													<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>
+												</>
+											)
+										}}
+									/>
+
 									<div className="tc_text_nl">Vous pouvez ensuite parcourir la liste des salons forums, ou procéder à une recherche par mots clés.</div>
 									<div className="tc_text_nl">Il est également possible de rejoindre un forum sur invitation d'un membre.</div>
 									<SeeMoreLinks
@@ -706,7 +719,7 @@ class FaqComponent extends Component {
 											dans ce cas, allez dans les réglages du navigateur et autorisez la conservation des données de navigation pour Tchap. Une intervention de vos services informatiques peut être nécessaire.
 										</div>
 										<div>
-											<span class="tc_text_i">Si vous souhaitez mettre Tchap “en pause” (lors de vos congés par exemple), vous pouvez désactiver les notifications sans avoir à vous déconnecter.</span>
+											<span className="tc_text_i">Si vous souhaitez mettre Tchap “en pause” (lors de vos congés par exemple), vous pouvez désactiver les notifications sans avoir à vous déconnecter.</span>
 										</div>
 										<div className="tc_FaqComponent_subtitle">Gardez au moins deux appareils connectés à Tchap</div>
 										<div>
@@ -738,7 +751,7 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl">
 										<div className="tc_FaqComponent_subtitle">Pour sauvegarder vos clés :</div>
 										<div>
-										<span class="tc_text_i">(Action à effectuer préalablement à une déconnexion ou une réinitialisation de mot de passe pour ne pas perdre accès à vos messages)</span>
+										<span className="tc_text_i">(Action à effectuer préalablement à une déconnexion ou une réinitialisation de mot de passe pour ne pas perdre accès à vos messages)</span>
 										</div>
 										<ol>
 											<li>Rendez-vous dans les paramètres de Tchap :

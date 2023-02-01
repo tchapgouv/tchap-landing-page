@@ -1,11 +1,24 @@
 .tc_FaqComponent {
   padding-bottom: 50px;
+  ul {
+    margin: 0px;
+  }
+  ul li {
+    margin-left: 8px;
+  }
+  ul li button {
+    margin: 0px;
+  }
   li {
     margin-bottom: 4px;
   }
   div {
     line-height: $font-line-height-24;
   }
+}
+
+.tc_FaqComponent_tabs {
+  margin: 20px 0px;
 }
 
 .tc_FaqComponent_menu_title {
@@ -84,6 +97,10 @@
 .tc_FaqComponent_border {
   border: 1px solid $color-text-darkgrey;
   border-radius: 3px;
+}
+
+.tc_FaqComponent_tabs__list {
+  margin-left: 10px;
 }
 
 @media (max-width: 650px) {
