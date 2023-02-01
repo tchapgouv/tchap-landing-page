@@ -1,5 +1,4 @@
 import { Component } from "react";
-import PropTypes from "prop-types";
 import { routerHOC } from "utils/HOC/ReactRouterHOC";
 import { t } from "react-i18nify";
 import Container from "@mui/material/Container";
@@ -13,6 +12,7 @@ import BottomBar from "components/bars/BottomBar";
 import GenericAccordion from "components/accordion/GenericAccordion";
 import GenericLink from "components/GenericLink";
 import SeeMoreLinks from "components/SeeMoreLinks";
+import { Tabs } from "components/tabs/Tabs";
 
 import "styles/pages/faq/FaqComponent.scss";
 
@@ -341,12 +341,12 @@ class FaqComponent extends Component {
 									</Grid>
 									<Grid container className="tc_FaqComponent_grid">
 										<Grid item xl={2}>
-											<img src={require("images/pem/avatar_forum.png")} alt="Salon Forum"/>
+											<img src={require("images/pem/avatar_forum.png")} alt="Forum"/>
 										</Grid>
 										<Grid item xl={10}>
-											<span className="tc_text_b">Les salons forums sont :</span>
+											<span className="tc_text_b">Les forums sont :</span>
 											<ul>
-												<li>des conversations entre plusieurs agents publics</li>
+												<li>des conversations entre plusieurs membres de Tchap</li>
 												<li>trouvables et accessibles à tous, sauf aux partenaires externes</li>
 												<li>non chiffrés</li>
 												<li>utilisés pour aborder des sujets transverses ou partager des centres d'intérêt professionnels (ou non !)</li>
@@ -356,12 +356,12 @@ class FaqComponent extends Component {
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
-											{ to: "#tcq03_003", text: "Comment démarrer une nouvelle conversation ?" },
+											{ to: "#tcq03_003", text: "Comment envoyer un nouveau message direct ?" },
 											{ to: "#tcq03_006", text: "Comment rejoindre un salon ?" },
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_003")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment démarrer une nouvelle conversation ?</title>
+									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment envoyer un nouveau message direct ?</title>
 									<div className="tc_text_nl">L'annuaire intégré vous permet d'entrer en contact direct avec l'ensemble des membres de Tchap.</div>
 									<div className="tc_text_nl">Pour démarrer une nouvelle conversation :</div>
 									<ul className="tc_list_decimal">
@@ -416,26 +416,46 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_005")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que faire si je ne souhaite pas apparaître dans l'annuaire ?</title>
-									<div className="tc_text_nl">Si vous ne souhaitez pas apparaître dans les résultats de recherche des membres, vous pouvez vous mettre sur <span className="tc_text_b">liste rouge</span> dans les Paramètres de Tchap.</div>
-									<div className="tc_text_nl">Les autres membres de Tchap ne pourront ainsi plus vous trouver, ni vous contacter, sauf s'ils renseignent votre adresse mail complète dans la barre de recherche.</div>
+									<title>
+										<div className="tc_align_horizontal">
+											<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+											Que faire si je ne souhaite pas apparaître dans l'annuaire ?
+											<div className="tc_tag_margin" />
+											<p className="fr-badge fr-badge--sm fr-badge--blue-ecume">Android et iOS seulement</p>
+										</div>
+									</title>
+									<div className="tc_text_nl">Si vous ne souhaitez pas apparaître dans les résultats de recherche d'utilisateurs, vous pouvez vous mettre sur <span className="tc_text_b">liste rouge</span> dans les Paramètres de Tchap.</div>
+									<div className="tc_text_nl">Les autres utilisateurs ne pourront ainsi plus vous trouver, ni vous contacter, sauf s'ils renseignent votre adresse mail complète dans la barre de recherche.</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_006")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment rejoindre un salon ?</title>
 									<div className="tc_text_nl"><span className="tc_text_b">Pour rejoindre un salon privé</span>, vous devez recevoir une invitation de la part d’un de ses administrateurs.</div>
-									<div className="tc_text_nl"><span className="tc_text_b">Pour trouver et rejoindre un salon forum</span>, vous pouvez rechercher par mots clés :</div>
-									<Grid container className="tc_FaqComponent_grid">
-										<Grid item xl={6}>
-											<div className="tc_text_nl"><span className="tc_text_b">Sur mobile</span>, rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un salon forum”.</div>
-											<img src={require("images/pem/create_room_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile" width="485"/>
-										</Grid>
-										<Grid item xl={6}>
-											<div className="tc_text_nl"><span className="tc_text_b">Sur le web</span>, cliquez sur le bouton “+” de la section “salons”.</div>
-											<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>					
-										</Grid>
-									</Grid>
+									<div className="tc_text_nl"><span className="tc_text_b">Pour trouver et rejoindre un forum</span>, vous pouvez rechercher par mots clés :</div>
+
+									<Tabs
+										id="tcq03_006"
+										tabs={[
+											{ id: 'mobile', label: 'Mobile' },
+											{ id: 'web', label: 'Web' }
+										]}
+										tabPanels={{
+											mobile: (
+												<>
+													<div className="tc_text_nl">Rendez-vous dans l'onglet des salons (#), cliquez sur le bouton "#+" et sélectionnez “Accéder à un forum”.</div>
+													<img src={require("images/pem/create_room_mobile.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon mobile" width="485"/>
+												</>
+											),
+											web: (
+												<>
+													<div className="tc_text_nl">Cliquez sur le bouton “+” de la section “salons”.</div>
+													<img src={require("images/pem/create_room_web.png")} className="tc_FaqComponent_wimg_mobile" alt="Création salon web"/>
+												</>
+											)
+										}}
+									/>
+
 									<div className="tc_text_nl">Vous pouvez ensuite parcourir la liste des salons forums, ou procéder à une recherche par mots clés.</div>
-									<div className="tc_text_nl">Il est également possible de rejoindre un salon forum sur invitation d'un membre.</div>
+									<div className="tc_text_nl">Il est également possible de rejoindre un forum sur invitation d'un membre.</div>
 									<SeeMoreLinks
 										onClick={this._onLocationChange}
 										links={[
@@ -537,14 +557,14 @@ class FaqComponent extends Component {
 									</Grid>
 									<Grid container className="tc_FaqComponent_grid">
 										<Grid item xl={2}>
-											<img src={require("images/pem/avatar_forum.png")} alt="Salon Forum"/>
+											<img src={require("images/pem/avatar_forum.png")} alt="Forum"/>
 										</Grid>
 										<Grid item xl={10}>
-											<span className="tc_text_b">Créer un Salon Forum</span>
+											<span className="tc_text_b">Créer un Forum</span>
 											<ul className="tc_list_nobullet">
-												<li>Pour que le salon soit visible et ouvert à tous les membres de Tchap (sauf partenaires externes), choisissez “Salon Forum”.</li>
-												<li>Le Salon Forum est recommandé s'il vise à aborder des sujets transverses susceptibles d'intéresser d'autres membres de Tchap.</li>
-												<li>Veillez à ce que le nom du Salon Forum soit le plus explicite possible pour que les membres puissent le trouver facilement.</li>
+												<li>Pour que le salon soit visible et ouvert à tous les membres de Tchap (sauf partenaires externes), choisissez “Forum”.</li>
+												<li>Le Forum est recommandé s'il vise à aborder des sujets transverses susceptibles d'intéresser d'autres membres de Tchap.</li>
+												<li>Veillez à ce que le nom du Forum soit le plus explicite possible pour que les membres puissent le trouver facilement.</li>
 											</ul>
 										</Grid>
 									</Grid>
@@ -566,7 +586,7 @@ class FaqComponent extends Component {
 										<li>changer le nom du salon</li>
 									</ul>
 									<div className="tc_text_nl">Un administrateur peut aussi désigner d'autres administrateurs et modérateurs, et partager certains pouvoirs avec eux, depuis les paramètres du Salon, dans les Rôles et Permissions.</div>
-									<div className="tc_text_nl">Attention : seul un administrateur est en mesure de se rétrograder, ou de s’expulser.
+									<div className="tc_text_nl">Attention : seul un administrateur est en mesure de se rétrograder, ou de se retirer du salon.
 									Si le dernier administrateur quitte le salon, ce salon ne sera plus administrable.
 									Il sera impossible de nommer un nouvel administrateur.</div>
 									
@@ -591,7 +611,7 @@ class FaqComponent extends Component {
 									<ul>
 										<li>en rappelant à l’ordre les membres concernés</li>
 										<li>en supprimant les contenus non conformes</li>
-										<li>en bannissant les membres concernés du salon en cas de récidive</li>
+										<li>en interdire l’accès au salon aux membres concernés en cas de récidive</li>
 									</ul>
 									<div className="tc_text_nl">Si un salon n’est pas administré en conformité avec les CGU de Tchap, une intervention de l’administration d’origine de ses administrateurs peut être sollicitée, et la fermeture du salon peut être envisagée.</div>
 									<SeeMoreLinks
@@ -633,8 +653,8 @@ class FaqComponent extends Component {
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment retirer une personne d'un salon ?</title>
 									<div className="tc_text_nl">Seul un administrateur ou un modérateur peut retirer un membre d'un salon. Pour ce faire, rendez-vous dans la liste des membres du salon et cliquez sur le nom de la personne :</div>
 									<ul>
-										<li>Pour qu'il lui soit impossible de revenir, choisissez "bannir"</li>
-										<li>Pour lui laisser la possibilité de revenir, choisissez "exclure" ou "expulser"</li>
+										<li>Pour qu'il lui soit impossible de revenir, choisissez "Interdire l’accès au salon (définitif)"</li>
+										<li>Pour lui laisser la possibilité de revenir, choisissez "Exclure" ou "Retirer du salon (réversible)"</li>
 									</ul>
 									<div className="tc_text_nl">Il est en revanche impossible de retirer un administrateur d’un salon : dans ce cas de figure, la personne doit elle-même quitter le salon.</div>
 
@@ -715,7 +735,7 @@ class FaqComponent extends Component {
 											dans ce cas, allez dans les réglages du navigateur et autorisez la conservation des données de navigation pour Tchap. Une intervention de vos services informatiques peut être nécessaire.
 										</div>
 										<div>
-											<span class="tc_text_i">Si vous souhaitez mettre Tchap “en pause” (lors de vos congés par exemple), vous pouvez désactiver les notifications sans avoir à vous déconnecter.</span>
+											<span className="tc_text_i">Si vous souhaitez mettre Tchap “en pause” (lors de vos congés par exemple), vous pouvez désactiver les notifications sans avoir à vous déconnecter.</span>
 										</div>
 										<div className="tc_FaqComponent_subtitle">Gardez au moins deux appareils connectés à Tchap</div>
 										<div>
@@ -747,7 +767,7 @@ class FaqComponent extends Component {
 									<div className="tc_text_nl">
 										<div className="tc_FaqComponent_subtitle">Pour sauvegarder vos clés :</div>
 										<div>
-										<span class="tc_text_i">(Action à effectuer préalablement à une déconnexion ou une réinitialisation de mot de passe pour ne pas perdre accès à vos messages)</span>
+										<span className="tc_text_i">(Action à effectuer préalablement à une déconnexion ou une réinitialisation de mot de passe pour ne pas perdre accès à vos messages)</span>
 										</div>
 										<ol>
 											<li>Rendez-vous dans les paramètres de Tchap :
