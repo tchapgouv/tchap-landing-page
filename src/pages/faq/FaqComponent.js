@@ -665,7 +665,8 @@ class FaqComponent extends Component {
 											<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
 											Comment supprimer un salon ?
 											<div className="tc_tag_margin" />
-											<Chip color="warning" label="iOS seulement" />
+											<p className="fr-badge fr-badge--sm fr-badge--blue-ecume">iOS seulement</p>
+
 										</div>
 									</title>
 									<div className="tc_text_nl">Si le salon est public, il faut d'abord le transformer en salon privé pour le retirer de la liste des salons forums.</div>
