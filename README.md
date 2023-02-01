@@ -1,6 +1,6 @@
 # tchap-landing-page
 
-Tchap landing page
+Tchap landing page : https://tchap.beta.gouv.fr/
 
 ## Installation
 
