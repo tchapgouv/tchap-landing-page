@@ -42,7 +42,7 @@ const TabsComponent = ({
                         role="tabpanel"
                         tabIndex="0"
                     >
-                        <Grid item xl={6}>
+                        <Grid item>
                             {tabPanels[tab.id]}
                         </Grid>
                     </div>
