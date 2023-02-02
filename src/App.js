@@ -8,6 +8,7 @@ import CookiesManagement from "pages/cookiesManagement/CookiesManagement";
 import Pem from "pages/pem/Pem";
 import PrivacyPolicy from "pages/privacy-policy/PrivacyPolicy";
 import Faq from "pages/faq/Faq";
+import FaqPasswordReset from "pages/faq/FaqPasswordReset";
 import Tac from "pages/tac/Tac";
 
 import "@fontsource/roboto";
@@ -30,6 +31,7 @@ class App extends Component {
 					<Route path="/gestion-des-cookies" element={<CookiesManagement />} />
 					<Route path="/prise-en-main" element={<Pem />} />
 					<Route path="/faq" element={<Faq />} />
+					<Route path="/faq-mot-de-passe" element={<FaqPasswordReset />} />
 					<Route path="/cgu" element={<Tac />} />
 					<Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
 					<Route path="/" element={<Home />} />

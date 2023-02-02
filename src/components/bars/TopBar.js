@@ -22,47 +22,47 @@ class TopBar extends Component {
 
 	render() {
 		return (
-			<header role="banner" class="fr-header">
+			<header role="banner" className="fr-header">
 				<BackToTop />
-				<div class="fr-header__body">
-					<div class="fr-container">
-						<div class="fr-header__body-row">
-							<div class="fr-header__brand fr-enlarge-link">
-								<div class="fr-header__brand-top">
-									<div class="fr-header__logo">
-										<p class="fr-logo">
+				<div className="fr-header__body">
+					<div className="fr-container">
+						<div className="fr-header__body-row">
+							<div className="fr-header__brand fr-enlarge-link">
+								<div className="fr-header__brand-top">
+									<div className="fr-header__logo">
+										<p className="fr-logo">
 											République
 											<br />Française
 										</p>
 									</div>
-									<div class="fr-header__navbar">
-										<button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-833" aria-haspopup="menu" title="Menu" id="fr-btn-menu-mobile">
+									<div className="fr-header__navbar">
+										<button className="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-833" aria-haspopup="menu" title="Menu" id="fr-btn-menu-mobile">
 											Menu
 										</button>
 									</div>
 								</div>
 								<TchapLogo width="50px" />
-								<div class="fr-header__service">
+								<div className="fr-header__service">
 									<a href="/" title="Accueil - Tchap" data-probe-name="home" onClick={this._hookProbe}>
-										<p class="fr-header__service-title">Tchap</p>
+										<p className="fr-header__service-title">Tchap</p>
 									</a>
 								</div>
 							</div>
-							<div class="fr-header__tools">
-								<div class="fr-header__tools-links">
-									<ul class="fr-links-group">
+							<div className="fr-header__tools">
+								<div className="fr-header__tools-links">
+									<ul className="fr-links-group">
 										<li>
-											<a class="fr-link" href={t('links.prise-en-main')} data-probe-name="pem" onClick={this._hookProbe}>
+											<a className="fr-link" href={t('links.prise-en-main')} data-probe-name="pem" onClick={this._hookProbe}>
 												Prise en main
 											</a>
 										</li>
 										<li>
-											<a class="fr-link" href={t('links.faq')} data-probe-name="faq" onClick={this._hookProbe}>
+											<a className="fr-link" href={t('links.faq')} data-probe-name="faq" onClick={this._hookProbe}>
 												FAQ
 											</a>
 										</li>
 										<li>
-											<a class="fr-link"
+											<a className="fr-link"
 												href="/#contact"
 												data-probe-name="contact"
 												onClick={this._hookProbe}>
@@ -75,10 +75,10 @@ class TopBar extends Component {
 						</div>
 					</div>
 				</div>
-				<div class="fr-header__menu fr-modal" id="modal-833" aria-labelledby="fr-btn-menu-mobile">
-					<div class="fr-container">
-						<button class="fr-link--close fr-link" aria-controls="modal-833">Fermer</button>
-						<div class="fr-header__menu-links"></div>
+				<div className="fr-header__menu fr-modal" id="modal-833" aria-labelledby="fr-btn-menu-mobile">
+					<div className="fr-container">
+						<button className="fr-link--close fr-link" aria-controls="modal-833">Fermer</button>
+						<div className="fr-header__menu-links"></div>
 					</div>
 				</div>
 			</header>
