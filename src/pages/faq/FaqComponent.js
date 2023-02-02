@@ -665,7 +665,7 @@ class FaqComponent extends Component {
 											<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
 											Comment supprimer un salon ?
 											<div className="tc_tag_margin" />
-											<p className="fr-badge fr-badge--sm fr-badge--blue-ecume">iOS seulement</p>
+											<p className="fr-badge fr-badge--sm fr-badge--blue-ecume">Android seulement</p>
 
 										</div>
 									</title>
