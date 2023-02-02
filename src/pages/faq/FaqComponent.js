@@ -5,6 +5,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import LinkIcon from '@mui/icons-material/Link';
 import Popper from "@mui/material/Popper";
+import Chip from "@mui/material/Chip";
+
 import TopBar from "components/bars/TopBar";
 import BottomBar from "components/bars/BottomBar";
 import GenericAccordion from "components/accordion/GenericAccordion";
@@ -414,9 +416,16 @@ class FaqComponent extends Component {
 										]}/>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_005")}>
-									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Que faire si je ne souhaite pas apparaître dans l'annuaire ?</title>
-									<div className="tc_text_nl">Si vous ne souhaitez pas apparaître dans les résultats de recherche des membres, vous pouvez vous mettre sur <span className="tc_text_b">liste rouge</span> dans les Paramètres de Tchap.</div>
-									<div className="tc_text_nl">Les autres membres de Tchap ne pourront ainsi plus vous trouver, ni vous contacter, sauf s'ils renseignent votre adresse mail complète dans la barre de recherche.</div>
+									<title>
+										<div className="tc_align_horizontal">
+											<LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />
+											Que faire si je ne souhaite pas apparaître dans l'annuaire ?
+											<div className="tc_tag_margin" />
+											<p className="fr-badge fr-badge--sm fr-badge--blue-ecume">Android et iOS seulement</p>
+										</div>
+									</title>
+									<div className="tc_text_nl">Si vous ne souhaitez pas apparaître dans les résultats de recherche d'utilisateurs, vous pouvez vous mettre sur <span className="tc_text_b">liste rouge</span> dans les Paramètres de Tchap.</div>
+									<div className="tc_text_nl">Les autres utilisateurs ne pourront ainsi plus vous trouver, ni vous contacter, sauf s'ils renseignent votre adresse mail complète dans la barre de recherche.</div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq03_006")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment rejoindre un salon ?</title>

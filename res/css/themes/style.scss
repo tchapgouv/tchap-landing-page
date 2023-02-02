@@ -68,6 +68,16 @@ $font-size-08: 0.8em;
   padding-right: 6px;
 }
 
+.tc_align_horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tc_tag_margin {
+  width: 10px;
+}
+
 .tc_link {
   text-decoration: none !important;
   font-weight: bold !important;
@@ -97,4 +107,53 @@ th, td {
 
 table.full-width {
   width: 100%;
+}
+
+/*
+  Keep the gouv design system classes here for now, until we update to v1.8+
+  because we currently use v1.2 and badges are not yet implemented in this version
+  (Updating to v1.8 implies many style changes to the whole landing page and that is not the purpose of this PR)
+*/
+.fr-badge {
+  --text-spacing: 0;
+  --title-spacing: 0;
+  z-index: 1;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  --underline-img: none;
+  --hover-tint: var(--hover);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  min-height: 1.5rem;
+  padding: 0 0.5rem;
+  overflow: initial;
+  max-height: none;
+  font-weight: 700;
+  max-width: 100%;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  color: var(--text-default-grey);
+  background-color: var(--background-contrast-grey);
+  --idle: transparent;
+  --hover: var(--background-contrast-grey-hover);
+  --active: var(--background-contrast-grey-active);
+}
+.fr-badge--sm {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  min-height: 1.125rem;
+  padding: 0 0.375rem;
+  overflow: initial;
+  max-width: 100%;
+  max-height: none;
+}
+.fr-badge--blue-ecume {
+  color: #2f4077;
+  background-color: #e9edfe;
+  --idle: transparent;
+  --hover: #c5d0fc;
+  --active: #adbffc;
 }
