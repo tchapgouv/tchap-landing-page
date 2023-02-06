@@ -2,7 +2,6 @@ import { Component } from "react";
 import { routerHOC } from "utils/HOC/ReactRouterHOC";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Popper from "@mui/material/Popper";
 
 import TopBar from "components/bars/TopBar";
 import BottomBar from "components/bars/BottomBar";
@@ -21,14 +20,14 @@ class FaqPasswordReset extends Component {
 		};
 	}
 
-	// componentDidMount() {
-	// 	const location = this.props.routerLocation;
-	// 	const anchor = location.hash.substring(1);
+	componentDidMount() {
+		const location = this.props.routerLocation;
+		const anchor = location.hash.substring(1);
 
-	// 	if (anchor && ['android', 'ios'].includes(anchor)) {
-	// 		this.setState({ initialTabToDisplay: anchor });
-	// 	}
-	// }
+		if (anchor && ['android', 'ios'].includes(anchor)) {
+			this.setState({ initialTabToDisplay: anchor });
+		}
+	}
 
 	webSection = [
 		'web_loginPage',
