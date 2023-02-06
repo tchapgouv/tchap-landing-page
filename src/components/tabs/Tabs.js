@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 
 const TabsComponent = ({
     id,
+    initialTabToDisplay,
     tabs,
     tabPanels
 }) => {
@@ -17,11 +18,11 @@ const TabsComponent = ({
                         <li key={tabId} role="presentation">
                             <button
                                 aria-controls={`${tabId}-panel`}
-                                aria-selected={index === 0 ? "true" : "false"}
+                                aria-selected={initialTabToDisplay === tab.id || (!initialTabToDisplay && index === 0) ? "true" : "false"}
                                 className="fr-tabs__tab fr-icon-checkbox-line fr-tabs__tab--icon-left"
                                 id={tabId}
                                 role="tab"
-                                tabIndex={index === 0 ? "0" : "-1"}
+                                tabIndex={initialTabToDisplay === tab.id || (!initialTabToDisplay && index === 0) ? "0" : index === 0 ? "0" : "-1"}
                             >
                                 {tab.label}
                             </button>
