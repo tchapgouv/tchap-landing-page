@@ -5,7 +5,6 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import LinkIcon from '@mui/icons-material/Link';
 import Popper from "@mui/material/Popper";
-import Chip from "@mui/material/Chip";
 
 import TopBar from "components/bars/TopBar";
 import BottomBar from "components/bars/BottomBar";
@@ -271,7 +270,7 @@ class FaqComponent extends Component {
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_005")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Comment réinitialiser mon mot de passe ?</title>
-									<div className="tc_text_nl">Pour réinitialiser votre mot de passe Tchap, veuillez suivre minutieusement les étapes décrites <GenericLink className="tc_FaqComponent_link" to={"/assets/pdf/bonnes_pratiques_reinitialisation_du_mot_de_passe.pdf"}>dans ce guide</GenericLink>.</div>
+									<div className="tc_text_nl">Pour réinitialiser votre mot de passe Tchap, veuillez suivre minutieusement les étapes décrites <a target="_blank" rel="noreferrer noopener nofollow" href="/faq-mot-de-passe">ici</a></div>
 								</GenericAccordion>
 								<GenericAccordion {...this._generateProps("tcq02_006")}>
 									<title><LinkIcon onClick={this._handleCopyClick} className="tc_FaqComponent_copy_icon" />Je change de téléphone ou d’ordinateur : que faire ?</title>

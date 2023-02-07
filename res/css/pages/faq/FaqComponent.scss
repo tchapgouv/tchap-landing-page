@@ -24,6 +24,7 @@
 .tc_FaqComponent_menu_title {
   font-size: $font-size-20;
   font-weight: bold;
+  line-height: 33px !important;
   margin: 20px 0 30px 20px;
 }
 
@@ -101,6 +102,20 @@
 
 .tc_FaqComponent_tabs__list {
   margin-left: 10px;
+}
+
+.tc_align_horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tc_tag_margin {
+  width: 10px;
+}
+
+.tc_vertical_image_margin {
+  height: 14px;
 }
 
 @media (max-width: 650px) {
