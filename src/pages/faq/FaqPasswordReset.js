@@ -385,11 +385,11 @@ class FaqPasswordReset extends Component {
 					<Container maxWidth="lg">
 						<Grid container className="tc_FaqComponent">
 							<Grid item xs={12}>
-								<div className="tc_FaqComponent_menu_title">FAQ > réinitialisation de mot de passe</div>
+								<div className="tc_FaqComponent_menu_title">FAQ | Réinitialisation de mot de passe</div>
 							</Grid>
 
 							<Grid item xs={12}>
-								<div className="tc_text_nl tc_faq_reset_pw_vertical_margin">Si besoin, une FAQ de cette page est téléchargeable en cliquant sur <GenericLink className="tc_FaqComponent_link" download target="_blank" to={"/assets/pdf/bonnes_pratiques_reinitialisation_du_mot_de_passe.pdf"}>ce lien</GenericLink>.</div>
+								<div className="tc_text_nl tc_faq_reset_pw_vertical_margin">Si besoin, une version PDF de cette page est téléchargeable en cliquant sur <GenericLink className="tc_FaqComponent_link" download target="_blank" to={"/assets/pdf/bonnes_pratiques_reinitialisation_du_mot_de_passe.pdf"}>ce lien</GenericLink>.</div>
 							</Grid>
 
 							<Grid item xs={12}>
