@@ -16,7 +16,7 @@ class FaqPasswordReset extends Component {
 		super(props);
 
 		this.state = {
-			initialTabToDisplay: "web",
+			initialTabToDisplay: "",
 		};
 	}
 
@@ -24,9 +24,9 @@ class FaqPasswordReset extends Component {
 		const location = this.props.routerLocation;
 		const anchor = location.hash.substring(1);
 
-		if (anchor && ['android', 'ios'].includes(anchor)) {
-			this.setState({ initialTabToDisplay: anchor });
-		}
+		this.setState({
+			initialTabToDisplay: anchor && ['android', 'ios'].includes(anchor) ? anchor : 'web'
+		});
 	}
 
 	webSection = [

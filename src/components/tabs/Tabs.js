@@ -31,13 +31,13 @@ const TabsComponent = ({
                 })}
             </ul>
 
-            {tabs.map(tab => {
+            {tabs.map((tab, index) => {
                 const tabId = `${tab.id}${id}`;
 
                 return (
                     <div
                         aria-labelledby={tabId}
-                        className="fr-tabs__panel fr-tabs__panel--selected"
+                        className={`fr-tabs__panel ${initialTabToDisplay === tab.id || (!initialTabToDisplay && index === 0) ? 'fr-tabs__panel--selected' : ''}`}
                         id={`${tabId}-panel`}
                         key={tabId}
                         role="tabpanel"
