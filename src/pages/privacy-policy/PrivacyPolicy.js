@@ -4,7 +4,6 @@ import BottomBar from "../../components/bars/BottomBar";
 import TopBar from "../../components/bars/TopBar";
 
 class PrivacyPolicy extends Component {
-
 	render() {
 		return (
 			<div className="tc_Tac">
@@ -142,12 +141,10 @@ class PrivacyPolicy extends Component {
 								</ul>
 							<div>Dans les conversations et les salons privés, les contenus du service de messagerie instantanée sont chiffrés. Ils ne sont visibles que par les Utilisateurs et Utilisatrices participants à la conversation ou au salon.</div>
 							<div>Dans les salons publics, les contenus ne sont pas chiffrés. L’équipe Tchap et les participants au salon ont accès aux contenus du service de messagerie instantanée.</div>
-						        </div>
-                                                <div className="tc_subparagraph">
-                                                        <div>L'administration a accès à la liste de ses agents présents sur l'Application
-                                                        
-
-                                              </div>
+						</div>
+                        <div className="tc_subparagraph">
+                            <div>L'administration a accès à la liste de ses agents présents sur l'Application</div>
+						</div>
 					</div>
 					<div className="tc_paragraph">
 						<h2>6. Sous-traitants</h2>
