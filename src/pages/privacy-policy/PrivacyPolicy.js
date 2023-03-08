@@ -46,7 +46,7 @@ class PrivacyPolicy extends Component {
 					<div className="tc_paragraph">
 						<h2>2. Finalités</h2>
 						<div className="tc_subparagraph">
-							<div>Les traitements ont pour finalités la gestion des comptes, la gestion des services transverses d’échange de messages et l’exploitation de l’Application.</div>
+							<div>Les traitements ont pour finalités la gestion des comptes, la gestion des services transverses d’échange de messages et l’exploitation de l’Application, la mise à disposition des administrations d'un service numérique d'usage partagé de messagerie collaborative.</div>
 						</div>
 					</div>
 					<div className="tc_paragraph">
@@ -142,7 +142,12 @@ class PrivacyPolicy extends Component {
 								</ul>
 							<div>Dans les conversations et les salons privés, les contenus du service de messagerie instantanée sont chiffrés. Ils ne sont visibles que par les Utilisateurs et Utilisatrices participants à la conversation ou au salon.</div>
 							<div>Dans les salons publics, les contenus ne sont pas chiffrés. L’équipe Tchap et les participants au salon ont accès aux contenus du service de messagerie instantanée.</div>
-						</div>
+						        </div>
+                                                <div className="tc_subparagraph">
+                                                        <div>L'administration a accès à la liste de ses agents présents sur l'Application
+                                                        
+
+                                              </div>
 					</div>
 					<div className="tc_paragraph">
 						<h2>6. Sous-traitants</h2>
