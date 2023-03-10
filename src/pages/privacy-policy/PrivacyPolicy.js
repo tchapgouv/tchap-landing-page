@@ -9,7 +9,6 @@ class PrivacyPolicy extends Component {
 			<div className="tc_Tac">
 				<TopBar borderBottom={true} />
 				<Container maxWidth="lg">
-
 					<h1>Politique de confidentialité</h1>
 
 					<div className="tc_paragraph">
@@ -42,12 +41,14 @@ class PrivacyPolicy extends Component {
 							</div>
 						</div>
 					</div>
+
 					<div className="tc_paragraph">
 						<h2>2. Finalités</h2>
 						<div className="tc_subparagraph">
-							<div>Les traitements ont pour finalités la gestion des comptes, la gestion des services transverses d’échange de messages et l’exploitation de l’Application, la mise à disposition des administrations d'un service numérique d'usage partagé de messagerie collaborative.</div>
+							Les traitements ont pour finalité la mise à disposition des administrations d'un service numérique d'usage partagé de messagerie collaborative. Ils comprennent les traitements nécessaires à la gestion des comptes, à la gestion des services transverses d’échanges de messages et l’exploitation et l'amélioration de l’Application.
 						</div>
 					</div>
+
 					<div className="tc_paragraph">
 						<h2>3.Base légale</h2>
 						<div className="tc_subparagraph">
@@ -62,8 +63,6 @@ class PrivacyPolicy extends Component {
 									(article 6 du décret n°2019-1088 du 25 octobre 2019 relatif au système d’information et de communication de l’Etat et à la direction interministérielle du numérique).
 								</a>
 							</div>
-							<br/>
-							<div>Les données de profil permettent également de réaliser des statistiques anonymisées sur l’usage de la plateforme.</div>
 						</div>
 						<div className="tc_subparagraph">
 							<h3>3.2 Données de contenus du service de messagerie instantanée</h3>
@@ -85,6 +84,7 @@ class PrivacyPolicy extends Component {
 							<div>L'obligation légale est posée par la loi LCEN n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique et par l’article 5 du décret n° 2021-1362 du 20 octobre 2021.</div>
 						</div>
 					</div>
+
 					<div className="tc_paragraph">
 						<h2>4. Durée de conservation</h2>
 						<table class="full-width">
@@ -129,7 +129,9 @@ class PrivacyPolicy extends Component {
 							</tbody>
 						</table>
 					</div>
+
 					<br/>
+
 					<div className="tc_paragraph">
 						<h2>5. Destinataires</h2>
 						<div className="tc_subparagraph">
@@ -146,6 +148,7 @@ class PrivacyPolicy extends Component {
                             <div>L'administration a accès à la liste de ses agents présents sur l'Application</div>
 						</div>
 					</div>
+
 					<div className="tc_paragraph">
 						<h2>6. Sous-traitants</h2>
 						<div className="tc_subparagraph">
@@ -193,6 +196,7 @@ class PrivacyPolicy extends Component {
 							</table>
 						</div>
 					</div>
+
 					<div className="tc_paragraph">
 						<h2>7. Accès à la liste des contacts locaux du téléphone</h2>
 						<div className="tc_subparagraph">
@@ -206,6 +210,7 @@ class PrivacyPolicy extends Component {
 							</ul>
 						</div>
 					</div>
+
 					<div className="tc_paragraph">
 						<h2>8. Cookies</h2>
 						<div className="tc_subparagraph">
@@ -249,6 +254,7 @@ class PrivacyPolicy extends Component {
 							<div>Tchap utilise également des cookies strictement nécessaires au bon fonctionnement de l’Application sans lesquels l’accès à la plateforme ne peut être pleinement garanti.</div>
 						</div>
 					</div>
+
 					<div className="tc_paragraph">
 						<h2>9. Sécurité</h2>
 						<div className="tc_subparagraph">
@@ -259,6 +265,7 @@ class PrivacyPolicy extends Component {
 							<div>Un contrôle des documents échangés est effectué avant leur remise aux destinataires et le document n’est pas remis tant que le contenu n’est pas vérifié. Il donne lieu à un déchiffrement du document dans une zone technique isolée, une vérification du type de fichier et des signatures virales, immédiatement suivie d’une destruction sécurisée de sa copie. Il ne constitue pas un engagement de la DINUM sur son innocuité.</div>
 						</div>
 					</div>
+
 					<div className="tc_paragraph">
 						<h2>10. Exercice des droits à la protection des données à caractère personnel </h2>
 						<div className="tc_subparagraph">
@@ -288,6 +295,7 @@ class PrivacyPolicy extends Component {
 							<div>Tchap utilise les adresses mails professionnelles issues des domaines autorisés et les noms, prénoms, qui en découlent. Toute demande relative à une modification d’adresse mail professionnelle ou relative aux noms et prénoms, devra être adressée à l’administration concernée.</div>
 						</div>
 					</div>
+
 					<div className="tc_paragraph">
 						<h2>11. Contact</h2>
 						<div className="tc_subparagraph">
