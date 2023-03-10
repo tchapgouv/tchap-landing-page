@@ -45,7 +45,7 @@ class PrivacyPolicy extends Component {
 					<div className="tc_paragraph">
 						<h2>2. Finalités</h2>
 						<div className="tc_subparagraph">
-							Les traitements ont pour finalité la mise à disposition des administrations d'un service numérique d'usage partagé de messagerie collaborative. Ils comprennent les traitements nécessaires à la gestion des comptes, à la gestion des services transverses d’échanges de messages et l’exploitation et l'amélioration de l’Application
+							Les traitements ont pour finalité la mise à disposition des administrations d'un service numérique d'usage partagé de messagerie collaborative. Ils comprennent les traitements nécessaires à la gestion des comptes, à la gestion des services transverses d’échanges de messages et l’exploitation et l'amélioration de l’Application.
 						</div>
 					</div>
 
