@@ -45,8 +45,7 @@ class PrivacyPolicy extends Component {
 					<div className="tc_paragraph">
 						<h2>2. Finalités</h2>
 						<div className="tc_subparagraph">
-							<div>Les traitements ont pour finalités la gestion des comptes, la gestion des services transverses d’échange de messages et l’exploitation de l’Application, la mise à disposition des administrations d'un service numérique d'usage partagé de messagerie collaborative.</div>
-						</div>
+							<div>Les traitements ont pour finalité la mise à disposition des administrations d'un service numérique d'usage partagé de messagerie collaborative. Ils comprennent les traitements nécessaires à la gestion des comptes, à la gestion des services transverses d’échanges de messages et l’exploitation et l'amélioration de l’Application
 					</div>
 					<div className="tc_paragraph">
 						<h2>3.Base légale</h2>
@@ -62,9 +61,7 @@ class PrivacyPolicy extends Component {
 									(article 6 du décret n°2019-1088 du 25 octobre 2019 relatif au système d’information et de communication de l’Etat et à la direction interministérielle du numérique).
 								</a>
 							</div>
-							<br/>
-							<div>Les données de profil permettent également de réaliser des statistiques anonymisées sur l’usage de la plateforme.</div>
-						</div>
+						
 						<div className="tc_subparagraph">
 							<h3>3.2 Données de contenus du service de messagerie instantanée</h3>
 							<div>Le traitement est nécessaire à l’exécution d’une mission d’intérêt public ou relevant de l’exercice de l’autorité publique dont est investi le responsable de traitement au sens de l’article 6-e du règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données.</div>
