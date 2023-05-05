@@ -57,7 +57,7 @@ class TopBar extends Component {
 											</a>
 										</li>
 										<li>
-											<a className="fr-link" href={t('links.faq')} data-probe-name="faq" onClick={this._hookProbe}>
+											<a className="fr-link" href="https://aide.tchap.beta.gouv.fr/fr" data-probe-name="faq" onClick={this._hookProbe}>
 												FAQ
 											</a>
 										</li>
