@@ -5,7 +5,9 @@ server {
     index index.html;
     root /app/dist;
     location / {
-        rewrite ^/faq.*$ https://aide.tchap.beta.gouv.fr/fr redirect;
         try_files $uri /index.html;
+    }
+    location ~ ^/faq.*$ {
+        return 301 https://aide.tchap.beta.gouv.fr;
     }
 }
