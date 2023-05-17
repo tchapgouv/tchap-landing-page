@@ -7,6 +7,11 @@ server {
     location / {
         try_files $uri /index.html;
     }
+
+    location ~ ^/faq/messages-verrouilles.*$ {
+        return 301 https://aide.tchap.beta.gouv.fr/fr/article/dechiffrement-impossible-de-mes-messages-comment-y-remedier-atnp15;
+    }
+
     location ~ ^/faq.*$ {
         return 301 https://aide.tchap.beta.gouv.fr;
     }
