@@ -128,7 +128,7 @@ class TestYourEmail extends Component {
 				<div className="tc_TestYourEmail_label">Votre administration est-elle déjà sur Tchap ?</div>
 
 					<FormControl variant="outlined" size="small">
-						<InputLabel htmlFor="test-your-email" className="tc_TestYourEmail_input_label">Testez votre adresse email professionnelle</InputLabel>
+						<InputLabel htmlFor="test-your-email" className="tc_TestYourEmail_input_label">Testez votre adresse mail professionnelle</InputLabel>
 						<OutlinedInput
 							id="test-your-email"
 							className="tc_TestYourEmail_input"
@@ -141,7 +141,7 @@ class TestYourEmail extends Component {
 									{ validateIcon }
 								</InputAdornment>
 							}
-							label="Testez votre adresse email professionnelle"
+							label="Testez votre adresse mail professionnelle"
 						/>
 					</FormControl>
 					<Button variant="contained" size="large" onClick={this.analyzeEmail} className={colorClass}>

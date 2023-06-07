@@ -34,12 +34,12 @@ class BottomBar extends Component {
 							</p>
 							<ul className="fr-footer__content-list">
 								<li className="fr-footer__content-item">
-									<a className="fr-footer__content-link" href="https://www.tchap.gouv.fr" data-probe-name="tchap-app" onClick={this._hookProbe}>
+									<a className="fr-footer__content-link" href="https://www.tchap.gouv.fr" data-probe-name="tchap-app" target="_blank" onClick={this._hookProbe}>
 										Utiliser Tchap
 									</a>
 								</li>
 								<li className="fr-footer__content-item">
-									<a className="fr-footer__content-link" href="https://github.com/tchapgouv" data-probe-name="github" onClick={this._hookProbe}>
+									<a className="fr-footer__content-link" href="https://github.com/tchapgouv" data-probe-name="github" target="_blank" onClick={this._hookProbe}>
 										Le code de Tchap sur Github
 									</a>
 								</li>
@@ -49,12 +49,12 @@ class BottomBar extends Component {
 									</a>
 								</li>
 								<li className="fr-footer__content-item">
-									<a className="fr-footer__content-link" href="https://beta.gouv.fr" data-probe-name="betagouv" onClick={this._hookProbe}>
+									<a className="fr-footer__content-link" href="https://beta.gouv.fr" data-probe-name="betagouv" target="_blank" onClick={this._hookProbe}>
 										beta.gouv.fr
 									</a>
 								</li>
 								<li className="fr-footer__content-item">
-									<a className="fr-footer__content-link" href="https://matrix.org/" data-probe-name="matrix" onClick={this._hookProbe}>
+									<a className="fr-footer__content-link" href="https://matrix.org/" data-probe-name="matrix" target="_blank" onClick={this._hookProbe}>
 										matrix.org
 									</a>
 								</li>
@@ -79,6 +79,11 @@ class BottomBar extends Component {
 							<li className="fr-footer__bottom-item">
 								<a className="fr-footer__bottom-link" href="/cgu" data-probe-name="terms-and-conditions" onClick={this._hookProbe}>
 									Conditions d'utilisation
+								</a>
+							</li>
+							<li className="fr-footer__bottom-item">
+								<a className="fr-footer__bottom-link" href="https://stats.tchap.incubateur.net/public/dashboard/8c6560e3-c27a-487b-b242-eb1636912f1a" data-probe-name="stats" target="_blank" onClick={this._hookProbe}>
+									Statistiques
 								</a>
 							</li>
 						</ul>

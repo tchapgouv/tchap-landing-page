@@ -35,7 +35,7 @@ class PrivacyPolicy extends Component {
 								<ul>
 									<li><span className="tc_text_b">Données relatives au profil :</span> prénom, nom, organisation et adresse mail professionnelle (obligatoire), une photographie d’identité (optionnel) ;</li>
 									<li><span className="tc_text_b">Données de contenus du service de messagerie instantanée :</span> message, fichiers, métadonnées ;</li>
-									<li><span className="tc_text_b">Données de contact du répertoire mobile :</span> prénom, nom, email (optionnel et les données ne sont pas importées) ;</li>
+									<li><span className="tc_text_b">Données de contact du répertoire mobile :</span> prénom, nom, adresse mail (optionnel et les données ne sont pas importées) ;</li>
 									<li><span className="tc_text_b">Données de connexion.</span></li>
 								</ul>
 							</div>
@@ -164,13 +164,13 @@ class PrivacyPolicy extends Component {
 									</tr>
 									<tr>
 										<th>Cloud du Ministère de l’Intérieur</th>
-										<td>Hébergement et envoi d’emails</td>
+										<td>Hébergement et envoi d’adresses mails</td>
 										<td>France</td>
 										<td>https://www.numerique.gouv.fr/services/cloud/cloud-interne/</td>
 									</tr>
 									<tr>
 										<th>Crisp</th>
-										<td>Support utilisateurs par email</td>
+										<td>Support utilisateurs par adresse mail</td>
 										<td>Pays Bas et Allemagne</td>
 										<td>https://crisp.chat/fr/</td>
 									</tr>
@@ -205,7 +205,7 @@ class PrivacyPolicy extends Component {
 							<div>Lorsque vous autorisez cet accès, Tchap l’utilise de deux manières :</div>
 							<br/>
 							<ul>
-								<li>Tchap parcourt les adresses emails de vos contacts pour découvrir d’autres Utilisateurs et Utilisatrices inscrits sur Tchap. Ces Utilisateurs et Utilisatrices sont listés dans la section ‘Contacts’ de l’Application. Ils vous sont proposés également lorsque vous souhaitez inviter des nouveaux membres à un salon. Aucune adresse email n’est stockée sur les serveurs ;</li>
+								<li>Tchap parcourt les adresses mails de vos contacts pour découvrir d’autres Utilisateurs et Utilisatrices inscrits sur Tchap. Ces Utilisateurs et Utilisatrices sont listés dans la section ‘Contacts’ de l’Application. Ils vous sont proposés également lorsque vous souhaitez inviter des nouveaux membres à un salon. Aucune adresse mail n’est stockée sur les serveurs ;</li>
 								<li>Lorsque vous souhaitez inviter des nouvelles personnes à rejoindre Tchap, les coordonnées de vos contacts locaux vous sont proposées.</li>
 							</ul>
 						</div>
