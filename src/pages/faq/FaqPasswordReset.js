@@ -300,7 +300,7 @@ class FaqPasswordReset extends Component {
 						/>
 					<div className="tc_vertical_image_margin" />
 
-					<li>La page « Relevez vos e-mails » s’affiche : allez dans votre boite mail, ouvrez le mail « Changement de mot de passe » et cliquez sur « Réinitialiser mon mot de passe ».</li>
+					<li>La page « Relevez vos adresses mails » s’affiche : allez dans votre boite mail, ouvrez le mail « Changement de mot de passe » et cliquez sur « Réinitialiser mon mot de passe ».</li>
 					
 					<div className="tc_vertical_image_margin" />
 						<div className="tc_align_horizontal">
