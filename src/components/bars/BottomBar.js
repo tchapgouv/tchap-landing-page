@@ -86,6 +86,11 @@ class BottomBar extends Component {
 									Statistiques
 								</a>
 							</li>
+							<li className="fr-footer__bottom-item">
+								<a className="fr-footer__bottom-link" href="https://status.tchap.numerique.gouv.fr/" data-probe-name="service-status" target="_blank" onClick={this._hookProbe}>
+									Etat des services
+								</a>
+							</li>
 						</ul>
 						<div className="fr-footer__bottom-copy">
 							<p>Sauf mention contraire, tous les contenus de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence etalab-2.0</a>
