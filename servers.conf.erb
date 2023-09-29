@@ -15,4 +15,8 @@ server {
     location ~ ^/faq.*$ {
         return 301 https://aide.tchap.beta.gouv.fr;
     }
+
+    location ~ ^/salon-accueil-flyer.*$ {
+        return 302 https://tchap.gouv.fr/#/room/!KbeocqEWSJvMsdxCbB:agent.dinum.tchap.gouv.fr;
+    }
 }
