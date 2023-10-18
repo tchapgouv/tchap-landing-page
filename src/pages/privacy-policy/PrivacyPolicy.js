@@ -175,12 +175,6 @@ class PrivacyPolicy extends Component {
 										<td>https://crisp.chat/fr/</td>
 									</tr>
 									<tr>
-										<th>Dolist</th>
-										<td>Service d’envoi d’emails d’informations</td>
-										<td>France et Suisse</td>
-										<td>https://www.dolist.com/societe/politique-rgpd/</td>
-									</tr>
-									<tr>
 										<th>Sendinblue</th>
 										<td>Service d’envoi d’emails d’informations de secours</td>
 										<td>UE et hors UE </td>
