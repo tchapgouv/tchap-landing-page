@@ -8,7 +8,7 @@ import "styles/pages/home/panels/JoinUsPanel.scss";
 class JoinUsPanel extends Component {
 	render() {
 		return (
-			<div className="tc_JoinUsPanel">
+			<div className="tc_JoinUsPanel" id="join">
 				<Container maxWidth="lg">
 					<Grid container>
 						<Grid item xs={12} className="tc_JoinUsPanel_joinus">
