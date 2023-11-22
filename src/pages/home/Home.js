@@ -1,4 +1,5 @@
 import {Component} from "react";
+import NoticeBar from "components/bars/NoticeBar";
 import TopBar from "components/bars/TopBar";
 import BottomBar from "components/bars/BottomBar";
 import WelcomePanel from "./panels/WelcomePanel";
@@ -13,6 +14,7 @@ class Home extends Component {
 		return (
 			<div className="tc_Home">
 				<TopBar/>
+				<NoticeBar/>
 				<WelcomePanel/>
 				<JoinUsPanel/>
 				<MainPanel/>
