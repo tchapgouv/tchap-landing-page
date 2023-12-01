@@ -13,7 +13,7 @@ class Tac extends Component {
 				<TopBar borderBottom={true} />
 				<Container maxWidth="lg">
 
-					<h1>Conditions générales d'utilisation en date du 21 avril 2022</h1>
+					<h1>Conditions générales d'utilisation en date du 1er décembre 2023</h1>
 
 					<div className="tc_paragraph">
 						<h2>1. Champ d'application</h2>
@@ -121,7 +121,7 @@ class Tac extends Component {
 						<div className="tc_subparagraph">
 							<div><u>Sites</u> : <a href="https://www.tchap.gouv.fr">www.tchap.gouv.fr</a> et <a href="https://tchap.beta.gouv.fr">tchap.beta.gouv.fr</a></div>
 							<div><u>Editeur</u> : Direction interministérielle du numérique de l'Etat (DINUM). 20 avenue de Ségur 75007 Paris - Tel. Accueil : 01.71.21.01.70 SIRET : 12000101100010 (secrétariat général du gouvernement) SIREN : 120 001 011</div>
-							<div><u>Directeur de la publication</u> : Monsieur Xavier ALBOUY, Directeur par intérim de la Direction interministérielle du numérique.</div>
+							<div><u>Directeur de la publication</u> : Madame Stéphanie Schaer, Directrice interministérielle du numérique.</div>
 							<div><u>Conception et gestion</u> : Le suivi éditorial et graphique est assuré par la DINUM.</div>
 							<div><u>Code source</u> : Tout site public ou privé est autorisé à établir, sans autorisation préalable, un lien (y compris profond) vers les informations diffusées sur le site.</div>
 							<div><u>Hébergement de la messagerie Tchap (tchap.gouv.fr)</u> : Ministère de l'Intérieur, Place Beauvau, 75800 Paris CEDEX 08</div>
