@@ -49,6 +49,11 @@ class BottomBar extends Component {
 									</a>
 								</li>
 								<li className="fr-footer__content-item">
+									<a className="fr-footer__content-link" href="/roadmap" data-probe-name="github" onClick={this._hookProbe}>
+										Feuille de route
+									</a>
+								</li>
+								<li className="fr-footer__content-item">
 									<a className="fr-footer__content-link" href="https://beta.gouv.fr" data-probe-name="betagouv" target="_blank" onClick={this._hookProbe}>
 										beta.gouv.fr
 									</a>
