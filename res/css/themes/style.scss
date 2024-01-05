@@ -12,7 +12,7 @@ $color-bg-mediumgrey: #f2f2f9;
 $color-bg-darkgrey: #efefef;
 
 /* Fonts */
-$font-letter-spacing: 1px;
+$font-letter-spacing: 0;
 $font-letter-spacing-16: 1.6px;
 $font-letter-spacing-10: 0.08em;
 $font-letter-spacing-08: 0.8px;
@@ -84,6 +84,13 @@ $font-size-08: 0.8em;
 
 .tc_paragraph .tc_subparagraph {
   margin-bottom: 1.5rem;
+}
+.tc_paragraph {
+  margin-top: 3.5em;
+}
+.tc_Tac .MuiContainer-root {
+  margin-bottom: 90px;
+  margin-top: 90px;
 }
 
 table, th, td {

@@ -5,10 +5,9 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "pages/home/Home";
 import Convention from "pages/convention/Convention";
 import CookiesManagement from "pages/cookiesManagement/CookiesManagement";
-import Pem from "pages/pem/Pem";
+import About from "pages/about/About";
 import PrivacyPolicy from "pages/privacy-policy/PrivacyPolicy";
-import Faq from "pages/faq/Faq";
-import FaqPasswordReset from "pages/faq/FaqPasswordReset";
+
 import Tac from "pages/tac/Tac";
 
 import "@fontsource/roboto";
@@ -29,11 +28,9 @@ class App extends Component {
 				<Routes>
 					<Route path="/convention" element={<Convention />} />
 					<Route path="/gestion-des-cookies" element={<CookiesManagement />} />
-					<Route path="/prise-en-main" element={<Pem />} />
-					<Route path="/faq" element={<Faq />} />
-					<Route path="/faq-mot-de-passe" element={<FaqPasswordReset />} />
 					<Route path="/cgu" element={<Tac />} />
 					<Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
+					<Route path="/a-propos" element={<About />} />
 					<Route path="/" element={<Home />} />
 				</Routes>
 			</BrowserRouter>
