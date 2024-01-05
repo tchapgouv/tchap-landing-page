@@ -24,26 +24,31 @@ class About extends Component {
 						<h3 id="Les-fonctions-clés-de-Tchap">Les fonctions clés de Tchap</h3>
 						<h4 id="1-Accès-à-un-annuaire-et-ajout-par-email-internes-et-externes">1. Accès à un annuaire et ajout par email (internes et externes)</h4>
 
-						<div className="tc_subparagraph">L’ajout d’un contact sur <strong>Tchap</strong> se fait grâce au nom et prénom de l’utilisateur (quand l’utilisateur a créé son compte Tchap) ou par son email (pour de nouveaux utilisateurs au sein ou en dehors de l’administration).</div>
+						<div className="tc_subparagraph">L’ajout d’un contact sur Tchap se fait grâce au nom et prénom de l’utilisateur (quand l’utilisateur a créé son compte Tchap) ou par son email (pour de nouveaux utilisateurs au sein ou en dehors de l’administration).</div>
 
 						<div className="tc_subparagraph">Tous les agents publics peuvent s’inscrire, si leur domaine de messagerie est autorisé. Les externes à la fonction publique peuvent être invités et ont des droits limités (pas d’accès à l’annuaire intégré et aux forums publics, impossibilité de créer des salons).</div>
+						<br/>
 						<h4 id="2-Séparation-internes-vs-externes-et-contrôles-réguliers-des-interlocuteurs">2. Séparation internes vs externes et contrôles réguliers des interlocuteurs</h4>
 
-						<div className="tc_subparagraph">Sur <strong>Tchap</strong>, il est facile de voir qui est interne à la fonction publique et qui est externe. Pour inviter un externe sur un salon ou dans une discussion privée, il suffit de l’inviter via son adresse email. Cela ne lui donne pas accès aux autres salons de Tchap.</div>
+						<div className="tc_subparagraph">Sur Tchap, il est facile de voir qui est interne à la fonction publique et qui est externe. Pour inviter un externe sur un salon ou dans une discussion privée, il suffit de l’inviter via son adresse email. Cela ne lui donne pas accès aux autres salons de Tchap.</div>
 						<div className="tc_subparagraph">Une vérification faite tous les 3 mois sur l’adresse email des utilisateurs permet de vérifier qu’ils sont toujours en poste et, dans le cas contraire, de suspendre leur compte Tchap (cette fonctionnalité sera remise en place en 2024).</div>
 
 						<div className="tc_subparagraph">Sur d’autres messageries grand public (Whatsapp, Signal, Telegram), il est possible de s’emparer d’un numéro de téléphone existant et d’usurper une identité. Il est aussi possible de se tromper de destinataire : il n’y a pas  de garantie de l’interlocuteur.  Une erreur peut aussi amener à contacter la mauvaise personne qui pourrait profiter de l’erreur pour exposer les informations qu’elle reçoit.</div>
+						<br/>
 						<h4 id="3-Facile-à-utiliser-sur-plusieurs-appareils">3. Facile à utiliser sur plusieurs appareils</h4>
 
-						<div className="tc_subparagraph"><strong>Tchap</strong> se base sur l’adresse email des utilisateurs : l’application peut être installée sur autant de téléphones que l’on souhaite (pro et perso) et toutes les sessions partagent en temps réel les échanges. De plus, Tchap est également accessible depuis un navigateur web, sur ordinateur.</div>
+						<div className="tc_subparagraph">Tchap se base sur l’adresse email des utilisateurs : l’application peut être installée sur autant de téléphones que l’on souhaite (pro et perso) et toutes les sessions partagent en temps réel les échanges. De plus, Tchap est également accessible depuis un navigateur web, sur ordinateur.</div>
+						<br/>
 						<h4 id="4-Offre-de-support-personnalisé-par-l’équipe-Tchap">4. Offre de support personnalisée par l’équipe Tchap</h4>
 
 						<div className="tc_subparagraph">L’équipe DINUM peut proposer une assistance personnalisée aux équipes supports et une aide au déploiement de la solution. Elle organise régulièrement des webinaires.</div>
+						<br/>
 						<h4 id="5-Collaboration-avec-l’ANS-l’OSIIC-et-l’Allemagne">5. Collaboration avec l’ANS, l’OSIIC, et l’Allemagne</h4>
 						<div className="tc_subparagraph">L’équipe est en lien rapproché avec l’Agence du Numérique en Santé et Opérateur des Systèmes d’Information Interministériels Classifiés pour partager les connaissances et mettre en commun les compétences techniques. Elle échange ainsi de manière régulière avec l’ANSSI qui accompagne le développement de Tchap.</div>
 						<div className="tc_subparagraph">Tchap travaille avec l’Agence du Numérique en Santé pour développer une messagerie interopérable pour sécuriser les échanges entre les professionels de santé.</div>
 						<div className="tc_subparagraph">L’équipe discute aussi avec le ministère allemand de la défense notamment pour appuyer ensemble les intérêts souverains auprès des logiciels opensource utilisés en commun. Elle a été approchée par la Suède, l’OTAN, Interpol, et par le contrôleur européen de la protection des données (EDPS).</div>
 						<div className="tc_subparagraph">Ces collaborations permettent de développer plus rapidement le projet.</div>
+						<br/>
 						<h4 id="6-Une-solution-gratuite-opérée-et-maitrisée-par-l’Etat">6. Une solution gratuite, opérée et maitrisée par l’Etat</h4>
 
 						<div className="tc_subparagraph">Tchap est proposé gratuitement aux administrations, collectivités et opérateurs de l’Etat. Pour ces derniers, Tchap est proposé dans le cadre d’une expérimentation, renouvelée chaque année depuis 2021. En 2024, une solution permettra de pérenniser cette prise en charge gratuite.</div>
