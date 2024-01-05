@@ -3,7 +3,7 @@ import { Component } from "react";
 import BottomBar from "../../components/bars/BottomBar";
 import TopBar from "../../components/bars/TopBar";
 
-class Roadmap extends Component {
+class About extends Component {
 	render() {
 		return (
 			<div className="tc_Tac">
@@ -94,4 +94,4 @@ class Roadmap extends Component {
 	}
 }
 
-export default Roadmap;
+export default About;
