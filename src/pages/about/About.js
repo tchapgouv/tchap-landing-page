@@ -66,11 +66,13 @@ class About extends Component {
 							<li>Pouvoir appeler son interlocuteur directement dans Tchap à partir de son téléphone ou son ordinateur (appel 1-à-1).</li>
 							<li>Proposer une expérience pour créer des <strong>visio-conférences</strong> de groupe vers les outils dédiés : webinaire et webconf.</li>
 						</ul>
+						<br/>
 						<div className="tc_subparagraph"><strong>Faciliter les échanges en équipe</strong></div>
 						<div className="tc_subparagraph">Placer la messagerie collaborative au centre des échanges des services et des équipes.</div><ul>
 							<li>Réunir les salons d’une équipe ou d’un service au sein d’un <strong>Espace de travail commun</strong></li>
 							<li>Accompagner les administrateurs d’Espace de travail dans la mise en place de leur communauté (bonnes pratiques)</li>
 						</ul>
+						<br/>
 						<div className="tc_subparagraph"><strong>Accueillir les nouveaux agents</strong></div>
 						<div className="tc_subparagraph">Permettre aux administrations d’inviter leurs nouveaux collaborateurs sur Tchap via une experience fluide.</div>
 						<ul>
@@ -78,7 +80,7 @@ class About extends Component {
 							<li>Mettre en place une console d’administration permettant de gérer un annuaire d’utilisateurs inscrits.</li>
 							<li>En 2024, Tchap recherchera une solution juridique pérenne permettant d’accueillir gratuitement les collectivités et les opérateurs de l’Etat.</li>
 						</ul>
-
+						<br/>
 						<div className="tc_subparagraph"><strong>Préparer le passage à l’échelle</strong></div>
 						<ul>
 							<li>Le succès de Tchap nécessite d’adapter l’architecture actuelle de nos serveurs afin de préparer le million d’utilisateurs actifs.</li>
