@@ -52,6 +52,11 @@ class TopBar extends Component {
 								<div className="fr-header__tools-links">
 									<ul className="fr-links-group">
 										<li>
+											<a className="fr-link" href="https://www.tchap.gouv.fr" data-probe-name="tchap-app" target="_blank" onClick={this._hookProbe}>
+												Utiliser Tchap
+											</a>
+										</li>
+										<li>
 											<a className="fr-link" href="https://aide.tchap.beta.gouv.fr/fr" data-probe-name="faq" onClick={this._hookProbe}>
 												FAQ
 											</a>
